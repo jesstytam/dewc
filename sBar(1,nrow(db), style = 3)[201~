@@ -1,0 +1,100 @@
+txtProgressBar              package:utils              R Documentation
+
+_T_e_x_t _P_r_o_g_r_e_s_s _B_a_r
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Text progress bar in the R console.
+
+_U_s_a_g_e:
+
+     txtProgressBar(min = 0, max = 1, initial = 0, char = "=",
+                    width = NA, title, label, style = 1, file = "")
+     
+     getTxtProgressBar(pb)
+     setTxtProgressBar(pb, value, title = NULL, label = NULL)
+     ## S3 method for class 'txtProgressBar'
+     close(con, ...)
+     
+_A_r_g_u_m_e_n_t_s:
+
+min, max: (finite) numeric values for the extremes of the progress bar.
+          Must have ‘min < max’.
+
+initial, value: initial or new value for the progress bar.  See
+          ‘Details’ for what happens with invalid values.
+
+    char: the character (or character string) to form the progress bar.
+          Must have non-zero display width.
+
+   width: the width of the progress bar, as a multiple of the width of
+          ‘char’.  If ‘NA’, the default, the number of characters is
+          that which fits into ‘getOption("width")’.
+
+   style: the ‘style’ of the bar - see ‘Details’.
+
+    file: an open connection object or ‘""’ which indicates the
+          console: ‘stderr()’ might be useful here.
+
+ pb, con: an object of class ‘"txtProgressBar"’.
+
+title, label: ignored, for compatibility with other progress bars.
+
+     ...: for consistency with the generic.
+
+_D_e_t_a_i_l_s:
+
+     ‘txtProgressBar’ will display a progress bar on the R console (or
+     a connection) via a text representation.
+
+     ‘setTxtProgessBar’ will update the value.  Missing (‘NA’) and
+     out-of-range values of ‘value’ will be (silently) ignored.  (Such
+     values of ‘initial’ cause the progress bar not to be displayed
+     until a valid value is set.)
+
+     The progress bar should be ‘close’d when finished with: this
+     outputs the final newline character.
+
+     ‘style = 1’ and ‘style = 2’ just shows a line of ‘char’. They
+     differ in that ‘style = 2’ redraws the line each time, which is
+     useful if other code might be writing to the R console.  ‘style =
+     3’ marks the end of the range by ‘|’ and gives a percentage to the
+     right of the bar.
+
+_V_a_l_u_e:
+
+     For ‘txtProgressBar’ an object of class ‘"txtProgressBar"’.
+
+     For ‘getTxtProgressBar’ and ‘setTxtProgressBar’, a length-one
+     numeric vector giving the previous value (invisibly for
+     ‘setTxtProgressBar’).
+
+_N_o_t_e:
+
+     Using ‘style’ 2 or 3 or reducing the value with ‘style = 1’ uses
+     ‘\r’ to return to the left margin - the interpretation of carriage
+     return is up to the terminal or console in which R is running, and
+     this is liable to produce ugly output on a connection other than a
+     terminal, including when ‘stdout()’ is redirected to a file.
+
+_S_e_e _A_l_s_o:
+
+     ‘winProgressBar’ (Windows only), ‘tkProgressBar’ (Unix-alike
+     platforms).
+
+_E_x_a_m_p_l_e_s:
+
+      # slow
+     testit <- function(x = sort(runif(20)), ...)
+     {
+         pb <- txtProgressBar(...)
+         for(i in c(0, x, 1)) {Sys.sleep(0.5); setTxtProgressBar(pb, i)}
+         Sys.sleep(1)
+         close(pb)
+     }
+     testit()
+     testit(runif(10))
+     testit(style = 3)
+     testit(char=' \u27a4')
+     
+
