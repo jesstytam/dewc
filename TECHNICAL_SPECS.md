@@ -6,6 +6,8 @@ The goal of this document is to outline the technical specifications of an LLM-d
 
 ## System architecture
 
+
+
 ## Dependancies
 
 # Requirements

@@ -15,17 +15,27 @@ for (i in 1:nrow(db_clean)) {
     name_split <- str_split(db_clean[i, "scientificName"], "\\s+")[[1]]
     cleanName <- character(0)
 
-    for (nameWord in name_split) {
-        ifelse(
-            str_detect(nameWord, "[[:punct:]]"),
-            break,
-            cleanName <- c(cleanName, nameWord)
-        )
+    for (j in seq_along(name_split)) {
+
+        nameWord <- name_split[j]
+
+        if (
+            j > 1 &&
+            (
+                str_detect(nameWord, "[[:punct:]]") ||
+                str_detect(nameWord, "^[[:upper:]]")
+            )
+        ) {
+            break
+        }
+
+        cleanName <- c(cleanName, nameWord)
     }
 
     cleanName <- paste(cleanName, collapse = " ")
     print(cleanName)
     db_clean[i, "scientificName_clean"] <- cleanName
+
 }
 
 #sanity checks
