@@ -6,21 +6,21 @@ library(dplyr)
 
 #apcalign
 
-apc_db <- read.csv(file = "data/plants_db/apc_db_nsw_clean.csv", header = T)
+apc_db <- read.csv(file = "data/apc/apc_db_nsw_clean.csv", header = T)
 namesChar <- as.character(apc_db["scientificName_clean"])
 namesList <- apc_db["scientificName_clean"]
 
-apc_out <- create_taxonomic_update_lookup( 
-  taxa = "Pterostylis readii"
-)
-apc_out
+# apc_out <- create_taxonomic_update_lookup( 
+#   taxa = "Pterostylis readii"
+# )
+# apc_out
 
 #austraits
 
 # austraits <- load_austraits(version = "7.0.0", path = "data/austraits/test") #does not download rds file
 austraits <- readRDS("data/austraits/austraits-7.0.0.rds")
 
-austraits_data <- extract_taxa(austraits, taxon_name = "Pterostylis readii")
+# austraits_data <- extract_taxa(austraits, taxon_name = "Pterostylis readii")
 
 #get data in a loop
 
@@ -53,4 +53,4 @@ for (i in 1:length(traitsvec)) {
 
 #save
 
-write.csv(traits_bigtibble, "data/austraits/traits_nsw.csv")
+write.csv(traits_bigtibble, "data/austraits/traits_nsw.csv", row.names=FALSE)

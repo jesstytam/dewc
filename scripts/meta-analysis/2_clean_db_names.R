@@ -1,7 +1,7 @@
 library(stringr)
 library(glue)
 
-db <- read.csv(file = "data/plants_db/apc_db_nsw_scinames.csv")
+db <- read.csv(file = "data/apc/apc_db_nsw_scinames.csv")
 
 #clean up scientific names
 
@@ -44,4 +44,4 @@ db_clean[1, "scientificName_clean"]
 
 #save
 
-write.csv(db_clean, "data/plants_db/apc_db_nsw_clean.csv")
+write.csv(db_clean, "data/apc/apc_db_nsw_clean.csv", row.names=FALSE)
