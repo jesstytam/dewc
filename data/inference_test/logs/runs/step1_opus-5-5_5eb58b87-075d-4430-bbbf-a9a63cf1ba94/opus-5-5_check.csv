@@ -1,0 +1,7 @@
+level,where,column,check,value
+error,RESULT line 1555,,"duplicate of line 1554 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 1557,,"duplicate of line 1556 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 1568,,"duplicate of line 1567 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 1872,,"duplicate of line 1871 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 1873,,"duplicate of line 1871 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 3313,,"duplicate of line 3312 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",

@@ -12,6 +12,7 @@ and exits 1 if any check fails.
 
 import argparse
 import csv
+import hashlib
 import re
 import sys
 from collections import Counter
@@ -23,8 +24,9 @@ MD_RAW = REPO / "data/papers_test/md"
 MD_OPT = REPO / "data/papers_test/md_agents"
 LOGS = ROOT / "logs"
 
-LOG_HEADER = ["paper", "status", "n_rows", "note"]
-MD_LOG_HEADER = ["paper", "status", "pdf_pages", "n_tables", "n_fixes", "unresolved", "note"]
+TOKEN_COLS = ["n_requests", "input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens", "output_tokens", "total_tokens"]
+LOG_HEADER = ["paper", "status", "n_rows", "started", "finished", "note"] + TOKEN_COLS
+MD_LOG_HEADER = ["paper", "status", "pdf_pages", "n_tables", "n_fixes", "unresolved", "started", "finished", "note"] + TOKEN_COLS
 STATUSES = {"done", "broken", "no_data"}
 
 FIXED_YEARS = [
@@ -39,13 +41,14 @@ VARIABLE_UNIT = [
     "Recovery_time",
 ]
 TIME_COLS = ["PJP mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
-DUP_KEY = ["scientific_name", "Latitude", "Longitude", "Location_name",
+DUP_KEY = ["scientific_name", "subsp", "Latitude", "Longitude", "Location_name",
            "Fire_type", "Fire_season_categorical", "File_name"]
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
 SEASON_RE = re.compile(r"(Summer|Autumn|Winter|Spring)(/(Summer|Autumn|Winter|Spring))*")
 PAGE_BREAK = "<!-- PAGE BREAK -->"
+UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 JUNK = {
     "page number prefix": re.compile(r"\{\d+\}<!-- PAGE BREAK -->"),
     "span tag": re.compile(r"<span id="),
@@ -98,6 +101,33 @@ def read_csv(path, report, name):
     return list(csv.reader(text.splitlines()))
 
 
+def sha256_hex(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def papers_hash():
+    """Same as: sha256sum data/papers_test/md_agents/*.md | LC_ALL=C sort | sha256sum (from the repo root)."""
+    lines = sorted(f"{sha256_hex(p.read_bytes())}  {p.relative_to(REPO)}\n" for p in MD_OPT.glob("*.md"))
+    return sha256_hex("".join(lines).encode("utf-8"))
+
+
+def check_times(where, entry, report, need_finished=True):
+    """started and finished must be UTC times from `date -u +%FT%TZ`, in order."""
+    for col in ("started", "finished") if need_finished else ("started",):
+        if not UTC_RE.fullmatch(entry.get(col, "")):
+            report.error(where, col, "must be UTC time like 2026-10-02T08:04:26Z", entry.get(col, ""))
+    if need_finished and UTC_RE.fullmatch(entry["started"]) and UTC_RE.fullmatch(entry["finished"]):
+        if entry["finished"] < entry["started"]:
+            report.error(where, "finished", "earlier than started", entry["finished"])
+
+
+def check_tokens(where, entry, report):
+    """Token cells: empty (agent) or whole numbers (filled by usage.py)."""
+    for col in TOKEN_COLS:
+        if entry.get(col, "") and not entry[col].isdigit():
+            report.error(where, col, "empty or whole number; filled by usage.py", entry[col])
+
+
 def decimals(value):
     return len(value.split(".")[1]) if "." in value else 0
 
@@ -139,8 +169,6 @@ def check_row(line, row, report):
                 report.error(where, col, "not a decimal number", value)
             elif not lo <= float(value) <= hi:
                 report.error(where, col, f"outside {lo} to {hi}", value)
-    if row["Location_name"] and (lat or lon):
-        report.error(where, "Location_name", "fill only when Latitude and Longitude are both empty")
 
     for col in TIME_COLS:
         value = row[col]
@@ -153,8 +181,8 @@ def check_row(line, row, report):
                 report.error(where, col, "more than 3 decimals", value)
 
     unit_needed = any(row[col] for col in VARIABLE_UNIT)
-    if unit_needed and row["Time_unit"] not in ("months", "years"):
-        report.error(where, "Time_unit", "must be months or years", row["Time_unit"])
+    if unit_needed and row["Time_unit"] not in ("days", "weeks", "months", "years"):
+        report.error(where, "Time_unit", "must be days, weeks, months or years", row["Time_unit"])
     if not unit_needed and row["Time_unit"]:
         report.error(where, "Time_unit", "must be empty: no variable-unit time column filled", row["Time_unit"])
 
@@ -201,8 +229,15 @@ def check_step1(slug, paper, report):
     papers = [r for r in log_rows if r["paper"] != "_run"]
     if not runs:
         report.error("LOG", "paper", "no _run line")
+    if runs:  # the current run must hash the files it used
+        expected = {"claude_md_sha256": sha256_hex((REPO / "CLAUDE.md").read_bytes()), "papers_sha256": papers_hash()}
+        for field, value in expected.items():
+            m = re.search(field + r"=([0-9a-f]{64})", runs[-1]["note"])
+            if m and m.group(1) != value:
+                report.error("LOG _run", "note", f"{field} does not match the current files; recompute with the command in CLAUDE.md", m.group(1))
     for r in runs:
-        for field in ("model=", "date=", "git="):
+        check_times("LOG _run", r, report, need_finished=False)
+        for field in ("model=", "date=", "git=", "claude_md_sha256="):
             if field not in r["note"]:
                 report.error("LOG _run", "note", f"missing {field}", r["note"])
 
@@ -233,6 +268,8 @@ def check_step1(slug, paper, report):
         where = f"LOG {r['paper']}"
         if r["status"] not in STATUSES:
             report.error(where, "status", "must be done, broken or no_data", r["status"])
+        check_times(where, r, report)
+        check_tokens(where, r, report)
         checked_stems.add(r["paper"])
         paper_rows = [(line, row) for line, row in rows if row["File_name"] == r["paper"]]
         if not paper_rows:
@@ -249,15 +286,29 @@ def check_step1(slug, paper, report):
     checked = [(line, row) for line, row in rows if paper is None or row["File_name"] in checked_stems]
     for line, row in checked:
         check_row(line, row, report)
+    # Location_name with coordinates: only when several sites of the paper share those coordinates
+    names = {}
+    for _, row in checked:
+        if row["Latitude"] or row["Longitude"]:
+            names.setdefault((row["File_name"], row["Latitude"], row["Longitude"]), set()).add(row["Location_name"])
+    for line, row in checked:
+        if row["Location_name"] and (row["Latitude"] or row["Longitude"]):
+            if len(names[(row["File_name"], row["Latitude"], row["Longitude"])] - {""}) < 2:
+                report.error(f"RESULT line {line}", "Location_name", "fill only when coordinates are empty or shared by several named sites", row["Location_name"])
     seen = {}
     for line, row in checked:
         if row["Genus"] == "NA":
             continue
         key = tuple(row[c] for c in DUP_KEY)
         if key in seen:
-            report.error(f"RESULT line {line}", "", f"duplicate of line {seen[key]} on {', '.join(DUP_KEY)}")
+            first_line, first_row = seen[key]
+            message = f"duplicate of line {first_line} on {', '.join(DUP_KEY)}"
+            if all(r["Notes"].startswith("separate entry in paper") for r in (row, first_row)):
+                report.warn(f"RESULT line {line}", "", message + " (marked separate entry in paper)")
+            else:
+                report.error(f"RESULT line {line}", "", message)
         else:
-            seen[key] = line
+            seen[key] = (line, row)
 
 
 def check_step0(report):
@@ -282,6 +333,9 @@ def check_step0(report):
         if not text.rstrip().splitlines()[-1].startswith("<!-- md_opt:"):
             report.error(where, "", "no <!-- md_opt: end comment")
         entry = next((r for r in log_rows if r["paper"] == stem), None)
+        if entry:
+            check_times(f"MD_LOG {stem}", entry, report)
+            check_tokens(f"MD_LOG {stem}", entry, report)
         if entry and entry["status"] == "done":
             breaks = text.count(PAGE_BREAK)
             if not entry["pdf_pages"].isdigit():

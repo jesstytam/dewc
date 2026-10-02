@@ -15,8 +15,10 @@ PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW fi
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
 PAPERS   = "data/papers_test/md_agents/*.md"     # extraction input = MD_OPT; pages split by <!-- PAGE BREAK -->
 RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (27 columns)
-LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,note
-MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,note
+LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
+MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
+TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
+USAGE    = "scripts/claude/usage.py"             # token usage per paper; run by the user after each session, never by agents
 CHECK    = "scripts/claude/check.py"             # fixed check script; run it, never edit it; writes reports to ROOT + "logs/"
 ```
 
@@ -27,24 +29,25 @@ CHECK    = "scripts/claude/check.py"             # fixed check script; run it, n
 | 0 | `MD_RAW`, `PDF_DONE` | `.md` files in `data/papers_test/md_agents/`; `MD_LOG`; `CHECK --step0` report |
 | 1 | `METADATA`, `TEMPLATE`, `PAPERS` | `RESULT`, `LOG`; `CHECK` report |
 
-Everything not listed for a step is off limits for that step. Write no script files; one-off shell or Python commands are allowed.
+Everything not listed for a step is off limits for that step. One-off shell or Python commands are allowed; a code file may be written only to the session scratchpad (never to the repo), so its full text stays in the session transcript.
 
 ## Steps
 
-`print(...)` = write that status line to the chat as plain text, so the user can follow progress. `bar(i, n)` = text progress bar, 20 characters wide: `[######--------------] 2/6 (33%)`.
+`print(...)` = write that status line to the chat as plain text, so the user can follow progress. `now_utc()` = output of `date -u +%FT%TZ`, e.g. `2026-10-02T08:04:26Z`. `bar(i, n)` = text progress bar, 20 characters wide: `[######--------------] 2/6 (33%)`.
 
 ```python
 # Step 0: optimise markdown. Only in a session where slug == MD_AGENT; other sessions never run Step 0.
 print(f"Step 0: optimise markdown | {len(MD_RAW)} papers")
-if not exists(MD_LOG): write(MD_LOG, "paper,status,pdf_pages,n_tables,n_fixes,unresolved,note")
+if not exists(MD_LOG): write(MD_LOG, "paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note," + TOKEN_COLS)
 for i, md in enumerate(sorted(MD_RAW), 1):
     out = MD_OPT(stem(md))
     if exists(out) and out ends with "<!-- md_opt:":    # finished earlier; resume safe
         print(f"{bar(i, len(MD_RAW))} {stem(md)} | skipped: already done"); continue
     if exists(out): overwrite(out, "")           # unfinished file from an interrupted run: restart from page 1; status "restarted" in note
+    started = now_utc()
     pdf = PDF_DONE matching stem(md)
     if not pdf:                                  # copy md unchanged, add end comment with note
-        copy(md, out); append(out, "<!-- md_opt: ...; note=no matching PDF -->"); log_md(stem(md), "no_pdf", note="no matching PDF")
+        copy(md, out); append(out, "<!-- md_opt: ...; note=no matching PDF -->"); log_md(stem(md), "no_pdf", started=started, finished=now_utc(), note="no matching PDF")
         print(f"{bar(i, len(MD_RAW))} {stem(md)} | no_pdf: copied unchanged"); continue
     print(f"{bar(i, len(MD_RAW))} {stem(md)} | {n_pages(pdf)} pages")
     for batch in pages(pdf, max_pages=10):       # read PDF pages as images; never load a whole long PDF at once
@@ -52,7 +55,7 @@ for i, md in enumerate(sorted(MD_RAW), 1):
         append(out, optimise(raw, batch))        # see Markdown optimisation; append only, never overwrite earlier batches
         print(f"    pages {first}-{last} of {n_pages(pdf)} | tables rebuilt {n_tables}")
     append(out, "<!-- md_opt: model=...; date=YYYY-MM-DD; md_sha256=...; pdf_sha256=...; pdf_pages=N; fixes=...; unresolved=... -->")
-    log_md(stem(md), "done", n_pages(pdf), n_tables, n_fixes, unresolved, note)   # 1 line per finished paper; quote cells with commas
+    log_md(stem(md), "done", n_pages(pdf), n_tables, n_fixes, unresolved, started, now_utc(), note)   # 1 line per finished paper; quote cells with commas
     print(f"    done | fixes {n_fixes} | unresolved {n_unresolved}")
 run(f"python {CHECK} --step0")                  # see Checks
 print(f"Step 0 done | {n_done} optimised, {n_skipped} skipped")
@@ -62,24 +65,25 @@ if any MD_RAW file has no finished MD_OPT file: stop; tell the user to run Step 
 print(f"Step 1: extract | agent {slug} | {len(PAPERS)} papers")
 if not exists(RESULT):
     write(RESULT, [name for name, rule in COLUMNS])   # header only; do not copy example rows
-    write(LOG, "paper,status,n_rows,note")
-log("_run", "start", 0, f"model={AGENTS[slug]}; date=YYYY-MM-DD; git={git rev-parse HEAD}; papers_sha256=...")   # 1 line per run
+    write(LOG, "paper,status,n_rows,started,finished,note," + TOKEN_COLS)
+log("_run", "start", 0, now_utc(), "", f"model={AGENTS[slug]}; date=YYYY-MM-DD; git={git rev-parse HEAD}; claude_md_sha256=...; papers_sha256=...")   # 1 line per run
 read(METADATA); read(TEMPLATE, rows=2..6 + first 3 rows with PJP mths filled)   # definitions + value format; TEMPLATE column order differs
 for i, paper in enumerate(sorted(PAPERS), 1):
     if paper in LOG:                         # finished in an earlier run
         print(f"{bar(i, len(PAPERS))} {stem(paper)} | skipped: in LOG"); continue
+    started = now_utc()
     remove rows of paper from RESULT         # leftovers from an interrupted run (match by File_name); state count in LOG note
     if broken(paper):                        # see Broken papers
-        append(RESULT, na_row(paper, reason)); log(paper, "broken", 1, reason)
+        append(RESULT, na_row(paper, reason)); log(paper, "broken", 1, started, now_utc(), reason)
         print(f"{bar(i, len(PAPERS))} {stem(paper)} | broken: {reason}"); check_paper(paper); continue
     print(f"{bar(i, len(PAPERS))} {stem(paper)} | {n_pages(paper)} pages")
     for batch in pages(paper, max_pages=10): # never load a whole long paper at once
         append(RESULT, extract(batch))       # write after every batch
         print(f"    pages {first}-{last} of {n_pages(paper)} | rows {n_rows}")
     if n_rows == 0:                          # readable, but no relevant data
-        append(RESULT, na_row(paper, reason)); log(paper, "no_data", 1, reason)
+        append(RESULT, na_row(paper, reason)); log(paper, "no_data", 1, started, now_utc(), reason)
         print(f"    no_data: {reason}"); check_paper(paper); continue
-    log(paper, "done", n_rows, problems)
+    log(paper, "done", n_rows, started, now_utc(), problems)
     print(f"    done | rows {n_rows} | problems {len(problems)}")
     check_paper(paper)
 print(f"Checks | agent {slug} | all papers")
@@ -87,7 +91,9 @@ run(f"python {CHECK} {slug}")                # see Checks
 print(f"Step 1 done | agent {slug} | papers {n_done} done, {n_broken} broken, {n_no_data} no_data | rows {total_rows} | failed checks {n_failed}")
 ```
 
-`papers_sha256` = sha256 of the sorted `sha256sum` output of all `PAPERS` files.
+Hashes, run from the repo root, exactly: `papers_sha256` = `sha256sum data/papers_test/md_agents/*.md | LC_ALL=C sort | sha256sum`; `claude_md_sha256` = `sha256sum CLAUDE.md`. Record the first 64 characters of the output.
+
+Token usage: do not estimate tokens. Every log line ends with 6 empty `TOKEN_COLS` cells. After the session, `USAGE` fills them per paper from the session transcript, using the `started` and `finished` times, so record both for every paper.
 
 ## Markdown optimisation
 
@@ -108,7 +114,20 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 - Species tables often span many pages. Read every page; extract every species row.
 - Table continues into the next batch: reuse its column headers from the previous batch.
 - Carry site and fire values (coordinates, location name, rainfall, fire season, severity, type) from the paper's methods onto every row of that paper. Several sites or fires: match each species row to its own site and fire.
-- Ambiguous value: fill best reading, explain in `Notes`.
+- Several named sites share one set of coordinates: still 1 row per site; site name in `Location_name`, coordinates kept. Never merge sites into 1 row with per-site values in `Notes`.
+- Site names: use the name as first printed in the paper's methods or study-site section; map table codes (e.g. column `A`) to that name. Same site = same string on every row.
+- A row needs at least 1 value in a fire response or time column. Values kept only in `Notes` (near-matches, unreliable or unitless values) never create a row on their own.
+- Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `Location_name` = those site names joined by ` / `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
+- Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry; `Notes` of each starts with `separate entry in paper` and names what differs.
+- Fill a column only when the paper's measure matches the column definition. Near-matches go in `Notes` only, with their definition (e.g. time to 80% of maximum flower production; expert or literature estimates).
+- Measure defined as a percentage of a cohort or population flowering: 50% -> `Time to 50% flowering`, 80% -> `Time to 80% flowering`, whatever the paper calls it (e.g. maturity, primary juvenile period).
+- `Time to 50% flowering_repr4` only for: maturation age measured as 50% of a cohort producing viable seed; or the primary-juvenile-period-in-months rule under Time columns.
+- Not yet flowering at the last observation ("not flowering after 4 years"): `>N`, e.g. `>4`.
+- Codes and units: use only definitions printed in the paper. Code not defined: copy it as printed (e.g. fire response `S`), never translate it. Unit not stated for a time value: leave the time columns empty; value and "unit not stated" in `Notes`.
+- Tables may be parsed with one-off code. Then print 3 random parsed rows next to their source table lines and confirm they match before writing them.
+- Ambiguous value: fill best reading, explain in `Notes`. Value printed with uncertainty marks (`c.`, `?`, `approx.`): fill the number without the marks; marks in `Notes`.
+- Ambiguous column (paper does not say which measure a value is, e.g. not stated whether from seed or from resprouts): `Notes` only.
+- Several estimates of one measure for the same species, site and fire (e.g. pooled model in a table and a single-site model in the text): fill the value from the paper's main results table; the others in `Notes`.
 
 ## Broken papers and papers without data
 
@@ -138,7 +157,7 @@ COLUMNS = [
   ("scientific_name", "Genus + ' ' + Species (+ ' *' if introduced)"),
   ("Family", "as printed; empty if not stated"),
   # fire response
-  ("fire_response categorical_surv1", "obligate | resprouter; paper gives both for one species -> paper's code as printed, e.g. 'R / k'"),
+  ("fire_response categorical_surv1", "code defined in paper as killed / fire-sensitive / obligate seeder -> obligate; defined as resprouter -> resprouter; any other code (undefined, minority, mixed, uncertain such as '?r', 'K/r') -> copied exactly as printed, including '?'"),
   ("resprouter_type", "e.g. basal, epicormic, lignotuber; as printed"),
   # time after fire: value as printed; range as 'min-max', e.g. 3.0-4.0; see Time columns
   ("PJP mths", "primary juvenile period, paper reports it in months"),
@@ -146,13 +165,13 @@ COLUMNS = [
   ("Age at first flower production from seed_repr3", "years; time or age to first flowering from seed, other wording"),
   ("secondary_juvenile_period", "paper's term is 'secondary juvenile period'"),
   ("Time to first flower production resprout_repr3a", "years; time to first flowering or reproduction of resprouts, other wording"),
-  ("Time to 50% flowering_repr4", "years; maturation age: time for 50% of an even-aged cohort to produce first viable seed; flowering-based estimates accepted, method in Notes"),
+  ("Time to 50% flowering_repr4", "years; maturation age: time for 50% of an even-aged cohort to produce first viable seed; 50% flowering goes to Time to 50% flowering"),
   ("Time to 50% flowering", "new; time until 50% of individuals flower, as stated in paper; not maturation age"),
   ("Time to 80% flowering", "new; time until 80% of individuals flower"),
   ("Recovery_time", "new; time from fire until recovery as defined in paper; recovery measure in Notes, e.g. 'pre-fire cover'"),
-  ("Time_unit", "new; months | years; unit of secondary_juvenile_period, Time to 50% flowering, Time to 80% flowering, Recovery_time; empty if none filled"),
+  ("Time_unit", "new; days | weeks | months | years; unit of secondary_juvenile_period, Time to 50% flowering, Time to 80% flowering, Recovery_time; empty if none filled"),
   # site
-  ("Location_name", "new; study site name as printed; fill only if Latitude and Longitude both empty"),
+  ("Location_name", "new; study site name as printed; fill only if Latitude and Longitude both empty, or several sites share one set of coordinates"),
   ("Latitude", "decimal degrees, WGS84; south negative; 33° 45' S -> -33.75"),
   ("Longitude", "decimal degrees, WGS84; east positive"),
   ("Rainfall_mm", "rainfall of location, mm; mean annual if stated; other period (e.g. post-fire year) -> period in Notes"),
@@ -168,9 +187,9 @@ COLUMNS = [
 ```
 
 Time columns:
-- Fixed units: `PJP mths` = months; `primary_juvenile_period`, `_repr3`, `_repr3a`, `_repr4` = years. All other time columns: paper's unit, recorded in `Time_unit`.
+- Fixed units: `PJP mths` = months; `primary_juvenile_period`, `_repr3`, `_repr3a`, `_repr4` = years. All other time columns: paper's unit (days, weeks, months or years), recorded in `Time_unit`.
 - Primary juvenile period in months: fill `PJP mths` (months) and `Time to 50% flowering_repr4` (years, no `Notes` entry). In years: fill `primary_juvenile_period` only.
-- `_repr3`, `_repr3a`, `_repr4` value reported in months: divide by 12; write `<column> converted from N months` in `Notes`. No other conversion.
+- Fixed-unit column, value reported in another unit: convert to the column's unit (years = months / 12 = weeks / 52 = days / 365; months = weeks / 4.33 = days / 30.4); write `<column> converted from N <unit>` in `Notes`. No other conversion.
 - Paper gives values under different terms (e.g. age at first flowering and primary juvenile period): each value in its own column. Apart from the months rule above, one value never fills 2 columns.
 - Precision: copy values with exactly the decimals printed in the paper. Do not round or add trailing zeros (`3.0` stays `3.0`; `3` stays `3`). Converted value: paper or source states the value in the target unit -> copy it as printed. Otherwise round to 3 decimals, drop trailing zeros (26 months -> 2.167; 30 months -> 2.5; 48 months -> 4).
 - Ranges: `min-max`, no spaces (`3.0 - 16.0` -> `3.0-16.0`). Open bounds as printed (`>23`, `<2`). Uncertain value: no `?` in the cell; explain in `Notes`.
@@ -184,7 +203,7 @@ CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote an
 `CHECK` tests every rule that needs no reading of the paper: header and column count, spaces, NA rows, `scientific_name`, coordinates, `Location_name`, time formats, decimals, `Time_unit`, `PJP mths` / 12 = repr4, fire season, rainfall, duplicates, `LOG` lines and row counts. It prints a summary, writes a report to `ROOT + "logs/"`, and exits 1 if any check fails.
 
 ```python
-def check_paper(paper):                          # after each paper's LOG line
+def check_paper(paper):                          # after every paper's LOG line, including broken and no_data; never skip
     for attempt in 1..3:
         if run(f"python {CHECK} {slug} --paper '{stem(paper)}'") == 0: return
         fix each failed row from the paper; fix LOG n_rows if rows changed
@@ -198,5 +217,5 @@ After all papers: run `CHECK` without `--paper`, fix errors the same way. After 
 - Read `data/reference/` or another agent's `RESULT` or `LOG`. They contain answers.
 - Edit `TEMPLATE`, `METADATA`, `MD_RAW`, `PDF_DONE`, or anything in `data/papers_test/` outside `md_agents/`.
 - Copy example rows from `TEMPLATE` into `RESULT`.
-- Edit `CHECK`, or write any script file.
+- Edit `CHECK`, or write any script file outside the session scratchpad.
 - Create or write anything in `data/inference/`. Use `data/inference_test/` only.

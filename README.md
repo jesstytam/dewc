@@ -10,7 +10,7 @@ git clone <this_repo>
 
 - System: Ubuntu 26.04.1 LTS
 - LLM: Claude Code via the terminal
-- Languages: Python, shell, R, natural language
+- Languages: Python, R, natural language
 
 # Data collection and cleaning
 
@@ -26,9 +26,37 @@ optimise markdown output after converting PDFs to MDs running `scripts/pipeline/
 
 test run and manual verification of answers
 
-## Steps to trigger agents to extract data (written by Claude, edited by human)
+### important things i included
+- log files
+- reference materials, e.g. metadata, 1 paper that has been extracted already
+- use of code and pseudo-code for deterministic outputs
+- permissions: read, write, which files or folders, etc.
+
+## Steps to trigger agents to extract data (draft written by Claude, edited by human)
 
 Use 1 model per session to prevent results leakage across models during inference times. Start a fresh session for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
+
+### Logging each session
+
+Every pipeline session is logged automatically. A `SessionEnd` hook in `.claude/settings.json` runs `scripts/claude/log_session.py` when a session ends. It acts only on sessions whose prompt starts with `Run Step 0` or `Run Step 1`; other sessions are ignored. For each pipeline session it:
+
+1. copies the session transcript (which records the model of every response) and a snapshot of the step's outputs to `data/inference_test/logs/runs/<step>_<slug>_<session id>/`: `md_opt_log.csv` and `md_opt_check.csv` for Step 0; `<slug>.csv`, `<slug>_log.csv` and `<slug>_check.csv` for Step 1;
+2. adds one line to `data/inference_test/logs/sessions.csv`: date, step (`step0`, `step1-trial` or `step1`), agent, the model IDs that actually answered, Claude Code version, session ID;
+3. fills the token breakdown (`n_requests`, `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens`, `output_tokens`, `total_tokens`): per paper in that paper's line of the step's log, and per step as whole-session totals in `sessions.csv`. The session total minus the papers is setup, checks and wrap-up. Each request is assigned to a paper by the `started` and `finished` times the agent writes in its log. Cache-read tokens make up most of the total because every request re-reads the conversation so far; compare papers mainly on `output_tokens` and `n_requests`.
+
+`models` in `sessions.csv` must show only the expected model ID (e.g. `claude-opus-5-5`). Any other model means the session did not run on the intended model, so its results are not valid for that agent. The agents also record the model themselves: Step 0 in the end comment of each `md_agents/` file, Step 1 in the `_run` line of `<slug>_log.csv`.
+
+Optional: before ending a session, type `/export data/inference_test/logs/runs/<step>_<slug>_<YYYYMMDD-HHMM>.txt` to also keep the conversation as readable text.
+
+If the hook did not run (e.g. the terminal was killed), log the session by hand; running it twice is safe:
+
+```bash
+python scripts/claude/log_session.py --session <session id>
+```
+
+**Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>.csv`, `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
+
+### Steps
 
 1. **Step 0: optimise markdown (Opus).** Compares `data/papers_test/md/` with the PDFs in `data/papers_test/pdf_done/` and writes fixed markdown to `data/papers_test/md_agents/`.
 

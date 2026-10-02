@@ -1,0 +1,8 @@
+level,where,column,check,value
+warning,RESULT line 1503,,"duplicate of line 1502 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 1851,,"duplicate of line 1850 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 1853,,"duplicate of line 1852 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 1864,,"duplicate of line 1863 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 2168,,"duplicate of line 2167 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 2169,,"duplicate of line 2167 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 3609,,"duplicate of line 3608 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
