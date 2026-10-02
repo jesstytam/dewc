@@ -22,8 +22,7 @@ for fi in tqdm(os.listdir(pdf_in_path)):
 
     #text?
     text = first_page.get_text()
-    md_file_path = f"{md_path}/{fi}"
-    md_subpath = f"{md_path}/{Path(fi).stem}"
+    md_marker_path = f"{md_path}/{Path(fi).stem}"
     if text.strip():
         print("     PDF is clean.")
         subprocess.run([
@@ -39,16 +38,15 @@ for fi in tqdm(os.listdir(pdf_in_path)):
             "--output_dir", md_path
         ])
         #move md file into the parent md folder
-        print(f"     Moving {md_file_path} into parent dir.")
-        md_old_path = f"{md_subpath}/{fi}".replace("pdf", "md")
-        shutil.move(md_old_path, md_file_path)
+        md_old_path = f"{md_marker_path}/{Path(fi).stem}.md"
+        print(f"     Moving {md_old_path} into parent dir.")
+        shutil.move(md_old_path, md_path)
         
     #image?
-    images = first_page.get_images()
-    if images:
-        print("     PDF was scanned, using ORC.")
+    else:
+        print("     PDF text not detected, using ORC instead.")
         md = pymupdf4llm.to_markdown(pdf_src)
-        out = Path(f"data/papers_test/md/{fi}.md")
+        out = Path(f"data/papers_test/md/{Path(fi).stem}.md")
         out.write_text(md, encoding="utf-8")
 
     #move pdf
@@ -57,7 +55,7 @@ for fi in tqdm(os.listdir(pdf_in_path)):
 
     #remove new folders
     print("     Removing sub-folder.")
-    if os.path.isdir(md_subpath):
-        shutil.rmtree(md_subpath)
+    if os.path.isdir(md_marker_path):
+        shutil.rmtree(md_marker_path)
 
 print("All done!")
