@@ -3,62 +3,88 @@
 ## Setup
 
 ```python
-AGENTS   = {"opus-5-5": "claude-opus-5-5", "sonnet-5-5": "claude-sonnet-5-5"}   # slug: exact model ID
+AGENTS   = {"opus-5-5": "claude-opus-5-5", "sonnet-5-5": "claude-sonnet-5-5"}   # slug: exact model ID; one session per agent
+slug     = AGENTS key whose model ID is the model running this session   # not in AGENTS: stop and tell the user
 MD_AGENT = "opus-5-5"                            # only this agent runs Step 0
-RUN      = "test"                                # "test" = trial run; "full" = final run
+RUN      = "test"                                # "test" = trial run; "full" = final run; keep "test" until the user says otherwise
 ROOT     = {"test": "data/inference_test/", "full": "data/inference/"}[RUN]   # read references and write results only under ROOT
-TEMPLATE = ROOT + "references/template.csv"      # row 1 = header (28 columns); rows 2+ = worked examples; new columns = NA in examples
+TEMPLATE = ROOT + "references/template.csv"      # row 1 = header (29 columns); rows 2+ = worked examples; new columns = NA in examples
 METADATA = ROOT + "references/metadata.csv"      # trait definitions
 MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output
 PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
 PAPERS   = "data/papers_test/md_agents/*.md"     # extraction input = MD_OPT; pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (26 columns)
-LOG      = ROOT + "results/{slug}_log.csv"       # header: paper,status,n_rows,note
-SCRIPTS  = "scripts/pipeline/"                   # helper scripts for Step 1 only
+RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (27 columns)
+LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,note
+MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,note
+CHECK    = "scripts/claude/check.py"             # fixed check script; run it, never edit it; writes reports to ROOT + "logs/"
 ```
 
 ## Read and write scope
 
 | Step | Read | Write |
 |---|---|---|
-| 0 | `MD_RAW`, `PDF_DONE` | `.md` files in `data/papers_test/md_agents/` only |
-| 1 | `METADATA`, `TEMPLATE`, `PAPERS` | `RESULT`, `LOG`, `SCRIPTS` |
+| 0 | `MD_RAW`, `PDF_DONE` | `.md` files in `data/papers_test/md_agents/`; `MD_LOG`; `CHECK --step0` report |
+| 1 | `METADATA`, `TEMPLATE`, `PAPERS` | `RESULT`, `LOG`; `CHECK` report |
 
-Everything not listed for a step is off limits for that step.
+Everything not listed for a step is off limits for that step. Write no script files; one-off shell or Python commands are allowed.
 
 ## Steps
 
+`print(...)` = write that status line to the chat as plain text, so the user can follow progress. `bar(i, n)` = text progress bar, 20 characters wide: `[######--------------] 2/6 (33%)`.
+
 ```python
-# Step 0: optimise markdown. Run by MD_AGENT only, before Step 1.
-for md in sorted(MD_RAW):
+# Step 0: optimise markdown. Only in a session where slug == MD_AGENT; other sessions never run Step 0.
+print(f"Step 0: optimise markdown | {len(MD_RAW)} papers")
+if not exists(MD_LOG): write(MD_LOG, "paper,status,pdf_pages,n_tables,n_fixes,unresolved,note")
+for i, md in enumerate(sorted(MD_RAW), 1):
     out = MD_OPT(stem(md))
-    if exists(out) and out ends with "<!-- md_opt:": continue   # finished earlier; resume safe
-    if exists(out): overwrite(out, "")           # unfinished file from an interrupted run: restart from page 1
-    pdf = PDF_DONE matching stem(md)             # no matching PDF: copy md unchanged, then add end comment with note
+    if exists(out) and out ends with "<!-- md_opt:":    # finished earlier; resume safe
+        print(f"{bar(i, len(MD_RAW))} {stem(md)} | skipped: already done"); continue
+    if exists(out): overwrite(out, "")           # unfinished file from an interrupted run: restart from page 1; status "restarted" in note
+    pdf = PDF_DONE matching stem(md)
+    if not pdf:                                  # copy md unchanged, add end comment with note
+        copy(md, out); append(out, "<!-- md_opt: ...; note=no matching PDF -->"); log_md(stem(md), "no_pdf", note="no matching PDF")
+        print(f"{bar(i, len(MD_RAW))} {stem(md)} | no_pdf: copied unchanged"); continue
+    print(f"{bar(i, len(MD_RAW))} {stem(md)} | {n_pages(pdf)} pages")
     for batch in pages(pdf, max_pages=10):       # read PDF pages as images; never load a whole long PDF at once
         raw = text in md for the same pages      # match by text on first and last page of batch; md may lack page markers
         append(out, optimise(raw, batch))        # see Markdown optimisation; append only, never overwrite earlier batches
+        print(f"    pages {first}-{last} of {n_pages(pdf)} | tables rebuilt {n_tables}")
     append(out, "<!-- md_opt: model=...; date=YYYY-MM-DD; md_sha256=...; pdf_sha256=...; pdf_pages=N; fixes=...; unresolved=... -->")
+    log_md(stem(md), "done", n_pages(pdf), n_tables, n_fixes, unresolved, note)   # 1 line per finished paper; quote cells with commas
+    print(f"    done | fixes {n_fixes} | unresolved {n_unresolved}")
+run(f"python {CHECK} --step0")                  # see Checks
+print(f"Step 0 done | {n_done} optimised, {n_skipped} skipped")
 
-# Step 1: extract. Each agent works independently.
-for slug, model in AGENTS.items():
-    if not exists(RESULT):
-        write(RESULT, [name for name, rule in COLUMNS])   # header only; do not copy example rows
-        write(LOG, "paper,status,n_rows,note")
-    log("_run", "start", 0, f"model={model}; date=YYYY-MM-DD; git={git rev-parse HEAD}; papers_sha256=...")   # 1 line per run
-    read(METADATA); read(TEMPLATE, rows=2..6 + first 3 rows with PJP mths filled)   # definitions + value format; TEMPLATE column order differs
-    for paper in sorted(PAPERS):
-        if paper in LOG: continue                # finished in an earlier run
-        remove rows of paper from RESULT         # leftovers from an interrupted run; state count in LOG note
-        if broken(paper):                        # see Broken papers
-            append(RESULT, na_row(paper, reason)); log(paper, "broken", 1, reason); continue
-        for batch in pages(paper, max_pages=10): # never load a whole long paper at once
-            append(RESULT, extract(batch))       # write after every batch
-        if n_rows == 0:                          # readable, but no relevant data
-            append(RESULT, na_row(paper, reason)); log(paper, "no_data", 1, reason); continue
-        log(paper, "done", n_rows, problems)
-    check(RESULT)                                # see Checks
+# Step 1: extract. One session per agent; this session handles only its own slug. Agents work independently.
+if any MD_RAW file has no finished MD_OPT file: stop; tell the user to run Step 0 first
+print(f"Step 1: extract | agent {slug} | {len(PAPERS)} papers")
+if not exists(RESULT):
+    write(RESULT, [name for name, rule in COLUMNS])   # header only; do not copy example rows
+    write(LOG, "paper,status,n_rows,note")
+log("_run", "start", 0, f"model={AGENTS[slug]}; date=YYYY-MM-DD; git={git rev-parse HEAD}; papers_sha256=...")   # 1 line per run
+read(METADATA); read(TEMPLATE, rows=2..6 + first 3 rows with PJP mths filled)   # definitions + value format; TEMPLATE column order differs
+for i, paper in enumerate(sorted(PAPERS), 1):
+    if paper in LOG:                         # finished in an earlier run
+        print(f"{bar(i, len(PAPERS))} {stem(paper)} | skipped: in LOG"); continue
+    remove rows of paper from RESULT         # leftovers from an interrupted run (match by File_name); state count in LOG note
+    if broken(paper):                        # see Broken papers
+        append(RESULT, na_row(paper, reason)); log(paper, "broken", 1, reason)
+        print(f"{bar(i, len(PAPERS))} {stem(paper)} | broken: {reason}"); check_paper(paper); continue
+    print(f"{bar(i, len(PAPERS))} {stem(paper)} | {n_pages(paper)} pages")
+    for batch in pages(paper, max_pages=10): # never load a whole long paper at once
+        append(RESULT, extract(batch))       # write after every batch
+        print(f"    pages {first}-{last} of {n_pages(paper)} | rows {n_rows}")
+    if n_rows == 0:                          # readable, but no relevant data
+        append(RESULT, na_row(paper, reason)); log(paper, "no_data", 1, reason)
+        print(f"    no_data: {reason}"); check_paper(paper); continue
+    log(paper, "done", n_rows, problems)
+    print(f"    done | rows {n_rows} | problems {len(problems)}")
+    check_paper(paper)
+print(f"Checks | agent {slug} | all papers")
+run(f"python {CHECK} {slug}")                # see Checks
+print(f"Step 1 done | agent {slug} | papers {n_done} done, {n_broken} broken, {n_no_data} no_data | rows {total_rows} | failed checks {n_failed}")
 ```
 
 `papers_sha256` = sha256 of the sorted `sha256sum` output of all `PAPERS` files.
@@ -94,6 +120,7 @@ Every paper gets at least 1 row in `RESULT`. Write an NA row when:
 na_row = {name: "NA" for name, rule in COLUMNS}  # exactly 1 NA row per paper
 na_row["Notes"]  = reason                        # e.g. "empty markdown: PDF conversion failed"; "no data: review paper, no species values"
 na_row["Source"] = citation if readable else stem(paper)
+na_row["File_name"] = stem(paper)
 ```
 
 Paper breaks partway: keep rows already extracted, add the 1 NA row, continue with next paper.
@@ -136,6 +163,7 @@ COLUMNS = [
   # record
   ("Notes", "assumptions, ambiguities, page number of source table"),
   ("Source", "full citation of the paper, same string on every row of that paper"),
+  ("File_name", "new; file stem of the paper in PAPERS, e.g. 'Kubiak Cunn 2009'; same on every row of that paper"),
 ]
 ```
 
@@ -147,30 +175,28 @@ Time columns:
 - Precision: copy values with exactly the decimals printed in the paper. Do not round or add trailing zeros (`3.0` stays `3.0`; `3` stays `3`). Converted value: paper or source states the value in the target unit -> copy it as printed. Otherwise round to 3 decimals, drop trailing zeros (26 months -> 2.167; 30 months -> 2.5; 48 months -> 4).
 - Ranges: `min-max`, no spaces (`3.0 - 16.0` -> `3.0-16.0`). Open bounds as printed (`>23`, `<2`). Uncertain value: no `?` in the cell; explain in `Notes`.
 - Variable-unit columns in one row use different units: `Time_unit` = unit of most values; list each exception in `Notes`, e.g. `Recovery_time in years`.
-- Omit the 2 unnamed `TEMPLATE` columns (20 and 21). All 26 named columns stay in `RESULT`.
+- Omit the 2 unnamed `TEMPLATE` columns (20 and 21). All 27 named columns stay in `RESULT`.
 
 CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell (`TEMPLATE` has some; do not copy them).
 
 ## Checks
 
+`CHECK` tests every rule that needs no reading of the paper: header and column count, spaces, NA rows, `scientific_name`, coordinates, `Location_name`, time formats, decimals, `Time_unit`, `PJP mths` / 12 = repr4, fire season, rainfall, duplicates, `LOG` lines and row counts. It prints a summary, writes a report to `ROOT + "logs/"`, and exits 1 if any check fails.
+
 ```python
-for row in RESULT:
-    assert n_columns(row) == 26
-    assert row["Source"]
-    if row["Genus"] == "NA": assert row["Notes"]; continue    # NA row: broken or no_data paper
-    assert row["Genus"] and row["Species"]
-    assert -44 <= row["Latitude"] <= -10 and 112 <= row["Longitude"] <= 154    # if filled
-    assert row["Location_name"] == "" or (row["Latitude"] == "" and row["Longitude"] == "")
-    assert row["Time_unit"] in {"months", "years"} if any variable-unit time column filled
-    assert every time value matches r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?"    # if filled
-assert no duplicate (scientific_name, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, Source)
-assert every paper in PAPERS has >= 1 row in RESULT and 1 line in LOG
+def check_paper(paper):                          # after each paper's LOG line
+    for attempt in 1..3:
+        if run(f"python {CHECK} {slug} --paper '{stem(paper)}'") == 0: return
+        fix each failed row from the paper; fix LOG n_rows if rows changed
+    log the remaining errors in the paper's LOG note
 ```
 
-Failed check: fix row from the paper, or log the problem. Never delete a row silently.
+After all papers: run `CHECK` without `--paper`, fix errors the same way. After Step 0: run `CHECK --step0`, fix each failed `MD_OPT` file from its PDF. Warnings: look, fix if real. Never delete a row silently.
 
 ## Do not
 
 - Read `data/reference/` or another agent's `RESULT` or `LOG`. They contain answers.
 - Edit `TEMPLATE`, `METADATA`, `MD_RAW`, `PDF_DONE`, or anything in `data/papers_test/` outside `md_agents/`.
 - Copy example rows from `TEMPLATE` into `RESULT`.
+- Edit `CHECK`, or write any script file.
+- Create or write anything in `data/inference/`. Use `data/inference_test/` only.
