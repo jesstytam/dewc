@@ -197,7 +197,7 @@ Time columns:
 - Variable-unit columns in one row use different units: `Time_unit` = unit of most values; list each exception in `Notes`, e.g. `Recovery_time in years`.
 - Omit the 2 unnamed `TEMPLATE` columns (20 and 21). All 27 named `TEMPLATE` columns stay in `RESULT`, plus `native_status` (not in `TEMPLATE`): 28 columns.
 
-CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell (`TEMPLATE` has some; do not copy them).
+CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell (`TEMPLATE` has some; do not copy them). Dashes: ASCII hyphen `-` in every cell, including names, codes and `Source` (en dash `–` or em dash `—` -> `-`).
 
 ## Checks
 

@@ -5,7 +5,7 @@ Usage (from the repo root):
     python scripts/claude/check.py <slug>                  # after all papers in Step 1
     python scripts/claude/check.py --step0                 # after Step 0
 
-Only checks that need no reading of the paper. Never edits RESULT or LOG.
+Only checks that need no reading of the paper; column rules are in references/metadata.csv. Never edits RESULT or LOG.
 Writes a report to data/inference_test/logs/{slug}_check.csv (or md_opt_check.csv)
 and exits 1 if any check fails.
 """
@@ -54,6 +54,13 @@ JUNK = {
     "span tag": re.compile(r"<span id="),
     "br tag": re.compile(r"<br\s*/?>"),
 }
+DASH_RE = re.compile(r"[\u2013\u2014]")  # en dash, em dash
+NAME_MARK_RE = re.compile(r"[?*]")
+RANK_RE = re.compile(r"[a-z]+\. \S")  # subsp. / var. / f. / cv. ... + name
+RANK_IN_SPECIES_RE = re.compile(r"\b(subsp|ssp|var|forma|f)\.?\s")
+CODE_SPACE_RE = re.compile(r"\s[?/;,)]|[?/;,(]\s")
+APA_RE = re.compile(r"[^()]+ \(\d{4}[a-z]?\)\. .+")
+NOTES_PAGE_RE = re.compile(r"\b(page|pg\.?|pp\.?)\s*\d", re.I)
 LIGATURE_RE = re.compile(r"\b\w*(fi|fl) (re|res|rst|eld|elds|tted|ne|nal|nd|ve|gure|gures|ower|owers|owering|owered)\b")
 
 
@@ -137,6 +144,8 @@ def check_row(line, row, report):
     for col, value in row.items():
         if value != value.strip():
             report.error(where, col, "leading or trailing space", value)
+        if DASH_RE.search(value):
+            report.error(where, col, "en or em dash; use ASCII hyphen '-'", value)
     for col in ("Source", "File_name"):
         if not row[col] or row[col] == "NA":
             report.error(where, col, "empty or NA")
@@ -157,10 +166,31 @@ def check_row(line, row, report):
             report.error(where, col, "empty")
 
     name = f"{row['Genus']} {row['Species']}"
-    if not row["scientific_name"].startswith(name):
-        report.error(where, "scientific_name", f"must start with '{name}'", row["scientific_name"])
-    if (row["subsp"] == "*") != row["scientific_name"].endswith(" *"):
-        report.error(where, "scientific_name", "' *' suffix must match subsp == '*'", row["scientific_name"])
+    if row["scientific_name"] != name:
+        report.error(where, "scientific_name", f"must be Genus + ' ' + Species: '{name}'", row["scientific_name"])
+    for col in ("Genus", "Species", "subsp"):
+        if NAME_MARK_RE.search(row[col]):
+            report.error(where, col, "remove '?' or '*' from the name; printed form in Notes", row[col])
+    if row["Genus"] and not re.fullmatch(r"[A-Z][a-z]+", row["Genus"]):
+        report.error(where, "Genus", "one capitalised word, no marks", row["Genus"])
+    if RANK_IN_SPECIES_RE.search(row["Species"]):
+        report.error(where, "Species", "rank word in Species; rank and name go in subsp", row["Species"])
+    elif row["Species"] and not re.fullmatch(r"[a-z][a-z-]*", row["Species"]):
+        report.warn(where, "Species", "not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')", row["Species"])
+    if row["subsp"] and not RANK_RE.match(row["subsp"]):
+        report.error(where, "subsp", "rank word + name, e.g. 'subsp. buxifolia', 'var. lanceolatus', 'f. glauca'", row["subsp"])
+    if row["native_status"] and not re.fullmatch(r"[a-z]+( [a-z]+)*", row["native_status"]):
+        report.error(where, "native_status", "paper's term in lower case, e.g. native, exotic", row["native_status"])
+    if CODE_SPACE_RE.search(row["fire_response categorical_surv1"]):
+        report.error(where, "fire_response categorical_surv1", "space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", row["fire_response categorical_surv1"])
+    family = row["Family"]
+    if family and (family.isupper() or not re.match(r"[A-Z][a-z]", family)):
+        report.warn(where, "Family", "only the first letter capitalised, e.g. Myrtaceae", family)
+    if row["Source"] != row["File_name"] and not APA_RE.fullmatch(row["Source"]):
+        report.warn(where, "Source", "does not look like APA: 'Author, A. B. (YYYY). Title. ...'", row["Source"])
+    m = NOTES_PAGE_RE.search(row["Notes"])
+    if m:
+        report.warn(where, "Notes", "page reference: write 'p. N' (printed page) or 'PDF p. N'", m.group(0))
 
     lat, lon = row["Latitude"], row["Longitude"]
     for col, value, lo, hi in (("Latitude", lat, -44, -10), ("Longitude", lon, 112, 154)):
