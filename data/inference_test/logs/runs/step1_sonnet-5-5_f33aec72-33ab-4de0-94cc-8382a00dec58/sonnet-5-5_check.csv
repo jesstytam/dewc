@@ -1,0 +1,32 @@
+level,where,column,check,value
+warning,RESULT line 85,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 92,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 502,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 503,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 504,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 1005,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",(hybrid)
+warning,RESULT line 1060,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1069,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1070,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1071,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1182,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
+warning,RESULT line 1183,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
+warning,RESULT line 1184,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
+warning,RESULT line 1197,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species A
+warning,RESULT line 1198,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species A
+warning,RESULT line 1249,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1679,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. B
+warning,RESULT line 1844,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
+warning,RESULT line 1932,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
+warning,RESULT line 1957,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
+warning,RESULT line 2370,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'Rocky Creek'
+warning,RESULT line 2862,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. B
+warning,RESULT line 3048,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Harden (1994)
+warning,RESULT line 3088,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Powell (1992)
+warning,RESULT line 3249,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
+warning,RESULT line 1762,,"duplicate of line 1761 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 1764,,"duplicate of line 1763 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 1775,,"duplicate of line 1774 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 3520,,"duplicate of line 3519 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 3731,,"duplicate of line 3730 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 3839,,"duplicate of line 3838 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",

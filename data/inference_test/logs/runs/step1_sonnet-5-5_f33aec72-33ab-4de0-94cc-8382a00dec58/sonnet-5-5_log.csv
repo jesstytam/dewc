@@ -1,0 +1,8 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-06T05:36:32Z,,model=claude-sonnet-5-5; date=2026-10-06; git=9234708f11f450cb0a27307606874b0cae203dbd; claude_md_sha256=c09218e9bc730ebf2e26a9818084df0fdb581d2ea54acda6d9c8f12131cb13cd; papers_sha256=74bf8ee339ceb629570bd195f5734681613bb2e60a53167964b38b963c9d39b8,,,,,,
+Benson 1985 Cunninghamia_primary juvenile period,done,65,2026-10-06T05:36:35Z,2026-10-06T05:37:27Z,,3,6,21448,186084,5772,213310
+Knox & Clarke 2004 Cunninghamia_primary juvenile period,done,33,2026-10-06T05:37:31Z,2026-10-06T05:38:14Z,,4,8,13762,331808,5183,350761
+Kubiak Cunn 2009,done,1306,2026-10-06T05:38:18Z,2026-10-06T05:41:23Z,"66 species skipped: no fire response and no usable flowering time (only fruiting, seedling or source-ambiguous underlined values kept in no row)",10,20,66291,1276573,20570,1363454
+Muir et al 2014 AustJBot_obligate seeder juvenile,done,8,2026-10-06T05:41:28Z,2026-10-06T05:42:03Z,,3,6,24276,510919,3685,538886
+Ooi 2019 JEnvManagement_fire seasonality,done,5,2026-10-06T05:42:07Z,2026-10-06T05:44:19Z,,2,4,444,391222,5359,397029
+nswfrrd_v1.3a_pdfvers_sppdata,done,2699,2026-10-06T05:44:34Z,2026-10-06T05:45:54Z,no citation printed in file: Source is the file stem; Primary juvenile and Secondary juvenile period units not stated: values in Notes only; 6 taxa listed twice kept as separate entries,6,12,23207,1330602,8744,1362565

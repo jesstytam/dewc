@@ -46,7 +46,7 @@ DUP_KEY = ["scientific_name", "subsp", "Latitude", "Longitude", "Location_name",
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
-SEASON_RE = re.compile(r"(Summer|Autumn|Winter|Spring)(/(Summer|Autumn|Winter|Spring))*")
+SEASON_RE = re.compile(r"(Summer|Autumn|Winter|Spring)(; (Summer|Autumn|Winter|Spring))*")
 PAGE_BREAK = "<!-- PAGE BREAK -->"
 UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 JUNK = {
@@ -223,7 +223,10 @@ def check_row(line, row, report):
 
     season = row["Fire_season_categorical"]
     if season and not SEASON_RE.fullmatch(season):
-        report.error(where, "Fire_season_categorical", "Summer|Autumn|Winter|Spring, joined by '/'", season)
+        report.error(where, "Fire_season_categorical", "Summer|Autumn|Winter|Spring, joined by '; '", season)
+    for col in ("Location_name", "resprouter_type"):
+        if re.search(r"\s/\s", row[col]) or (col == "resprouter_type" and "/" in row[col]):
+            report.warn(where, col, "several values: join with '; ' (keep '/' only if printed inside one value)", row[col])
     rain = row["Rainfall_mm"]
     if rain and not re.fullmatch(r"\d+(\.\d+)?(-\d+(\.\d+)?)?", rain):
         report.error(where, "Rainfall_mm", "not a number or min-max range", rain)

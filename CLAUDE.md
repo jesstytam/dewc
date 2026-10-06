@@ -9,7 +9,7 @@ MD_AGENT = "opus-5-5"                            # only this agent runs Step 0
 RUN      = "test"                                # "test" = trial run; "full" = final run; keep "test" until the user says otherwise
 ROOT     = {"test": "data/inference_test/", "full": "data/inference/"}[RUN]   # read references and write results only under ROOT
 TEMPLATE = ROOT + "references/template.csv"      # row 1 = header (29 columns); rows 2+ = worked examples; new columns = NA in examples
-METADATA = ROOT + "references/metadata.csv"      # column dictionary: 1 row per RESULT column; type, unit, allowed values, trait code, definition, rule, example
+METADATA = ROOT + "references/metadata.csv"      # column dictionary: 1 row per RESULT column; type, unit, allowed values, trait code, definition, rule, example; ' | ' separates alternatives in allowed_values and example
 MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output
 PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
@@ -117,7 +117,7 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 - Several named sites share one set of coordinates: still 1 row per site; site name in `Location_name`, coordinates kept. Never merge sites into 1 row with per-site values in `Notes`.
 - Site names: copy the name exactly as first printed in the paper's methods or study-site section. Do not add words (e.g. park or region name) and do not remove words. Map table codes (e.g. column `A`) to that name. Same site = same string on every row.
 - A row needs at least 1 value in a fire response or time column. Values kept only in `Notes` (near-matches, unreliable or unitless values) never create a row on their own.
-- Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `Location_name` = those site names joined by ` / `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
+- Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `Location_name` = those site names joined by `; `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
 - Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry; `Notes` of each starts with `separate entry in paper` and names what differs.
 - Fill a column only when the paper's measure matches the column definition. Near-matches go in `Notes` only, with their definition (e.g. time to 80% of maximum flower production; expert or literature estimates).
 - Measure defined as a percentage of a cohort or population flowering: 50% -> `Time to 50% flowering`, 80% -> `Time to 80% flowering`, whatever the paper calls it (e.g. maturity, primary juvenile period).
@@ -197,7 +197,7 @@ Time columns:
 - Variable-unit columns in one row use different units: `Time_unit` = unit of most values; list each exception in `Notes`, e.g. `Recovery_time in years`.
 - Omit the 2 unnamed `TEMPLATE` columns (20 and 21). All 27 named `TEMPLATE` columns stay in `RESULT`, plus `native_status` (not in `TEMPLATE`): 28 columns.
 
-CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell (`TEMPLATE` has some; do not copy them). Dashes: ASCII hyphen `-` in every cell, including names, codes and `Source` (en dash `–` or em dash `—` -> `-`).
+CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell (`TEMPLATE` has some; do not copy them). Several values in one cell: separate with `; ` (semicolon, space), e.g. `Autumn; Spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Dashes: ASCII hyphen `-` in every cell, including names, codes and `Source` (en dash `–` or em dash `—` -> `-`).
 
 ## Checks
 
