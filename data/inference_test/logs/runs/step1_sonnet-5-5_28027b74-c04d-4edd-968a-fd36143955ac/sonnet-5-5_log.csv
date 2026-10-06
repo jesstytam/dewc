@@ -1,0 +1,8 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-06T03:12:58Z,,model=claude-sonnet-5-5; date=2026-10-06; git=2cc52fe4c2500ecfb6299060a2c71c937d3e70f3; claude_md_sha256=b014b8b6ed841fd0e11c7a7e0f9cd97d6185d1963898a9bb1f23ade5c8418e97; papers_sha256=74bf8ee339ceb629570bd195f5734681613bb2e60a53167964b38b963c9d39b8,,,,,,
+Benson 1985 Cunninghamia_primary juvenile period,done,65,2026-10-06T03:13:02Z,2026-10-06T03:13:55Z,,5,10,23402,344143,6554,374109
+Knox & Clarke 2004 Cunninghamia_primary juvenile period,done,33,2026-10-06T03:13:57Z,2026-10-06T03:14:30Z,,4,8,17019,348946,4091,370064
+Kubiak Cunn 2009,done,1306,2026-10-06T03:14:33Z,2026-10-06T03:17:30Z,68 Appendix 1 species without a row: only underlined first flowering (seed vs resprout unclear) or fruiting/seedling values and no fire response,11,22,69598,1443467,21435,1534522
+Muir et al 2014 AustJBot_obligate seeder juvenile,done,8,2026-10-06T03:17:34Z,2026-10-06T03:18:04Z,,3,6,17808,520162,3473,541449
+Ooi 2019 JEnvManagement_fire seasonality,done,13,2026-10-06T03:18:04Z,2026-10-06T03:18:58Z,,5,10,27501,976720,7423,1011654
+nswfrrd_v1.3a_pdfvers_sppdata,done,2699,2026-10-06T03:18:58Z,2026-10-06T03:20:00Z,no codes defined or units stated in paper so fire response codes copied as printed and time values only in Notes; no citation printed so Source = file stem,5,10,19875,1107385,8113,1135383

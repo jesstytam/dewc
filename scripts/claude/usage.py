@@ -9,9 +9,12 @@ subagent transcripts in <session>/subagents/) and the step's log. Each API respo
 assigned to the paper whose started-finished window in the log contains its timestamp;
 responses outside every window (setup, final checks, wrap-up) go to "_other".
 
+A session can run several steps (e.g. Step 0, then Step 1). Then pass --window with the
+step's part of the session (log_session.py does this); only responses inside it count.
+
 Fills the token columns (USAGE_COLS) of each paper's line in the step's log, and of the
-session's line in logs/sessions.csv (whole-session totals, including _other). Adds the
-columns to a file's header if missing. Changes no other cells.
+session's line for this step in logs/sessions.csv (totals for the window, including _other).
+Adds the columns to a file's header if missing. Changes no other cells.
 """
 
 import argparse
@@ -66,14 +69,15 @@ def log_path(step, slug):
     return LOGS / ("md_opt_log.csv" if step == "step0" else f"{slug}_log.csv")
 
 
-def fill(path, key, values):
-    """Write USAGE_COLS values into the rows of a CSV whose `key` column matches."""
+def fill(path, keys, values):
+    """Write USAGE_COLS values into the rows of a CSV whose `keys` columns (as a tuple) match."""
     rows = list(csv.DictReader(open(path, encoding="utf-8", newline="")))
     header = next(csv.reader(open(path, encoding="utf-8", newline="")))
     header += [c for c in USAGE_COLS if c not in header]
     for row in rows:
-        if row[key] in values:
-            row.update({c: values[row[key]][c] for c in USAGE_COLS})
+        key = tuple(row.get(k, "") for k in keys)
+        if key in values:
+            row.update({c: values[key][c] for c in USAGE_COLS})
     with open(path, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=header, restval="", lineterminator="\n")
         w.writeheader()
@@ -100,12 +104,19 @@ def main():
     parser.add_argument("--step", required=True, help="step0, step1-trial or step1")
     parser.add_argument("--slug", required=True, help="agent slug, e.g. opus-5-5")
     parser.add_argument("--session", required=True, help="session id or path to its .jsonl transcript")
+    parser.add_argument("--window", help="START,END (ISO times; END may be empty = session end): count only responses in this part of the session")
     args = parser.parse_args()
+    since = until = None
+    if args.window:
+        start, _, end = args.window.partition(",")
+        since, until = parse_time(start), parse_time(end) if end else None
 
     main_file, files = transcript_files(args.session)
     papers = windows(args.step, args.slug)
     totals = {}
     for r in responses(files):
+        if (since and r["time"] < since) or (until and r["time"] >= until):
+            continue
         paper = next((p for p, start, end in papers if start <= r["time"] <= end), "_other")
         row = totals.setdefault(paper, {"n_requests": 0, "models": set(), **{t: 0 for t in TOKENS}})
         row["n_requests"] += 1
@@ -118,12 +129,15 @@ def main():
     grand = {c: sum(row[c] for row in totals.values()) for c in USAGE_COLS}
     grand["models"] = set().union(*(row["models"] for row in totals.values()))
 
-    fill(log_path(args.step, args.slug), "paper", {p: totals[p] for p, _, _ in papers if p in totals})
+    if not totals:
+        sys.exit(f"no responses for session {main_file.stem} in window {args.window}")
+    fill(log_path(args.step, args.slug), ["paper"], {(p,): totals[p] for p, _, _ in papers if p in totals})
     sessions = LOGS / "sessions.csv"
-    if sessions.exists() and any(r["session_id"] == main_file.stem for r in csv.DictReader(open(sessions, encoding="utf-8", newline=""))):
-        fill(sessions, "session_id", {main_file.stem: grand})
+    key = (main_file.stem, args.step)
+    if sessions.exists() and any((r["session_id"], r["step"]) == key for r in csv.DictReader(open(sessions, encoding="utf-8", newline=""))):
+        fill(sessions, ["session_id", "step"], {key: grand})
     else:
-        print(f"    warning: session {main_file.stem} not in {sessions.relative_to(REPO)}; session totals not written")
+        print(f"    warning: session {main_file.stem} ({args.step}) not in {sessions.relative_to(REPO)}; session totals not written")
 
     print(f"usage {args.step} | {args.slug} | session {main_file.stem} | models {'|'.join(sorted(grand['models']))}")
     order = [p for p, _, _ in papers if p in totals] + (["_other"] if "_other" in totals else [])
