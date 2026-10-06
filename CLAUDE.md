@@ -9,12 +9,12 @@ MD_AGENT = "opus-5-5"                            # only this agent runs Step 0
 RUN      = "test"                                # "test" = trial run; "full" = final run; keep "test" until the user says otherwise
 ROOT     = {"test": "data/inference_test/", "full": "data/inference/"}[RUN]   # read references and write results only under ROOT
 TEMPLATE = ROOT + "references/template.csv"      # row 1 = header (29 columns); rows 2+ = worked examples; new columns = NA in examples
-METADATA = ROOT + "references/metadata.csv"      # trait definitions
+METADATA = ROOT + "references/metadata.csv"      # column dictionary: 1 row per RESULT column; type, unit, allowed values, trait code, definition, rule, example
 MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output
 PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
 PAPERS   = "data/papers_test/md_agents/*.md"     # extraction input = MD_OPT; pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (27 columns)
+RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (28 columns)
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
@@ -67,7 +67,7 @@ if not exists(RESULT):
     write(RESULT, [name for name, rule in COLUMNS])   # header only; do not copy example rows
     write(LOG, "paper,status,n_rows,started,finished,note," + TOKEN_COLS)
 log("_run", "start", 0, now_utc(), "", f"model={AGENTS[slug]}; date=YYYY-MM-DD; git={git rev-parse HEAD}; claude_md_sha256=...; papers_sha256=...")   # 1 line per run
-read(METADATA); read(TEMPLATE, rows=2..6 + first 3 rows with PJP mths filled)   # definitions + value format; TEMPLATE column order differs
+read(METADATA); read(TEMPLATE, rows=2..6 + first 3 rows with PJP mths filled)   # column rules + value format; TEMPLATE column order differs
 for i, paper in enumerate(sorted(PAPERS), 1):
     if paper in LOG:                         # finished in an earlier run
         print(f"{bar(i, len(PAPERS))} {stem(paper)} | skipped: in LOG"); continue
@@ -115,7 +115,7 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 - Table continues into the next batch: reuse its column headers from the previous batch.
 - Carry site and fire values (coordinates, location name, rainfall, fire season, severity, type) from the paper's methods onto every row of that paper. Several sites or fires: match each species row to its own site and fire.
 - Several named sites share one set of coordinates: still 1 row per site; site name in `Location_name`, coordinates kept. Never merge sites into 1 row with per-site values in `Notes`.
-- Site names: use the name as first printed in the paper's methods or study-site section; map table codes (e.g. column `A`) to that name. Same site = same string on every row.
+- Site names: copy the name exactly as first printed in the paper's methods or study-site section. Do not add words (e.g. park or region name) and do not remove words. Map table codes (e.g. column `A`) to that name. Same site = same string on every row.
 - A row needs at least 1 value in a fire response or time column. Values kept only in `Notes` (near-matches, unreliable or unitless values) never create a row on their own.
 - Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `Location_name` = those site names joined by ` / `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
 - Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry; `Notes` of each starts with `separate entry in paper` and names what differs.
@@ -146,43 +146,44 @@ Paper breaks partway: keep rows already extracted, add the 1 NA row, continue wi
 
 ## Columns
 
-Order in `RESULT`, grouped by similarity. Names match `TEMPLATE` exactly. Columns marked `new` are NA in `TEMPLATE` examples; fill them in `RESULT` when stated.
+Order in `RESULT`, grouped by similarity. Names match `TEMPLATE` exactly. Columns marked `new` are NA in `TEMPLATE` examples; fill them in `RESULT` when stated. Each column's definition, unit, allowed values and fill rule are in `METADATA` (same names, same order); follow them as part of these rules.
 
 ```python
 COLUMNS = [
   # taxon
-  ("Genus", "as printed in paper"),
-  ("Species", "as printed in paper"),
-  ("subsp", "subspecies or variety name; '*' if species introduced / exotic / weed"),
-  ("scientific_name", "Genus + ' ' + Species (+ ' *' if introduced)"),
-  ("Family", "as printed; empty if not stated"),
+  ("Genus", ""),
+  ("Species", ""),
+  ("subsp", ""),
+  ("scientific_name", ""),
+  ("native_status", "new"),
+  ("Family", ""),
   # fire response
-  ("fire_response categorical_surv1", "code defined in paper as killed / fire-sensitive / obligate seeder -> obligate; defined as resprouter -> resprouter; any other code (undefined, minority, mixed, uncertain such as '?r', 'K/r') -> copied exactly as printed, including '?'"),
-  ("resprouter_type", "e.g. basal, epicormic, lignotuber; as printed"),
-  # time after fire: value as printed; range as 'min-max', e.g. 3.0-4.0; see Time columns
-  ("PJP mths", "primary juvenile period, paper reports it in months"),
-  ("primary_juvenile_period", "primary juvenile period, paper reports it in years"),
-  ("Age at first flower production from seed_repr3", "years; time or age to first flowering from seed, other wording"),
-  ("secondary_juvenile_period", "paper's term is 'secondary juvenile period'"),
-  ("Time to first flower production resprout_repr3a", "years; time to first flowering or reproduction of resprouts, other wording"),
-  ("Time to 50% flowering_repr4", "years; maturation age: time for 50% of an even-aged cohort to produce first viable seed; 50% flowering goes to Time to 50% flowering"),
-  ("Time to 50% flowering", "new; time until 50% of individuals flower, as stated in paper; not maturation age"),
-  ("Time to 80% flowering", "new; time until 80% of individuals flower"),
-  ("Recovery_time", "new; time from fire until recovery as defined in paper; recovery measure in Notes, e.g. 'pre-fire cover'"),
-  ("Time_unit", "new; days | weeks | months | years; unit of secondary_juvenile_period, Time to 50% flowering, Time to 80% flowering, Recovery_time; empty if none filled"),
+  ("fire_response categorical_surv1", ""),
+  ("resprouter_type", ""),
+  # time after fire
+  ("PJP mths", ""),
+  ("primary_juvenile_period", ""),
+  ("Age at first flower production from seed_repr3", ""),
+  ("secondary_juvenile_period", ""),
+  ("Time to first flower production resprout_repr3a", ""),
+  ("Time to 50% flowering_repr4", ""),
+  ("Time to 50% flowering", "new"),
+  ("Time to 80% flowering", "new"),
+  ("Recovery_time", "new"),
+  ("Time_unit", "new"),
   # site
-  ("Location_name", "new; study site name as printed; fill only if Latitude and Longitude both empty, or several sites share one set of coordinates"),
-  ("Latitude", "decimal degrees, WGS84; south negative; 33° 45' S -> -33.75"),
-  ("Longitude", "decimal degrees, WGS84; east positive"),
-  ("Rainfall_mm", "rainfall of location, mm; mean annual if stated; other period (e.g. post-fire year) -> period in Notes"),
+  ("Location_name", "new"),
+  ("Latitude", ""),
+  ("Longitude", ""),
+  ("Rainfall_mm", ""),
   # fire
-  ("Fire_type", "new; wildfire | prescribed burn | experimental burn | as printed"),
-  ("Fire_season_categorical", "Summer | Autumn | Winter | Spring; several seasons joined by '/', e.g. Autumn/Spring; derive from fire date if only date given, note in Notes"),
-  ("Fire_severity_categorical", "Low | Moderate | Moderate-High | High; other scale -> as printed"),
+  ("Fire_type", "new"),
+  ("Fire_season_categorical", ""),
+  ("Fire_severity_categorical", ""),
   # record
-  ("Notes", "assumptions, ambiguities, page number of source table"),
-  ("Source", "full citation of the paper, same string on every row of that paper"),
-  ("File_name", "new; file stem of the paper in PAPERS, e.g. 'Kubiak Cunn 2009'; same on every row of that paper"),
+  ("Notes", ""),
+  ("Source", ""),
+  ("File_name", "new"),
 ]
 ```
 
@@ -194,7 +195,7 @@ Time columns:
 - Precision: copy values with exactly the decimals printed in the paper. Do not round or add trailing zeros (`3.0` stays `3.0`; `3` stays `3`). Converted value: paper or source states the value in the target unit -> copy it as printed. Otherwise round to 3 decimals, drop trailing zeros (26 months -> 2.167; 30 months -> 2.5; 48 months -> 4).
 - Ranges: `min-max`, no spaces (`3.0 - 16.0` -> `3.0-16.0`). Open bounds as printed (`>23`, `<2`). Uncertain value: no `?` in the cell; explain in `Notes`.
 - Variable-unit columns in one row use different units: `Time_unit` = unit of most values; list each exception in `Notes`, e.g. `Recovery_time in years`.
-- Omit the 2 unnamed `TEMPLATE` columns (20 and 21). All 27 named columns stay in `RESULT`.
+- Omit the 2 unnamed `TEMPLATE` columns (20 and 21). All 27 named `TEMPLATE` columns stay in `RESULT`, plus `native_status` (not in `TEMPLATE`): 28 columns.
 
 CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell (`TEMPLATE` has some; do not copy them).
 
