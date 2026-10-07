@@ -57,7 +57,8 @@ JUNK = {
 DASH_RE = re.compile(r"[\u2013\u2014]")  # en dash, em dash
 NAME_MARK_RE = re.compile(r"[?*]")
 RANK_RE = re.compile(r"[a-z]+\. \S")  # subsp. / var. / f. / cv. ... + name
-RANK_IN_SPECIES_RE = re.compile(r"\b(subsp|ssp|var|forma|f)\.?\s")
+RANK_IN_SPECIES_RE = re.compile(r"(?:^|\s)(nothosubsp|subsp|ssp|nothovar|var|forma|f)\.?\s")
+HYPHEN_SPACE_RE = re.compile(r"\s-|-\s")
 CODE_SPACE_RE = re.compile(r"\s[?/;,)]|[?/;,(]\s")
 APA_RE = re.compile(r"[^()]+ \(\d{4}[a-z]?\)\. .+")
 NOTES_PAGE_RE = re.compile(r"\b(page|pg\.?|pp\.?)\s*\d", re.I)
@@ -171,6 +172,8 @@ def check_row(line, row, report):
     for col in ("Genus", "Species", "subsp"):
         if NAME_MARK_RE.search(row[col]):
             report.error(where, col, "remove '?' or '*' from the name; printed form in Notes", row[col])
+        if HYPHEN_SPACE_RE.search(row[col]):
+            report.error(where, col, "space next to a hyphen; hyphenated epithet is one word ('novae- zelandiae' -> 'novae-zelandiae')", row[col])
     if row["Genus"] and not re.fullmatch(r"[A-Z][a-z]+", row["Genus"]):
         report.error(where, "Genus", "one capitalised word, no marks", row["Genus"])
     if RANK_IN_SPECIES_RE.search(row["Species"]):
