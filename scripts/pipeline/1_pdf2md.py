@@ -7,6 +7,8 @@ import subprocess
 import pymupdf
 import pymupdf4llm
 
+from session_info2 import session_info
+
 pdf_in_path = "data/papers_test/pdf_new"
 pdf_done_path = "data/papers_test/pdf_done"
 md_path = "data/papers_test/md"
@@ -23,6 +25,8 @@ for fi in tqdm(os.listdir(pdf_in_path)):
     #text?
     text = first_page.get_text()
     md_marker_path = f"{md_path}/{Path(fi).stem}"
+    print(f"     MD marker path: {md_marker_path}")
+
     if text.strip():
         print("     PDF is clean.")
         subprocess.run([
@@ -39,14 +43,15 @@ for fi in tqdm(os.listdir(pdf_in_path)):
         ])
         #move md file into the parent md folder
         md_old_path = f"{md_marker_path}/{Path(fi).stem}.md"
+        md_dst_path = f"{md_path}/{Path(fi).stem.replace(' ', '_')}.md"
         print(f"     Moving {md_old_path} into parent dir.")
-        shutil.move(md_old_path, md_path)
+        shutil.move(md_old_path, md_dst_path)
         
     #image?
     else:
         print("     PDF text not detected, using ORC instead.")
         md = pymupdf4llm.to_markdown(pdf_src)
-        out = Path(f"data/papers_test/md/{Path(fi).stem}.md")
+        out = Path(f"{md_path}/{Path(fi).stem.replace(' ', '_')}.md")
         out.write_text(md, encoding="utf-8")
 
     #move pdf
@@ -59,3 +64,5 @@ for fi in tqdm(os.listdir(pdf_in_path)):
         shutil.rmtree(md_marker_path)
 
 print("All done!")
+
+print(session_info(dependencies=True))

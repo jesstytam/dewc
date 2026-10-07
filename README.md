@@ -4,37 +4,63 @@
 
 ```
 git clone <this_repo>
+cd <this_repo>
+pip install -r requirements.txt
 ```
 
-# Setup
+# My system's setup
 
 - System: Ubuntu 26.04.1 LTS
 - LLM: Claude Code via the terminal
-- Languages: Python, R, natural language
+- Languages: Python, shell/bash script, R, natural language
 
-# Data collection and cleaning
+# Data collection
 
-## 
+tbd
 
-# Data extraction
+# Data cleaning
 
-## Itertive improment to write CLAUDE.md
+## Converting PDF to Markdown
 
-unify variables related to this study from Austraits and Fire Ecology Database.
+Since Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
 
-optimise markdown output after converting PDFs to MDs running `scripts/pipeline/1_pdf2md.py`. 
+## Data extraction with LLM
 
-test run and manual verification of answers
+### Important considerations
 
-### important things i included
-- log files
-- reference materials, e.g. metadata, 1 paper that has been extracted already
-- use of code and pseudo-code for deterministic outputs
-- permissions: read, write, which files or folders, etc.
+Since Claude / LLM is responsible for data extraction, the pipeline instructions were create through a back-and-fourth conversation with the chatbot. This was done by first having a simple outline of the requirements, including the following:
 
-## Steps to trigger agents to extract data (draft written by Claude, edited by human)
+- input and output formats
+- log files, what to log, e.g. token usage and terminal outputs
+- reference materials, e.g. metadata
+- language requirements, i.e. use of code and pseudo-code for deterministic outputs
+- read and write permissions for which files and folders
+
+### Writing CLAUDE.md
+
+Claude reads instructions from the `CLAUDE.md` file, which was updated iteratively by parsing prompts to the LLM and manually checking the outputs after each inference test. 
+
+To update the file, a CSV file containing the extraction results of 1 paper, as well as the associated metadata CSV file - both created by human, were provided to Claude for understanding the aims and requirements of the data extraction pipeline.
+
+Requirements included some of the following:
+
+- updating the variables and corresponding metadata required in this study from [Austraits](https://austraits.org/) and [Fire Ecology Database](http://fireecologyplants.net/).
+- optimising the markdown output after converting PDFs to MDs with `1_pdf2md.py`
+- data type inconsistencies, e.g. decimal places, to include "subsp." in subspecies column or not, etc.
+
+Additional Python scripts created by Claude as per my instructions included `check.py` to identify conflicting results between inference outputs and guidelines, `log_session.py` to log each inference session's outputs, and `usage.py` to record LLM token usage.
+
+### Triggering the agent (draft written by Claude, edited by human)
 
 Use 1 model per session to prevent results leakage across models during inference times. Start a fresh session for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
+
+### Initial testing
+
+1 paper that has been extracted already
+
+The intial testing stage aimed to confirm and test that the outputs of the LLMs are consistent and follow the provided guidelines in `CLAUDE.md` while showing 0 errors when running `check.py`. 
+
+show 1 paper -> iterate tests on 6 papers -> add 14 papers -> test
 
 ### Logging each session
 
@@ -113,3 +139,10 @@ python scripts/claude/log_session.py --session <session id>
 If a session stops early (usage limit, context full), start a new session with the same prompt. Finished papers are skipped and unfinished ones are redone.
 
 All output stays in `data/papers_test/md_agents/` and `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
+
+
+# Token usage
+
+optimise md: 71.3M tokens for 14 papers
+
+data extraction: ~ slightly more than 1M tokens for both models

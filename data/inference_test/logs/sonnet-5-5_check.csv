@@ -1,36 +1,37 @@
 level,where,column,check,value
-warning,RESULT line 87,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
-warning,RESULT line 94,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
-warning,RESULT line 502,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
-warning,RESULT line 503,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
-warning,RESULT line 504,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
-warning,RESULT line 1061,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1070,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1071,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1072,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1183,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
-warning,RESULT line 1184,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
-warning,RESULT line 1185,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
-warning,RESULT line 1198,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species A
-warning,RESULT line 1199,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species A
-warning,RESULT line 1250,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1688,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. B
-warning,RESULT line 1853,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
-warning,RESULT line 1941,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
-warning,RESULT line 1966,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
-warning,RESULT line 2379,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'Rocky Creek'
-warning,RESULT line 2845,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",novae- zelandiae
-warning,RESULT line 2871,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. B
-warning,RESULT line 3041,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",novae- angliae
-warning,RESULT line 3057,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Harden (1994)
-warning,RESULT line 3097,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Powell (1992)
-warning,RESULT line 3258,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
-warning,RESULT line 3609,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",luteo- album
-warning,RESULT line 3824,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",artemisioides nothosubsp. artemisioides
-warning,RESULT line 3827,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",glutinosa nothosubsp. luerssenii
-warning,RESULT line 1771,,"duplicate of line 1770 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
-warning,RESULT line 1773,,"duplicate of line 1772 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
-warning,RESULT line 1784,,"duplicate of line 1783 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
-warning,RESULT line 3529,,"duplicate of line 3528 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
-warning,RESULT line 3740,,"duplicate of line 3739 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
-warning,RESULT line 3848,,"duplicate of line 3847 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 133,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 140,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 547,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 548,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 549,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 1050,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",(hybrid)
+warning,RESULT line 1104,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1113,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1114,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1115,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1226,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
+warning,RESULT line 1227,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
+warning,RESULT line 1228,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",X crocosmiiflora
+warning,RESULT line 1241,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species A
+warning,RESULT line 1242,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species A
+warning,RESULT line 1293,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 2129,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. B
+warning,RESULT line 2294,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
+warning,RESULT line 2382,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
+warning,RESULT line 2407,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
+warning,RESULT line 2820,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'Rocky Creek'
+warning,RESULT line 3312,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. B
+warning,RESULT line 3498,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Harden (1994)
+warning,RESULT line 3538,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Powell (1992)
+warning,RESULT line 3699,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
+error,RESULT line 2,Location_name,fill only when coordinates are empty or shared by several named sites,NA
+error,RESULT line 1669,Location_name,fill only when coordinates are empty or shared by several named sites,NA
+error,RESULT line 1670,Location_name,fill only when coordinates are empty or shared by several named sites,NA
+warning,RESULT line 2212,,"duplicate of line 2211 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 2214,,"duplicate of line 2213 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 2225,,"duplicate of line 2224 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 3970,,"duplicate of line 3969 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 4181,,"duplicate of line 4180 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 4289,,"duplicate of line 4288 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 4569,,"duplicate of line 4568 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 4571,,"duplicate of line 4570 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",

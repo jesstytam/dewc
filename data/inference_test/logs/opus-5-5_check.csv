@@ -23,9 +23,15 @@ warning,RESULT line 2858,Species,"not a plain lower-case epithet (fine for phras
 warning,RESULT line 3044,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Harden (1994)
 warning,RESULT line 3084,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A sensu Powell (1992)
 warning,RESULT line 3245,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. A
+warning,RESULT line 4262,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT line 4273,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT line 4470,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT line 4481,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
 warning,RESULT line 1758,,"duplicate of line 1757 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
 warning,RESULT line 1760,,"duplicate of line 1759 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
 warning,RESULT line 1771,,"duplicate of line 1770 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
 warning,RESULT line 3516,,"duplicate of line 3515 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
 warning,RESULT line 3727,,"duplicate of line 3726 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
 warning,RESULT line 3835,,"duplicate of line 3834 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 4566,,"duplicate of line 4565 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 4568,,"duplicate of line 4567 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
