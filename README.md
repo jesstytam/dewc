@@ -20,7 +20,8 @@ tbd
 
 # Data cleaning
 
-![](assets/pipeline_flowchart.drawio.pdf)
+<!-- ![](assets/pipeline_flowchart.drawio.pdf) -->
+<a href="assets/pipeline_flowchart.drawio.pdf" class="image fit"></a>
 Figure 1. Overview of our testing pipeline, before implementing in production.
 
 ## Converting PDF to Markdown
