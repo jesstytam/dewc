@@ -1,0 +1,23 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-08T05:58:00Z,,model=claude-sonnet-5-5; date=2026-10-08; git=51f01c0a02c28514e4491e9192eeb9cbaf182c37; claude_md_sha256=775a99b873bbd62289d08caf93270c166080c40e20072d70b48c5c2213bfcee2; papers_sha256=fa510360aaa05feba974d6e3d71dfc64bce7f818326e57cb0ad304ee2457fda1,,,,,,
+1-s2.0-S0006320798001128-main,done,1,2026-10-08T05:58:02Z,2026-10-08T05:58:30Z,only fire response (resprouter) found; no flowering times,5,10,8242,324923,3298,336473
+AuldScottProcFireEffectsIAWF1997,done,7,2026-10-08T05:58:35Z,2026-10-08T05:58:48Z,2 species have PJP unknown; rows kept for fire response,2,4,15447,146624,1606,163681
+Austral_Ecology_-_2002_-_Wahren_-_Early_post‐fire_regeneration_in_subalpine_heathland_and_grassland_in_the_Victorian_Alpine,done,1,2026-10-08T05:58:50Z,2026-10-08T05:59:12Z,Poa spp. and unnamed shrubs not extracted (no species name),1,2,17221,89833,2792,109848
+Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,done,6,2026-10-08T05:59:20Z,2026-10-08T05:59:58Z,,4,8,27795,484913,5728,518444
+Australian_Journal_of_Ecology_-_December_1988_-_BRADSTOCK_-_Demography_of_woody_plants_in_relation_to_fire_Banksia,done,2,2026-10-08T05:59:58Z,2026-10-08T06:00:19Z,,3,6,17560,429391,2905,449862
+BF00040753,done,2,2026-10-08T06:00:19Z,2026-10-08T06:00:39Z,fire response only; no flowering time values,3,6,18757,475545,2257,496565
+Benson 1985 Cunninghamia_primary juvenile period,done,65,2026-10-08T06:00:39Z,2026-10-08T06:01:31Z,,4,8,22651,740090,7161,769910
+J_Vegetation_Science_-_2007_-_Auld_-_Dispersal_and_recruitment_dynamics_in_the_fleshy‐fruited_Persoonia_lanceolata_,done,1,2026-10-08T06:01:31Z,2026-10-08T06:01:52Z,,3,6,16856,597636,2671,617169
+Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,done,14,2026-10-08T06:01:52Z,2026-10-08T06:02:14Z,"journal printed as 1998, 86, 946-959; file name says 2002",3,6,15308,659795,2740,677849
+Knox_&_Clarke_2004_Cunninghamia_primary_juvenile_period,done,33,2026-10-08T06:02:14Z,2026-10-08T06:02:53Z,,3,6,21807,708752,5328,735893
+Kubiak_Cunn_2009,done,1305,2026-10-08T06:02:53Z,2026-10-08T06:05:29Z,68 species with no fire response code or flowering time in appendix 1 not given a row (only seedling or fruiting notes or empty),12,24,62973,3388848,19833,3471678
+Muir_et_al_2014_AustJBot_obligate_seeder_juvenile,done,8,2026-10-08T06:05:29Z,2026-10-08T06:06:05Z,,4,8,20310,1267734,3326,1291378
+Ooi_2019_JEnvManagement_fire_seasonality,done,13,2026-10-08T06:06:05Z,2026-10-08T06:06:46Z,,3,6,26335,1037581,5770,1069692
+Post_fire_juvenile_period_of_plants_in_s,done,53,2026-10-08T06:06:46Z,2026-10-08T06:07:49Z,"table 6 and 7 aggregate values and four resprouters flowering 24-36 months (text, p. 171) not entered: no per-species value",3,6,38351,1118364,9110,1165831
+biostor-259750,done,200,2026-10-08T06:07:49Z,2026-10-08T06:08:58Z,"table 5 only; Hymenophyllum cupressiforme (not recorded after fire, strategy unknown) not entered; Tables 3, 4, 6 hold site-level floristics and structure, no species flowering times",7,14,31730,2891632,9169,2932545
+bt02009,done,6,2026-10-08T06:08:58Z,2026-10-08T06:09:23Z,,4,8,16823,1744596,2930,1764357
+bt9830293,done,3,2026-10-08T06:09:23Z,2026-10-08T06:09:39Z,no time values; flowering peaks only in notes,2,4,6785,898336,2334,907459
+bt9890001,no_data,1,2026-10-08T06:09:39Z,2026-10-08T06:09:57Z,no species-level juvenile period or fire response values,4,8,16230,1852599,1774,1870611
+enright1996,done,1,2026-10-08T06:09:57Z,2026-10-08T06:10:09Z,,2,4,11910,944066,1378,957358
+nswfrrd_v1.3a_pdfvers_sppdata,done,2699,2026-10-08T06:10:09Z,2026-10-08T06:11:14Z,primary and secondary juvenile values in notes only (unit not stated); 6 taxa printed as 2 separate entries,7,14,17587,3437675,8056,3463332
+wf24046,done,5,2026-10-08T06:11:14Z,2026-10-08T06:12:14Z,,4,8,21360,2007464,5759,2034591

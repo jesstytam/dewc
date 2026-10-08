@@ -9,6 +9,7 @@ MD_AGENT = "opus-5-5"                            # only this agent runs Step 0
 RUN      = "test"                                # "test" = trial run; "full" = final run; keep "test" until the user says otherwise
 ROOT     = {"test": "data/inference_test/", "full": "data/inference/"}[RUN]   # read references and write results only under ROOT
 METADATA = ROOT + "references/metadata.csv"      # column dictionary: 1 row per RESULT column; type, unit, allowed values, trait code, definition, rule, example; ' | ' separates alternatives in allowed_values and example; the only format reference
+VALUE_MAP = ROOT + "references/value_map.csv"   # paper terms and codes -> standard values for fire response, severity and resprouter type, with the notes entry to write
 MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output for scanned PDFs only (text-layer PDFs go straight to md_agents/)
 PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
@@ -26,7 +27,7 @@ CHECK    = "scripts/claude/check.py"             # fixed check script; run it, n
 | Step | Read | Write |
 |---|---|---|
 | 0 | `MD_RAW`, `PDF_DONE` | `.md` files in `data/papers_test/md_agents/`; `MD_LOG`; `CHECK --step0` report |
-| 1 | `METADATA`, `PAPERS`, `RESULT`, `LOG` | `RESULT`, `LOG`; `CHECK` report |
+| 1 | `METADATA`, `VALUE_MAP`, `PAPERS`, `RESULT`, `LOG` | `RESULT`, `LOG`; `CHECK` report |
 
 Everything not listed for a step is off limits for that step. One-off shell or Python commands are allowed; a code file may be written only to the session scratchpad (never to the repo), so its full text stays in the session transcript.
 
@@ -66,7 +67,7 @@ if not exists(RESULT):
     write(RESULT, [name for name, rule in COLUMNS])   # header only
     write(LOG, "paper,status,n_rows,started,finished,note," + TOKEN_COLS)
 log("_run", "start", 0, now_utc(), "", f"model={AGENTS[slug]}; date=YYYY-MM-DD; git={git rev-parse HEAD}; claude_md_sha256=...; papers_sha256=...")   # 1 line per run
-read(METADATA)                               # column rules and value formats
+read(METADATA); read(VALUE_MAP)              # column rules, value formats, term map
 for i, paper in enumerate(sorted(PAPERS), 1):  # LC_ALL=C order; one paper at a time: finish its LOG line before starting the next
     if paper in LOG:                         # finished in an earlier run
         print(f"{bar(i, len(PAPERS))} {stem(paper)} | skipped: in LOG"); continue
@@ -116,7 +117,7 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 - Several named sites share one set of coordinates: still 1 row per site; site name in `location_name`, coordinates kept. Never merge sites into 1 row with per-site values in `notes`.
 - A row needs at least 1 value in a fire response or time column. Values kept only in `notes` (near-matches, unreliable or unitless values) never create a row on their own.
 - Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `location_name` = those site names joined by `; `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
-- Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry; `notes` of each starts with `separate entry in paper` and names what differs.
+- Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry. Duplicate rows are fine; do not check or remove them.
 - Fill a column only when the paper's measure matches the column definition. Near-matches go in `notes` only, with their definition (e.g. time to 80% of maximum flower production; expert or literature estimates).
 - Not yet flowering at the last observation ("not flowering after 4 years"): `>N`, e.g. `>4`.
 - Codes and units: use only definitions printed in the paper. Code not defined: copy it as printed (e.g. fire response `S`), never translate it. Unit not stated for a time value: leave the time columns empty; value and "unit not stated" in `notes`.
@@ -208,7 +209,7 @@ After all papers: run `CHECK` without `--paper`, fix errors the same way. After 
 
 ## Do not
 
-- Read `data/reference/` or another agent's `RESULT` or `LOG`. They contain answers.
-- Edit `METADATA`, `MD_RAW`, `PDF_DONE`, or anything in `data/papers_test/` outside `md_agents/`.
+- Read `data/reference/`, `data/papers_test/answers/`, `logs/benchmark*.csv`, or another agent's `RESULT` or `LOG`. They contain answers.
+- Edit `METADATA`, `VALUE_MAP`, `MD_RAW`, `PDF_DONE`, or anything in `data/papers_test/` outside `md_agents/`.
 - Edit `CHECK`, or write any script file outside the session scratchpad.
 - Create or write anything in `data/inference/`. Use `data/inference_test/` only.

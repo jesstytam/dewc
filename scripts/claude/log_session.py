@@ -8,10 +8,11 @@ A session can run several steps (e.g. "Run Step 0", then "Run Step 1"). Each ste
 the session runs from its prompt to the next prompt for a different step (or the session end).
 For each step in a pipeline session it:
   1. copies the session transcript to logs/runs/{step}_{slug}_{session}/transcript.jsonl;
-  2. snapshots the rules (CLAUDE.md, check.py, template.csv, metadata.csv) and the step's outputs into the same folder (Step 0: md_opt_log.csv and
+  2. snapshots the rules (CLAUDE.md, check.py, template.csv, metadata.csv, value_map.csv) and the step's outputs into the same folder (Step 0: md_opt_log.csv and
      md_opt_check.csv; Step 1: results/{slug}.csv, {slug}_log.csv, {slug}_check.csv);
   3. adds the step's line to logs/sessions.csv (once per session and step);
-  4. fills the token columns in the step's log and in sessions.csv, counting only the step's part of the session (usage.py --window).
+  4. fills the token columns in the step's log and in sessions.csv, counting only the step's part of the session (usage.py --window);
+  5. Step 1: scores the snapshot against the answers (benchmark.py --run) into logs/benchmark.csv.
 """
 
 import argparse
@@ -106,7 +107,8 @@ def log_step(path, session, step, since, until, slug, models, version):
     run_dir = LOGS / "runs" / f"{step}_{slug}_{session}"
     run_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(path, run_dir / "transcript.jsonl")
-    for f in (REPO / "CLAUDE.md", REPO / "scripts/claude/check.py", ROOT / "references/template.csv", ROOT / "references/metadata.csv"):
+    for f in (REPO / "CLAUDE.md", REPO / "scripts/claude/check.py", ROOT / "references/template.csv", ROOT / "references/metadata.csv",
+              ROOT / "references/value_map.csv"):
         if not (run_dir / f.name).exists():  # first logging of the session = closest to the run
             shutil.copy2(f, run_dir / f.name)
 
@@ -131,6 +133,10 @@ def log_step(path, session, step, since, until, slug, models, version):
     for f in outputs:
         if f.exists():
             shutil.copy2(f, run_dir / f.name)
+
+    # 5. accuracy benchmark against the answers (Step 1 of a known agent)
+    if step == "step1" and slug in AGENTS.values():
+        subprocess.run([sys.executable, str(Path(__file__).parent / "benchmark.py"), "--run", run_dir.name], check=False)
     print(f"logged {step} | {slug} | session {session} | {run_dir.relative_to(REPO)}", file=sys.stderr)
 
 

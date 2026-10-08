@@ -41,14 +41,12 @@ VARIABLE_UNIT = [
     "recovery_time",
 ]
 TIME_COLS = ["pjp_mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
-DUP_KEY = ["scientific_name", "subsp", "latitude", "longitude", "location_name",
-           "fire_type", "fire_season_categorical", "file_name"]
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
 SEASON_RE = re.compile(r"(summer|autumn|winter|spring)(; (summer|autumn|winter|spring))*")
 SEASON_ORDER = ["summer", "autumn", "winter", "spring"]
-KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "file_name"}  # see Case in CLAUDE.md
+KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "file_name", "notes"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms
 PLURAL_RE = re.compile(r"\b[a-z]+[^s\W]s\b")  # e.g. rhizomes, tubers (not grass)
 PAGE_BREAK = "<!-- PAGE BREAK -->"
 UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
@@ -151,9 +149,7 @@ def check_row(line, row, report):
         if DASH_RE.search(value):
             report.error(where, col, "en or em dash; use ASCII hyphen '-'", value)
         if value != "NA" and value != value.lower() and col not in KEEP_CASE:
-            if col == "notes":  # codes and printed forms quoted in notes keep their case
-                report.warn(where, col, "lower case except codes or printed forms quoted from the paper", value[:80])
-            elif not (col == "source" and value == row["file_name"]):
+            if not (col == "source" and value == row["file_name"]):
                 report.error(where, col, "lower case (only genus, codes and file_name keep capitals)", value)
     for col in ("source", "file_name"):
         if not row[col] or row[col] == "NA":
@@ -334,7 +330,7 @@ def check_step1(slug, paper, report):
         if len(citations) > 1:
             report.error(where, "source", f"{len(citations)} different Source strings; use one", " | ".join(sorted(citations)))
 
-    # row level, then duplicates
+    # row level (duplicate rows are allowed; handled after extraction)
     checked = [(line, row) for line, row in rows if paper is None or row["file_name"] in checked_stems]
     for line, row in checked:
         check_row(line, row, report)
@@ -348,20 +344,6 @@ def check_step1(slug, paper, report):
         if row["location_name"] and (row["latitude"] or row["longitude"]):
             if len(names[(row["file_name"], row["latitude"], row["longitude"])] - {""}) < 2:
                 report.error(f"RESULT line {line}", "location_name", "fill only when coordinates are empty or shared by several named sites", row["location_name"])
-    seen = {}
-    for line, row in checked:
-        if row["genus"] == "NA":
-            continue
-        key = tuple(row[c] for c in DUP_KEY)
-        if key in seen:
-            first_line, first_row = seen[key]
-            message = f"duplicate of line {first_line} on {', '.join(DUP_KEY)}"
-            if all(r["notes"].startswith("separate entry in paper") for r in (row, first_row)):
-                report.warn(f"RESULT line {line}", "", message + " (marked separate entry in paper)")
-            else:
-                report.error(f"RESULT line {line}", "", message)
-        else:
-            seen[key] = (line, row)
 
 
 def check_step0(report):

@@ -21,16 +21,15 @@ tbd
 # Data cleaning
 
 <!-- ![](assets/pipeline_flowchart.drawio.pdf) -->
-<a href="assets/pipeline_flowchart.drawio.pdf" class="image fit"></a>
-Figure 1. Overview of our testing pipeline, before implementing in production.
+<image src="assets/pipeline_flowchart.drawio.pdf"/>
 
 ## Converting PDF to Markdown
 
 Since Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
 
-## Data extraction with LLM
+# Data extraction with LLM
 
-### Important considerations
+## Important considerations
 
 Since Claude / LLM is responsible for data extraction, the pipeline instructions were create through a back-and-fourth conversation with the chatbot. This was done by first having a simple outline of the requirements, including the following:
 
@@ -40,7 +39,7 @@ Since Claude / LLM is responsible for data extraction, the pipeline instructions
 - language requirements, i.e. use of code and pseudo-code for deterministic outputs
 - read and write permissions for which files and folders
 
-### Writing CLAUDE.md
+## Writing CLAUDE.md
 
 Claude reads instructions from the `CLAUDE.md` file, which was updated iteratively by parsing prompts to the LLM and manually checking the outputs after each inference test. 
 
@@ -54,11 +53,11 @@ Requirements included some of the following:
 
 Additional Python scripts created by Claude as per my instructions included `check.py` to identify conflicting results between inference outputs and guidelines, `log_session.py` to log each inference session's outputs, and `usage.py` to record LLM token usage.
 
-### Triggering the agent (draft written by Claude, edited by human)
+## Triggering the agent (draft written by Claude, edited by human)
 
 Use 1 model per session to prevent results leakage across models during inference times. Start a fresh session for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
 
-### Initial testing
+## Initial testing
 
 1 paper that has been extracted already
 
@@ -66,7 +65,7 @@ The intial testing stage aimed to confirm and test that the outputs of the LLMs 
 
 show 1 paper -> iterate tests on 6 papers -> add 14 papers -> test
 
-### Logging each session
+## Logging each session
 
 Every pipeline session is logged automatically. A `SessionEnd` hook in `.claude/settings.json` runs `scripts/claude/log_session.py` when a session ends. It acts only on sessions whose prompt starts with `Run Step 0` or `Run Step 1`; other sessions are ignored. For each pipeline session it:
 
@@ -86,7 +85,7 @@ python scripts/claude/log_session.py --session <session id>
 
 **Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>.csv`, `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
 
-### Steps
+## Steps
 
 1. **Step 0: optimise markdown (Opus).** Compares `data/papers_test/md/` with the PDFs in `data/papers_test/pdf_done/` and writes fixed markdown to `data/papers_test/md_agents/`.
 
