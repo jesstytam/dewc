@@ -20,6 +20,9 @@ tbd
 
 # Data cleaning
 
+![pipeline_diagram](assets/pipeline_flowchart.drawio.pdf)
+Figure 1. Overview of our testing pipeline, before implementing in production.
+
 ## Converting PDF to Markdown
 
 Since Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
