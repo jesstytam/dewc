@@ -20,7 +20,7 @@ tbd
 
 # Data cleaning
 
-![pipeline_diagram](assets/pipeline_flowchart.drawio.pdf)
+![](assets/pipeline_flowchart.drawio.pdf)
 Figure 1. Overview of our testing pipeline, before implementing in production.
 
 ## Converting PDF to Markdown
