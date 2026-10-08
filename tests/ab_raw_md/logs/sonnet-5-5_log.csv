@@ -1,0 +1,16 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-08T01:28:46Z,,model=claude-sonnet-5-5; date=2026-10-08; git=c59935759ace50b38335840a82f8d341239fd077; claude_md_sha256=c5d265aedcdd0c3fe17bce5018b1f9dd6da1aa6084e74032274cd283b79c01a1; papers_sha256=5c0538509b7f567c4bea485466d98709b2696bfde28c1dfeadecf8cecc3c96a1,,,,,,
+1-s2.0-S0006320798001128-main,done,1,2026-10-08T01:28:46Z,2026-10-08T01:29:21Z,,6,12,29607,349157,4267,383043
+AuldScottProcFireEffectsIAWF1997,done,7,2026-10-08T01:29:21Z,2026-10-08T01:29:40Z,,3,6,15269,236712,2610,254597
+Austral_Ecology_-_2002_-_Wahren_-_Early_post‐fire_regeneration_in_subalpine_heathland_and_grassland_in_the_Victorian_Alpine,done,3,2026-10-08T01:29:40Z,2026-10-08T01:30:06Z,,2,4,20059,189717,3664,213444
+Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,done,6,2026-10-08T01:30:06Z,2026-10-08T01:30:53Z,,5,10,32265,600733,4198,637206
+Australian_Journal_of_Ecology_-_December_1988_-_BRADSTOCK_-_Demography_of_woody_plants_in_relation_to_fire_Banksia,done,2,2026-10-08T01:30:53Z,2026-10-08T01:31:13Z,"Banksia ericifolia shallow-soil value (primary juvenile period >8 years) kept in Notes of the deep-soil row: same species, site and fire would be a duplicate row",3,6,25651,448764,2568,476989
+BF00040753,done,2,2026-10-08T01:31:13Z,2026-10-08T01:31:32Z,,3,6,18024,520090,2323,540443
+J_Vegetation_Science_-_2007_-_Auld_-_Dispersal_and_recruitment_dynamics_in_the_fleshy‐fruited_Persoonia_lanceolata_,done,1,2026-10-08T01:31:32Z,2026-10-08T01:31:45Z,,2,4,15865,380386,1741,397996
+Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,broken,1,2026-10-08T01:31:45Z,2026-10-08T01:32:00Z,"garbled text: font encoding corrupted digits and punctuation throughout (e.g. '02years' and '04 sites' for 13 years and 15 sites, '[' for '.'), so numeric values are unreliable; model paper for Banksia hookeriana",2,4,20357,412290,1760,434411
+biostor-259750,done,178,2026-10-08T01:32:00Z,2026-10-08T01:34:05Z,"non-vascular taxa (lichens, liverworts, mosses, fungi) not extracted; per-subsite split not possible from garbled Table 3",5,10,59657,1206623,19392,1285682
+bt02009,done,4,2026-10-08T01:34:05Z,2026-10-08T01:34:25Z,,3,6,27538,899244,1420,928208
+bt9830293,done,2,2026-10-08T01:34:25Z,2026-10-08T01:34:47Z,"Lambertia formosa has no fire response or time value, no row",5,10,14214,1596304,3600,1614128
+bt9890001,no_data,1,2026-10-08T01:34:47Z,2026-10-08T01:35:06Z,no species-level values; year not printed,4,8,16754,1339180,1931,1357873
+enright1996,done,1,2026-10-08T01:35:06Z,2026-10-08T01:35:18Z,,2,4,7987,688496,1571,698058
+wf24046,done,5,2026-10-08T01:35:18Z,2026-10-08T01:36:03Z,"check_ab.py duplicate errors on 2 row pairs left: 1990s and 2017 sampling eras of the same species share every compared field (different stands and fires, no field to tell them apart)",3,6,26208,1073534,6422,1106170

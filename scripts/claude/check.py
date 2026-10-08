@@ -30,23 +30,26 @@ MD_LOG_HEADER = ["paper", "status", "pdf_pages", "n_tables", "n_fixes", "unresol
 STATUSES = {"done", "broken", "no_data"}
 
 FIXED_YEARS = [
-    "Age at first flower production from seed_repr3",
-    "Time to first flower production resprout_repr3a",
-    "Time to 50% flowering_repr4",
+    "age_at_first_flower_production_from_seed_repr3",
+    "time_to_first_flower_production_resprout_repr3a",
+    "time_to_50_percent_flowering_repr4",
 ]
 VARIABLE_UNIT = [
     "secondary_juvenile_period",
-    "Time to 50% flowering",
-    "Time to 80% flowering",
-    "Recovery_time",
+    "time_to_50_percent_flowering",
+    "time_to_80_percent_flowering",
+    "recovery_time",
 ]
-TIME_COLS = ["PJP mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
-DUP_KEY = ["scientific_name", "subsp", "Latitude", "Longitude", "Location_name",
-           "Fire_type", "Fire_season_categorical", "File_name"]
+TIME_COLS = ["pjp_mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
+DUP_KEY = ["scientific_name", "subsp", "latitude", "longitude", "location_name",
+           "fire_type", "fire_season_categorical", "file_name"]
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
-SEASON_RE = re.compile(r"(Summer|Autumn|Winter|Spring)(; (Summer|Autumn|Winter|Spring))*")
+SEASON_RE = re.compile(r"(summer|autumn|winter|spring)(; (summer|autumn|winter|spring))*")
+SEASON_ORDER = ["summer", "autumn", "winter", "spring"]
+KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "file_name"}  # see Case in CLAUDE.md
+PLURAL_RE = re.compile(r"\b[a-z]+[^s\W]s\b")  # e.g. rhizomes, tubers (not grass)
 PAGE_BREAK = "<!-- PAGE BREAK -->"
 UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
 JUNK = {
@@ -60,7 +63,7 @@ RANK_RE = re.compile(r"[a-z]+\. \S")  # subsp. / var. / f. / cv. ... + name
 RANK_IN_SPECIES_RE = re.compile(r"(?:^|\s)(nothosubsp|subsp|ssp|nothovar|var|forma|f)\.?\s")
 HYPHEN_SPACE_RE = re.compile(r"\s-|-\s")
 CODE_SPACE_RE = re.compile(r"\s[?/;,)]|[?/;,(]\s")
-APA_RE = re.compile(r"[^()]+ \(\d{4}[a-z]?\)\. .+")
+APA_RE = re.compile(r"[^()]+ \((\d{4}[a-z]?|n\.d\.)\)\. .+")  # (n.d.) = no year printed
 NOTES_PAGE_RE = re.compile(r"\b(page|pg\.?|pp\.?)\s*\d", re.I)
 LIGATURE_RE = re.compile(r"\b\w*(fi|fl) (re|res|rst|eld|elds|tted|ne|nal|nd|ve|gure|gures|ower|owers|owering|owered)\b")
 
@@ -147,61 +150,65 @@ def check_row(line, row, report):
             report.error(where, col, "leading or trailing space", value)
         if DASH_RE.search(value):
             report.error(where, col, "en or em dash; use ASCII hyphen '-'", value)
-    for col in ("Source", "File_name"):
+        if value != "NA" and value != value.lower() and col not in KEEP_CASE:
+            if col == "notes":  # codes and printed forms quoted in notes keep their case
+                report.warn(where, col, "lower case except codes or printed forms quoted from the paper", value[:80])
+            elif not (col == "source" and value == row["file_name"]):
+                report.error(where, col, "lower case (only genus, codes and file_name keep capitals)", value)
+    for col in ("source", "file_name"):
         if not row[col] or row[col] == "NA":
             report.error(where, col, "empty or NA")
 
-    if row["Genus"] == "NA":  # NA row
+    if row["genus"] == "NA":  # NA row
         for col, value in row.items():
-            if col not in ("Notes", "Source", "File_name") and value != "NA":
+            if col not in ("notes", "source", "file_name") and value != "NA":
                 report.error(where, col, "NA row: cell must be NA", value)
-        if not row["Notes"] or row["Notes"] == "NA":
-            report.error(where, "Notes", "NA row: reason missing")
+        if not row["notes"] or row["notes"] == "NA":
+            report.error(where, "notes", "NA row: reason missing")
         return
 
     for col, value in row.items():
         if value == "NA":
             report.error(where, col, "NA in data row; leave empty instead")
-    for col in ("Genus", "Species"):
+    for col in ("genus", "species"):
         if not row[col]:
             report.error(where, col, "empty")
 
-    name = f"{row['Genus']} {row['Species']}"
+    name = f"{row['genus']} {row['species']}"
     if row["scientific_name"] != name:
-        report.error(where, "scientific_name", f"must be Genus + ' ' + Species: '{name}'", row["scientific_name"])
-    for col in ("Genus", "Species", "subsp"):
+        report.error(where, "scientific_name", f"must be genus + ' ' + species: '{name}'", row["scientific_name"])
+    for col in ("genus", "species", "subsp"):
         if NAME_MARK_RE.search(row[col]):
             report.error(where, col, "remove '?' or '*' from the name; printed form in Notes", row[col])
         if HYPHEN_SPACE_RE.search(row[col]):
             report.error(where, col, "space next to a hyphen; hyphenated epithet is one word ('novae- zelandiae' -> 'novae-zelandiae')", row[col])
-    if row["Genus"] and not re.fullmatch(r"[A-Z][a-z]+", row["Genus"]):
-        report.error(where, "Genus", "one capitalised word, no marks", row["Genus"])
-    if RANK_IN_SPECIES_RE.search(row["Species"]):
-        report.error(where, "Species", "rank word in Species; rank and name go in subsp", row["Species"])
-    elif row["Species"] and not re.fullmatch(r"[a-z][a-z-]*", row["Species"]):
-        report.warn(where, "Species", "not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')", row["Species"])
+    if row["genus"] and not re.fullmatch(r"[A-Z][a-z]+", row["genus"]):
+        report.error(where, "genus", "one capitalised word, no marks", row["genus"])
+    if RANK_IN_SPECIES_RE.search(row["species"]):
+        report.error(where, "species", "rank word in Species; rank and name go in subsp", row["species"])
+    elif row["species"] and not re.fullmatch(r"[a-z][a-z-]*", row["species"]):
+        report.warn(where, "species", "not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')", row["species"])
     if row["subsp"] and not RANK_RE.match(row["subsp"]):
         report.error(where, "subsp", "rank word + name, e.g. 'subsp. buxifolia', 'var. lanceolatus', 'f. glauca'", row["subsp"])
     if row["native_status"] and not re.fullmatch(r"[a-z]+( [a-z]+)*", row["native_status"]):
         report.error(where, "native_status", "paper's term in lower case, e.g. native, exotic", row["native_status"])
-    if CODE_SPACE_RE.search(row["fire_response categorical_surv1"]):
-        report.error(where, "fire_response categorical_surv1", "space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", row["fire_response categorical_surv1"])
-    family = row["Family"]
-    if family and (family.isupper() or not re.match(r"[A-Z][a-z]", family)):
-        report.warn(where, "Family", "only the first letter capitalised, e.g. Myrtaceae", family)
-    if row["Source"] != row["File_name"] and not APA_RE.fullmatch(row["Source"]):
-        report.warn(where, "Source", "does not look like APA: 'Author, A. B. (YYYY). Title. ...'", row["Source"])
-    m = NOTES_PAGE_RE.search(row["Notes"])
+    if CODE_SPACE_RE.search(row["fire_response_categorical_surv1"]):
+        report.error(where, "fire_response_categorical_surv1", "space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", row["fire_response_categorical_surv1"])
+    if row["source"] != row["file_name"] and not APA_RE.fullmatch(row["source"]):
+        report.warn(where, "source", "does not look like APA: 'author, a. b. (yyyy). title. ...'", row["source"])
+    m = NOTES_PAGE_RE.search(row["notes"])
     if m:
-        report.warn(where, "Notes", "page reference: write 'p. N' (printed page) or 'PDF p. N'", m.group(0))
+        report.warn(where, "notes", "page reference: write 'p. N' (printed page) or 'pdf p. N'", m.group(0))
 
-    lat, lon = row["Latitude"], row["Longitude"]
-    for col, value, lo, hi in (("Latitude", lat, -44, -10), ("Longitude", lon, 112, 154)):
+    lat, lon = row["latitude"], row["longitude"]
+    for col, value, lo, hi in (("latitude", lat, -44, -10), ("longitude", lon, 112, 154)):
         if value:
             if not NUMBER_RE.fullmatch(value):
                 report.error(where, col, "not a decimal number", value)
             elif not lo <= float(value) <= hi:
                 report.error(where, col, f"outside {lo} to {hi}", value)
+            elif "." in value and (value.endswith("0") or decimals(value) > 4):
+                report.error(where, col, "at most 4 decimals, no trailing zeros ('151.0' -> '151')", value)
 
     for col in TIME_COLS:
         value = row[col]
@@ -214,25 +221,34 @@ def check_row(line, row, report):
                 report.error(where, col, "more than 3 decimals", value)
 
     unit_needed = any(row[col] for col in VARIABLE_UNIT)
-    if unit_needed and row["Time_unit"] not in ("days", "weeks", "months", "years"):
-        report.error(where, "Time_unit", "must be days, weeks, months or years", row["Time_unit"])
-    if not unit_needed and row["Time_unit"]:
-        report.error(where, "Time_unit", "must be empty: no variable-unit time column filled", row["Time_unit"])
+    if unit_needed and row["time_unit"] not in ("days", "weeks", "months", "years"):
+        report.error(where, "time_unit", "must be days, weeks, months or years", row["time_unit"])
+    if not unit_needed and row["time_unit"]:
+        report.error(where, "time_unit", "must be empty: no variable-unit time column filled", row["time_unit"])
 
-    pjp, repr4 = row["PJP mths"], row["Time to 50% flowering_repr4"]
+    pjp, repr4 = row["pjp_mths"], row["time_to_50_percent_flowering_repr4"]
     if pjp and repr4 and NUMBER_RE.fullmatch(pjp) and NUMBER_RE.fullmatch(repr4):
         if round(float(pjp) / 12, decimals(repr4)) != float(repr4):
-            report.error(where, "Time to 50% flowering_repr4", f"should be PJP mths / 12 ({float(pjp) / 12:.3f})", repr4)
+            report.error(where, "time_to_50_percent_flowering_repr4", f"should be PJP mths / 12 ({float(pjp) / 12:.3f})", repr4)
 
-    season = row["Fire_season_categorical"]
+    season = row["fire_season_categorical"]
     if season and not SEASON_RE.fullmatch(season):
-        report.error(where, "Fire_season_categorical", "Summer|Autumn|Winter|Spring, joined by '; '", season)
-    for col in ("Location_name", "resprouter_type"):
+        report.error(where, "fire_season_categorical", "summer|autumn|winter|spring, joined by '; '", season)
+    elif season:
+        seasons = season.split("; ")
+        if seasons != sorted(seasons, key=SEASON_ORDER.index):
+            report.error(where, "fire_season_categorical", "calendar order: summer; autumn; winter; spring", season)
+    resprout = row["resprouter_type"]
+    if re.search(r"\b(and|or)\b", resprout):
+        report.warn(where, "resprouter_type", "several types: join with '; ' instead of 'and' / 'or'", resprout)
+    if resprout != resprout.lower() or PLURAL_RE.search(resprout):
+        report.warn(where, "resprouter_type", "lower case and singular, e.g. rhizome, lignotuber", resprout)
+    for col in ("location_name", "resprouter_type"):
         if re.search(r"\s/\s", row[col]) or (col == "resprouter_type" and "/" in row[col]):
             report.warn(where, col, "several values: join with '; ' (keep '/' only if printed inside one value)", row[col])
-    rain = row["Rainfall_mm"]
+    rain = row["rainfall_mm"]
     if rain and not re.fullmatch(r"\d+(\.\d+)?(-\d+(\.\d+)?)?", rain):
-        report.error(where, "Rainfall_mm", "not a number or min-max range", rain)
+        report.error(where, "rainfall_mm", "not a number or min-max range", rain)
 
 
 def check_step1(slug, paper, report):
@@ -295,8 +311,8 @@ def check_step1(slug, paper, report):
 
     stems = {r["paper"] for r in log_rows if r["paper"] != "_run"}
     for line, row in rows:
-        if row["File_name"] not in stems:
-            report.error(f"RESULT line {line}", "File_name", "matches no LOG paper", row["File_name"])
+        if row["file_name"] not in stems:
+            report.error(f"RESULT line {line}", "file_name", "matches no LOG paper", row["file_name"])
 
     # paper level
     checked_stems = set()
@@ -307,39 +323,40 @@ def check_step1(slug, paper, report):
         check_times(where, r, report)
         check_tokens(where, r, report)
         checked_stems.add(r["paper"])
-        paper_rows = [(line, row) for line, row in rows if row["File_name"] == r["paper"]]
+        paper_rows = [(line, row) for line, row in rows if row["file_name"] == r["paper"]]
         if not paper_rows:
             report.error(where, "", "no rows in RESULT")
         if str(len(paper_rows)) != r["n_rows"]:
             report.error(where, "n_rows", f"RESULT has {len(paper_rows)} rows", r["n_rows"])
-        if r["status"] in ("broken", "no_data") and not any(row["Genus"] == "NA" for _, row in paper_rows):
+        if r["status"] in ("broken", "no_data") and not any(row["genus"] == "NA" for _, row in paper_rows):
             report.error(where, "status", f"{r['status']} paper needs an NA row")
-        citations = {row["Source"] for _, row in paper_rows}
+        citations = {row["source"] for _, row in paper_rows}
         if len(citations) > 1:
-            report.error(where, "Source", f"{len(citations)} different Source strings; use one", " | ".join(sorted(citations)))
+            report.error(where, "source", f"{len(citations)} different Source strings; use one", " | ".join(sorted(citations)))
 
     # row level, then duplicates
-    checked = [(line, row) for line, row in rows if paper is None or row["File_name"] in checked_stems]
+    checked = [(line, row) for line, row in rows if paper is None or row["file_name"] in checked_stems]
     for line, row in checked:
         check_row(line, row, report)
     # Location_name with coordinates: only when several sites of the paper share those coordinates
     names = {}
-    for _, row in checked:
-        if row["Latitude"] or row["Longitude"]:
-            names.setdefault((row["File_name"], row["Latitude"], row["Longitude"]), set()).add(row["Location_name"])
-    for line, row in checked:
-        if row["Location_name"] and (row["Latitude"] or row["Longitude"]):
-            if len(names[(row["File_name"], row["Latitude"], row["Longitude"])] - {""}) < 2:
-                report.error(f"RESULT line {line}", "Location_name", "fill only when coordinates are empty or shared by several named sites", row["Location_name"])
+    checked_sites = [(line, row) for line, row in checked if row["genus"] != "NA"]  # NA rows are checked in check_row
+    for _, row in checked_sites:
+        if row["latitude"] or row["longitude"]:
+            names.setdefault((row["file_name"], row["latitude"], row["longitude"]), set()).add(row["location_name"])
+    for line, row in checked_sites:
+        if row["location_name"] and (row["latitude"] or row["longitude"]):
+            if len(names[(row["file_name"], row["latitude"], row["longitude"])] - {""}) < 2:
+                report.error(f"RESULT line {line}", "location_name", "fill only when coordinates are empty or shared by several named sites", row["location_name"])
     seen = {}
     for line, row in checked:
-        if row["Genus"] == "NA":
+        if row["genus"] == "NA":
             continue
         key = tuple(row[c] for c in DUP_KEY)
         if key in seen:
             first_line, first_row = seen[key]
             message = f"duplicate of line {first_line} on {', '.join(DUP_KEY)}"
-            if all(r["Notes"].startswith("separate entry in paper") for r in (row, first_row)):
+            if all(r["notes"].startswith("separate entry in paper") for r in (row, first_row)):
                 report.warn(f"RESULT line {line}", "", message + " (marked separate entry in paper)")
             else:
                 report.error(f"RESULT line {line}", "", message)

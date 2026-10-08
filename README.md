@@ -143,6 +143,6 @@ All output stays in `data/papers_test/md_agents/` and `data/inference_test/`. No
 
 # Token usage
 
-optimise md: 71.3M tokens for 14 papers
+optimise md: 0.5-15M tokens per paper
 
 data extraction: ~ slightly more than 1M tokens for both models

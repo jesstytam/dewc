@@ -1,0 +1,14 @@
+level,where,column,check,value
+warning,RESULT line 3,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 4,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 5,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 6,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 7,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 8,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 9,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Auld, T. D., & Scott, J. (n.d.). Conservation of endangered plants in urban fire-prone habitats."
+warning,RESULT line 10,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 11,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 21,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Zammit, C., & Westoby, M. (n.d.). Population structure and reproductive status of two Banksia shrubs at various times after fire."
+warning,RESULT line 22,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Zammit, C., & Westoby, M. (n.d.). Population structure and reproductive status of two Banksia shrubs at various times after fire."
+error,RESULT line 212,,"duplicate of line 211 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 214,,"duplicate of line 213 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",

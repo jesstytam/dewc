@@ -1,0 +1,1706 @@
+comparison,paper,taxon,column,value_a,value_b
+test,1-s2.0-S0006320798001128-main,Themeda triandra,a only,,
+test,AuldScottProcFireEffectsIAWF1997,Acacia suaveolens,b only,,
+test,AuldScottProcFireEffectsIAWF1997,Actinotus helianthi,b only,,
+test,AuldScottProcFireEffectsIAWF1997,Darwinia biflora,Location_name,Sydney Region,
+test,AuldScottProcFireEffectsIAWF1997,Darwinia diminuta,Location_name,Sydney Region,
+test,AuldScottProcFireEffectsIAWF1997,Darwinia glaucophylla,Location_name,Sydney Region,
+test,AuldScottProcFireEffectsIAWF1997,Darwinia procera,Location_name,Sydney Region,
+test,AuldScottProcFireEffectsIAWF1997,Grevillea caleyi,Location_name,Sydney Region,
+test,AuldScottProcFireEffectsIAWF1997,Grevillea longifolia,primary_juvenile_period,2.5-5,3-5
+test,AuldScottProcFireEffectsIAWF1997,Grevillea longifolia,Location_name,Sydney Region,
+test,AuldScottProcFireEffectsIAWF1997,Grevillea shiressii,Location_name,Sydney Region,
+test,Austral_Ecology_-_2002_-_Wahren_-_Early_post‐fire_regeneration_in_subalpine_heathland_and_grassland_in_the_Victorian_Alpine,Poa sp.,a only,,
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,Acacia pulchella,Location_name,Swan Coastal Plain,
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,Allocasuarina humilis,Location_name,Swan Coastal Plain,
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,Banksia attenuata,Location_name,Swan Coastal Plain,
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,Banksia prionotes,Location_name,Swan Coastal Plain,
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,Gompholobium tomentosum,Location_name,Swan Coastal Plain,
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,Hibbertia hypericoides,Location_name,Swan Coastal Plain,
+test,BF00040753,Banksia ericifolia,Family,Proteaceae,
+test,BF00040753,Banksia oblongifolia,Family,Proteaceae,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia attenuata,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia baxteri,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia burdettii,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia candolleana,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia coccinea,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia cuneata,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia elegans,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia grossa,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia hookeriana,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia lanata,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia leptophylla,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia menziesii,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia micrantha,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia prionotes,b only,,
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,Banksia tricuspis,b only,,
+test,biostor-259750,Caesia parviflora,a only,,
+test,biostor-259750,Drosera whittakeri,a only,,
+test,biostor-259750,Isolepis inundata,a only,,
+test,biostor-259750,Olearia teretifolia,a only,,
+test,biostor-259750,Anthoceros laevis,b only,,
+test,biostor-259750,Asterella drummondii,b only,,
+test,biostor-259750,Astroloma teretifolia,b only,,
+test,biostor-259750,Barbula calycina,b only,,
+test,biostor-259750,Breutelia affinis,b only,,
+test,biostor-259750,Bryum billardierei,b only,,
+test,biostor-259750,Bryum pachytheca,b only,,
+test,biostor-259750,Caesia parviflorus,b only,,
+test,biostor-259750,Campylopus introflexus,b only,,
+test,biostor-259750,Campylopus pyriformis,b only,,
+test,biostor-259750,Cephaloziella exiliflora,b only,,
+test,biostor-259750,Ceratodon purpureus,b only,,
+test,biostor-259750,Cladia aggregata,b only,,
+test,biostor-259750,Danthonia procera,b only,,
+test,biostor-259750,Drosera whittakerii,b only,,
+test,biostor-259750,Funaria hygrometrica,b only,,
+test,biostor-259750,Isolepis indundata,b only,,
+test,biostor-259750,Lethocolea pansa,b only,,
+test,biostor-259750,Lophocolea semiteres,b only,,
+test,biostor-259750,Marchantia polymorpha,b only,,
+test,biostor-259750,Polytrichum juniperinum,b only,,
+test,biostor-259750,Symphogyna podophylla,b only,,
+test,biostor-259750,Wijkia extenuata,b only,,
+test,biostor-259750,Acacia acinacea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia dealbata,Age at first flower production from seed_repr3,>3,
+test,biostor-259750,Acacia dealbata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia genistifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia mearnsii,Age at first flower production from seed_repr3,>3,
+test,biostor-259750,Acacia mearnsii,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia melanoxylon,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia mucronata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia myrtifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia pycnantha,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia verniciflua,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acacia verticillata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Acaena novae-zelandiae,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Acaena novae-zelandiae,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acianthus caudatus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Acianthus pusillus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Acrotriche serrulata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Adiantum aethiopicum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Agrostis avenacea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Aira caryophyllea,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Aira caryophyllea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Anthoxanthum odoratum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Asperula scoparia,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Asperula scoparia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Aster subulatus,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Aster subulatus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Astroloma humifusum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Austrostipa rudis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Austrostipa semibarbata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Billardiera scandens,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Billardiera scandens,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Blechnum cartilagineum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Blechnum nudum,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Briza minor,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Briza minor,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Brunonia australis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Burchardia umbellata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Bursaria spinosa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Caladenia cardiochila,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Caladenia catenata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Caladenia menziesii,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Caladenia reticulata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Caladenia tentaculata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Carduus tenuiflorus,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Cassytha glabella,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Cassytha glabella,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Cassytha melantha,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Cassytha melantha,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Centaurium spicatum,Age at first flower production from seed_repr3,,1-2
+test,biostor-259750,Centaurium spicatum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Cirsium vulgare,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Cirsium vulgare,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Clematis aristata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Comesperma volubile,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Comesperma volubile,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Coprosma quadrifida,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Correa reflexa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Cyathea australis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Cynoglossum suaveolens,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Cyrtostylis reniformis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Danthonia geniculata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Danthonia induta,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Danthonia pilosa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Danthonia setacea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Deyeuxia densa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Deyeuxia quadriseta,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Dianella revoluta,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Dichelachne rara,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Dichondra repens,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Dichondra repens,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Dipodium punctatum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Drosera macrantha,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Drosera peltata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Drosera peltata subsp. auriculata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Echinopogon ovatus,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Echinopogon ovatus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Epacris impressa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Eriochilus cucullatus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus aromaphloia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus baxteri,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus cypellocarpa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus globulus subsp. bicostata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus obliqua,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus ovata,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus tricarpa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus viminalis,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Eucalyptus willisii,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Euchiton involucratus,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Euchiton involucratus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Euchiton sphaericus,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Euchiton sphaericus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Exocarpos cupressiformis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Gahnia radula,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Gahnia sieberiana,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Galium binifolium,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Galium binifolium,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Geranium solanderi,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Geranium solanderi,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Gleichenia microphylla,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Glycine clandestina,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Glycine clandestina,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Gonocarpus tetragynus,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Gonocarpus tetragynus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Goodenia lanata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Goodenia ovata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Helichrysum leucopsideum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Helichrysum scorpioides,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Hibbertia riparia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Holcus lanatus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Hydrocotyle callicarpa,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Hydrocotyle callicarpa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Hydrocotyle hirta,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Hydrocotyle hirta,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Hydrocotyle laxiflora,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Hydrocotyle laxiflora,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Hypericum gramineum,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Hypericum gramineum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Hypochoeris radicata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Hypolepis rugosula,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Indigofera australis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Isolepis hystrix,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Isolepis marginata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Joycea pallida,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Juncus pauciflorus,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Juncus planifolius,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Kennedia prostrata,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Kennedia prostrata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lagenifera gracilis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lagenifera stipitata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lepidosperma elatius,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Leptorhynchos linearis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Leptorhynchos squamatus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Leptospermum continentale,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Leptospermum continentale,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Lissanthe strigosa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lobelia gibbosa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lobelia rhombifolia,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Lobelia rhombifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lomandra filiformis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lomandra longifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Lomandra micrantha,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lomandra multiflora,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Lomatia ilicifolia,Time to first flower production resprout_repr3a,0.5-0.667,
+test,biostor-259750,Lomatia ilicifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Luzula meridionalis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Melaleuca squarrosa,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Microlaena stipoides,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Notodanthonia semiannularis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Olearia argophylla,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Olearia lirata,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Olearia phlogopappa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Olearia ramulosa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Opercularia varia,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Opercularia varia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Oxalis corniculata,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Ozothamnus ferrugineus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pelargonium australe,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Phyllanthus gunnii,Age at first flower production from seed_repr3,,3
+test,biostor-259750,Phyllanthus gunnii,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pimelea humilis,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Pimelea linifolia,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Pimelea linifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Plantago varia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Poa morrisii,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Poa sieberiana,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Poa tenera,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pomaderris aspera,Age at first flower production from seed_repr3,>3,
+test,biostor-259750,Pomaderris aspera,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pomaderris elachophylla,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pomaderris ferruginea,Age at first flower production from seed_repr3,>3,
+test,biostor-259750,Pomaderris ferruginea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Poranthera microphylla,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Poranthera microphylla,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Prasophyllum odoratum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Prostanthera lasianthos,Age at first flower production from seed_repr3,>3,
+test,biostor-259750,Prostanthera lasianthos,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pteridium esculentum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pterostylis longifolia,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Pterostylis nana,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Pterostylis nutans,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Pterostylis parviflora,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Pterostylis sanguinea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Pultenaea daphnoides,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Pultenaea daphnoides,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Pultenaea scabra,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Pultenaea scabra,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Rorippa dictyosperma,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Rorippa dictyosperma,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Schoenus apogon,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Senecio velleioides,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Senecio velleioides,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Solanum laciniatum,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Solanum laciniatum,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Sonchus oleraceus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Spyridium parvifolium,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Spyridium parvifolium,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Stellaria flaccida,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Stellaria flaccida,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Stellaria media,native_status,introduced,
+test,biostor-259750,Stellaria media,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Stellaria media,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Stellaria pungens,Age at first flower production from seed_repr3,,2
+test,biostor-259750,Stellaria pungens,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Tetrarrhena distichophylla,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Tetrarrhena juncea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Thelymitra flexuosa,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Thelymitra ixioides,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Thelymitra pauciflora,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Thelymitra rubra,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Thysanotus juncifolius,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Thysanotus patersonii,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Thysanotus tuberosus,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Todea barbara,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Veronica calycina,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Veronica derwentiana,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Viola cleistogamoides,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Viola cleistogamoides,Location_name,Angahook-Lorne State Park,"near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Viola hederacea,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Viola hederacea,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Vulpia myuros,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Vulpia myuros,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,biostor-259750,Wahlenbergia gracilenta,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Wahlenbergia gracilenta,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park; near Distillery Creek Road, Angahook-Lorne State Park"
+test,biostor-259750,Wahlenbergia stricta,Age at first flower production from seed_repr3,,1
+test,biostor-259750,Wahlenbergia stricta,Location_name,Angahook-Lorne State Park,"Bambra Road, Angahook-Lorne State Park"
+test,bt02009,Doryanthes excelsa,Family,Doryanthaceae,
+test,bt02009,Doryanthes excelsa,Location_name,Site 1; Site 2,Site 1; Site 2
+test,bt02009,Doryanthes excelsa,Latitude,-34.05,
+test,bt02009,Doryanthes excelsa,Longitude,151.05,
+test,bt02009,Telopea speciosissima,Family,Proteaceae,
+test,bt02009,Telopea speciosissima,Location_name,Site 1; Site 3,Site 1; Site 3
+test,bt02009,Telopea speciosissima,Latitude,-34.05,
+test,bt02009,Telopea speciosissima,Longitude,151.05,
+test,bt9830293,Telopea speciosissima,a only,,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Acacia buxifolia subsp. buxifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Acacia dealbata,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Acacia filicifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Acacia implexa,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Acacia ulicifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Brachyloma daphnoides subsp. glabrum,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Cassinia leptocephala,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Cassinia quinquefaria,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Cryptandra amara,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Daviesia latifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Epacris microphylla,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Hakea eriantha,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Hakea laevipes subsp. graniticola,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Hardenbergia violacea,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Hibbertia acicularis,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Hibbertia obtusifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Hovea heterophylla,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Indigofera adesmiifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Indigofera australis,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Jacksonia scoparia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Leucopogon lanceolatus var. lanceolatus,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Leucopogon sp. nov,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Lissanthe strigosa subsp. strigosa,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Lomatia silaifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Melichrus urceolatus,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Monotoca scoparia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Olearia myrsinoides,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Olearia sp. aff. elliptica,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Olearia viscidula,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Pimelea linifolia,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Pultenaea microphylla,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Pultenaea setulosai,Fire_severity_categorical,Low; Moderate,
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,Rhytidosporum diosmoides,Fire_severity_categorical,Low; Moderate,
+noise,Kubiak Cunn 2009,Petunia hybrid,a only,,
+noise,Kubiak Cunn 2009,Senecio minimus,a only,,
+noise,Kubiak Cunn 2009,Petunia (hybrid),b only,,
+noise,Kubiak Cunn 2009,Acacia baileyana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia binervia,native_status,,native
+noise,Kubiak Cunn 2009,Acacia binervia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia elata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia falcata,native_status,,native
+noise,Kubiak Cunn 2009,Acacia falcata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia floribunda,native_status,,native
+noise,Kubiak Cunn 2009,Acacia floribunda,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia hispidula,native_status,,native
+noise,Kubiak Cunn 2009,Acacia hispidula,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia implexa,native_status,,native
+noise,Kubiak Cunn 2009,Acacia implexa,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia irrorata subsp. irrorata,native_status,,native
+noise,Kubiak Cunn 2009,Acacia irrorata subsp. irrorata,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia irrorata subsp. irrorata,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Acacia irrorata subsp. irrorata,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Acacia linifolia,native_status,,native
+noise,Kubiak Cunn 2009,Acacia linifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia longifolia subsp. longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Acacia longifolia subsp. longifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia longissima,native_status,,native
+noise,Kubiak Cunn 2009,Acacia longissima,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia myrtifolia,native_status,,native
+noise,Kubiak Cunn 2009,Acacia myrtifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia oxycedrus,native_status,,native
+noise,Kubiak Cunn 2009,Acacia oxycedrus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia parramattensis,native_status,,native
+noise,Kubiak Cunn 2009,Acacia parramattensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia parvipinnula,native_status,,native
+noise,Kubiak Cunn 2009,Acacia parvipinnula,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia podalyriifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia saligna,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia schinoides,native_status,,native
+noise,Kubiak Cunn 2009,Acacia schinoides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acacia suaveolens,native_status,,native
+noise,Kubiak Cunn 2009,Acacia suaveolens,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia terminalis,native_status,,native
+noise,Kubiak Cunn 2009,Acacia terminalis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acacia ulicifolia,native_status,,native
+noise,Kubiak Cunn 2009,Acacia ulicifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acer negundo,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acetosa sagittata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acianthus caudatus,native_status,,native
+noise,Kubiak Cunn 2009,Acianthus caudatus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acianthus fornicatus,native_status,,native
+noise,Kubiak Cunn 2009,Acianthus fornicatus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acianthus pusillus,native_status,,native
+noise,Kubiak Cunn 2009,Acianthus pusillus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Acmena smithii,native_status,,native
+noise,Kubiak Cunn 2009,Acmena smithii,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Acrotriche divaricata,native_status,,native
+noise,Kubiak Cunn 2009,Acrotriche divaricata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Actinotus helianthi,native_status,,native
+noise,Kubiak Cunn 2009,Actinotus helianthi,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Actinotus minor,native_status,,native
+noise,Kubiak Cunn 2009,Actinotus minor,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Adiantum aethiopicum,native_status,,native
+noise,Kubiak Cunn 2009,Adiantum aethiopicum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Adiantum hispidulum,native_status,,native
+noise,Kubiak Cunn 2009,Adiantum hispidulum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Aegiceras corniculatum,native_status,,native
+noise,Kubiak Cunn 2009,Aegiceras corniculatum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Agave americana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ageratina adenophora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ageratina riparia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ageratum houstonianum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ailanthus altissima,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Allocasuarina distyla,native_status,,native
+noise,Kubiak Cunn 2009,Allocasuarina distyla,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Allocasuarina littoralis,native_status,,native
+noise,Kubiak Cunn 2009,Allocasuarina littoralis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Allocasuarina torulosa,native_status,,native
+noise,Kubiak Cunn 2009,Allocasuarina torulosa,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Alstroemeria pulchella,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Alternanthera denticulata,native_status,,native
+noise,Kubiak Cunn 2009,Alternanthera denticulata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Amaranthus hybridus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Amaranthus viridus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Amaryllis belladonna,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ambrosia artemesiifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Amperea xiphoclada,native_status,,native
+noise,Kubiak Cunn 2009,Amperea xiphoclada,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Amyema congener subsp. congener,native_status,,native
+noise,Kubiak Cunn 2009,Amyema congener subsp. congener,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Anagallis arvensis,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Anagallis arvensis,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Anagallis arvensis,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Andropogon virginicus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Angophora bakeri,native_status,,native
+noise,Kubiak Cunn 2009,Angophora bakeri,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Angophora costata,native_status,,native
+noise,Kubiak Cunn 2009,Angophora costata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Angophora hispida,native_status,,native
+noise,Kubiak Cunn 2009,Angophora hispida,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Anisopogon avenaceus,native_status,,native
+noise,Kubiak Cunn 2009,Anisopogon avenaceus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Anomatheca laxa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Anredera cordifolia,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Araujia sericifera,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Aristea ecklonii,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Aristida benthamii,native_status,,native
+noise,Kubiak Cunn 2009,Aristida benthamii,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Aristida calycina var. calycina,native_status,,native
+noise,Kubiak Cunn 2009,Aristida calycina var. calycina,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Aristida ramosa,native_status,,native
+noise,Kubiak Cunn 2009,Aristida ramosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Aristida vagans,native_status,,native
+noise,Kubiak Cunn 2009,Aristida vagans,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Aristida warburgii,native_status,,native
+noise,Kubiak Cunn 2009,Aristida warburgii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Arundo donax,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Asparagus aethiopicus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Asparagus asparagoides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Asparagus officinalis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Asparagus scandens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Asplenium australasicum,native_status,,native
+noise,Kubiak Cunn 2009,Asplenium australasicum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Asplenium flabellifolium,native_status,,native
+noise,Kubiak Cunn 2009,Asplenium flabellifolium,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Asterolasia correifolia,native_status,,native
+noise,Kubiak Cunn 2009,Asterolasia correifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Astrotricha floccosa,native_status,,native
+noise,Kubiak Cunn 2009,Astrotricha floccosa,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Astrotricha latifolia,native_status,,native
+noise,Kubiak Cunn 2009,Astrotricha latifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Astrotricha longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Astrotricha longifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Atriplex prostrata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Austrodanthonia tenuior,native_status,,native
+noise,Kubiak Cunn 2009,Austrodanthonia tenuior,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Austromyrtus tenuifolia,native_status,,native
+noise,Kubiak Cunn 2009,Austromyrtus tenuifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Austrostipa pubescens,native_status,,native
+noise,Kubiak Cunn 2009,Austrostipa pubescens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Avicennia marina var. australasica,native_status,,native
+noise,Kubiak Cunn 2009,Avicennia marina var. australasica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Babingtonia densifolia,native_status,,native
+noise,Kubiak Cunn 2009,Babingtonia densifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Babingtonia pluriflora,native_status,,native
+noise,Kubiak Cunn 2009,Babingtonia pluriflora,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Backhousia myrtifolia,native_status,,native
+noise,Kubiak Cunn 2009,Backhousia myrtifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Baeckea brevifolia,native_status,,native
+noise,Kubiak Cunn 2009,Baeckea brevifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Baeckea diosmifolia,native_status,,native
+noise,Kubiak Cunn 2009,Baeckea diosmifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Baeckea imbricata,native_status,,native
+noise,Kubiak Cunn 2009,Baeckea imbricata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Baeckea linifolia,native_status,,native
+noise,Kubiak Cunn 2009,Baeckea linifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Baloskion tetraphyllum subsp. meiostachyum,native_status,,native
+noise,Kubiak Cunn 2009,Baloskion tetraphyllum subsp. meiostachyum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Banksia ericifolia,native_status,,native
+noise,Kubiak Cunn 2009,Banksia ericifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Banksia integrifolia,native_status,,native
+noise,Kubiak Cunn 2009,Banksia integrifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Banksia marginata,native_status,,native
+noise,Kubiak Cunn 2009,Banksia marginata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Banksia oblongifolia,native_status,,native
+noise,Kubiak Cunn 2009,Banksia oblongifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Banksia robur,native_status,,native
+noise,Kubiak Cunn 2009,Banksia robur,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Banksia serrata,native_status,,native
+noise,Kubiak Cunn 2009,Banksia serrata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Banksia spinulosa,native_status,,native
+noise,Kubiak Cunn 2009,Banksia spinulosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Bauera microphylla,native_status,,native
+noise,Kubiak Cunn 2009,Bauera microphylla,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bauera rubioides,native_status,,native
+noise,Kubiak Cunn 2009,Bauera rubioides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Baumea juncea,native_status,,native
+noise,Kubiak Cunn 2009,Baumea juncea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Baumea rubiginosa,native_status,,native
+noise,Kubiak Cunn 2009,Baumea rubiginosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bertya brownii,native_status,,native
+noise,Kubiak Cunn 2009,Bertya brownii,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bidens pilosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bidens subalternans,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Bidens tripartita,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Billardiera scandens,native_status,,native
+noise,Kubiak Cunn 2009,Billardiera scandens,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Blandfordia nobilis,native_status,,native
+noise,Kubiak Cunn 2009,Blandfordia nobilis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Blechnum ambiguum,native_status,,native
+noise,Kubiak Cunn 2009,Blechnum ambiguum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Blechnum camfieldii,native_status,,native
+noise,Kubiak Cunn 2009,Blechnum camfieldii,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Blechnum cartilagineum,native_status,,native
+noise,Kubiak Cunn 2009,Blechnum cartilagineum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Blechnum indicum,native_status,,native
+noise,Kubiak Cunn 2009,Blechnum indicum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Blechnum nudum,native_status,,native
+noise,Kubiak Cunn 2009,Blechnum nudum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Boronia ledifolia,native_status,,native
+noise,Kubiak Cunn 2009,Boronia ledifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Boronia mollis,native_status,,native
+noise,Kubiak Cunn 2009,Boronia mollis,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Boronia pinnata,native_status,,native
+noise,Kubiak Cunn 2009,Boronia pinnata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Boronia polygalifolia,native_status,,native
+noise,Kubiak Cunn 2009,Boronia polygalifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Boronia rigens,native_status,,native
+noise,Kubiak Cunn 2009,Boronia rigens,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bossiaea heterophylla,native_status,,native
+noise,Kubiak Cunn 2009,Bossiaea heterophylla,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bossiaea obcordata,native_status,,native
+noise,Kubiak Cunn 2009,Bossiaea obcordata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Bossiaea scolopendria,native_status,,native
+noise,Kubiak Cunn 2009,Bossiaea scolopendria,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Brachyloma daphnoides,native_status,,native
+noise,Kubiak Cunn 2009,Brachyloma daphnoides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Brachyscome angustifolia var. angustifolia,native_status,,native
+noise,Kubiak Cunn 2009,Brachyscome angustifolia var. angustifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Brassica fruticulosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Brassica juncea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Brassica tournefortii,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Breynia oblongifolia,native_status,,native
+noise,Kubiak Cunn 2009,Breynia oblongifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Briza maxima,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Briza minor,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Brunoniella pumilio,native_status,,native
+noise,Kubiak Cunn 2009,Brunoniella pumilio,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Buddleja davidii,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Buddleja madagascariensis,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Burchardia umbellata,native_status,,native
+noise,Kubiak Cunn 2009,Burchardia umbellata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Bursaria spinosa,native_status,,native
+noise,Kubiak Cunn 2009,Bursaria spinosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Caesia parviflora,native_status,,native
+noise,Kubiak Cunn 2009,Caesia parviflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Caladenia carnea,native_status,,native
+noise,Kubiak Cunn 2009,Caladenia carnea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Caladenia catenata,native_status,,native
+noise,Kubiak Cunn 2009,Caladenia catenata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Caleana major,native_status,,native
+noise,Kubiak Cunn 2009,Caleana major,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Callicoma serratifolia,native_status,,native
+noise,Kubiak Cunn 2009,Callicoma serratifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Callistemon citrinus,native_status,,native
+noise,Kubiak Cunn 2009,Callistemon citrinus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Callistemon linearis,native_status,,native
+noise,Kubiak Cunn 2009,Callistemon linearis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Callitris muelleri,native_status,,native
+noise,Kubiak Cunn 2009,Callitris muelleri,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Calochilus campestris,native_status,,native
+noise,Kubiak Cunn 2009,Calochilus campestris,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Calochilus paludosus,native_status,,native
+noise,Kubiak Cunn 2009,Calochilus paludosus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Calochilus robertsonii,native_status,,native
+noise,Kubiak Cunn 2009,Calochilus robertsonii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Calochlaena dubia,native_status,,native
+noise,Kubiak Cunn 2009,Calochlaena dubia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Calystegia marginata,native_status,,native
+noise,Kubiak Cunn 2009,Calystegia marginata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Calytrix tetragona,native_status,,native
+noise,Kubiak Cunn 2009,Calytrix tetragona,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Canna indica,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Capsella bursa-pastoris,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cardamine flexuosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cardamine hirsuta,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cardiospermum grandiflorum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Carex inversa,native_status,,native
+noise,Kubiak Cunn 2009,Carex inversa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cassinia aculeata,native_status,,native
+noise,Kubiak Cunn 2009,Cassinia aculeata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cassinia denticulata,native_status,,native
+noise,Kubiak Cunn 2009,Cassinia denticulata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cassytha glabella,native_status,,native
+noise,Kubiak Cunn 2009,Cassytha glabella,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cassytha pubescens,native_status,,native
+noise,Kubiak Cunn 2009,Cassytha pubescens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Casuarina glauca,native_status,,native
+noise,Kubiak Cunn 2009,Casuarina glauca,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Caustis flexuosa,native_status,,native
+noise,Kubiak Cunn 2009,Caustis flexuosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Caustis pentandra,native_status,,native
+noise,Kubiak Cunn 2009,Caustis pentandra,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cayatia clematidea,native_status,,native
+noise,Kubiak Cunn 2009,Cayatia clematidea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Celtis australis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Centaurium tenuiflorum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Centella asiatica,native_status,,native
+noise,Kubiak Cunn 2009,Centella asiatica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Centrolepis strigosa,native_status,,native
+noise,Kubiak Cunn 2009,Centrolepis strigosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cerastium glomeratum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ceratopetalum apetalum,native_status,,native
+noise,Kubiak Cunn 2009,Ceratopetalum apetalum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ceratopetalum gummiferum,native_status,,native
+noise,Kubiak Cunn 2009,Ceratopetalum gummiferum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cestichis reflexa,native_status,,native
+noise,Kubiak Cunn 2009,Cestichis reflexa,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cestrum parqui,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Chamaesyce supina,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cheilanthes distans,native_status,,native
+noise,Kubiak Cunn 2009,Cheilanthes distans,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cheilanthes sieberi,native_status,,native
+noise,Kubiak Cunn 2009,Cheilanthes sieberi,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Chenopodium album,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chiloglottis sp.,native_status,,native
+noise,Kubiak Cunn 2009,Chiloglottis sp.,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chloanthes stoechadis,native_status,,native
+noise,Kubiak Cunn 2009,Chloanthes stoechadis,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chloris gayana,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chlorophytum comosum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Chordifex dimorphus,native_status,,native
+noise,Kubiak Cunn 2009,Chordifex dimorphus,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chordifex fastigiatus,native_status,,native
+noise,Kubiak Cunn 2009,Chordifex fastigiatus,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chorizandra cymbaria,native_status,,native
+noise,Kubiak Cunn 2009,Chorizandra cymbaria,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Chorizandra sphaerocephala,native_status,,native
+noise,Kubiak Cunn 2009,Chorizandra sphaerocephala,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Christella dentata,native_status,,native
+noise,Kubiak Cunn 2009,Christella dentata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Chrysanthemoides monilifera subsp. monilifera,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cinnamomum camphora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cirsium vulgare,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cissus hypoglauca,native_status,,native
+noise,Kubiak Cunn 2009,Cissus hypoglauca,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Clematis aristata,native_status,,native
+noise,Kubiak Cunn 2009,Clematis aristata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Clerodendrum tomentosum,native_status,,native
+noise,Kubiak Cunn 2009,Clerodendrum tomentosum,Time to first flower production resprout_repr3a,2.75,
+noise,Kubiak Cunn 2009,Clerodendrum tomentosum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Clivia miniata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Colocasia esculenta,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Comesperma ericinum,native_status,,native
+noise,Kubiak Cunn 2009,Comesperma ericinum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Comesperma sphaerocarpum,native_status,,native
+noise,Kubiak Cunn 2009,Comesperma sphaerocarpum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Comesperma volubile,native_status,,native
+noise,Kubiak Cunn 2009,Comesperma volubile,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Commelina cyanea,native_status,,native
+noise,Kubiak Cunn 2009,Commelina cyanea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Commersonia fraseri,native_status,,native
+noise,Kubiak Cunn 2009,Commersonia fraseri,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Conospermum ericifolium,native_status,,native
+noise,Kubiak Cunn 2009,Conospermum ericifolium,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Conospermum longifolium subsp. angustifolium,native_status,,native
+noise,Kubiak Cunn 2009,Conospermum longifolium subsp. angustifolium,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Conospermum longifolium subsp. longifolium,native_status,,native
+noise,Kubiak Cunn 2009,Conospermum longifolium subsp. longifolium,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Conyza bonariensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Coreopsis lanceolata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Coronopus didymus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Correa reflexa,native_status,,native
+noise,Kubiak Cunn 2009,Correa reflexa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cortaderia selloana,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Corybas pruinosus,native_status,,native
+noise,Kubiak Cunn 2009,Corybas pruinosus,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Corymbia gummifera,native_status,,native
+noise,Kubiak Cunn 2009,Corymbia gummifera,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cotoneaster franchetti,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cotoneaster glaucophyllus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cotula australis,native_status,,native
+noise,Kubiak Cunn 2009,Cotula australis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Crassocephalum crepidioides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Crassula multicava,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Crassula sieberiana,native_status,,native
+noise,Kubiak Cunn 2009,Crassula sieberiana,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Crocosmia X crocosmiiflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Crowea saligna,native_status,,native
+noise,Kubiak Cunn 2009,Crowea saligna,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cryptandra amara,native_status,,native
+noise,Kubiak Cunn 2009,Cryptandra amara,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cryptandra ericoides,native_status,,native
+noise,Kubiak Cunn 2009,Cryptandra ericoides,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cryptostylis erecta,native_status,,native
+noise,Kubiak Cunn 2009,Cryptostylis erecta,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cryptostylis subulata,native_status,,native
+noise,Kubiak Cunn 2009,Cryptostylis subulata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cyathea australis,native_status,,native
+noise,Kubiak Cunn 2009,Cyathea australis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cyathochaeta diandra,native_status,,native
+noise,Kubiak Cunn 2009,Cyathochaeta diandra,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cymbidium suave,native_status,,native
+noise,Kubiak Cunn 2009,Cymbidium suave,Time to first flower production resprout_repr3a,1.769,
+noise,Kubiak Cunn 2009,Cymbidium suave,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cymbopogon refractus,native_status,,native
+noise,Kubiak Cunn 2009,Cymbopogon refractus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cyperus albostriatus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Cyperus brevifolius,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cyperus eragrostis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Cyperus polystachyos,native_status,,native
+noise,Kubiak Cunn 2009,Cyperus polystachyos,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dampiera purpurea,native_status,,native
+noise,Kubiak Cunn 2009,Dampiera purpurea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dampiera stricta,native_status,,native
+noise,Kubiak Cunn 2009,Dampiera stricta,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Darwinia biflora,native_status,,native
+noise,Kubiak Cunn 2009,Darwinia biflora,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Darwinia fascicularis var. fascicularis,native_status,,native
+noise,Kubiak Cunn 2009,Darwinia fascicularis var. fascicularis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Darwinia procera,native_status,,native
+noise,Kubiak Cunn 2009,Darwinia procera,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Davallia solida var. pyxidata,native_status,,native
+noise,Kubiak Cunn 2009,Davallia solida var. pyxidata,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Daviesia alata,native_status,,native
+noise,Kubiak Cunn 2009,Daviesia alata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Daviesia ulicifolia,native_status,,native
+noise,Kubiak Cunn 2009,Daviesia ulicifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Delairea odorata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Desmodium gunnii,native_status,,native
+noise,Kubiak Cunn 2009,Desmodium gunnii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Desmodium rhytidophyllum,native_status,,native
+noise,Kubiak Cunn 2009,Desmodium rhytidophyllum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dianella caerulea,native_status,,native
+noise,Kubiak Cunn 2009,Dianella caerulea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dianella prunina,native_status,,native
+noise,Kubiak Cunn 2009,Dianella prunina,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dianella revoluta,native_status,,native
+noise,Kubiak Cunn 2009,Dianella revoluta,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dichelachne crinita,native_status,,native
+noise,Kubiak Cunn 2009,Dichelachne crinita,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dichelachne micrantha,native_status,,native
+noise,Kubiak Cunn 2009,Dichelachne micrantha,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Digitaria parviflora,native_status,,native
+noise,Kubiak Cunn 2009,Digitaria parviflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dillwynia floribunda var. floribunda,native_status,,native
+noise,Kubiak Cunn 2009,Dillwynia floribunda var. floribunda,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dillwynia retorta,native_status,,native
+noise,Kubiak Cunn 2009,Dillwynia retorta,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dillwynia rudis,native_status,,native
+noise,Kubiak Cunn 2009,Dillwynia rudis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dipodium roseum,native_status,,native
+noise,Kubiak Cunn 2009,Dipodium roseum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dipodium variegatum,native_status,,native
+noise,Kubiak Cunn 2009,Dipodium variegatum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dipogon lignosus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Diuris aurea,native_status,,native
+noise,Kubiak Cunn 2009,Diuris aurea,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Diuris maculata,native_status,,native
+noise,Kubiak Cunn 2009,Diuris maculata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dockrillia linguiformis,native_status,,native
+noise,Kubiak Cunn 2009,Dockrillia linguiformis,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dodonaea pinnata,native_status,,native
+noise,Kubiak Cunn 2009,Dodonaea pinnata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Dodonaea triquetra,native_status,,native
+noise,Kubiak Cunn 2009,Dodonaea triquetra,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Doodia aspera,native_status,,native
+noise,Kubiak Cunn 2009,Doodia aspera,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Doodia caudata,native_status,,native
+noise,Kubiak Cunn 2009,Doodia caudata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Doodia linearis,native_status,,native
+noise,Kubiak Cunn 2009,Doodia linearis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Dracophyllum secundum,native_status,,native
+noise,Kubiak Cunn 2009,Dracophyllum secundum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Drosera auriculata,native_status,,native
+noise,Kubiak Cunn 2009,Drosera auriculata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Drosera binata,native_status,,native
+noise,Kubiak Cunn 2009,Drosera binata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Drosera peltata,native_status,,native
+noise,Kubiak Cunn 2009,Drosera peltata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Drosera spatulata,native_status,,native
+noise,Kubiak Cunn 2009,Drosera spatulata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Duboisia myoporoides,native_status,,native
+noise,Kubiak Cunn 2009,Duboisia myoporoides,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Echinopogon caespitosus,native_status,,native
+noise,Kubiak Cunn 2009,Echinopogon caespitosus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ehrharta erecta,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Elaeocarpus reticulatus,native_status,,native
+noise,Kubiak Cunn 2009,Elaeocarpus reticulatus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Empodisma minus,native_status,,native
+noise,Kubiak Cunn 2009,Empodisma minus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Endiandra sieberi,native_status,,native
+noise,Kubiak Cunn 2009,Endiandra sieberi,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Entolasia marginata,native_status,,native
+noise,Kubiak Cunn 2009,Entolasia marginata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Entolasia stricta,native_status,,native
+noise,Kubiak Cunn 2009,Entolasia stricta,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Epacris crassifolia,native_status,,native
+noise,Kubiak Cunn 2009,Epacris crassifolia,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Epacris longiflora,native_status,,native
+noise,Kubiak Cunn 2009,Epacris longiflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Epacris microphylla,native_status,,native
+noise,Kubiak Cunn 2009,Epacris microphylla,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Epacris obtusifolia,native_status,,native
+noise,Kubiak Cunn 2009,Epacris obtusifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Epacris pulchella,native_status,,native
+noise,Kubiak Cunn 2009,Epacris pulchella,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Epacris purpurascens var. purpurascens,native_status,,native
+noise,Kubiak Cunn 2009,Epacris purpurascens var. purpurascens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Epilobium billardierianum var. cinereum,native_status,,native
+noise,Kubiak Cunn 2009,Epilobium billardierianum var. cinereum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eragrostis brownii,native_status,,native
+noise,Kubiak Cunn 2009,Eragrostis brownii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eragrostis leptostachya,native_status,,native
+noise,Kubiak Cunn 2009,Eragrostis leptostachya,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Erechtites valerianifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Erigeron karvinskianus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eriobotrya japonica,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eriochilus petricola,native_status,,native
+noise,Kubiak Cunn 2009,Eriochilus petricola,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eriostemon australasius,native_status,,native
+noise,Kubiak Cunn 2009,Eriostemon australasius,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eryngium pandanifolium,Time to first flower production resprout_repr3a,0.962,
+noise,Kubiak Cunn 2009,Eryngium pandanifolium,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Erythrina crista-galli,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Erythrina x sykesii,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eucalyptus botryoides,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus botryoides,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eucalyptus haemastoma,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus haemastoma,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus luehmanniana,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus luehmanniana,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eucalyptus obstans,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus obstans,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eucalyptus paniculata,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus paniculata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus pilularis,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus pilularis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus piperita,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus piperita,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus punctata,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus punctata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eucalyptus racemosa,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus racemosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus resinifera,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus resinifera,Time to first flower production resprout_repr3a,3.654,
+noise,Kubiak Cunn 2009,Eucalyptus resinifera,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus saligna,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus saligna,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eucalyptus umbra,native_status,,native
+noise,Kubiak Cunn 2009,Eucalyptus umbra,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Euphorbia depauperata var. pubescens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Euphorbia peplus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eupomatia laurina,native_status,,native
+noise,Kubiak Cunn 2009,Eupomatia laurina,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Eurychorda complanata,native_status,,native
+noise,Kubiak Cunn 2009,Eurychorda complanata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Euryomyrtus ramosissima,native_status,,native
+noise,Kubiak Cunn 2009,Euryomyrtus ramosissima,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Eustrephus latifolius,native_status,,native
+noise,Kubiak Cunn 2009,Eustrephus latifolius,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Exocarpos cupressiformis,native_status,,native
+noise,Kubiak Cunn 2009,Exocarpos cupressiformis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ficus coronata,native_status,,native
+noise,Kubiak Cunn 2009,Ficus coronata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ficus pumila,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ficus rubiginosa,native_status,,native
+noise,Kubiak Cunn 2009,Ficus rubiginosa,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Fimbristylis dichotoma,native_status,,native
+noise,Kubiak Cunn 2009,Fimbristylis dichotoma,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Foeniculum vulgare,Time to first flower production resprout_repr3a,0.962,
+noise,Kubiak Cunn 2009,Foeniculum vulgare,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Freesia hybrid,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Fumaria capreolata subsp. capreolata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Fumaria officianalis,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Fumaria officianalis,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Fumaria officianalis,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Gahnia clarkei,native_status,,native
+noise,Kubiak Cunn 2009,Gahnia clarkei,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gahnia erythrocarpa,native_status,,native
+noise,Kubiak Cunn 2009,Gahnia erythrocarpa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gahnia melanocarpa,native_status,,native
+noise,Kubiak Cunn 2009,Gahnia melanocarpa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gahnia radula,native_status,,native
+noise,Kubiak Cunn 2009,Gahnia radula,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Galinsoga parviflora,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Galium aparine,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gamochaeta americana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gamochaeta pensylvanica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gamochaeta spicata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Geitonoplesium cymosum,native_status,,native
+noise,Kubiak Cunn 2009,Geitonoplesium cymosum,Time to first flower production resprout_repr3a,0.673,
+noise,Kubiak Cunn 2009,Geitonoplesium cymosum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Genista monspessulana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Genoplesium fimbriatum,native_status,,native
+noise,Kubiak Cunn 2009,Genoplesium fimbriatum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Genoplesium pumilum,native_status,,native
+noise,Kubiak Cunn 2009,Genoplesium pumilum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Genoplesium rufum,native_status,,native
+noise,Kubiak Cunn 2009,Genoplesium rufum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Geranium homeanum,native_status,,native
+noise,Kubiak Cunn 2009,Geranium homeanum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gladiolus angustus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gleichenia dicarpa,native_status,,native
+noise,Kubiak Cunn 2009,Gleichenia dicarpa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gleichenia microphylla,native_status,,native
+noise,Kubiak Cunn 2009,Gleichenia microphylla,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gleichenia rupestris,native_status,,native
+noise,Kubiak Cunn 2009,Gleichenia rupestris,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Glochidion ferdinandi,native_status,,native
+noise,Kubiak Cunn 2009,Glochidion ferdinandi,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Glossodia major,native_status,,native
+noise,Kubiak Cunn 2009,Glossodia major,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Glossodia minor,native_status,,native
+noise,Kubiak Cunn 2009,Glossodia minor,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Glycine clandestina,native_status,,native
+noise,Kubiak Cunn 2009,Glycine clandestina,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Glycine tabacina,native_status,,native
+noise,Kubiak Cunn 2009,Glycine tabacina,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gompholobium glabratum,native_status,,native
+noise,Kubiak Cunn 2009,Gompholobium glabratum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Gompholobium grandiflorum,native_status,,native
+noise,Kubiak Cunn 2009,Gompholobium grandiflorum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gompholobium latifolium,native_status,,native
+noise,Kubiak Cunn 2009,Gompholobium latifolium,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gonocarpus micranthus subsp. micranthus,native_status,,native
+noise,Kubiak Cunn 2009,Gonocarpus micranthus subsp. micranthus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gonocarpus salsoloides,native_status,,native
+noise,Kubiak Cunn 2009,Gonocarpus salsoloides,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gonocarpus teucrioides,native_status,,native
+noise,Kubiak Cunn 2009,Gonocarpus teucrioides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Goodenia bellidifolia,native_status,,native
+noise,Kubiak Cunn 2009,Goodenia bellidifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Goodenia hederacea,native_status,,native
+noise,Kubiak Cunn 2009,Goodenia hederacea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Goodenia heterophylla,native_status,,native
+noise,Kubiak Cunn 2009,Goodenia heterophylla,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Goodenia ovata,native_status,,native
+noise,Kubiak Cunn 2009,Goodenia ovata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Goodenia paniculata,native_status,,native
+noise,Kubiak Cunn 2009,Goodenia paniculata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Grammitis stenophylla,native_status,,native
+noise,Kubiak Cunn 2009,Grammitis stenophylla,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Grevillea buxifolia,native_status,,native
+noise,Kubiak Cunn 2009,Grevillea buxifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Grevillea linearifolia,native_status,,native
+noise,Kubiak Cunn 2009,Grevillea linearifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Grevillea sericea,native_status,,native
+noise,Kubiak Cunn 2009,Grevillea sericea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Grevillea speciosa,native_status,,native
+noise,Kubiak Cunn 2009,Grevillea speciosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gymnoschoenus sphaerocephalus,native_status,,native
+noise,Kubiak Cunn 2009,Gymnoschoenus sphaerocephalus,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Gymnostachys anceps,native_status,,native
+noise,Kubiak Cunn 2009,Gymnostachys anceps,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Haemodorum corymbosum,native_status,,native
+noise,Kubiak Cunn 2009,Haemodorum corymbosum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Haemodorum planifolium,native_status,,native
+noise,Kubiak Cunn 2009,Haemodorum planifolium,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hakea dactyloides,native_status,,native
+noise,Kubiak Cunn 2009,Hakea dactyloides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hakea gibbosa,native_status,,native
+noise,Kubiak Cunn 2009,Hakea gibbosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hakea laevipes subsp. laevipes,native_status,,native
+noise,Kubiak Cunn 2009,Hakea laevipes subsp. laevipes,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hakea propinqua,native_status,,native
+noise,Kubiak Cunn 2009,Hakea propinqua,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hakea salicifolia,native_status,,native
+noise,Kubiak Cunn 2009,Hakea salicifolia,Age at first flower production from seed_repr3,5.673,
+noise,Kubiak Cunn 2009,Hakea salicifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hakea sericea,native_status,,native
+noise,Kubiak Cunn 2009,Hakea sericea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hakea teretifolia,native_status,,native
+noise,Kubiak Cunn 2009,Hakea teretifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hardenbergia violacea,native_status,,native
+noise,Kubiak Cunn 2009,Hardenbergia violacea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hedera helix,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hedychium gardnerianum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Helianthus annuus,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Helianthus annuus,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Helianthus annuus,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Helichrysum elatum,native_status,,native
+noise,Kubiak Cunn 2009,Helichrysum elatum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Helichrysum rutidolepis,native_status,,native
+noise,Kubiak Cunn 2009,Helichrysum rutidolepis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Helichrysum scorpioides,native_status,,native
+noise,Kubiak Cunn 2009,Helichrysum scorpioides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hemarthria uncinata,native_status,,native
+noise,Kubiak Cunn 2009,Hemarthria uncinata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hemigenia purpurea,native_status,,native
+noise,Kubiak Cunn 2009,Hemigenia purpurea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hibbertia aspera,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia aspera,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hibbertia bracteata,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia bracteata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hibbertia cistiflora,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia cistiflora,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hibbertia dentata,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia dentata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hibbertia diffusa,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia diffusa,Time to first flower production resprout_repr3a,0.442,
+noise,Kubiak Cunn 2009,Hibbertia diffusa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hibbertia fasciculata,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia fasciculata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hibbertia linearis,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia linearis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hibbertia nitida,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia nitida,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hibbertia riparia,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia riparia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hibbertia scandens,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia scandens,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hibbertia serpyllifolia,native_status,,native
+noise,Kubiak Cunn 2009,Hibbertia serpyllifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hibiscus diversifolius,native_status,,native
+noise,Kubiak Cunn 2009,Hibiscus diversifolius,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Histiopteris incisa,native_status,,native
+noise,Kubiak Cunn 2009,Histiopteris incisa,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hovea linearis,native_status,,native
+noise,Kubiak Cunn 2009,Hovea linearis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hovea longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Hovea longifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hybanthus monopetalus,native_status,,native
+noise,Kubiak Cunn 2009,Hybanthus monopetalus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hydrocotyle bonariensis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hydrocotyle peduncularis,native_status,,native
+noise,Kubiak Cunn 2009,Hydrocotyle peduncularis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hymenophyllum cupressiforme,native_status,,native
+noise,Kubiak Cunn 2009,Hymenophyllum cupressiforme,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Hypericum gramineum,native_status,,native
+noise,Kubiak Cunn 2009,Hypericum gramineum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hypericum perforatum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hypochaeris radicata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hypolepis muelleri,native_status,,native
+noise,Kubiak Cunn 2009,Hypolepis muelleri,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Hypoxis hygrometrica,native_status,,native
+noise,Kubiak Cunn 2009,Hypoxis hygrometrica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Impatiens walleriana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Imperata cylindrica var. major,native_status,,native
+noise,Kubiak Cunn 2009,Imperata cylindrica var. major,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ipomoea cairica,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ipomoea indica,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Isolepis cernua,native_status,,native
+noise,Kubiak Cunn 2009,Isolepis cernua,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Isolepis prolifera,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Isopogon anemonifolius,native_status,,native
+noise,Kubiak Cunn 2009,Isopogon anemonifolius,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Isopogon anethifolius,native_status,,native
+noise,Kubiak Cunn 2009,Isopogon anethifolius,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Jasminum polyanthum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Juncus articulatus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Juncus continuus,native_status,,native
+noise,Kubiak Cunn 2009,Juncus continuus,Time to first flower production resprout_repr3a,0.808,
+noise,Kubiak Cunn 2009,Juncus continuus,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Kennedia rubicunda,native_status,,native
+noise,Kubiak Cunn 2009,Kennedia rubicunda,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Kunzea ambigua,native_status,,native
+noise,Kubiak Cunn 2009,Kunzea ambigua,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Kunzea capitata,native_status,,native
+noise,Kubiak Cunn 2009,Kunzea capitata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lactuca serriola,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lagenifera gracilis,native_status,,native
+noise,Kubiak Cunn 2009,Lagenifera gracilis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lambertia formosa,native_status,,native
+noise,Kubiak Cunn 2009,Lambertia formosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lantana camara,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lasiopetalum ferrugineum,native_status,,native
+noise,Kubiak Cunn 2009,Lasiopetalum ferrugineum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lasiopetalum parviflorum,native_status,,native
+noise,Kubiak Cunn 2009,Lasiopetalum parviflorum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Laxmannia gracilis,native_status,,native
+noise,Kubiak Cunn 2009,Laxmannia gracilis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Leionema dentatum,native_status,,native
+noise,Kubiak Cunn 2009,Leionema dentatum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lepidosperma filiforme,native_status,,native
+noise,Kubiak Cunn 2009,Lepidosperma filiforme,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lepidosperma gunnii,native_status,,native
+noise,Kubiak Cunn 2009,Lepidosperma gunnii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lepidosperma laterale,native_status,,native
+noise,Kubiak Cunn 2009,Lepidosperma laterale,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lepidosperma limicola,native_status,,native
+noise,Kubiak Cunn 2009,Lepidosperma limicola,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lepidosperma neesii,native_status,,native
+noise,Kubiak Cunn 2009,Lepidosperma neesii,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leptocarpus tenax,native_status,,native
+noise,Kubiak Cunn 2009,Leptocarpus tenax,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leptomeria acida,native_status,,native
+noise,Kubiak Cunn 2009,Leptomeria acida,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Leptospermum arachnoides,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum arachnoides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leptospermum grandifolium,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum grandifolium,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leptospermum juniperinum,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum juniperinum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leptospermum parvifolium,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum parvifolium,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Leptospermum polygalifolium,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum polygalifolium,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Leptospermum squarrosum,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum squarrosum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leptospermum trinervium,native_status,,native
+noise,Kubiak Cunn 2009,Leptospermum trinervium,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lepyrodia scariosa,native_status,,native
+noise,Kubiak Cunn 2009,Lepyrodia scariosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leucopogon amplexicaulis,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon amplexicaulis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leucopogon appressus,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon appressus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leucopogon ericoides,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon ericoides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Leucopogon esquamatus,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon esquamatus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leucopogon juniperinus,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon juniperinus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Leucopogon lanceolatus,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon lanceolatus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leucopogon microphyllus,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon microphyllus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Leucopogon setiger,native_status,,native
+noise,Kubiak Cunn 2009,Leucopogon setiger,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ligustrum lucidum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ligustrum sinense,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lilium formosanum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lindsaea linearis,native_status,,native
+noise,Kubiak Cunn 2009,Lindsaea linearis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lindsaea microphylla,native_status,,native
+noise,Kubiak Cunn 2009,Lindsaea microphylla,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Linum trigynum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Liquidambar styraciflua,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lissanthe strigosa subsp. subulata,native_status,,native
+noise,Kubiak Cunn 2009,Lissanthe strigosa subsp. subulata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Livistona australis,native_status,,native
+noise,Kubiak Cunn 2009,Livistona australis,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lobelia alata,native_status,,native
+noise,Kubiak Cunn 2009,Lobelia alata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lobularia maratima,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Logania albiflora,native_status,,native
+noise,Kubiak Cunn 2009,Logania albiflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomandra cylindrica,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra cylindrica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lomandra filiformis subsp. filiformis,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra filiformis subsp. filiformis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomandra fluviatilis,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra fluviatilis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lomandra glauca,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra glauca,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomandra gracilis,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra gracilis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomandra longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra longifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomandra micrantha,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra micrantha,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lomandra multiflora,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra multiflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomandra obliqua,native_status,,native
+noise,Kubiak Cunn 2009,Lomandra obliqua,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomatia myricoides,native_status,,native
+noise,Kubiak Cunn 2009,Lomatia myricoides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lomatia silaifolia,native_status,,native
+noise,Kubiak Cunn 2009,Lomatia silaifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Lonicera japonica,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lotus angustissimus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ludwigia peruviana,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lycopersicon esculentum,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lycopersicon esculentum,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Lycopersicon esculentum,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Lycopodiella lateralis,native_status,,native
+noise,Kubiak Cunn 2009,Lycopodiella lateralis,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Lyperanthus suaveolens,native_status,,native
+noise,Kubiak Cunn 2009,Lyperanthus suaveolens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Macrozamia communis,native_status,,native
+noise,Kubiak Cunn 2009,Macrozamia communis,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Malva parviflora,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Marsdenia suaveolens,native_status,,native
+noise,Kubiak Cunn 2009,Marsdenia suaveolens,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Maytenus silvestris,native_status,,native
+noise,Kubiak Cunn 2009,Maytenus silvestris,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Medicago arabica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Medicago polymorpha,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Melaleuca deanei,native_status,,native
+noise,Kubiak Cunn 2009,Melaleuca deanei,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Melaleuca hypericifolia,native_status,,native
+noise,Kubiak Cunn 2009,Melaleuca hypericifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Melaleuca linariifolia,native_status,,native
+noise,Kubiak Cunn 2009,Melaleuca linariifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Melaleuca nodosa,native_status,,native
+noise,Kubiak Cunn 2009,Melaleuca nodosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Melaleuca styphelioides,native_status,,native
+noise,Kubiak Cunn 2009,Melaleuca styphelioides,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Melia azedarach,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Melilotus indicus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Melinis repens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Micrantheum ericoides,native_status,,native
+noise,Kubiak Cunn 2009,Micrantheum ericoides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Microlaena stipoides,native_status,,native
+noise,Kubiak Cunn 2009,Microlaena stipoides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Micromyrtus ciliata,native_status,,native
+noise,Kubiak Cunn 2009,Micromyrtus ciliata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Microtis unifolia,native_status,,native
+noise,Kubiak Cunn 2009,Microtis unifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Mirbelia rubiifolia,native_status,,native
+noise,Kubiak Cunn 2009,Mirbelia rubiifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Mirbelia speciosa subsp. speciosa,native_status,,native
+noise,Kubiak Cunn 2009,Mirbelia speciosa subsp. speciosa,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Mirbelia speciosa subsp. speciosa,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Mirbelia speciosa subsp. speciosa,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Mitrasacme polymorpha,native_status,,native
+noise,Kubiak Cunn 2009,Mitrasacme polymorpha,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Modiola caroliniana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Monotaxis linifolia,native_status,,native
+noise,Kubiak Cunn 2009,Monotaxis linifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Monotoca elliptica,native_status,,native
+noise,Kubiak Cunn 2009,Monotoca elliptica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Monotoca scoparia,native_status,,native
+noise,Kubiak Cunn 2009,Monotoca scoparia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Morinda jasminoides,native_status,,native
+noise,Kubiak Cunn 2009,Morinda jasminoides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Morus alba,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Muellerina eucalyptoides,native_status,,native
+noise,Kubiak Cunn 2009,Muellerina eucalyptoides,fire_response categorical_surv1,resprouter,R(1)m.i.f
+noise,Kubiak Cunn 2009,Muellerina eucalyptoides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Narcissus sp.,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Nephrolepis cordifolia,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Nerium oleander,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Notelaea longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Notelaea longifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Nothoscordum borbonicum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ochna serrulata,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Olax stricta,native_status,,native
+noise,Kubiak Cunn 2009,Olax stricta,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Olearia microphylla,native_status,,native
+noise,Kubiak Cunn 2009,Olearia microphylla,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Olearia tomentosa,native_status,,native
+noise,Kubiak Cunn 2009,Olearia tomentosa,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Omalanthus populifolius,native_status,,native
+noise,Kubiak Cunn 2009,Omalanthus populifolius,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Opercularia aspera,native_status,,native
+noise,Kubiak Cunn 2009,Opercularia aspera,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Opercularia varia,native_status,,native
+noise,Kubiak Cunn 2009,Opercularia varia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Oplismenus aemulus,native_status,,native
+noise,Kubiak Cunn 2009,Oplismenus aemulus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Oxalis corniculata,native_status,,native
+noise,Kubiak Cunn 2009,Oxalis corniculata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Oxalis debilis var. corymbosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Oxalis incarnata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Oxalis latifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Oxalis pes-caprae,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ozothamnus diosmifolius,native_status,,native
+noise,Kubiak Cunn 2009,Ozothamnus diosmifolius,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pandorea pandorana,native_status,,native
+noise,Kubiak Cunn 2009,Pandorea pandorana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Panicum simile,native_status,,native
+noise,Kubiak Cunn 2009,Panicum simile,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Paraserianthes lophantha subsp. lophantha,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Paraserianthes lophantha subsp. lophantha,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Paraserianthes lophantha subsp. lophantha,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Parsonsia straminea,native_status,,native
+noise,Kubiak Cunn 2009,Parsonsia straminea,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Paspalum dilatatum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Paspalum quadrifarium,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Paspalum urvillei,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Passiflora herbertiana,native_status,,native
+noise,Kubiak Cunn 2009,Passiflora herbertiana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Patersonia glabrata,native_status,,native
+noise,Kubiak Cunn 2009,Patersonia glabrata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Patersonia sericea,native_status,,native
+noise,Kubiak Cunn 2009,Patersonia sericea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pavonia hastata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pellaea falcata,native_status,,native
+noise,Kubiak Cunn 2009,Pellaea falcata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pennisetum clandestinum,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pennisetum macrourum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Persicaria capitata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Persoonia lanceolata,native_status,,native
+noise,Kubiak Cunn 2009,Persoonia lanceolata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Persoonia laurina,native_status,,native
+noise,Kubiak Cunn 2009,Persoonia laurina,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Persoonia levis,native_status,,native
+noise,Kubiak Cunn 2009,Persoonia levis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Persoonia linearis,native_status,,native
+noise,Kubiak Cunn 2009,Persoonia linearis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Persoonia pinifolia,native_status,,native
+noise,Kubiak Cunn 2009,Persoonia pinifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Petrophile pulchella,native_status,,native
+noise,Kubiak Cunn 2009,Petrophile pulchella,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Petrorhagia velutina,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Phebalium squamulosum subsp. squamulosum,native_status,,native
+noise,Kubiak Cunn 2009,Phebalium squamulosum subsp. squamulosum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Philotheca salsolifolia subsp. salsolifolia,native_status,,native
+noise,Kubiak Cunn 2009,Philotheca salsolifolia subsp. salsolifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Philydrum lanuginosum,native_status,,native
+noise,Kubiak Cunn 2009,Philydrum lanuginosum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Phoenix canariensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Phragmites australis,native_status,,native
+noise,Kubiak Cunn 2009,Phragmites australis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Phyllanthus hirtellus,native_status,,native
+noise,Kubiak Cunn 2009,Phyllanthus hirtellus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Phyllanthus tenellus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Phyllostachys aurea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Phyllota grandiflora,native_status,,native
+noise,Kubiak Cunn 2009,Phyllota grandiflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Phyllota phylicoides,native_status,,native
+noise,Kubiak Cunn 2009,Phyllota phylicoides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Physalis peruviana,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Physalis peruviana,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Physalis peruviana,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Phytolacca octandra,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Phytolacca octandra,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Phytolacca octandra,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Pimelea curviflora,native_status,,native
+noise,Kubiak Cunn 2009,Pimelea curviflora,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pimelea curviflora,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Pimelea curviflora,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Pimelea linifolia,native_status,,native
+noise,Kubiak Cunn 2009,Pimelea linifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pinus radiata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pittosporum revolutum,native_status,,native
+noise,Kubiak Cunn 2009,Pittosporum revolutum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pittosporum undulatum,native_status,,native
+noise,Kubiak Cunn 2009,Pittosporum undulatum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Plantago lanceolata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Platycerium bifurcatum,native_status,,native
+noise,Kubiak Cunn 2009,Platycerium bifurcatum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Platylobium formosum,native_status,,native
+noise,Kubiak Cunn 2009,Platylobium formosum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Platysace lanceolata,native_status,,native
+noise,Kubiak Cunn 2009,Platysace lanceolata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Platysace linearifolia,native_status,,native
+noise,Kubiak Cunn 2009,Platysace linearifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Platysace stephensonii,native_status,,native
+noise,Kubiak Cunn 2009,Platysace stephensonii,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Plectranthus parviflorus,native_status,,native
+noise,Kubiak Cunn 2009,Plectranthus parviflorus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Poa annua,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Poa annua,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Poa annua,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Poa labillardieri,native_status,,native
+noise,Kubiak Cunn 2009,Poa labillardieri,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Podocarpus spinulosus,native_status,,native
+noise,Kubiak Cunn 2009,Podocarpus spinulosus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Podolobium ilicifolium,native_status,,native
+noise,Kubiak Cunn 2009,Podolobium ilicifolium,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Polycarpon tetraphyllum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Polygala myrtifolia,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Polygala myrtifolia,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Polygala myrtifolia,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Polygala virgata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Polymeria calycina,native_status,,native
+noise,Kubiak Cunn 2009,Polymeria calycina,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Polyscias sambucifolia,native_status,,native
+noise,Kubiak Cunn 2009,Polyscias sambucifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pomaderris discolor,native_status,,native
+noise,Kubiak Cunn 2009,Pomaderris discolor,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pomaderris elliptica,native_status,,native
+noise,Kubiak Cunn 2009,Pomaderris elliptica,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pomaderris ferruginea,native_status,,native
+noise,Kubiak Cunn 2009,Pomaderris ferruginea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pomaderris intermedia,native_status,,native
+noise,Kubiak Cunn 2009,Pomaderris intermedia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pomax umbellata,native_status,,native
+noise,Kubiak Cunn 2009,Pomax umbellata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Populus alba,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Poranthera corymbosa,native_status,,native
+noise,Kubiak Cunn 2009,Poranthera corymbosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Poranthera ericifolia,native_status,,native
+noise,Kubiak Cunn 2009,Poranthera ericifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Poranthera microphylla,native_status,,native
+noise,Kubiak Cunn 2009,Poranthera microphylla,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Potentilla indica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Prasophyllum elatum,native_status,,native
+noise,Kubiak Cunn 2009,Prasophyllum elatum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Prasophyllum striatum,native_status,,native
+noise,Kubiak Cunn 2009,Prasophyllum striatum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pratia purpurascens,native_status,,native
+noise,Kubiak Cunn 2009,Pratia purpurascens,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Prostanthera denticulata,native_status,,native
+noise,Kubiak Cunn 2009,Prostanthera denticulata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Prostanthera linearis,native_status,,native
+noise,Kubiak Cunn 2009,Prostanthera linearis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Prunella vulgaris,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Prunus cerasus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Prunus persica,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pseuderanthemum variabile,native_status,,native
+noise,Kubiak Cunn 2009,Pseuderanthemum variabile,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pseudognaphalium luteoalbum,native_status,,native
+noise,Kubiak Cunn 2009,Pseudognaphalium luteoalbum,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pseudognaphalium luteoalbum,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Pseudognaphalium luteoalbum,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Psilotum nudum,native_status,,native
+noise,Kubiak Cunn 2009,Psilotum nudum,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Psoralea pinnata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pteridium esculentum,native_status,,native
+noise,Kubiak Cunn 2009,Pteridium esculentum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pteris tremula,native_status,,native
+noise,Kubiak Cunn 2009,Pteris tremula,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pteris vittata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pterostylis acuminata,native_status,,native
+noise,Kubiak Cunn 2009,Pterostylis acuminata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pterostylis concinna,native_status,,native
+noise,Kubiak Cunn 2009,Pterostylis concinna,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pterostylis daintreana,native_status,,native
+noise,Kubiak Cunn 2009,Pterostylis daintreana,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pterostylis longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Pterostylis longifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pterostylis nutans,native_status,,native
+noise,Kubiak Cunn 2009,Pterostylis nutans,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ptilothrix deusta,native_status,,native
+noise,Kubiak Cunn 2009,Ptilothrix deusta,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pultenaea daphnoides,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea daphnoides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pultenaea flexilis,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea flexilis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pultenaea mollis,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea mollis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pultenaea polifolia,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea polifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pultenaea retusa,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea retusa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pultenaea stipularis,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea stipularis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pultenaea tuberculata,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea tuberculata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Pultenaea villosa,native_status,,native
+noise,Kubiak Cunn 2009,Pultenaea villosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pyracantha angustifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pyracantha crenulata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pyracantha fortuneana,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Pyrrosia rupestris,native_status,,native
+noise,Kubiak Cunn 2009,Pyrrosia rupestris,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ranunculus plebeius,native_status,,native
+noise,Kubiak Cunn 2009,Ranunculus plebeius,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ranunculus repens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Rapanea variabilis,native_status,,native
+noise,Kubiak Cunn 2009,Rapanea variabilis,Time to first flower production resprout_repr3a,2.346,
+noise,Kubiak Cunn 2009,Rapanea variabilis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Reinwardtia indica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Rhytidosporum procumbens,native_status,,native
+noise,Kubiak Cunn 2009,Rhytidosporum procumbens,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Richardia stellaris,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Ricinocarpos pinifolius,native_status,,native
+noise,Kubiak Cunn 2009,Ricinocarpos pinifolius,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Ricinus communis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Rimacola elliptica,native_status,,native
+noise,Kubiak Cunn 2009,Rimacola elliptica,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Roldana petasitis,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Romulea rosea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Rorippa gigantea,native_status,,native
+noise,Kubiak Cunn 2009,Rorippa gigantea,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Rorippa gigantea,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Rorippa gigantea,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Rorippa nasturtium-aquaticum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Rubus discolor,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Rulingia dasyphylla,native_status,,native
+noise,Kubiak Cunn 2009,Rulingia dasyphylla,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Rulingia dasyphylla,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Rulingia dasyphylla,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Rumex brownii,native_status,,native
+noise,Kubiak Cunn 2009,Rumex brownii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Rumex crispus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Salix alba,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Salix babylonica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Samolus repens,native_status,,native
+noise,Kubiak Cunn 2009,Samolus repens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Sarcopetalum harveyanum,native_status,,native
+noise,Kubiak Cunn 2009,Sarcopetalum harveyanum,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Scaevola ramosissima,native_status,,native
+noise,Kubiak Cunn 2009,Scaevola ramosissima,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schelhammera undulata,native_status,,native
+noise,Kubiak Cunn 2009,Schelhammera undulata,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schizaea bifida,native_status,,native
+noise,Kubiak Cunn 2009,Schizaea bifida,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schizaea rupestris,native_status,,native
+noise,Kubiak Cunn 2009,Schizaea rupestris,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schizomeria ovata,native_status,,native
+noise,Kubiak Cunn 2009,Schizomeria ovata,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schoenus apogon,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus apogon,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schoenus brevifolius,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus brevifolius,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Schoenus ericetorum,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus ericetorum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Schoenus imberbis,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus imberbis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schoenus melanostachys,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus melanostachys,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schoenus moorei,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus moorei,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schoenus paludosus,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus paludosus,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Schoenus villosus,native_status,,native
+noise,Kubiak Cunn 2009,Schoenus villosus,Time to first flower production resprout_repr3a,1.077,
+noise,Kubiak Cunn 2009,Schoenus villosus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Selaginella uliginosa,native_status,,native
+noise,Kubiak Cunn 2009,Selaginella uliginosa,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Senecio hispidulus var. hispidulus,native_status,,native
+noise,Kubiak Cunn 2009,Senecio hispidulus var. hispidulus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Senecio madagascariensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Senna pendula,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Setaria gracilis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Setaria palmifolia,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Setaria sphacelata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Sida rhombifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Sigesbeckia orientalis,native_status,,native
+noise,Kubiak Cunn 2009,Sigesbeckia orientalis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Silene gallica var. gallica,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Sisyrinchium iridifolium,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Sisyrinchium species A,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Smilax australis,native_status,,native
+noise,Kubiak Cunn 2009,Smilax australis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Smilax glyciphylla,native_status,,native
+noise,Kubiak Cunn 2009,Smilax glyciphylla,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Solanum chenopodioides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Solanum mauritianum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Solanum prinophyllum,native_status,,native
+noise,Kubiak Cunn 2009,Solanum prinophyllum,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Solanum prinophyllum,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Solanum prinophyllum,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Solanum vescum,native_status,,native
+noise,Kubiak Cunn 2009,Solanum vescum,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Solanum vescum,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Solanum vescum,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Solidago canadensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Sonchus oleraceus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Sorghum bicolor,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Sorghum bicolor,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Sorghum bicolor,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Sowerbaea juncea,native_status,,native
+noise,Kubiak Cunn 2009,Sowerbaea juncea,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Sporobolus creber,native_status,,native
+noise,Kubiak Cunn 2009,Sporobolus creber,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Sprengelia incarnata,native_status,,native
+noise,Kubiak Cunn 2009,Sprengelia incarnata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Stachys arvensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Stackhousia nuda,native_status,,native
+noise,Kubiak Cunn 2009,Stackhousia nuda,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Stackhousia viminea,native_status,,native
+noise,Kubiak Cunn 2009,Stackhousia viminea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Stellaria media,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Stenocarpus salignus,native_status,,native
+noise,Kubiak Cunn 2009,Stenocarpus salignus,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Stephania japonica var. discolor,native_status,,native
+noise,Kubiak Cunn 2009,Stephania japonica var. discolor,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Sticherus flabellatus,native_status,,native
+noise,Kubiak Cunn 2009,Sticherus flabellatus,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Stylidium graminifolium,native_status,,native
+noise,Kubiak Cunn 2009,Stylidium graminifolium,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Stylidium lineare,native_status,,native
+noise,Kubiak Cunn 2009,Stylidium lineare,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Stylidium productum,native_status,,native
+noise,Kubiak Cunn 2009,Stylidium productum,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Styphelia longifolia,native_status,,native
+noise,Kubiak Cunn 2009,Styphelia longifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Styphelia triflora,native_status,,native
+noise,Kubiak Cunn 2009,Styphelia triflora,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Styphelia tubiflora,native_status,,native
+noise,Kubiak Cunn 2009,Styphelia tubiflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Syncarpia glomulifera,native_status,,native
+noise,Kubiak Cunn 2009,Syncarpia glomulifera,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Synoum glandulosum,native_status,,native
+noise,Kubiak Cunn 2009,Synoum glandulosum,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tagetes minuta,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Taraxacum officianale,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Telopea speciosissima,native_status,,native
+noise,Kubiak Cunn 2009,Telopea speciosissima,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Tetragonia tetragonioides,native_status,,native
+noise,Kubiak Cunn 2009,Tetragonia tetragonioides,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Tetraria capillaris,native_status,,native
+noise,Kubiak Cunn 2009,Tetraria capillaris,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Tetratheca ericifolia,native_status,,native
+noise,Kubiak Cunn 2009,Tetratheca ericifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tetratheca glandulosa,native_status,,native
+noise,Kubiak Cunn 2009,Tetratheca glandulosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tetratheca thymifolia,native_status,,native
+noise,Kubiak Cunn 2009,Tetratheca thymifolia,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Thelionema caespitosum,native_status,,native
+noise,Kubiak Cunn 2009,Thelionema caespitosum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Thelymitra ixioides,native_status,,native
+noise,Kubiak Cunn 2009,Thelymitra ixioides,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Thelymitra pauciflora,native_status,,native
+noise,Kubiak Cunn 2009,Thelymitra pauciflora,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Themda australis,native_status,,native
+noise,Kubiak Cunn 2009,Themda australis,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Thunbergia alata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Thysanotus juncifolius,native_status,,native
+noise,Kubiak Cunn 2009,Thysanotus juncifolius,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Thysanotus tuberosus,native_status,,native
+noise,Kubiak Cunn 2009,Thysanotus tuberosus,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Todea barbara,native_status,,native
+noise,Kubiak Cunn 2009,Todea barbara,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Toxicodendron succedaneum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trachymene incisa,native_status,,native
+noise,Kubiak Cunn 2009,Trachymene incisa,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tradescantia fluminensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trema tomentosa var. viridis,native_status,,native
+noise,Kubiak Cunn 2009,Trema tomentosa var. viridis,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tricoryne simplex,native_status,,native
+noise,Kubiak Cunn 2009,Tricoryne simplex,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Tricostularia pauciflora,native_status,,native
+noise,Kubiak Cunn 2009,Tricostularia pauciflora,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trifolium campestre,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trifolium cernuum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trifolium dubium,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trifolium glomeratum,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Trifolium repens,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Triglochin procerum,native_status,,native
+noise,Kubiak Cunn 2009,Triglochin procerum,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tristania neriifolia,native_status,,native
+noise,Kubiak Cunn 2009,Tristania neriifolia,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tristaniopsis collina,native_status,,native
+noise,Kubiak Cunn 2009,Tristaniopsis collina,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tristaniopsis laurina,native_status,,native
+noise,Kubiak Cunn 2009,Tristaniopsis laurina,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Trochocarpa laurina,native_status,,native
+noise,Kubiak Cunn 2009,Trochocarpa laurina,Location_name,Lane Cove River; Narrabeen Lagoon,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tropaeolum majus,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Tropaeolum majus,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Tropaeolum majus,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Tylophora barbata,native_status,,native
+noise,Kubiak Cunn 2009,Tylophora barbata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Typha orientalis,native_status,,native
+noise,Kubiak Cunn 2009,Typha orientalis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Utricularia dichotoma,native_status,,native
+noise,Kubiak Cunn 2009,Utricularia dichotoma,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Utricularia lateriflora,native_status,,native
+noise,Kubiak Cunn 2009,Utricularia lateriflora,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Verbena bonariensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Verbena litoralis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Veronica persica,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Veronica persica,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Veronica persica,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Veronica plebeia,native_status,,native
+noise,Kubiak Cunn 2009,Veronica plebeia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Vicia hirsuta,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Vicia sativa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Vicia tetrasperma,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Villarsia exaltata,native_status,,native
+noise,Kubiak Cunn 2009,Villarsia exaltata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Viminaria juncea,native_status,,native
+noise,Kubiak Cunn 2009,Viminaria juncea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Vinca major,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Viola hederacea,native_status,,native
+noise,Kubiak Cunn 2009,Viola hederacea,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Viola odorata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Vitis sp.,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Wahlenbergia gracilis,native_status,,native
+noise,Kubiak Cunn 2009,Wahlenbergia gracilis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Watsonia meriana cv. Bulbillifera,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Wikstroemia indica,native_status,,native
+noise,Kubiak Cunn 2009,Wikstroemia indica,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Wilkiea huegeliana,native_status,,native
+noise,Kubiak Cunn 2009,Wilkiea huegeliana,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Wisteria sinensis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Woollsia pungens,native_status,,native
+noise,Kubiak Cunn 2009,Woollsia pungens,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xanthium occidentale,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Xanthorrhoea arborea,native_status,,native
+noise,Kubiak Cunn 2009,Xanthorrhoea arborea,Time to first flower production resprout_repr3a,0.673; 0.981,0.673
+noise,Kubiak Cunn 2009,Xanthorrhoea arborea,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xanthorrhoea media,native_status,,native
+noise,Kubiak Cunn 2009,Xanthorrhoea media,Time to first flower production resprout_repr3a,0.327; 0.75,0.327
+noise,Kubiak Cunn 2009,Xanthorrhoea media,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xanthorrhoea minor,native_status,,native
+noise,Kubiak Cunn 2009,Xanthorrhoea minor,Location_name,,Lane Cove River valley; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xanthorrhoea minor,Latitude,-33.75,
+noise,Kubiak Cunn 2009,Xanthorrhoea minor,Longitude,151.0833,
+noise,Kubiak Cunn 2009,Xanthorrhoea resinifera,native_status,,native
+noise,Kubiak Cunn 2009,Xanthorrhoea resinifera,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xanthosia pilosa,native_status,,native
+noise,Kubiak Cunn 2009,Xanthosia pilosa,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xanthosia tridentata,native_status,,native
+noise,Kubiak Cunn 2009,Xanthosia tridentata,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Xylomelum pyriforme,native_status,,native
+noise,Kubiak Cunn 2009,Xylomelum pyriforme,Location_name,Lane Cove River; Lane Cove River; Narrabeen Lagoon; Narrabeen Lagoon,Lane Cove River valley; Lane Cove River valley; Narrabeen Lagoon catchment area; Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xyris gracilis,native_status,,native
+noise,Kubiak Cunn 2009,Xyris gracilis,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Xyris juncea,native_status,,native
+noise,Kubiak Cunn 2009,Xyris juncea,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Xyris operculata,native_status,,native
+noise,Kubiak Cunn 2009,Xyris operculata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Yucca aloifolia,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Zieria laevigata,native_status,,native
+noise,Kubiak Cunn 2009,Zieria laevigata,Location_name,Narrabeen Lagoon,Narrabeen Lagoon catchment area
+noise,Kubiak Cunn 2009,Zieria pilosa,native_status,,native
+noise,Kubiak Cunn 2009,Zieria pilosa,Location_name,Lane Cove River,Lane Cove River valley
+noise,Kubiak Cunn 2009,Zieria smithii,native_status,,native
+noise,Kubiak Cunn 2009,Zieria smithii,Location_name,Lane Cove River,Lane Cove River valley
+noise,Ooi 2019 JEnvManagement_fire seasonality,Leucopogon esquamatus,Fire_severity_categorical,High; Low,High
+noise,Ooi 2019 JEnvManagement_fire seasonality,Leucopogon exolasius,Fire_severity_categorical,High; Low,High
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Herpolirion novae- zelandiae,a only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Leptospermum novae- angliae,a only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Pseudognaphalium luteo- album,a only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Senna artemisioides nothosubsp. artemisioides,a only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Senna glutinosa nothosubsp. luerssenii,a only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Herpolirion novae-zelandiae,b only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Leptospermum novae-angliae,b only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Pseudognaphalium luteo-album,b only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Senna artemisioides nothosubsp. artemisioides,b only,,
+noise,nswfrrd_v1.3a_pdfvers_sppdata,Senna glutinosa nothosubsp. luerssenii,b only,,

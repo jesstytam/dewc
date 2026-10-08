@@ -1,0 +1,10 @@
+level,where,column,check,value
+warning,RESULT line 258,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 265,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 346,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Ooi, M. K. J. (n.d.). The importance of fire season when managing threatened plant species: A long-term case-study of a rare Leucopogon species (Ericaceae)."
+warning,RESULT line 347,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Ooi, M. K. J. (n.d.). The importance of fire season when managing threatened plant species: A long-term case-study of a rare Leucopogon species (Ericaceae)."
+warning,RESULT line 348,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Ooi, M. K. J. (n.d.). The importance of fire season when managing threatened plant species: A long-term case-study of a rare Leucopogon species (Ericaceae)."
+warning,RESULT line 349,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Ooi, M. K. J. (n.d.). The importance of fire season when managing threatened plant species: A long-term case-study of a rare Leucopogon species (Ericaceae)."
+warning,RESULT line 350,Source,"does not look like APA: 'Author, A. B. (YYYY). Title. ...'","Ooi, M. K. J. (n.d.). The importance of fire season when managing threatened plant species: A long-term case-study of a rare Leucopogon species (Ericaceae)."
+error,RESULT line 404,,"duplicate of line 403 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",
+error,RESULT line 406,,"duplicate of line 405 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name",

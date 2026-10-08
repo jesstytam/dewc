@@ -1,0 +1,23 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-08T03:42:48Z,,model=claude-sonnet-5-5; date=2026-10-08; git=c59935759ace50b38335840a82f8d341239fd077; claude_md_sha256=f731f95bd26b0276bbf431fd442fd08160e1023eb74f94e32d4a4efd7d06368c; papers_sha256=e680275412f2da2409a4d3203fc200d71d7994b8a101e67ca2b3660b340fceab,,,,,,
+1-s2.0-S0006320798001128-main,broken,1,2026-10-08T03:43:00Z,2026-10-08T03:43:14Z,"needs Step 0: text-layer PDF with wrong font encoding ('fi' printed as '®', 'ff' dropped, dashes as '±', degree and minute marks lost from coordinates); Table 2 missing from markdown",3,6,3816,197785,1704,203311
+AuldScottProcFireEffectsIAWF1997,done,7,2026-10-08T03:43:17Z,2026-10-08T03:43:33Z,,2,4,14335,144468,2223,161030
+Austral_Ecology_-_2002_-_Wahren_-_Early_post‐fire_regeneration_in_subalpine_heathland_and_grassland_in_the_Victorian_Alpine,done,1,2026-10-08T03:43:36Z,2026-10-08T03:44:13Z,only species-level fire response in paper; Poa and other taxa reported at genus or growth-form level only,4,8,15819,375049,4077,394953
+Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,done,6,2026-10-08T03:44:17Z,2026-10-08T03:45:31Z,,7,14,35209,882570,7895,925688
+Australian_Journal_of_Ecology_-_December_1988_-_BRADSTOCK_-_Demography_of_woody_plants_in_relation_to_fire_Banksia,done,2,2026-10-08T03:45:36Z,2026-10-08T03:46:01Z,,4,8,18697,611491,3251,633447
+BF00040753,done,2,2026-10-08T03:47:48Z,2026-10-08T03:48:06Z,,2,4,11161,396509,2409,410083
+biostor-259750,done,197,2026-10-08T03:48:09Z,2026-10-08T03:50:40Z,skipped without values: Hymenophyllum cupressiforme; Amyema pendulum; Geranium spp.; Senecio spp.,11,22,60077,2563149,20177,2643425
+bt02009,done,2,2026-10-08T03:50:43Z,2026-10-08T03:51:17Z,,4,8,12460,1096469,4357,1113294
+bt9830293,no_data,1,2026-10-08T03:51:19Z,2026-10-08T03:51:26Z,"no data: paper gives flowering density and peak flowering 2 years after fire for Telopea speciosissima and Lambertia formosa, but no time to first flowering, juvenile period or fire response value",1,2,4987,283146,917,289052
+bt9890001,no_data,1,2026-10-08T03:51:29Z,2026-10-08T03:51:43Z,"no data: paper studies senescence and regeneration of Acacia verticillata scrub and eucalypt seedling survival, no species-level juvenile period, time to flowering or fire response values",3,6,10215,881732,1513,893466
+enright1996,done,1,2026-10-08T03:51:43Z,2026-10-08T03:51:53Z,,1,2,6216,299435,1472,307125
+Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,done,14,2026-10-08T03:51:57Z,2026-10-08T03:52:22Z,,3,6,10558,937879,3320,951763
+J_Vegetation_Science_-_2007_-_Auld_-_Dispersal_and_recruitment_dynamics_in_the_fleshy‐fruited_Persoonia_lanceolata_,done,1,2026-10-08T03:52:25Z,2026-10-08T03:52:52Z,,3,6,10850,977225,3328,991409
+Knox_&_Clarke_2004_Cunninghamia_primary_juvenile_period,done,33,2026-10-08T03:52:55Z,2026-10-08T03:53:40Z,,4,8,21972,1374770,6449,1403199
+Kubiak_Cunn_2009,broken,1,2026-10-08T03:53:47Z,2026-10-08T03:54:33Z,"needs Step 0: Appendix 1 (828 species) is garbled in the markdown: species names are replaced by peak-flowering annotations such as '(prob.pk.pf.flower.c.2-3y)' on many rows, and the flowering and fruiting Resp and Seed columns are merged, so values cannot be assigned to species and columns",5,10,16871,1823252,5063,1845196
+Benson 1985 Cunninghamia_primary juvenile period,done,65,2026-10-08T03:46:04Z,2026-10-08T03:54:42Z,,17,34,49419,4320443,18642,4388538
+Muir_et_al_2014_AustJBot_obligate_seeder_juvenile,done,8,2026-10-08T03:54:52Z,2026-10-08T03:55:18Z,,2,4,15889,772640,3792,792325
+nswfrrd_v1.3a_pdfvers_sppdata,broken,1,2026-10-08T03:55:21Z,2026-10-08T03:55:26Z,"needs Step 0: species data table is garbled in the markdown: species names are truncated (e.g. 'Abutilon otocarpu'), species details and vital attributes columns are split into separate tables on different pages, and cells of one species are scattered over several rows, so values cannot be assigned to species",1,2,3255,400261,621,404139
+Ooi_2019_JEnvManagement_fire_seasonality,done,5,2026-10-08T03:55:29Z,2026-10-08T03:56:31Z,,5,10,24665,2068374,8650,2101699
+Post_fire_juvenile_period_of_plants_in_s,done,52,2026-10-08T03:56:34Z,2026-10-08T03:58:23Z,,5,10,32561,2217782,15825,2266178
+wf24046,done,4,2026-10-08T03:58:26Z,2026-10-08T03:59:04Z,"check duplicate errors remain (2): rows for populations measured in the 1990s and in 2017 differ only in sampling era, which has no column; era is stated in Notes",2,4,18773,936608,5162,960547

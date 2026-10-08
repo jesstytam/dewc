@@ -1,0 +1,7 @@
+level,where,column,check,value
+warning,RESULT line 16,resprouter_type,several values: join with '; ' (keep '/' only if printed inside one value),epicormic and/or basal
+warning,RESULT line 123,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 130,Species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 18,,"duplicate of line 17 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 415,,"duplicate of line 414 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",
+warning,RESULT line 417,,"duplicate of line 416 on scientific_name, subsp, Latitude, Longitude, Location_name, Fire_type, Fire_season_categorical, File_name (marked separate entry in paper)",

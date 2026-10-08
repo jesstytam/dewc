@@ -1,0 +1,21 @@
+comparison,paper,rows_a,rows_b,taxa_a,taxa_b,taxa_both,fire_response_agree,times_agree,site_agree,tokens_a,tokens_b
+test,1-s2.0-S0006320798001128-main,1,1,1,0,0,,,,383043,133640
+test,AuldScottProcFireEffectsIAWF1997,7,9,7,9,7,1.0,0.984,0.667,254597,
+test,Austral_Ecology_-_2002_-_Wahren_-_Early_post‐fire_regeneration_in_subalpine_heathland_and_grassland_in_the_Victorian_Alpine,3,1,2,1,1,1.0,1.0,1.0,213444,112118
+test,Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,6,6,6,6,6,1.0,1.0,0.667,637206,268627
+test,Australian_Journal_of_Ecology_-_December_1988_-_BRADSTOCK_-_Demography_of_woody_plants_in_relation_to_fire_Banksia,2,2,2,2,2,1.0,1.0,1.0,476989,298145
+test,BF00040753,2,2,2,2,2,1.0,1.0,1.0,540443,176568
+test,J_Vegetation_Science_-_2007_-_Auld_-_Dispersal_and_recruitment_dynamics_in_the_fleshy‐fruited_Persoonia_lanceolata_,1,1,1,1,1,1.0,1.0,1.0,397996,428550
+test,Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,1,15,0,15,0,,,,434411,464365
+test,biostor-259750,178,197,178,197,174,1.0,0.968,0.667,1285682,3364647
+test,bt02009,4,2,2,2,2,1.0,1.0,0.0,928208,1338229
+test,bt9830293,2,1,1,0,0,,,,1614128,457551
+test,bt9890001,1,1,0,0,0,,,,1357873,932635
+test,enright1996,1,1,1,1,1,1.0,1.0,1.0,698058,474533
+test,wf24046,5,5,2,2,2,1.0,1.0,1.0,1106170,3016871
+noise,Benson 1985 Cunninghamia_primary juvenile period,65,65,37,37,37,1.0,1.0,1.0,470809,200745
+noise,Knox & Clarke 2004 Cunninghamia_primary juvenile period,33,33,33,33,33,1.0,1.0,1.0,393806,257797
+noise,Kubiak Cunn 2009,1307,1303,761,760,759,0.999,0.998,0.648,3031241,4685600
+noise,Muir et al 2014 AustJBot_obligate seeder juvenile,8,8,8,8,8,1.0,1.0,1.0,652743,377403
+noise,Ooi 2019 JEnvManagement_fire seasonality,13,13,3,3,3,1.0,1.0,1.0,934743,786714
+noise,nswfrrd_v1.3a_pdfvers_sppdata,2699,2699,2693,2693,2688,1.0,1.0,1.0,1308785,3583295
