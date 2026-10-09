@@ -14,7 +14,7 @@ MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output for scanned 
 PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
 PAPERS   = "data/papers_test/md_agents/*.md"     # extraction input: MD_OPT files of scanned PDFs + raw pdf2md files of text-layer PDFs (end comment "md_opt: none"); pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (28 columns)
+RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (37 columns)
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
@@ -115,7 +115,7 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 - Table continues into the next batch: reuse its column headers from the previous batch.
 - Carry site and fire values (coordinates, location name, rainfall, fire season, severity, type) from the paper's methods onto every row of that paper. Several sites or fires: match each species row to its own site and fire.
 - Several named sites share one set of coordinates: still 1 row per site; site name in `location_name`, coordinates kept. Never merge sites into 1 row with per-site values in `notes`.
-- A row needs at least 1 value in a fire response or time column. Values kept only in `notes` (near-matches, unreliable or unitless values) never create a row on their own.
+- A row needs at least 1 value in a fire response or time column. Values kept only in `notes` (near-matches, unreliable or unitless values) never create a row on their own. Exception: a fire response code left out of the cell by a `VALUE_MAP` rule (no clear class, conflicting codes) still creates a row.
 - Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `location_name` = those site names joined by `; `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
 - Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry. Duplicate rows are fine; do not check or remove them.
 - Fill a column only when the paper's measure matches the column definition. Near-matches go in `notes` only, with their definition (e.g. time to 80% of maximum flower production; expert or literature estimates).
@@ -138,9 +138,12 @@ na_row = {name: "NA" for name, rule in COLUMNS}  # exactly 1 NA row per paper
 na_row["notes"]  = reason                        # e.g. "empty markdown: PDF conversion failed"; "no data: review paper, no species values"
 na_row["source"] = citation if readable else stem(paper)
 na_row["file_name"] = stem(paper)
+na_row["supplementary_material"] = items if any else "NA"   # see Supplementary material
 ```
 
 Paper breaks partway: keep rows already extracted, add the 1 NA row, continue with next paper.
+
+Supplementary material (not in `PAPERS`): paper refers to supplementary or supporting material, or to items such as `Table S1`, `Appendix S2`, `Online Resource 1` -> fill `supplementary_material` on every row of that paper, NA row included (see `METADATA`). Extract what the main text gives; never guess the supplement's values.
 
 ## Columns
 
@@ -157,6 +160,7 @@ COLUMNS = [
   ("family", ""),
   # fire response
   ("fire_response_categorical_surv1", ""),
+  ("fire_response_implied", "new"),
   ("resprouter_type", ""),
   # time after fire
   ("pjp_mths", ""),
@@ -169,16 +173,25 @@ COLUMNS = [
   ("time_to_80_percent_flowering", "new"),
   ("recovery_time", "new"),
   ("time_unit", "new"),
+  # error of a time value
+  ("error_column", "new"),
+  ("error_type", "new"),
+  ("error_value", "new"),
+  ("sample_size", "new"),
   # site
   ("location_name", "new"),
   ("latitude", ""),
   ("longitude", ""),
   ("rainfall_mm", ""),
+  ("rainfall_post_fire_mm", "new"),
+  ("rainfall_post_fire_period", "new"),
   # fire
   ("fire_type", "new"),
   ("fire_season_categorical", ""),
   ("fire_severity_categorical", ""),
   # record
+  ("data_location", "new"),
+  ("supplementary_material", "new"),
   ("notes", ""),
   ("source", ""),
   ("file_name", "new"),

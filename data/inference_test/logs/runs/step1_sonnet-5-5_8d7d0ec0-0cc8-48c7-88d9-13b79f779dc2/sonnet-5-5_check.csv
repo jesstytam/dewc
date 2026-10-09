@@ -1,0 +1,19 @@
+level,where,column,check,value
+warning,RESULT line 161,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 168,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 1135,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1144,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1145,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1146,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1272,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
+warning,RESULT line 1273,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
+warning,RESULT line 1324,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 2022,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
+warning,RESULT line 2187,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
+warning,RESULT line 2275,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 2300,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
+warning,RESULT line 2713,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'rocky creek'
+warning,RESULT line 3205,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
+warning,RESULT line 3391,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a sensu harden (1994)
+warning,RESULT line 3431,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a sensu powell (1992)
+warning,RESULT line 3592,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a

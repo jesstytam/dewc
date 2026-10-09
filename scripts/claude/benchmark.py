@@ -15,11 +15,13 @@ Two levels, each with true positives (tp), false positives (fp) and false negati
   value:  for each taxon in both, the set of values of a column over the taxon's rows.
           tp = values in both; fp = model values not in the answers (wrong or extra); fn = answer values the model lacks.
 Scores: precision, recall, f1, and f05 (F0.5: precision weighted twice as much as recall; headline score).
+  fp_extra: the part of fp where the answer cell is empty (model value unverified: the answers may simply
+  not record it); precision_filled = tp / (tp + fp - fp_extra), i.e. precision over cells both sides filled.
 
 Writes, under data/inference_test/logs/:
   benchmark.csv          1 line per run x paper x level x column, plus totals (paper "_all", column "_all");
                          joins sessions.csv on (session_id, step)
-  benchmark_details.csv  1 line per taxon or value in only one side, with the model's source location from notes
+  benchmark_details.csv  1 line per taxon or value in only one side, with the model's source location (data_location; notes in older runs)
 """
 
 import argparse
@@ -88,7 +90,8 @@ SKIP = {  # snapshots that are not runs of their own
     "277cfa7d-2629-481f-9e22-0fbcaef68be6": "stray session that skipped every paper; its snapshot holds the outputs of 79bf9038",
 }
 HEADER = ["session_id", "step", "slug", "date", "git", "claude_md_sha256", "metadata_sha256",
-          "paper", "level", "column", "tp", "fp", "fn", "precision", "recall", "f1", "f05"]
+          "paper", "level", "column", "tp", "fp", "fn", "precision", "recall", "f1", "f05",
+          "fp_extra", "precision_filled"]
 DETAIL_HEADER = ["session_id", "slug", "paper", "taxon", "column", "kind", "model_value", "answer_value", "model_source_location"]
 
 RANK_RE = re.compile(r"\b(subsp|ssp|var|f|forma|nothosubsp)\.?\s+", re.I)
@@ -269,13 +272,13 @@ def load_run(run_dir):
             cell[c] |= values
         if g("native_status").strip().lower() in INTRODUCED or "*" in g("subsp") + g("scientific_name"):
             cell["introduced"].add("introduced")
-        where[paper].setdefault(t, g("notes", "Notes").split(";")[0].strip()[:80])
+        where[paper].setdefault(t, (g("data_location") or g("notes", "Notes").split(";")[0]).strip()[:80])  # older runs: location in notes
     return info, out, where, {paper_of_stem(s) for s in fresh} - {None}
 
 
 def score_run(info, model, where, papers, answers):
     lines, details = [], []
-    totals = defaultdict(lambda: [0, 0, 0])
+    totals = defaultdict(lambda: [0, 0, 0, 0])
     cols = list(VALUE_COLS.values()) + ["introduced"]
     for paper in sorted(p for p in papers if p in answers):
         ans, mod = answers[paper], model.get(paper, {})
@@ -300,13 +303,15 @@ def score_run(info, model, where, papers, answers):
         for t in sorted(a_t - m_t):
             details.append([paper, " ".join(x for x in t if x), "taxon", "missed", "", "", ""])
         for col in cols:
-            c = [0, 0, 0]
+            c = [0, 0, 0, 0]  # tp, fp, fn, fp_extra
             for t in sorted(a_t & m_t):
                 av, mv = ans[t][col], mod[t][col]
                 hits, m_only, a_only = match(col, av, mv)
                 c[0] += hits
                 c[1] += len(m_only)
                 c[2] += len(a_only)
+                if not av:
+                    c[3] += len(m_only)
                 if m_only or a_only:
                     kind = "wrong" if av and mv else ("extra" if mv else "missed")
                     details.append([paper, " ".join(x for x in t if x), col, kind,
@@ -314,12 +319,17 @@ def score_run(info, model, where, papers, answers):
             if any(c):
                 lines.append([paper, "value", col, *c])
                 for key in ((col,), ("_all",)):
-                    for k in range(3):
+                    for k in range(4):
                         totals[("value",) + key][k] += c[k]
     for (level, col), c in totals.items():
         lines.append(["_all", level, col, *c])
     base = [info[k] for k in HEADER[:7]]
-    rows = [base + line + scores(*line[3:6]) for line in lines]
+    def filled(line):
+        if line[1] != "value":
+            return ["", ""]
+        tp, fp, extra = line[3], line[4], line[6]
+        return [extra, round(tp / (tp + fp - extra), 4) if tp + fp - extra else ""]
+    rows = [base + line[:6] + scores(*line[3:6]) + filled(line) for line in lines]
     return rows, [[info["session_id"], info["slug"], *d] for d in details]
 
 

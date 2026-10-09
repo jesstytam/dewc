@@ -1,0 +1,23 @@
+column,paper_term,value,notes_entry
+fire_response_categorical_surv1,"defined as killed, fire-sensitive, obligate seeder, non-sprouter or OSR (e.g. codes K, fs, S when defined so)",obligate,
+fire_response_categorical_surv1,"defined as probably or possibly killed (e.g. pK, ?K, ?fs)",obligate,"fire response code printed '<code>' = <definition as printed>; certainty as stated in the paper (e.g. 'probably' = 80-90% sure, 'possibly' = 50-70% sure)"
+fire_response_categorical_surv1,"defined as resprouting, sprouter, FRR (facultative: resprouts and recruits from seed) or ORR (e.g. codes R, r when defined so)",resprouter,
+fire_response_categorical_surv1,"defined as probably or possibly resprouting (e.g. pR, ?R, ?r)",resprouter,"fire response code printed '<code>' = <definition as printed>; certainty as stated in the paper (e.g. 'probably' = 80-90% sure, 'possibly' = 50-70% sure)"
+fire_response_categorical_surv1,"defined as mostly killed, some resprout (e.g. K/r, O/r, fs/r)",O/r,"fire response code printed '<code>' = <definition as printed>"
+fire_response_categorical_surv1,"defined as mostly resprout, some killed (e.g. R/k, R/o)",R/o,"fire response code printed '<code>' = <definition as printed>"
+fire_response_categorical_surv1,"defined as killed and resprouting in similar proportions, no majority stated (e.g. K/R, O/R)",O/R,"fire response code printed '<code>' = <definition as printed>"
+fire_response_categorical_surv1,code not defined in the paper,code as printed,"fire response code printed '<code>', not defined in the paper"
+fire_severity_categorical,"low, low intensity, mild, cool, light",low,
+fire_severity_categorical,"low to moderate, low-moderate, moderate-low",low-moderate,
+fire_severity_categorical,"moderate, medium, moderate intensity",moderate,
+fire_severity_categorical,"moderate to high, moderate-high",moderate-high,
+fire_severity_categorical,"high, high intensity, very high intensity, severe, intense",high,"fire severity printed '<term>'"
+fire_severity_categorical,"extreme, extreme intensity",extreme,
+fire_severity_categorical,"other terms (e.g. hot, patchy, various)",term as printed,
+resprouter_type,"tuber, tuberoid",tuber,
+resprouter_type,"basal bud, basal sprout, basal shoot, root crown",basal,
+resprouter_type,"lignotuber, lignotuberous",lignotuber,
+resprouter_type,"rhizome, rhizostolon",rhizome,
+resprouter_type,"root sucker, rootsucker, soil sucker",root sucker,
+resprouter_type,"epicormic, epicormic bud, epicormic shoot",epicormic,
+resprouter_type,"corm, bulb, stem, apical bud and other organs",term as printed (lower case; singular),

@@ -46,7 +46,11 @@ TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
 SEASON_RE = re.compile(r"(summer|autumn|winter|spring)(; (summer|autumn|winter|spring))*")
 SEASON_ORDER = ["summer", "autumn", "winter", "spring"]
-KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "file_name", "notes"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms
+ERROR_TYPE_RE = re.compile(r"se|sd|ci\d+|± not defined")
+ERROR_NUMBER_RE = re.compile(r"\d+(\.\d+)?")
+CI_RE = re.compile(r"-?\d+(\.\d+)?--?\d+(\.\d+)?|-?\d+(\.\d+)?-\d+(\.\d+)?")
+SUPP_RE = re.compile(r"supplementary|supporting information|online resource|electronic supplement|\b(table|fig\.?|figure|appendix) s\d", re.I)
+KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "fire_response_implied", "file_name", "notes"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms
 PLURAL_RE = re.compile(r"\b[a-z]+[^s\W]s\b")  # e.g. rhizomes, tubers (not grass)
 PAGE_BREAK = "<!-- PAGE BREAK -->"
 UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
@@ -62,6 +66,7 @@ RANK_IN_SPECIES_RE = re.compile(r"(?:^|\s)(nothosubsp|subsp|ssp|nothovar|var|for
 HYPHEN_SPACE_RE = re.compile(r"\s-|-\s")
 CODE_SPACE_RE = re.compile(r"\s[?/;,)]|[?/;,(]\s")
 APA_RE = re.compile(r"[^()]+ \((\d{4}[a-z]?|n\.d\.)\)\. .+")  # (n.d.) = no year printed
+LOC_PAGE_RE = re.compile(r"\b(pdf )?p\. \d")
 NOTES_PAGE_RE = re.compile(r"\b(page|pg\.?|pp\.?)\s*\d", re.I)
 LIGATURE_RE = re.compile(r"\b\w*(fi|fl) (re|res|rst|eld|elds|tted|ne|nal|nd|ve|gure|gures|ower|owers|owering|owered)\b")
 
@@ -157,7 +162,7 @@ def check_row(line, row, report):
 
     if row["genus"] == "NA":  # NA row
         for col, value in row.items():
-            if col not in ("notes", "source", "file_name") and value != "NA":
+            if col not in ("notes", "source", "file_name", "supplementary_material") and value != "NA":
                 report.error(where, col, "NA row: cell must be NA", value)
         if not row["notes"] or row["notes"] == "NA":
             report.error(where, "notes", "NA row: reason missing")
@@ -188,10 +193,18 @@ def check_row(line, row, report):
         report.error(where, "subsp", "rank word + name, e.g. 'subsp. buxifolia', 'var. lanceolatus', 'f. glauca'", row["subsp"])
     if row["native_status"] and not re.fullmatch(r"[a-z]+( [a-z]+)*", row["native_status"]):
         report.error(where, "native_status", "paper's term in lower case, e.g. native, exotic", row["native_status"])
-    if CODE_SPACE_RE.search(row["fire_response_categorical_surv1"]):
-        report.error(where, "fire_response_categorical_surv1", "space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", row["fire_response_categorical_surv1"])
+    for col in ("fire_response_categorical_surv1", "fire_response_implied"):
+        if CODE_SPACE_RE.search(row[col]):
+            report.error(where, col, "space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", row[col])
+    if row["fire_response_categorical_surv1"] not in ("", "NA") and row["fire_response_implied"] not in ("", "NA"):
+        report.error(where, "fire_response_implied", "fill only when fire_response_categorical_surv1 is empty (stated response wins)", row["fire_response_implied"])
     if row["source"] != row["file_name"] and not APA_RE.fullmatch(row["source"]):
         report.warn(where, "source", "does not look like APA: 'author, a. b. (yyyy). title. ...'", row["source"])
+    loc = row["data_location"]
+    if row["genus"] != "NA" and not loc:
+        report.error(where, "data_location", "where the row's values are printed, e.g. 'table 2, p. 342'", loc)
+    elif loc and loc != "NA" and not LOC_PAGE_RE.search(loc):
+        report.warn(where, "data_location", "no page: add 'p. N' (printed page) or 'pdf p. N'", loc)
     m = NOTES_PAGE_RE.search(row["notes"])
     if m:
         report.warn(where, "notes", "page reference: write 'p. N' (printed page) or 'pdf p. N'", m.group(0))
@@ -222,6 +235,25 @@ def check_row(line, row, report):
     if not unit_needed and row["time_unit"]:
         report.error(where, "time_unit", "must be empty: no variable-unit time column filled", row["time_unit"])
 
+    err_col, err_type, err_value = row["error_column"], row["error_type"], row["error_value"]
+    if err_value not in ("", "NA"):
+        if err_col not in TIME_COLS:
+            report.error(where, "error_column", "name of the time column the error belongs to", err_col)
+        elif not row[err_col]:
+            report.error(where, "error_column", "names an empty time column", err_col)
+        if not err_type:
+            report.error(where, "error_type", "needed when error_value is filled", err_type)
+        elif err_type.startswith("ci") and not CI_RE.fullmatch(err_value):
+            report.error(where, "error_value", "confidence interval as lower-upper, e.g. 1.5-3.7", err_value)
+        elif err_type in ("se", "sd") and not ERROR_NUMBER_RE.fullmatch(err_value):
+            report.error(where, "error_value", "se or sd: a single number", err_value)
+    elif (err_col or err_type) and "NA" not in (err_col, err_type):
+        report.error(where, "error_value", "empty, but error_column or error_type is filled", err_value)
+    if err_type not in ("", "NA") and not ERROR_TYPE_RE.fullmatch(err_type):
+        report.warn(where, "error_type", "not se, sd, ci<N> or '± not defined'; fine if printed so", err_type)
+    if row["sample_size"] not in ("", "NA") and not re.fullmatch(r"\d+", row["sample_size"]):
+        report.warn(where, "sample_size", "not a whole number; fine if printed so (explain in notes)", row["sample_size"])
+
     pjp, repr4 = row["pjp_mths"], row["time_to_50_percent_flowering_repr4"]
     if pjp and repr4 and NUMBER_RE.fullmatch(pjp) and NUMBER_RE.fullmatch(repr4):
         if round(float(pjp) / 12, decimals(repr4)) != float(repr4):
@@ -242,9 +274,12 @@ def check_row(line, row, report):
     for col in ("location_name", "resprouter_type"):
         if re.search(r"\s/\s", row[col]) or (col == "resprouter_type" and "/" in row[col]):
             report.warn(where, col, "several values: join with '; ' (keep '/' only if printed inside one value)", row[col])
-    rain = row["rainfall_mm"]
-    if rain and not re.fullmatch(r"\d+(\.\d+)?(-\d+(\.\d+)?)?", rain):
-        report.error(where, "rainfall_mm", "not a number or min-max range", rain)
+    for col in ("rainfall_mm", "rainfall_post_fire_mm"):
+        rain = row[col]
+        if rain and rain != "NA" and not re.fullmatch(r"\d+(\.\d+)?(-\d+(\.\d+)?)?", rain):
+            report.error(where, col, "not a number or min-max range", rain)
+    if bool(row["rainfall_post_fire_mm"]) != bool(row["rainfall_post_fire_period"]):
+        report.error(where, "rainfall_post_fire_period", "rainfall_post_fire_mm and its period go together", row["rainfall_post_fire_period"])
 
 
 def check_step1(slug, paper, report):
@@ -320,6 +355,14 @@ def check_step1(slug, paper, report):
         check_tokens(where, r, report)
         checked_stems.add(r["paper"])
         paper_rows = [(line, row) for line, row in rows if row["file_name"] == r["paper"]]
+        supp = {row["supplementary_material"] for _, row in paper_rows}
+        if len(supp) > 1:
+            report.error(where, "supplementary_material", f"{len(supp)} different strings; use one on every row", " | ".join(sorted(supp)))
+        md = MD_OPT / f"{r['paper']}.md"
+        if md.exists() and supp <= {"", "NA"}:
+            m = SUPP_RE.search(md.read_text(encoding="utf-8"))
+            if m:
+                report.warn(where, "supplementary_material", "paper refers to supplementary material; fill '<item> (<content>)' on every row", m.group(0))
         if not paper_rows:
             report.error(where, "", "no rows in RESULT")
         if str(len(paper_rows)) != r["n_rows"]:
@@ -334,16 +377,17 @@ def check_step1(slug, paper, report):
     checked = [(line, row) for line, row in rows if paper is None or row["file_name"] in checked_stems]
     for line, row in checked:
         check_row(line, row, report)
-    # Location_name with coordinates: only when several sites of the paper share those coordinates
-    names = {}
-    checked_sites = [(line, row) for line, row in checked if row["genus"] != "NA"]  # NA rows are checked in check_row
-    for _, row in checked_sites:
-        if row["latitude"] or row["longitude"]:
-            names.setdefault((row["file_name"], row["latitude"], row["longitude"]), set()).add(row["location_name"])
-    for line, row in checked_sites:
-        if row["location_name"] and (row["latitude"] or row["longitude"]):
-            if len(names[(row["file_name"], row["latitude"], row["longitude"])] - {""}) < 2:
-                report.error(f"RESULT line {line}", "location_name", "fill only when coordinates are empty or shared by several named sites", row["location_name"])
+    # location_name empty on some rows of a paper while other rows name a site: usually a missed site
+    by_paper = {}
+    for line, row in checked:
+        if row["genus"] != "NA":  # NA rows are checked in check_row
+            by_paper.setdefault(row["file_name"], []).append((line, row))
+    for stem, prow in by_paper.items():
+        empty = [line for line, row in prow if not row["location_name"]]
+        if empty and len(empty) < len(prow):
+            report.warn(f"RESULT lines {empty[0]}..{empty[-1]}", "location_name",
+                        f"empty on {len(empty)} of {len(prow)} rows of {stem} while other rows name a site; fill it, or say in notes why the row has no site",
+                        "")
 
 
 def check_step0(report):
