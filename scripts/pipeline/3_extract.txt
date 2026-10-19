@@ -1,0 +1,9 @@
+Run the following line-by-line in the terminal:
+
+`claude --model claude-opus-5-5`
+
+`Run Step 1 in CLAUDE.md. Do not ask questions.`
+
+`claude --model claude-sonnet-5-5`
+
+`Run Step 1 in CLAUDE.md. Do not ask questions.`
