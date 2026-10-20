@@ -149,3 +149,11 @@ All output stays in `data/papers_test/md_agents/` and `data/inference_test/`. No
 optimise md: 0.5-15M tokens per paper
 
 data extraction: ~ slightly more than 1M tokens for both models
+
+# Benchmarking
+
+I spent a good few weeks thinking about how to benchmark the extraction results against the ground truth, using methods such as F1 and Levenshtein distance. However, after more thinking, I realised that since 100% accuracy is only a theoretical number, as even a human produces around 4-5% error rates, there is no need to optimise the model(s) any further (currently at ~80% accurate). The biggest time lag in this pipeline can be cut even shorter if I can somehow reduce the time taken for a human to review the extraction results.
+
+# Human-in-the-loop GUI
+
+This is the part where I highlight my creation of an application that can increase the speed at which extraction results can be checked.
