@@ -156,4 +156,4 @@ I spent a good few weeks thinking about how to benchmark the extraction results 
 
 # Human-in-the-loop GUI
 
-This is the part where I highlight my creation of an application that can increase the speed at which extraction results can be checked.
+This is the part where I highlight my creation of an application that can increase the speed at which extraction results can be checked. 

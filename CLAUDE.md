@@ -14,7 +14,7 @@ MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output for scanned 
 PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
 MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
 PAPERS   = "data/papers_test/md_agents/*.md"     # extraction input: MD_OPT files of scanned PDFs + raw pdf2md files of text-layer PDFs (end comment "md_opt: none"); pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (37 columns)
+RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (38 columns)
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
@@ -123,6 +123,7 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 - Codes and units: use only definitions printed in the paper. Code not defined: copy it as printed (e.g. fire response `S`), never translate it. Unit not stated for a time value: leave the time columns empty; value and "unit not stated" in `notes`.
 - Tables may be parsed with one-off code. Then print 3 random parsed rows next to their source table lines and confirm they match before writing them.
 - Ambiguous value: fill best reading, explain in `notes`. Value printed with uncertainty marks (`c.`, `?`, `approx.`): fill the number without the marks; marks in `notes`.
+- Every place named in `data_location` gets its verbatim quote in `data_quote`: the sentence, the species' table row, or the figure label and title (see `METADATA`). Copy it from the paper's markdown, not from memory; `CHECK` searches the paper for it.
 - Ambiguous column (paper does not say which measure a value is, e.g. not stated whether from seed or from resprouts): `notes` only.
 - Several estimates of one measure for the same species, site and fire (e.g. pooled model in a table and a single-site model in the text): fill the value from the paper's main results table; the others in `notes`.
 
@@ -191,6 +192,7 @@ COLUMNS = [
   ("fire_severity_categorical", ""),
   # record
   ("data_location", "new"),
+  ("data_quote", "new"),
   ("supplementary_material", "new"),
   ("notes", ""),
   ("source", ""),
@@ -204,7 +206,7 @@ Time columns:
 - Precision: copy values with exactly the decimals printed in the paper. Do not round or add trailing zeros (`3.0` stays `3.0`; `3` stays `3`). Converted value: paper or source states the value in the target unit -> copy it as printed. Otherwise round to 3 decimals, drop trailing zeros (26 months -> 2.167; 30 months -> 2.5; 48 months -> 4).
 - Ranges: `min-max`, no spaces (`3.0 - 16.0` -> `3.0-16.0`). Open bounds as printed (`>23`, `<2`). Uncertain value: no `?` in the cell; explain in `notes`.
 
-CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell. Case: lower case in every cell (`Myrtaceae` -> `myrtaceae`, `Summer` -> `summer`, author and place names too), except: first letter of `genus` (also in `scientific_name`); `NA`; codes copied as printed, in any column including `notes` (case can carry meaning, e.g. `R` vs `r`); `file_name` (= file stem, also in `source` when used there). Several values in one cell: separate with `; ` (semicolon, space), e.g. `autumn; spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Dashes: ASCII hyphen `-` in every cell, including names, codes and `source` (en dash `–` or em dash `—` -> `-`). Form not set by a rule: use the form of the `METADATA` example. Uncertain value: keep the format; explain in `notes`.
+CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell. Case: lower case in every cell (`Myrtaceae` -> `myrtaceae`, `Summer` -> `summer`, author and place names too), except: first letter of `genus` (also in `scientific_name`); `NA`; codes copied as printed, in any column including `notes` (case can carry meaning, e.g. `R` vs `r`); `file_name` (= file stem, also in `source` when used there); `data_quote` (verbatim from the paper). Several values in one cell: separate with `; ` (semicolon, space), e.g. `autumn; spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Dashes: ASCII hyphen `-` in every cell except `data_quote`, including names, codes and `source` (en dash `–` or em dash `—` -> `-`). Form not set by a rule: use the form of the `METADATA` example. Uncertain value: keep the format; explain in `notes`.
 
 ## Checks
 

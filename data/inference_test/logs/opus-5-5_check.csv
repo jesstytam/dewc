@@ -1,28 +1,2 @@
 level,where,column,check,value
-warning,RESULT line 11,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
-warning,RESULT line 119,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
-warning,RESULT line 126,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
-warning,RESULT line 534,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
-warning,RESULT line 535,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
-warning,RESULT line 536,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
-warning,RESULT line 1093,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1102,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1103,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1104,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1215,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x crocosmiiflora
-warning,RESULT line 1216,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x crocosmiiflora
-warning,RESULT line 1217,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x crocosmiiflora
-warning,RESULT line 1230,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
-warning,RESULT line 1231,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
-warning,RESULT line 1282,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
-warning,RESULT line 1619,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
-warning,RESULT line 1630,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
-warning,RESULT line 1980,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
-warning,RESULT line 2145,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
-warning,RESULT line 2233,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
-warning,RESULT line 2258,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
-warning,RESULT line 2671,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'rocky creek'
-warning,RESULT line 3163,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
-warning,RESULT line 3349,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a sensu harden (1994)
-warning,RESULT line 3389,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a sensu powell (1992)
-warning,RESULT line 3550,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+error,RESULT line 1,,header must be the 38 COLUMNS names in order,

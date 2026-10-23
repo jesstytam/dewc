@@ -50,7 +50,7 @@ ERROR_TYPE_RE = re.compile(r"se|sd|ci\d+|± not defined")
 ERROR_NUMBER_RE = re.compile(r"\d+(\.\d+)?")
 CI_RE = re.compile(r"-?\d+(\.\d+)?--?\d+(\.\d+)?|-?\d+(\.\d+)?-\d+(\.\d+)?")
 SUPP_RE = re.compile(r"supplementary|supporting information|online resource|electronic supplement|\b(table|fig\.?|figure|appendix) s\d", re.I)
-KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "fire_response_implied", "file_name", "notes"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms
+KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "fire_response_implied", "file_name", "notes", "data_quote"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms; data_quote is verbatim
 PLURAL_RE = re.compile(r"\b[a-z]+[^s\W]s\b")  # e.g. rhizomes, tubers (not grass)
 PAGE_BREAK = "<!-- PAGE BREAK -->"
 UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
@@ -146,12 +146,58 @@ def decimals(value):
     return len(value.split(".")[1]) if "." in value else 0
 
 
+def squash(text):
+    return " ".join(text.split())
+
+
+_paper_text = {}
+
+
+def paper_text(stem):
+    """Paper markdown with whitespace runs squashed, or None if missing."""
+    if stem not in _paper_text:
+        md = MD_OPT / f"{stem}.md"
+        _paper_text[stem] = squash(md.read_text(encoding="utf-8")) if md.exists() else None
+    return _paper_text[stem]
+
+
+def check_quote(where, row, report):
+    """data_quote: one '[<data_location item>] <quote>' per data_location item, each quote found verbatim in the paper."""
+    loc, quote = row["data_location"], row["data_quote"]
+    if not quote:
+        report.error(where, "data_quote", "verbatim quote for each data_location item, e.g. '[table 2, p. 342] | Banksia ericifolia | R | 5 |'", quote)
+        return
+    if not loc:
+        return
+    items = loc.split("; ")
+    starts = []
+    pos = 0
+    for k, item in enumerate(items):
+        tag = f"[{item}] "
+        at = quote.find(tag if k == 0 else "; " + tag, pos)
+        if at == -1 or (k == 0 and at != 0):
+            report.error(where, "data_quote", f"item {k + 1} must start with '[{item}] ' (one item per data_location item, same order, joined by '; ')", quote[:120])
+            return
+        starts.append((at if k == 0 else at + 2, len(tag)))
+        pos = at + len(tag)
+    text = paper_text(row["file_name"])
+    if text is None:
+        return
+    for k, (at, n) in enumerate(starts):
+        end = starts[k + 1][0] - 2 if k + 1 < len(starts) else len(quote)
+        body = quote[at + n:end]
+        for piece in body.split(" ... "):
+            piece = squash(piece)
+            if piece and piece not in text:
+                report.error(where, "data_quote", f"not found verbatim in the paper ([{items[k]}]); copy it from the markdown", piece[:120])
+
+
 def check_row(line, row, report):
     where = f"RESULT line {line}"
     for col, value in row.items():
         if value != value.strip():
             report.error(where, col, "leading or trailing space", value)
-        if DASH_RE.search(value):
+        if DASH_RE.search(value) and col != "data_quote":
             report.error(where, col, "en or em dash; use ASCII hyphen '-'", value)
         if value != "NA" and value != value.lower() and col not in KEEP_CASE:
             if not (col == "source" and value == row["file_name"]):
@@ -205,6 +251,7 @@ def check_row(line, row, report):
         report.error(where, "data_location", "where the row's values are printed, e.g. 'table 2, p. 342'", loc)
     elif loc and loc != "NA" and not LOC_PAGE_RE.search(loc):
         report.warn(where, "data_location", "no page: add 'p. N' (printed page) or 'pdf p. N'", loc)
+    check_quote(where, row, report)
     m = NOTES_PAGE_RE.search(row["notes"])
     if m:
         report.warn(where, "notes", "page reference: write 'p. N' (printed page) or 'pdf p. N'", m.group(0))
