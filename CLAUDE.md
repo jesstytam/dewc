@@ -10,11 +10,11 @@ RUN      = "test"                                # "test" = trial run; "full" = 
 ROOT     = {"test": "data/inference_test/", "full": "data/inference/"}[RUN]   # read references and write results only under ROOT
 METADATA = ROOT + "references/metadata.csv"      # column dictionary: 1 row per RESULT column; type, unit, allowed values, trait code, definition, rule, example; ' | ' separates alternatives in allowed_values and example; the only format reference
 VALUE_MAP = ROOT + "references/value_map.csv"   # paper terms and codes -> standard values for fire response, severity and resprouter type, with the notes entry to write
-MD_RAW   = "data/papers_test/md/*.md"            # pdf2md.py output for scanned PDFs only (text-layer PDFs go straight to md_agents/)
-PDF_DONE = "data/papers_test/pdf_done/*.pdf"     # source PDF for each MD_RAW file; same file stem
-MD_OPT   = "data/papers_test/md_agents/{stem}.md" # Step 0 output; one file per paper
-PAPERS   = "data/papers_test/md_agents/*.md"     # extraction input: MD_OPT files of scanned PDFs + raw pdf2md files of text-layer PDFs (end comment "md_opt: none"); pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (38 columns)
+MD_RAW   = "data/papers_test/md_raw/*.md"        # 2_pdf2md.py output, every PDF; last line "<!-- pdf2md: scanned -->" or "<!-- pdf2md: text-layer -->"; Step 0 empties it
+PDF_CLEAN = "data/papers_test/pdf_clean/{stem}.pdf"   # source PDF of each paper, renamed by 1_clean_pdf.py; same file stem as its markdown
+MD_LLM   = "data/papers_test/md_llm/{stem}.md"   # Step 0 output; one file per paper: optimised (scanned) or moved unchanged (text-layer, end comment "md_opt: none")
+PAPERS   = "data/papers_test/md_llm/*.md"        # extraction input; pages split by <!-- PAGE BREAK -->
+RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (39 columns)
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
@@ -26,7 +26,7 @@ CHECK    = "scripts/claude/check.py"             # fixed check script; run it, n
 
 | Step | Read | Write |
 |---|---|---|
-| 0 | `MD_RAW`, `PDF_DONE` | `.md` files in `data/papers_test/md_agents/`; `MD_LOG`; `CHECK --step0` report |
+| 0 | `MD_RAW`, `PDF_CLEAN` | `.md` files in `data/papers_test/md_llm/`; move or remove `.md` files in `data/papers_test/md_raw/`; `MD_LOG`; `CHECK --step0` report |
 | 1 | `METADATA`, `VALUE_MAP`, `PAPERS`, `RESULT`, `LOG` | `RESULT`, `LOG`; `CHECK` report |
 
 Everything not listed for a step is off limits for that step. One-off shell or Python commands are allowed; a code file may be written only to the session scratchpad (never to the repo), so its full text stays in the session transcript.
@@ -40,15 +40,19 @@ Everything not listed for a step is off limits for that step. One-off shell or P
 print(f"Step 0: optimise markdown | {len(MD_RAW)} papers")
 if not exists(MD_LOG): write(MD_LOG, "paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note," + TOKEN_COLS)
 for i, md in enumerate(sorted(MD_RAW), 1):
-    out = MD_OPT(stem(md))
-    if exists(out) and out ends with "<!-- md_opt:":    # finished earlier; resume safe
-        print(f"{bar(i, len(MD_RAW))} {stem(md)} | skipped: already done"); continue
+    out = MD_LLM(stem(md))
+    if exists(out) and out ends with "<!-- md_opt:":    # finished earlier, interrupted before md was removed
+        remove(md); print(f"{bar(i, len(MD_RAW))} {stem(md)} | skipped: already done"); continue
     if exists(out): overwrite(out, "")           # unfinished file from an interrupted run: restart from page 1; status "restarted" in note
     started = now_utc()
-    pdf = PDF_DONE file with stem(pdf).replace(" ", "_") == stem(md)
-    if not pdf:                                  # copy md unchanged, add end comment with note
-        copy(md, out); append(out, "<!-- md_opt: ...; note=no matching PDF -->"); log_md(stem(md), "no_pdf", started=started, finished=now_utc(), note="no matching PDF")
-        print(f"{bar(i, len(MD_RAW))} {stem(md)} | no_pdf: copied unchanged"); continue
+    if md ends with "<!-- pdf2md: text-layer -->":   # text-layer PDF: no optimisation
+        move(md, out); replace(out, last line, "<!-- md_opt: none; text-layer PDF, raw marker output, Step 0 skipped -->")
+        log_md(stem(md), "text_layer", started=started, finished=now_utc())
+        print(f"{bar(i, len(MD_RAW))} {stem(md)} | text_layer: moved unchanged"); continue
+    pdf = PDF_CLEAN(stem(md))                    # md ends with "<!-- pdf2md: scanned -->"
+    if not exists(pdf):                          # move md unchanged, add end comment with note
+        move(md, out); replace(out, last line, "<!-- md_opt: ...; note=no matching PDF -->"); log_md(stem(md), "no_pdf", started=started, finished=now_utc(), note="no matching PDF")
+        print(f"{bar(i, len(MD_RAW))} {stem(md)} | no_pdf: moved unchanged"); continue
     print(f"{bar(i, len(MD_RAW))} {stem(md)} | {n_pages(pdf)} pages")
     for batch in pages(pdf, max_pages=10):       # read PDF pages as images; never load a whole long PDF at once
         raw = text in md for the same pages      # match by text on first and last page of batch; md may lack page markers
@@ -56,12 +60,13 @@ for i, md in enumerate(sorted(MD_RAW), 1):
         print(f"    pages {first}-{last} of {n_pages(pdf)} | tables rebuilt {n_tables}")
     append(out, "<!-- md_opt: model=...; date=YYYY-MM-DD; md_sha256=...; pdf_sha256=...; pdf_pages=N; fixes=...; unresolved=... -->")
     log_md(stem(md), "done", n_pages(pdf), n_tables, n_fixes, unresolved, started, now_utc(), note)   # 1 line per finished paper; quote cells with commas
+    remove(md)                                   # only after the end comment and MD_LOG line are written
     print(f"    done | fixes {n_fixes} | unresolved {n_unresolved}")
 run(f"python {CHECK} --step0")                  # see Checks
-print(f"Step 0 done | {n_done} optimised, {n_skipped} skipped")
+print(f"Step 0 done | {n_done} optimised, {n_text_layer} text_layer, {n_skipped} skipped")
 
 # Step 1: extract. One session per agent; this session handles only its own slug. Agents work independently.
-if any MD_RAW file has no finished MD_OPT file: stop; tell the user to run Step 0 first
+if MD_RAW is not empty: stop; tell the user to run Step 0 first
 print(f"Step 1: extract | agent {slug} | {len(PAPERS)} papers")
 if not exists(RESULT):
     write(RESULT, [name for name, rule in COLUMNS])   # header only
@@ -91,13 +96,13 @@ run(f"python {CHECK} {slug}")                # see Checks
 print(f"Step 1 done | agent {slug} | papers {n_done} done, {n_broken} broken, {n_no_data} no_data | rows {total_rows} | failed checks {n_failed}")
 ```
 
-Hashes, run from the repo root, exactly: `papers_sha256` = `sha256sum data/papers_test/md_agents/*.md | LC_ALL=C sort | sha256sum`; `claude_md_sha256` = `sha256sum CLAUDE.md`. Record the first 64 characters of the output.
+Hashes, run from the repo root, exactly: `papers_sha256` = `sha256sum data/papers_test/md_llm/*.md | LC_ALL=C sort | sha256sum`; `claude_md_sha256` = `sha256sum CLAUDE.md`. Record the first 64 characters of the output.
 
 Tokens: never estimate. Leave the 6 `TOKEN_COLS` cells empty on every log line; record `started` and `finished` for every paper (`USAGE` uses them).
 
 ## Markdown optimisation
 
-Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it matches the PDF. `MD_RAW` holds scanned PDFs only; their raw text may be poor OCR or empty (no text layer): then build each page from the PDF page image.
+Compare each scanned paper's `MD_RAW` file with its PDF page by page. Fix the markdown so it matches the PDF. Raw text of a scanned PDF may be poor OCR or empty (no text layer): then build each page from the PDF page image. Do not copy the `<!-- pdf2md: ... -->` line into `MD_LLM`.
 
 - Tables: rebuild every table as a markdown pipe table, one species per row, values in the correct column. Fix rows split by wrapped species names, merged cells (`<br>` lists), and multi-line headers spread over several rows. Read tables from the PDF page, not from the broken markdown.
 - Text: fix split ligatures (`fi re` -> `fire`, `fl ower` -> `flower`), OCR errors (`Brishane` -> `Brisbane`), joined words, and scrambled word order.
@@ -131,7 +136,7 @@ Compare each `MD_RAW` file with its PDF page by page. Fix the markdown so it mat
 
 Every paper gets at least 1 row in `RESULT`. Write an NA row when:
 - **broken**: file empty or under 1,000 bytes; no `<!-- md_opt:` end comment; end comment lists an `unresolved` table that holds species values; text garbled or unreadable; read error.
-- Text-layer paper (end comment `md_opt: none`) broken because its text is garbled (e.g. wrong font encoding): LOG note starts with `needs Step 0:` and names the problem. The user then moves the raw file to `MD_RAW` and runs Step 0 for it.
+- Text-layer paper (end comment `md_opt: none`) broken because its text is garbled (e.g. wrong font encoding): LOG note starts with `needs Step 0:` and names the problem. The user then puts the paper back into `MD_RAW` marked `<!-- pdf2md: scanned -->` and runs Step 0 for it.
 - **no_data**: paper readable, all pages read, no species-level juvenile period or fire response values found.
 
 ```python
@@ -139,6 +144,7 @@ na_row = {name: "NA" for name, rule in COLUMNS}  # exactly 1 NA row per paper
 na_row["notes"]  = reason                        # e.g. "empty markdown: PDF conversion failed"; "no data: review paper, no species values"
 na_row["source"] = citation if readable else stem(paper)
 na_row["file_name"] = stem(paper)
+na_row["pdf_path"] = pdf_path(paper)            # see METADATA
 na_row["supplementary_material"] = items if any else "NA"   # see Supplementary material
 ```
 
@@ -197,6 +203,7 @@ COLUMNS = [
   ("notes", ""),
   ("source", ""),
   ("file_name", "new"),
+  ("pdf_path", "new"),
 ]
 ```
 
@@ -206,7 +213,7 @@ Time columns:
 - Precision: copy values with exactly the decimals printed in the paper. Do not round or add trailing zeros (`3.0` stays `3.0`; `3` stays `3`). Converted value: paper or source states the value in the target unit -> copy it as printed. Otherwise round to 3 decimals, drop trailing zeros (26 months -> 2.167; 30 months -> 2.5; 48 months -> 4).
 - Ranges: `min-max`, no spaces (`3.0 - 16.0` -> `3.0-16.0`). Open bounds as printed (`>23`, `<2`). Uncertain value: no `?` in the cell; explain in `notes`.
 
-CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell. Case: lower case in every cell (`Myrtaceae` -> `myrtaceae`, `Summer` -> `summer`, author and place names too), except: first letter of `genus` (also in `scientific_name`); `NA`; codes copied as printed, in any column including `notes` (case can carry meaning, e.g. `R` vs `r`); `file_name` (= file stem, also in `source` when used there); `data_quote` (verbatim from the paper). Several values in one cell: separate with `; ` (semicolon, space), e.g. `autumn; spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Dashes: ASCII hyphen `-` in every cell except `data_quote`, including names, codes and `source` (en dash `–` or em dash `—` -> `-`). Form not set by a rule: use the form of the `METADATA` example. Uncertain value: keep the format; explain in `notes`.
+CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell. Case: lower case in every cell (`Myrtaceae` -> `myrtaceae`, `Summer` -> `summer`, author and place names too), except: first letter of `genus` (also in `scientific_name`); `NA`; codes copied as printed, in any column including `notes` (case can carry meaning, e.g. `R` vs `r`); `file_name` (= file stem, also in `source` when used there); `data_quote` (verbatim from the paper); `pdf_path` (file path as on disk). Several values in one cell: separate with `; ` (semicolon, space), e.g. `autumn; spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Dashes: ASCII hyphen `-` in every cell except `data_quote`, including names, codes and `source` (en dash `–` or em dash `—` -> `-`). Form not set by a rule: use the form of the `METADATA` example. Uncertain value: keep the format; explain in `notes`.
 
 ## Checks
 
@@ -220,11 +227,11 @@ def check_paper(paper):                          # after every paper's LOG line,
     log the remaining errors in the paper's LOG note
 ```
 
-After all papers: run `CHECK` without `--paper`, fix errors the same way. After Step 0: run `CHECK --step0`, fix each failed `MD_OPT` file from its PDF. Warnings: look, fix if real. Never delete a row silently.
+After all papers: run `CHECK` without `--paper`, fix errors the same way. After Step 0: run `CHECK --step0`, fix each failed `MD_LLM` file from its PDF. Warnings: look, fix if real. Never delete a row silently.
 
 ## Do not
 
 - Read `data/reference/`, `data/papers_test/answers/`, `logs/benchmark*.csv`, or another agent's `RESULT` or `LOG`. They contain answers.
-- Edit `METADATA`, `VALUE_MAP`, `MD_RAW`, `PDF_DONE`, or anything in `data/papers_test/` outside `md_agents/`.
+- Edit `METADATA`, `VALUE_MAP`, `PDF_CLEAN`, or anything in `data/papers_test/` outside `md_raw/` (Step 0 only: move or remove) and `md_llm/`.
 - Edit `CHECK`, or write any script file outside the session scratchpad.
 - Create or write anything in `data/inference/`. Use `data/inference_test/` only.

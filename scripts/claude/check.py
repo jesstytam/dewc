@@ -20,14 +20,17 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 ROOT = REPO / "data/inference_test"  # test run only; never data/inference
-MD_RAW = REPO / "data/papers_test/md"
-MD_OPT = REPO / "data/papers_test/md_agents"
+MD_RAW = REPO / "data/papers_test/md_raw"
+MD_LLM = REPO / "data/papers_test/md_llm"
+PDF_CLEAN = "data/papers_test/pdf_clean/"
+PDF_CLEAN_DIR = REPO / PDF_CLEAN
 LOGS = ROOT / "logs"
 
 TOKEN_COLS = ["n_requests", "input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens", "output_tokens", "total_tokens"]
 LOG_HEADER = ["paper", "status", "n_rows", "started", "finished", "note"] + TOKEN_COLS
 MD_LOG_HEADER = ["paper", "status", "pdf_pages", "n_tables", "n_fixes", "unresolved", "started", "finished", "note"] + TOKEN_COLS
 STATUSES = {"done", "broken", "no_data"}
+MD_STATUSES = {"done", "text_layer", "no_pdf"}
 
 FIXED_YEARS = [
     "age_at_first_flower_production_from_seed_repr3",
@@ -50,7 +53,7 @@ ERROR_TYPE_RE = re.compile(r"se|sd|ci\d+|± not defined")
 ERROR_NUMBER_RE = re.compile(r"\d+(\.\d+)?")
 CI_RE = re.compile(r"-?\d+(\.\d+)?--?\d+(\.\d+)?|-?\d+(\.\d+)?-\d+(\.\d+)?")
 SUPP_RE = re.compile(r"supplementary|supporting information|online resource|electronic supplement|\b(table|fig\.?|figure|appendix) s\d", re.I)
-KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "fire_response_implied", "file_name", "notes", "data_quote"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms; data_quote is verbatim
+KEEP_CASE = {"genus", "scientific_name", "fire_response_categorical_surv1", "fire_response_implied", "file_name", "notes", "data_quote", "pdf_path"}  # see Case in CLAUDE.md; notes quote codes, genus names and printed forms; data_quote is verbatim
 PLURAL_RE = re.compile(r"\b[a-z]+[^s\W]s\b")  # e.g. rhizomes, tubers (not grass)
 PAGE_BREAK = "<!-- PAGE BREAK -->"
 UTC_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z")
@@ -120,8 +123,8 @@ def sha256_hex(data):
 
 
 def papers_hash():
-    """Same as: sha256sum data/papers_test/md_agents/*.md | LC_ALL=C sort | sha256sum (from the repo root)."""
-    lines = sorted(f"{sha256_hex(p.read_bytes())}  {p.relative_to(REPO)}\n" for p in MD_OPT.glob("*.md"))
+    """Same as: sha256sum data/papers_test/md_llm/*.md | LC_ALL=C sort | sha256sum (from the repo root)."""
+    lines = sorted(f"{sha256_hex(p.read_bytes())}  {p.relative_to(REPO)}\n" for p in MD_LLM.glob("*.md"))
     return sha256_hex("".join(lines).encode("utf-8"))
 
 
@@ -156,7 +159,7 @@ _paper_text = {}
 def paper_text(stem):
     """Paper markdown with whitespace runs squashed, or None if missing."""
     if stem not in _paper_text:
-        md = MD_OPT / f"{stem}.md"
+        md = MD_LLM / f"{stem}.md"
         _paper_text[stem] = squash(md.read_text(encoding="utf-8")) if md.exists() else None
     return _paper_text[stem]
 
@@ -192,6 +195,11 @@ def check_quote(where, row, report):
                 report.error(where, "data_quote", f"not found verbatim in the paper ([{items[k]}]); copy it from the markdown", piece[:120])
 
 
+def expected_pdf_path(stem):
+    """pdf_path rule in metadata.csv: the PDF in pdf_clean with the paper's file stem."""
+    return PDF_CLEAN + f"{stem}.pdf" if (PDF_CLEAN_DIR / f"{stem}.pdf").exists() else ""
+
+
 def check_row(line, row, report):
     where = f"RESULT line {line}"
     for col, value in row.items():
@@ -205,10 +213,13 @@ def check_row(line, row, report):
     for col in ("source", "file_name"):
         if not row[col] or row[col] == "NA":
             report.error(where, col, "empty or NA")
+    pdf = expected_pdf_path(row["file_name"])
+    if row["pdf_path"] != pdf:
+        report.error(where, "pdf_path", f"must be '{pdf}'" if pdf else "no PDF with this file stem in pdf_clean: leave empty, say so in the LOG note", row["pdf_path"])
 
     if row["genus"] == "NA":  # NA row
         for col, value in row.items():
-            if col not in ("notes", "source", "file_name", "supplementary_material") and value != "NA":
+            if col not in ("notes", "source", "file_name", "supplementary_material", "pdf_path") and value != "NA":
                 report.error(where, col, "NA row: cell must be NA", value)
         if not row["notes"] or row["notes"] == "NA":
             report.error(where, "notes", "NA row: reason missing")
@@ -378,7 +389,7 @@ def check_step1(slug, paper, report):
             report.error("LOG", "paper", "paper not in LOG; write its LOG line before checking", paper)
             return
     else:
-        expected = sorted(p.stem for p in MD_OPT.glob("*.md"))
+        expected = sorted(p.stem for p in MD_LLM.glob("*.md"))
         counts = Counter(r["paper"] for r in papers)
         for stem in expected:
             if counts[stem] != 1:
@@ -405,7 +416,7 @@ def check_step1(slug, paper, report):
         supp = {row["supplementary_material"] for _, row in paper_rows}
         if len(supp) > 1:
             report.error(where, "supplementary_material", f"{len(supp)} different strings; use one on every row", " | ".join(sorted(supp)))
-        md = MD_OPT / f"{r['paper']}.md"
+        md = MD_LLM / f"{r['paper']}.md"
         if md.exists() and supp <= {"", "NA"}:
             m = SUPP_RE.search(md.read_text(encoding="utf-8"))
             if m:
@@ -447,21 +458,30 @@ def check_step0(report):
     log_rows = [dict(zip(MD_LOG_HEADER, cells)) for cells in log[1:]]
     counts = Counter(r["paper"] for r in log_rows)
 
+    # Step 0 moves or removes every md_raw file once its md_llm file is finished
     for md in sorted(MD_RAW.glob("*.md")):
-        stem, where = md.stem, f"MD_OPT {md.stem}"
+        report.error(f"MD_RAW {md.stem}", "", "still in md_raw: Step 0 not finished for this paper")
+
+    for out in sorted(MD_LLM.glob("*.md")):
+        stem, where = out.stem, f"MD_LLM {out.stem}"
         if counts[stem] != 1:
             report.error("MD_LOG", "paper", f"{counts[stem]} lines, expected 1", stem)
-        out = MD_OPT / f"{stem}.md"
-        if not out.exists():
-            report.error(where, "", "file missing")
-            continue
+        if not (PDF_CLEAN_DIR / f"{stem}.pdf").exists():
+            report.warn(where, "", "no PDF with the same stem in pdf_clean")
         text = out.read_text(encoding="utf-8")
-        if not text.rstrip().splitlines()[-1].startswith("<!-- md_opt:"):
+        lines = text.rstrip().splitlines()
+        if not lines or not lines[-1].startswith("<!-- md_opt:"):
             report.error(where, "", "no <!-- md_opt: end comment")
+        if "<!-- pdf2md:" in text:
+            report.error(where, "", "<!-- pdf2md: ... --> line copied from md_raw; remove it")
         entry = next((r for r in log_rows if r["paper"] == stem), None)
         if entry:
+            if entry["status"] not in MD_STATUSES:
+                report.error(f"MD_LOG {stem}", "status", "must be " + ", ".join(sorted(MD_STATUSES)), entry["status"])
             check_times(f"MD_LOG {stem}", entry, report)
             check_tokens(f"MD_LOG {stem}", entry, report)
+        if entry and entry["status"] == "text_layer":
+            continue  # moved unchanged; no optimisation checks
         if entry and entry["status"] == "done":
             breaks = text.count(PAGE_BREAK)
             if not entry["pdf_pages"].isdigit():

@@ -73,7 +73,7 @@ Every pipeline session is logged automatically. A `SessionEnd` hook in `.claude/
 2. adds one line to `data/inference_test/logs/sessions.csv`: date, step (`step0`, `step1-trial` or `step1`), agent, the model IDs that actually answered, Claude Code version, session ID;
 3. fills the token breakdown (`n_requests`, `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens`, `output_tokens`, `total_tokens`): per paper in that paper's line of the step's log, and per step as whole-session totals in `sessions.csv`. The session total minus the papers is setup, checks and wrap-up. Each request is assigned to a paper by the `started` and `finished` times the agent writes in its log. Cache-read tokens make up most of the total because every request re-reads the conversation so far; compare papers mainly on `output_tokens` and `n_requests`.
 
-`models` in `sessions.csv` must show only the expected model ID (e.g. `claude-opus-5-5`). Any other model means the session did not run on the intended model, so its results are not valid for that agent. The agents also record the model themselves: Step 0 in the end comment of each `md_agents/` file, Step 1 in the `_run` line of `<slug>_log.csv`.
+`models` in `sessions.csv` must show only the expected model ID (e.g. `claude-opus-5-5`). Any other model means the session did not run on the intended model, so its results are not valid for that agent. The agents also record the model themselves: Step 0 in the end comment of each optimised `md_llm/` file, Step 1 in the `_run` line of `<slug>_log.csv`.
 
 Optional: before ending a session, type `/export data/inference_test/logs/runs/<step>_<slug>_<YYYYMMDD-HHMM>.txt` to also keep the conversation as readable text.
 
@@ -87,7 +87,7 @@ python scripts/claude/log_session.py --session <session id>
 
 ## Steps
 
-1. **Step 0: optimise markdown (Opus).** Compares `data/papers_test/md/` with the PDFs in `data/papers_test/pdf_done/` and writes fixed markdown to `data/papers_test/md_agents/`.
+1. **Step 0: optimise markdown (Opus).** Works through `data/papers_test/md_raw/`: text-layer papers are moved unchanged to `data/papers_test/md_llm/`; scanned papers are compared with their PDF in `data/papers_test/pdf_clean/`, fixed, and written to `data/papers_test/md_llm/`. `md_raw/` is empty when Step 0 is done.
 
    ```
    claude --model claude-opus-5-5
@@ -97,7 +97,7 @@ python scripts/claude/log_session.py --session <session id>
    Run Step 0 in CLAUDE.md. Do not ask questions. Stop after CHECK --step0 passes.
    ```
 
-2. **Manual check.** Open 1–2 files in `data/papers_test/md_agents/` and compare their tables with the PDF (e.g. Kubiak 2009 Appendix 1, Benson 1985 Table 2). Step 1 is only as good as these files. Also read `data/inference_test/logs/md_opt_log.csv` for unresolved items.
+2. **Manual check.** Open 1–2 files in `data/papers_test/md_llm/` and compare their tables with the PDF (e.g. Kubiak 2009 Appendix 1, Benson 1985 Table 2). Step 1 is only as good as these files. Also read `data/inference_test/logs/md_opt_log.csv` for unresolved items.
 
 3. **Step 1 trial: one paper (Opus).** New session.
 
@@ -141,7 +141,7 @@ python scripts/claude/log_session.py --session <session id>
 
 If a session stops early (usage limit, context full), start a new session with the same prompt. Finished papers are skipped and unfinished ones are redone.
 
-All output stays in `data/papers_test/md_agents/` and `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
+All output stays in `data/papers_test/md_llm/` and `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
 
 
 # Token usage

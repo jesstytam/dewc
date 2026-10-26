@@ -9,11 +9,11 @@ import pymupdf4llm
 
 # from session_info2 import session_info
 
-pdf_in_path = "data/papers_test/pdf_new"
-pdf_done_path = "data/papers_test/pdf_done"
-md_path = "data/papers_test/md"                # scanned PDFs: raw markdown for Step 0
-md_agents_path = "data/papers_test/md_agents"  # text-layer PDFs: raw markdown straight to Step 1
-md_opt_skipped = "\n<!-- md_opt: none; text-layer PDF, raw marker output, Step 0 skipped -->\n"
+pdf_in_path = "data/papers_test/pdf_clean"  # renamed PDFs from 1_clean_pdf.py; they stay here (pdf_path in results)
+md_raw_path = "data/papers_test/md_raw"     # raw markdown of every PDF; Step 0 optimises (scanned) or moves (text-layer) it to md_llm
+md_llm_path = "data/papers_test/md_llm"     # Step 0 output, input of Step 1
+#last line of each md_raw file: tells Step 0 whether to optimise it
+pdf_type_line = {True: "\n<!-- pdf2md: scanned -->\n", False: "\n<!-- pdf2md: text-layer -->\n"}
 
 
 def is_scanned(doc, n_pages=5, min_cover=0.7):
@@ -30,27 +30,31 @@ def is_scanned(doc, n_pages=5, min_cover=0.7):
     return hits > checked / 2
 
 
-for fi in tqdm(os.listdir(pdf_in_path)):
+def converted(fi):
+    """True if markdown exists for this PDF in md_raw (waiting for Step 0) or md_llm (done)."""
+    return any(os.path.exists(f"{folder}/{Path(fi).stem}.md") for folder in (md_raw_path, md_llm_path))
+
+
+for fi in tqdm(sorted(os.listdir(pdf_in_path))):
+    if not fi.lower().endswith(".pdf"):
+        continue
+    if converted(fi):
+        print(f"Skipping {fi}: markdown exists")
+        continue
 
     print(f"Processing {fi}...")
 
     pdf_src = os.path.join(pdf_in_path, fi)
-    pdf_dst = os.path.join(pdf_done_path, fi)
     stem = Path(fi).stem
-    md_marker_path = f"{md_path}/{stem}"
-    md_name = f"{stem.replace(' ', '_')}.md"
-    print(f"     MD marker path: {md_marker_path}")
+    md_marker_path = f"{md_raw_path}/{stem}"
+    md_dst_path = f"{md_raw_path}/{stem}.md"
 
     #scanned? (full-page images; an OCR text layer does not make it clean)
     with pymupdf.open(pdf_src) as doc:
         scanned = is_scanned(doc)
 
     if not scanned:
-        md_dst_path = f"{md_agents_path}/{md_name}"
-        if os.path.exists(md_dst_path):
-            print(f"     {md_dst_path} exists; not overwritten.")
-            continue
-        print("     PDF has a text layer: raw markdown to md_agents, Step 0 skipped.")
+        print("     PDF has a text layer: marker markdown to md_raw; Step 0 moves it to md_llm unchanged.")
         subprocess.run([
             "marker_single", pdf_src,
             "--mode", "fast",
@@ -61,24 +65,18 @@ for fi in tqdm(os.listdir(pdf_in_path)):
             "--html_tables_in_markdown",
             "--paginate_output",
             "--page_separator", "<!-- PAGE BREAK -->",
-            "--output_dir", md_path
+            "--output_dir", md_raw_path
         ])
-        #move md file into md_agents and mark it as finished for Step 1
-        md_old_path = f"{md_marker_path}/{stem}.md"
-        print(f"     Moving {md_old_path} to {md_dst_path}.")
-        shutil.move(md_old_path, md_dst_path)
-        with open(md_dst_path, "a", encoding="utf-8") as f:
-            f.write(md_opt_skipped)
+        #marker writes md_raw/<stem>/<stem>.md; move it up to md_raw/<stem>.md
+        shutil.move(f"{md_marker_path}/{stem}.md", md_dst_path)
 
     #scanned: raw text layer (if any) for Step 0, which reads the page images
     else:
-        print("     PDF is scanned: raw markdown to md for Step 0.")
-        md = pymupdf4llm.to_markdown(pdf_src)
-        out = Path(f"{md_path}/{md_name}")
-        out.write_text(md, encoding="utf-8")
+        print("     PDF is scanned: raw markdown to md_raw; Step 0 optimises it into md_llm.")
+        Path(md_dst_path).write_text(pymupdf4llm.to_markdown(pdf_src), encoding="utf-8")
 
-    #move pdf
-    shutil.move(pdf_src, pdf_dst)
+    with open(md_dst_path, "a", encoding="utf-8") as f:
+        f.write(pdf_type_line[scanned])
 
     #remove new folders
     print("     Removing sub-folder.")
