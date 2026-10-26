@@ -1,8 +1,9 @@
 """Check extraction output against the rules in CLAUDE.md.
 
 Usage (from the repo root):
-    python scripts/claude/check.py <slug> --paper <stem>   # after each paper in Step 1
-    python scripts/claude/check.py <slug>                  # after all papers in Step 1
+    python scripts/claude/check.py <slug> --paper <stem>   # after each paper in Step 1 (raw results)
+    python scripts/claude/check.py <slug>                  # after all papers in Step 1 (raw results)
+    python scripts/claude/check.py <slug> --final          # after scripts/pipeline/5_normalise.py (final results)
     python scripts/claude/check.py --step0                 # after Step 0
 
 Only checks that need no reading of the paper; column rules are in references/metadata.csv. Never edits RESULT or LOG.
@@ -44,6 +45,8 @@ VARIABLE_UNIT = [
     "recovery_time",
 ]
 TIME_COLS = ["pjp_mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
+RAW_EMPTY = ["pjp_mths", "time_unit", "scientific_name", "pdf_path"]  # filled by 5_normalise.py
+RAW_TIME_RE = re.compile(r"(\S.*?) (days|weeks|months|years)")  # raw time cell: value as printed + unit
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
@@ -177,7 +180,7 @@ def check_quote(where, row, report):
     pos = 0
     for k, item in enumerate(items):
         tag = f"[{item}] "
-        at = quote.find(tag if k == 0 else "; " + tag, pos)
+        at = quote.lower().find((tag if k == 0 else "; " + tag).lower(), pos)  # data_location is lower-cased by 5_normalise.py
         if at == -1 or (k == 0 and at != 0):
             report.error(where, "data_quote", f"item {k + 1} must start with '[{item}] ' (one item per data_location item, same order, joined by '; ')", quote[:120])
             return
@@ -200,11 +203,33 @@ def expected_pdf_path(stem):
     return PDF_CLEAN + f"{stem}.pdf" if (PDF_CLEAN_DIR / f"{stem}.pdf").exists() else ""
 
 
-def check_row(line, row, report):
+def formatted(row):
+    """Raw row with the case and dash rules applied, as 5_normalise.py does, for the content checks."""
+    out = {}
+    for col, value in row.items():
+        if col != "data_quote":
+            value = DASH_RE.sub("-", value)
+        if value != "NA" and col not in KEEP_CASE and not (col == "source" and value == row["file_name"]):
+            value = value.lower()
+        out[col] = value
+    if out["genus"] != "NA":
+        out["genus"] = out["genus"][:1].upper() + out["genus"][1:].lower()
+    return out
+
+
+def raw_time_ok(value):
+    """'<value as printed> <unit>', e.g. '26 months', '3.0 - 16.0 years', '>4 years'."""
+    m = RAW_TIME_RE.fullmatch(value)
+    return bool(m) and bool(TIME_RE.fullmatch(re.sub(r"\s+", "", DASH_RE.sub("-", m.group(1)))))
+
+
+def check_row(line, row, report, raw=True):
     where = f"RESULT line {line}"
     for col, value in row.items():
         if value != value.strip():
             report.error(where, col, "leading or trailing space", value)
+        if raw:
+            continue  # case and dashes are set by 5_normalise.py
         if DASH_RE.search(value) and col != "data_quote":
             report.error(where, col, "en or em dash; use ASCII hyphen '-'", value)
         if value != "NA" and value != value.lower() and col not in KEEP_CASE:
@@ -213,13 +238,21 @@ def check_row(line, row, report):
     for col in ("source", "file_name"):
         if not row[col] or row[col] == "NA":
             report.error(where, col, "empty or NA")
-    pdf = expected_pdf_path(row["file_name"])
-    if row["pdf_path"] != pdf:
-        report.error(where, "pdf_path", f"must be '{pdf}'" if pdf else "no PDF with this file stem in pdf_clean: leave empty, say so in the LOG note", row["pdf_path"])
+    if raw:
+        if row["genus"] != "NA":
+            for col in RAW_EMPTY:
+                if row[col]:
+                    report.error(where, col, "leave empty in raw results: 5_normalise.py fills it", row[col])
+        row = formatted(row)
+    else:
+        pdf = expected_pdf_path(row["file_name"])
+        if row["pdf_path"] != pdf:
+            report.error(where, "pdf_path", f"must be '{pdf}'" if pdf else "no PDF with this file stem in pdf_clean", row["pdf_path"])
 
     if row["genus"] == "NA":  # NA row
+        keep = ("notes", "source", "file_name", "supplementary_material") + (() if raw else ("pdf_path",))
         for col, value in row.items():
-            if col not in ("notes", "source", "file_name", "supplementary_material", "pdf_path") and value != "NA":
+            if col not in keep and value != "NA":
                 report.error(where, col, "NA row: cell must be NA", value)
         if not row["notes"] or row["notes"] == "NA":
             report.error(where, "notes", "NA row: reason missing")
@@ -233,7 +266,7 @@ def check_row(line, row, report):
             report.error(where, col, "empty")
 
     name = f"{row['genus']} {row['species']}"
-    if row["scientific_name"] != name:
+    if not raw and row["scientific_name"] != name:
         report.error(where, "scientific_name", f"must be genus + ' ' + species: '{name}'", row["scientific_name"])
     for col in ("genus", "species", "subsp"):
         if NAME_MARK_RE.search(row[col]):
@@ -277,21 +310,25 @@ def check_row(line, row, report):
             elif "." in value and (value.endswith("0") or decimals(value) > 4):
                 report.error(where, col, "at most 4 decimals, no trailing zeros ('151.0' -> '151')", value)
 
-    for col in TIME_COLS:
-        value = row[col]
-        if value and not TIME_RE.fullmatch(value):
-            report.error(where, col, "time format: number, min-max, or >/< bound", value)
-    for col in FIXED_YEARS:
-        value = row[col]
-        if value and TIME_RE.fullmatch(value):
-            if any(decimals(part) > 3 for part in value.lstrip("<>").split("-")):
-                report.error(where, col, "more than 3 decimals", value)
-
-    unit_needed = any(row[col] for col in VARIABLE_UNIT)
-    if unit_needed and row["time_unit"] not in ("days", "weeks", "months", "years"):
-        report.error(where, "time_unit", "must be days, weeks, months or years", row["time_unit"])
-    if not unit_needed and row["time_unit"]:
-        report.error(where, "time_unit", "must be empty: no variable-unit time column filled", row["time_unit"])
+    if raw:
+        for col in TIME_COLS:
+            if row[col] and col not in RAW_EMPTY and not raw_time_ok(row[col]):
+                report.error(where, col, "'<value as printed> <unit>', unit days|weeks|months|years, e.g. '26 months'", row[col])
+    else:
+        for col in TIME_COLS:
+            value = row[col]
+            if value and not TIME_RE.fullmatch(value):
+                report.error(where, col, "time format: number, min-max, or >/< bound", value)
+        for col in FIXED_YEARS:
+            value = row[col]
+            if value and TIME_RE.fullmatch(value):
+                if any(decimals(part) > 3 for part in value.lstrip("<>").split("-")):
+                    report.error(where, col, "more than 3 decimals", value)
+        unit_needed = any(row[col] for col in VARIABLE_UNIT)
+        if unit_needed and row["time_unit"] not in ("days", "weeks", "months", "years"):
+            report.error(where, "time_unit", "must be days, weeks, months or years", row["time_unit"])
+        if not unit_needed and row["time_unit"]:
+            report.error(where, "time_unit", "must be empty: no variable-unit time column filled", row["time_unit"])
 
     err_col, err_type, err_value = row["error_column"], row["error_type"], row["error_value"]
     if err_value not in ("", "NA"):
@@ -313,7 +350,7 @@ def check_row(line, row, report):
         report.warn(where, "sample_size", "not a whole number; fine if printed so (explain in notes)", row["sample_size"])
 
     pjp, repr4 = row["pjp_mths"], row["time_to_50_percent_flowering_repr4"]
-    if pjp and repr4 and NUMBER_RE.fullmatch(pjp) and NUMBER_RE.fullmatch(repr4):
+    if not raw and pjp and repr4 and NUMBER_RE.fullmatch(pjp) and NUMBER_RE.fullmatch(repr4):
         if round(float(pjp) / 12, decimals(repr4)) != float(repr4):
             report.error(where, "time_to_50_percent_flowering_repr4", f"should be PJP mths / 12 ({float(pjp) / 12:.3f})", repr4)
 
@@ -340,9 +377,9 @@ def check_row(line, row, report):
         report.error(where, "rainfall_post_fire_period", "rainfall_post_fire_mm and its period go together", row["rainfall_post_fire_period"])
 
 
-def check_step1(slug, paper, report):
+def check_step1(slug, paper, report, final=False):
     columns = columns_from_claude_md()
-    result_path = ROOT / f"results/{slug}.csv"
+    result_path = ROOT / (f"results/{slug}.csv" if final else f"results/{slug}_raw.csv")
     log_path = LOGS / f"{slug}_log.csv"
     result = read_csv(result_path, report, "RESULT")
     log = read_csv(log_path, report, "LOG")
@@ -434,7 +471,7 @@ def check_step1(slug, paper, report):
     # row level (duplicate rows are allowed; handled after extraction)
     checked = [(line, row) for line, row in rows if paper is None or row["file_name"] in checked_stems]
     for line, row in checked:
-        check_row(line, row, report)
+        check_row(line, row, report, raw=not final)
     # location_name empty on some rows of a paper while other rows name a site: usually a missed site
     by_paper = {}
     for line, row in checked:
@@ -501,6 +538,7 @@ def main():
     parser.add_argument("slug", nargs="?", help="agent slug, e.g. opus-5-5")
     parser.add_argument("--paper", help="file stem of one paper; check only its rows")
     parser.add_argument("--step0", action="store_true", help="check Step 0 output instead")
+    parser.add_argument("--final", action="store_true", help="check the final results written by 5_normalise.py instead of the raw results")
     args = parser.parse_args()
     if not args.step0 and not args.slug:
         parser.error("give a slug, or --step0")
@@ -511,8 +549,8 @@ def main():
         out = LOGS / "md_opt_check.csv"
         scope = "Step 0"
     else:
-        check_step1(args.slug, args.paper, report)
-        out = LOGS / f"{args.slug}_check.csv"
+        check_step1(args.slug, args.paper, report, args.final)
+        out = LOGS / (f"{args.slug}_check_final.csv" if args.final else f"{args.slug}_check.csv")
         scope = f"{args.slug}" + (f" | paper {args.paper}" if args.paper else " | all papers")
 
     report.write(out)

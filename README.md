@@ -69,7 +69,7 @@ show 1 paper -> iterate tests on 6 papers -> add 14 papers -> test
 
 Every pipeline session is logged automatically. A `SessionEnd` hook in `.claude/settings.json` runs `scripts/claude/log_session.py` when a session ends. It acts only on sessions whose prompt starts with `Run Step 0` or `Run Step 1`; other sessions are ignored. For each pipeline session it:
 
-1. copies the session transcript (which records the model of every response) and a snapshot of the step's outputs to `data/inference_test/logs/runs/<step>_<slug>_<session id>/`: `md_opt_log.csv` and `md_opt_check.csv` for Step 0; `<slug>.csv`, `<slug>_log.csv` and `<slug>_check.csv` for Step 1;
+1. copies the session transcript (which records the model of every response) and a snapshot of the step's outputs to `data/inference_test/logs/runs/<step>_<slug>_<session id>/`: `md_opt_log.csv` and `md_opt_check.csv` for Step 0; `<slug>_raw.csv`, `<slug>_log.csv` and `<slug>_check.csv` for Step 1;
 2. adds one line to `data/inference_test/logs/sessions.csv`: date, step (`step0`, `step1-trial` or `step1`), agent, the model IDs that actually answered, Claude Code version, session ID;
 3. fills the token breakdown (`n_requests`, `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens`, `output_tokens`, `total_tokens`): per paper in that paper's line of the step's log, and per step as whole-session totals in `sessions.csv`. The session total minus the papers is setup, checks and wrap-up. Each request is assigned to a paper by the `started` and `finished` times the agent writes in its log. Cache-read tokens make up most of the total because every request re-reads the conversation so far; compare papers mainly on `output_tokens` and `n_requests`.
 
@@ -83,7 +83,7 @@ If the hook did not run (e.g. the terminal was killed), log the session by hand;
 python scripts/claude/log_session.py --session <session id>
 ```
 
-**Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>.csv`, `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
+**Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>_raw.csv` (and the normalised `<slug>.csv`), `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
 
 ## Steps
 
@@ -109,7 +109,7 @@ python scripts/claude/log_session.py --session <session id>
    Run Step 1 in CLAUDE.md. Do not ask questions. Process only "Knox & Clarke 2004 Cunninghamia_primary juvenile period", then stop.
    ```
 
-   Check the rows in `data/inference_test/results/opus-5-5.csv`, the log in `data/inference_test/logs/opus-5-5_log.csv`, and the check report in `data/inference_test/logs/opus-5-5_check.csv`.
+   Check the rows in `data/inference_test/results/opus-5-5_raw.csv` (values as printed in the paper), the log in `data/inference_test/logs/opus-5-5_log.csv`, and the check report in `data/inference_test/logs/opus-5-5_check.csv`.
 
 4a. **Step 1: all papers (Opus).** New session. Papers already in the log are skipped.
 
@@ -131,12 +131,20 @@ python scripts/claude/log_session.py --session <session id>
    Run Step 1 in CLAUDE.md. Do not ask questions. Stop after the final CHECK run.
    ```
 
-5. **Final check.** Each check exits 1 if any check fails; the reports are in `data/inference_test/logs/`.
+5. **Normalise.** Converts the raw results (values as printed) into the final results: time values to each column's unit, `pjp_mths`, `time_unit`, case, dashes, `scientific_name` and `pdf_path`. Writes `data/inference_test/results/<slug>.csv`; the raw file is not changed. Rerun it after any change to the script; no re-extraction needed.
+
+   ```
+   python scripts/pipeline/5_normalise.py opus-5-5 sonnet-5-5
+   ```
+
+6. **Final check.** Each check exits 1 if any check fails; the reports are in `data/inference_test/logs/` (`<slug>_check.csv` for raw, `<slug>_check_final.csv` for final).
 
    ```
    python scripts/claude/check.py --step0
    python scripts/claude/check.py opus-5-5
    python scripts/claude/check.py sonnet-5-5
+   python scripts/claude/check.py opus-5-5 --final
+   python scripts/claude/check.py sonnet-5-5 --final
    ```
 
 If a session stops early (usage limit, context full), start a new session with the same prompt. Finished papers are skipped and unfinished ones are redone.

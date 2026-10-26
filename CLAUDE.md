@@ -14,7 +14,8 @@ MD_RAW   = "data/papers_test/md_raw/*.md"        # 2_pdf2md.py output, every PDF
 PDF_CLEAN = "data/papers_test/pdf_clean/{stem}.pdf"   # source PDF of each paper, renamed by 1_clean_pdf.py; same file stem as its markdown
 MD_LLM   = "data/papers_test/md_llm/{stem}.md"   # Step 0 output; one file per paper: optimised (scanned) or moved unchanged (text-layer, end comment "md_opt: none")
 PAPERS   = "data/papers_test/md_llm/*.md"        # extraction input; pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}.csv"           # header = COLUMNS names, in COLUMNS order (39 columns)
+RESULT   = ROOT + "results/{slug}_raw.csv"       # raw extraction, values as printed; header = COLUMNS names, in COLUMNS order (39 columns)
+NORMALISE = "scripts/pipeline/5_normalise.py"  # RESULT -> final ROOT + "results/{slug}.csv" (units, case, dashes); run by the user after Step 1, never by agents
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
@@ -93,7 +94,7 @@ for i, paper in enumerate(sorted(PAPERS), 1):  # LC_ALL=C order; one paper at a 
     check_paper(paper)
 print(f"Checks | agent {slug} | all papers")
 run(f"python {CHECK} {slug}")                # see Checks
-print(f"Step 1 done | agent {slug} | papers {n_done} done, {n_broken} broken, {n_no_data} no_data | rows {total_rows} | failed checks {n_failed}")
+print(f"Step 1 done | agent {slug} | papers {n_done} done, {n_broken} broken, {n_no_data} no_data | rows {total_rows} | failed checks {n_failed} | next: user runs NORMALISE")
 ```
 
 Hashes, run from the repo root, exactly: `papers_sha256` = `sha256sum data/papers_test/md_llm/*.md | LC_ALL=C sort | sha256sum`; `claude_md_sha256` = `sha256sum CLAUDE.md`. Record the first 64 characters of the output.
@@ -124,7 +125,7 @@ Compare each scanned paper's `MD_RAW` file with its PDF page by page. Fix the ma
 - Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `location_name` = those site names joined by `; `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
 - Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry. Duplicate rows are fine; do not check or remove them.
 - Fill a column only when the paper's measure matches the column definition. Near-matches go in `notes` only, with their definition (e.g. time to 80% of maximum flower production; expert or literature estimates).
-- Not yet flowering at the last observation ("not flowering after 4 years"): `>N`, e.g. `>4`.
+- Not yet flowering at the last observation ("not flowering after 4 years"): `>N <unit>`, e.g. `>4 years`.
 - Codes and units: use only definitions printed in the paper. Code not defined: copy it as printed (e.g. fire response `S`), never translate it. Unit not stated for a time value: leave the time columns empty; value and "unit not stated" in `notes`.
 - Tables may be parsed with one-off code. Then print 3 random parsed rows next to their source table lines and confirm they match before writing them.
 - Ambiguous value: fill best reading, explain in `notes`. Value printed with uncertainty marks (`c.`, `?`, `approx.`): fill the number without the marks; marks in `notes`.
@@ -144,7 +145,6 @@ na_row = {name: "NA" for name, rule in COLUMNS}  # exactly 1 NA row per paper
 na_row["notes"]  = reason                        # e.g. "empty markdown: PDF conversion failed"; "no data: review paper, no species values"
 na_row["source"] = citation if readable else stem(paper)
 na_row["file_name"] = stem(paper)
-na_row["pdf_path"] = pdf_path(paper)            # see METADATA
 na_row["supplementary_material"] = items if any else "NA"   # see Supplementary material
 ```
 
@@ -207,13 +207,16 @@ COLUMNS = [
 ]
 ```
 
-Time columns:
-- Fixed-unit column (`METADATA` unit = months or years), value reported in another unit: convert to the column's unit (years = months / 12 = weeks / 52 = days / 365; months = weeks / 4.33 = days / 30.4); write `<column> converted from N <unit>` in `notes`. No other conversion.
-- Paper gives values under different terms (e.g. age at first flowering and primary juvenile period): each value in its own column. Apart from the `pjp_mths` rule in `METADATA`, one value never fills 2 columns.
-- Precision: copy values with exactly the decimals printed in the paper. Do not round or add trailing zeros (`3.0` stays `3.0`; `3` stays `3`). Converted value: paper or source states the value in the target unit -> copy it as printed. Otherwise round to 3 decimals, drop trailing zeros (26 months -> 2.167; 30 months -> 2.5; 48 months -> 4).
-- Ranges: `min-max`, no spaces (`3.0 - 16.0` -> `3.0-16.0`). Open bounds as printed (`>23`, `<2`). Uncertain value: no `?` in the cell; explain in `notes`.
+Time columns (raw: as printed; `NORMALISE` converts):
+- Write each time value as `<value> <unit>`: value exactly as printed (same decimals, `3.0 - 16.0` and `>4` as printed), unit `days`, `weeks`, `months` or `years` (the paper's unit, spelled out). E.g. `26 months`, `>4 years`, `3.0-16.0 years`. Never convert or round.
+- Primary juvenile period in any unit: `primary_juvenile_period`. `NORMALISE` moves months to `pjp_mths` and fills `time_to_50_percent_flowering_repr4`.
+- Leave `pjp_mths`, `time_unit`, `scientific_name` and `pdf_path` empty (NA row: `NA`); `NORMALISE` fills them.
+- `error_value` in the unit of its time column as printed; `NORMALISE` converts both.
+- Paper prints one value in 2 units: write the one in the paper's main results; the other in `notes`.
+- Paper gives values under different terms (e.g. age at first flowering and primary juvenile period): each value in its own column. One value never fills 2 columns.
+- Uncertain value: no `?` in the cell; explain in `notes`.
 
-CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell. Case: lower case in every cell (`Myrtaceae` -> `myrtaceae`, `Summer` -> `summer`, author and place names too), except: first letter of `genus` (also in `scientific_name`); `NA`; codes copied as printed, in any column including `notes` (case can carry meaning, e.g. `R` vs `r`); `file_name` (= file stem, also in `source` when used there); `data_quote` (verbatim from the paper); `pdf_path` (file path as on disk). Several values in one cell: separate with `; ` (semicolon, space), e.g. `autumn; spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Dashes: ASCII hyphen `-` in every cell except `data_quote`, including names, codes and `source` (en dash `–` or em dash `—` -> `-`). Form not set by a rule: use the form of the `METADATA` example. Uncertain value: keep the format; explain in `notes`.
+CSV format: UTF-8, comma separator, LF line endings, decimal point `.`. Quote any cell containing a comma, quote, or newline; double inner quotes. Empty cell = no value; `NA` only in NA rows. Trim leading and trailing spaces in every cell. Case and dashes: copy as printed; `NORMALISE` sets them. Exception: `notes` in lower case, except codes (case can carry meaning, e.g. `R` vs `r`), genus names and quoted text. Several values in one cell: separate with `; ` (semicolon, space), e.g. `autumn; spring`; a `/` printed inside a single value (e.g. code `K/r`, a site name) stays as printed. Form not set by a rule: use the form of the `METADATA` example. Uncertain value: keep the format; explain in `notes`.
 
 ## Checks
 
@@ -233,5 +236,6 @@ After all papers: run `CHECK` without `--paper`, fix errors the same way. After 
 
 - Read `data/reference/`, `data/papers_test/answers/`, `logs/benchmark*.csv`, or another agent's `RESULT` or `LOG`. They contain answers.
 - Edit `METADATA`, `VALUE_MAP`, `PDF_CLEAN`, or anything in `data/papers_test/` outside `md_raw/` (Step 0 only: move or remove) and `md_llm/`.
-- Edit `CHECK`, or write any script file outside the session scratchpad.
+- Edit `CHECK` or `NORMALISE`, run `NORMALISE`, or write the final `ROOT + "results/{slug}.csv"`.
+- Write any script file outside the session scratchpad.
 - Create or write anything in `data/inference/`. Use `data/inference_test/` only.
