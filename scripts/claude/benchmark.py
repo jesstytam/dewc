@@ -27,6 +27,7 @@ Writes, under data/inference_test/logs/:
 import argparse
 import csv
 import hashlib
+import importlib.util
 import re
 import sys
 from collections import defaultdict
@@ -106,8 +107,33 @@ def paper_of_source(source):
     return next((p for prefix, p in PAPERS if s.startswith(prefix)), None)
 
 
+# file stems after the PDF renaming (1_clean_pdf.py, 2026-10-20) -> paper id (old stem) in PAPERS,
+# so scores stay comparable with runs before the renaming
+RENAMED = {
+    "Kubiak_2009": "Kubiak_Cunn_2009",
+    "Wark_1997": "biostor-259750",
+    "Burrows_et_al_2008": "Post_fire_juvenile_period_of_plants_in_s",
+    "Benson_1985": "Benson_1985_Cunninghamia",
+    "Miller_et_al_2025": "Austral_Ecology_-_2025_-_Miller",
+    "Wahren_et_al_2001": "Austral_Ecology_-_2002_-_Wahren",
+    "Auld_et_al_1995": "AuldScottProcFireEffectsIAWF1997",
+    "Enright_et_al_2025": "wf24046",
+    "Enright_et_al_1998": "Journal_of_Ecology_-_2002_-_Enright",
+    "Enright_et_al_1996": "enright1996",
+    "Pyke_1983": "bt9830293",
+    "Bradstock_et_al_1988": "Australian_Journal_of_Ecology_-_December_1988_-_BRADSTOCK",
+    "Zammit_et_al_1987": "BF00040753",
+    "Ashton_et_al_1989": "bt9890001",
+    "Denham_et_al_2002": "bt02009",
+    "Morgan_et_al_1999": "1-s2.0-S0006320798001128-main",
+    "Auld_et_al_2007": "J_Vegetation_Science_-_2007_-_Auld",
+    "Knox_et_al_2004": "Knox_&_Clarke_2004",
+}
+
+
 def paper_of_stem(stem):
     k = stem_key(stem)
+    k = RENAMED.get(k, k)
     return next((p for _, p in PAPERS if k.startswith(p)), None)
 
 
@@ -232,11 +258,27 @@ def load_answers():
     return out
 
 
+def read_result(run_dir, slug):
+    """Final result rows of a snapshot, or None. Snapshots from raw extraction on (2026-10-26) hold only
+    {slug}_raw.csv; it is normalised here with the same code as scripts/pipeline/5_normalise.py."""
+    final, raw = run_dir / f"{slug}.csv", run_dir / f"{slug}_raw.csv"
+    if final.exists():
+        return list(csv.DictReader(open(final, encoding="utf-8", newline="")))
+    if not raw.exists():
+        return None
+    spec = importlib.util.spec_from_file_location("normalise", REPO / "scripts/pipeline/5_normalise.py")
+    normalise = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(normalise)
+    problems = []
+    rows = csv.DictReader(open(raw, encoding="utf-8", newline=""))
+    return [normalise.normalise_row(r, problems, f"raw line {i}") for i, r in enumerate(rows, 2)]
+
+
 def load_run(run_dir):
     slug = run_dir.name.split("_")[1]
     session = run_dir.name.split("_", 2)[2]
-    result, log = run_dir / f"{slug}.csv", run_dir / f"{slug}_log.csv"
-    if not result.exists() or not log.exists():
+    result, log = read_result(run_dir, slug), run_dir / f"{slug}_log.csv"
+    if result is None or not log.exists():
         return None
     log_rows = list(csv.DictReader(open(log, encoding="utf-8", newline="")))
     runs = [r for r in log_rows if r["paper"] == "_run"]
@@ -254,7 +296,7 @@ def load_run(run_dir):
     }
     out = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))
     where = defaultdict(dict)
-    for r in csv.DictReader(open(result, encoding="utf-8", newline="")):
+    for r in result:
         r = {k.strip(): v for k, v in r.items() if k}
         g = lambda *names: next((r[n] for n in names if n in r), "")  # noqa: E731  old or new column name
         stem = stem_key(g("file_name", "File_name"))

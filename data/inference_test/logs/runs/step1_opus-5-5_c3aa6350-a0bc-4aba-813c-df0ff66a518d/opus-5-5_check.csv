@@ -1,0 +1,9 @@
+level,where,column,check,value
+warning,RESULT line 166,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 173,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 204,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 205,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 311,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT line 322,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT lines 130..135,location_name,"empty on 6 of 62 rows of Burrows_et_al_2008 while other rows name a site; fill it, or say in notes why the row has no site",
+warning,RESULT lines 341..342,location_name,"empty on 2 of 200 rows of Wark_1997 while other rows name a site; fill it, or say in notes why the row has no site",

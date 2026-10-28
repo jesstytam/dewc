@@ -1,0 +1,24 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-26T07:30:31Z,,model=claude-sonnet-5-5; date=2026-10-26; git=f4f69959dfe4b4834d042dd106a60c87c4c1d0b3; claude_md_sha256=a0fca9b1380afdd9a78268dfe4aa481b87c2c91533d9071f1407e2a3a4976331; papers_sha256=c1c7e11c1b1508c7b92cc0edabe2dec02db06f557cca5c1e182a0cc58fbd791a,,,,,,
+Ashton_et_al_1989,no_data,1,2026-10-26T07:30:33Z,2026-10-26T07:30:46Z,no species-level juvenile period or fire response values,1,2,22479,66147,1405,90033
+Auld_et_al_1995,done,7,2026-10-26T07:30:46Z,2026-10-26T07:31:12Z,,1,2,15920,88626,3489,108037
+Auld_et_al_2007,done,1,2026-10-26T07:31:14Z,2026-10-26T07:31:45Z,,1,2,14528,108133,4275,126938
+Benson_1985,done,66,2026-10-26T07:31:48Z,2026-10-26T07:33:26Z,,4,8,28773,578655,13655,621091
+Bradstock_et_al_1988,done,3,2026-10-26T07:33:29Z,2026-10-26T07:33:57Z,,1,2,19346,156186,4168,179702
+Burrows_1995,done,1,2026-10-26T07:34:01Z,2026-10-26T07:34:26Z,,1,2,11446,179800,3743,194991
+Burrows_et_al_2008,done,54,2026-10-26T07:34:26Z,2026-10-26T07:36:28Z,,5,10,44275,1111094,17144,1172523
+Denham_et_al_2002,done,2,2026-10-26T07:36:37Z,2026-10-26T07:37:15Z,,2,4,30924,491118,5252,527298
+Enright_et_al_1996,done,1,2026-10-26T07:37:15Z,2026-10-26T07:37:35Z,,1,2,21589,268184,3047,292822
+Enright_et_al_1998,broken,1,2026-10-26T07:37:35Z,2026-10-26T07:37:48Z,"needs Step 0: text garbled: wrong font encoding in the text layer (digits shifted, e.g. '0' for '1', fi ligature printed as '_', punctuation printed as '[', '\', '!', '""'), numbers unreadable",2,4,18715,595929,1397,616045
+Enright_et_al_2025,done,5,2026-10-26T07:37:49Z,2026-10-26T07:39:19Z,,4,8,35731,1305906,14088,1355733
+Knox_et_al_2004,done,33,2026-10-26T07:39:24Z,2026-10-26T07:40:34Z,,6,12,25281,2184040,8498,2217831
+Kubiak_2009,broken,37,2026-10-26T07:40:37Z,2026-10-26T07:43:29Z,"needs Step 0: appendix 1 table columns collapsed in the text layer (empty cells dropped, headers repeated in the table body), values not assignable to columns; rows extracted from statements in the text only",8,16,66253,3305816,25202,3397287
+Miller_et_al_2025,done,6,2026-10-26T07:43:33Z,2026-10-26T07:45:03Z,,8,16,41910,3744522,11653,3798101
+Morgan_et_al_1999,done,1,2026-10-26T07:45:06Z,2026-10-26T07:45:26Z,,1,2,17374,485065,2601,505042
+Muir_et_al_2014,done,8,2026-10-26T07:45:29Z,2026-10-26T07:46:00Z,,2,4,18680,1021472,4525,1044681
+NSWNPWS_2004,broken,1,2026-10-26T07:46:04Z,2026-10-26T07:46:17Z,"needs Step 0: species tables scrambled in the text layer, cells of different species mixed and out of order",2,4,6602,1061481,1161,1069248
+Ooi_2019,done,6,2026-10-26T07:46:17Z,2026-10-26T07:47:24Z,,3,6,22386,1630682,10544,1663618
+Pyke_1983,done,3,2026-10-26T07:47:29Z,2026-10-26T07:47:53Z,,1,2,5172,561529,3554,570257
+Wahren_et_al_2001,done,1,2026-10-26T07:47:56Z,2026-10-26T07:48:29Z,,2,4,14270,1151076,4207,1169557
+Wark_1997,done,197,2026-10-26T07:48:33Z,2026-10-26T07:51:39Z,"genus-only entries (Geranium spp., Senecio spp.) and entries not recorded after the fire (Amyema pendulum, Hymenophyllum cupressiforme) not extracted",14,28,44488,8548601,22813,8615930
+Zammit_et_al_1987,done,10,2026-10-26T07:51:39Z,2026-10-26T07:52:21Z,,2,4,20965,1280756,6206,1307931

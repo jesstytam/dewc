@@ -1,7 +1,3 @@
-
-
-{0}<!-- PAGE BREAK -->
-
 # **Fire responses of bushland plants after the January 1994 wildfires in northern Sydney**
 
 *P.J.Kubiak*
@@ -24,7 +20,7 @@ Following a fire, the time taken by plants to flower after germination from seed
 
 The durations of primary and secondary juvenile periods may vary between populations of a given plant species, due to factors such as differences in the amount of post
 
-{1}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 fire rainfall, length of growing season and variations in nutrient availability and soil depth between different habitats (Bradstock & O'Connell 1988, Keith 1996, Benson & McDougall 1998, Keith *et al*. 2002a, Knox & Clarke 2004). Generally, the durations of primary juvenile periods for woody plant species are longer than those for herbaceous species (Keith 1996). Also, woody resprouters tend to have longer primary juvenile periods than woody obligate seeders (Keith 1996). Benson & McDougall (2005) indicated that the primary juvenile periods for many plant species in the bushland of the Sydney region are yet to be recorded.
 
@@ -34,15 +30,46 @@ Between late December 1993 and mid-January 1994 wildfires occurred in many parts
 
 **Table 1 A selection of studies on fire responses of plant species in south-eastern Australia and the Sydney area**
 
-<table><thead><tr><th>Researcher</th><th>Location</th><th>Type of observation</th></tr></thead><tbody><tr><td></td><td>Canberra</td><td>regeneration of plant species following fires in bushland</td></tr><tr><td>Wark et al . (1987)</td><td></td><td></td></tr><tr><td></td><td>southern coastal Victoria</td><td>responses of plants, after a high intensity wildfire</td></tr><tr><td></td><td>Myall Lakes</td><td>categorized the modes of post-fire regeneration for plant species in woodland</td></tr><tr><td>Myerscough et al . (1995)</td><td></td><td></td></tr><tr><td></td><td>Myall Lakes</td><td>fire responses of plants in coastal heaths</td></tr><tr><td>Benwell (1998)</td><td>north-eastern NSW</td><td>modes of post-fire regeneration of coastal heathland plant species</td></tr><tr><td>Clarke et al . (2005)</td><td></td><td></td></tr><tr><td></td><td>New England Tablelands</td><td>responses of woody plants following fires</td></tr><tr><td>Walsh &amp; McDougall (2004)</td><td>Kosciuszko National Park</td><td>recovery of plants in treeless subalpine vegetation after a major wildfire</td></tr><tr><td>Siddiqi et al . (1976)</td><td>Bouddi NP</td><td>effects of fire on coastal heathland vegetation</td></tr><tr><td>Benson (1981)</td><td>Agnes Banks</td><td>modes of regeneration after fire for plant species on a sand deposit</td></tr><tr><td>Benson (1985)</td><td>Brisbane Water NP</td><td></td></tr><tr><td>Nieuwenhuis (1987)</td><td>Ku-ring-gai Chase NP</td><td>effects of fire frequency on bushland</td></tr><tr><td>Bradstock et al . (1997)</td><td>Brisbane Water NP</td><td>effects of high frequency fire in a coastal heathland</td></tr><tr><td>Auld et al . (2000)</td><td>Sydney area</td><td>soil seedbank longevity of plant species</td></tr></tbody></table>
+| Researcher | Location | Type of observation |
+|---|---|---|
+| Purdie & Slatyer (1976) | Canberra | regeneration of plant species following fires in bushland |
+| Purdie (1977) | | |
+| Wark et al. (1987) | southern coastal Victoria | responses of plants, after a high intensity wildfire |
+| Wark (1996, 1997, 1999, 2000) | | |
+| Fox & Fox (1986) | Myall Lakes | categorized the modes of post-fire regeneration for plant species in woodland and forest |
+| Fox (1988) | | |
+| Myerscough et al. (1995) | Myall Lakes | fire responses of plants in coastal heaths |
+| Myerscough & Clarke (2007) | | |
+| Benwell (1998) | north-eastern NSW | modes of post-fire regeneration of coastal heathland plant species |
+| Clarke & Knox (2002) | New England Tablelands | responses of woody plants following fires |
+| Knox & Clarke (2004) | | |
+| Clarke et al. (2005) | | |
+| Walsh & McDougall (2004) | Kosciuszko National Park | recovery of plants in treeless subalpine vegetation after a major wildfire |
+| | **Sydney area studies** | |
+| Siddiqi et al. (1976) | Bouddi NP | effects of fire on coastal heathland vegetation |
+| Benson (1981) | Agnes Banks | modes of regeneration after fire for plant species on a sand deposit |
+| Benson (1985) | Brisbane Water NP | maturation periods for some shrub species after fires |
+| | Glenorie | |
+| Nieuwenhuis (1987) | Ku-ring-gai Chase NP | effects of fire frequency on bushland |
+| Bradstock et al. (1997) | Brisbane Water NP | effects of high frequency fire in a coastal heathland |
+| Auld et al. (2000) | Sydney area | soil seedbank longevity of plant species |
 
-#### **Table 2 Individual plant species whose fire ecology has been studied in the Sydney area**
+**Table 2 Individual plant species whose fire ecology has been studied in the Sydney area**
 
-<table><thead><tr><th>Species (family)</th><th></th><th>Researcher</th></tr></thead><tbody><tr><td>Acacia suaveolens</td><td>(Fabaceae)</td><td>Auld 1986, Auld &amp; Myerscough 1986, Warton &amp; Wardle 2003</td></tr><tr><td>Angophora hispida</td><td>(Myrtaceae)</td><td>Auld 1987</td></tr><tr><td>Banksia ericifolia</td><td>(Proteaceae)</td><td>Bradstock &amp; Myerscough 1981, Morris &amp; Myerscough 1988</td></tr><tr><td>Banksia oblongifolia</td><td>(Proteaceae)</td><td>Zammit 1988</td></tr><tr><td>Blandfordia nobilis</td><td>(Blandfordiaceae)</td><td>Johnson et al . 1994</td></tr><tr><td>Eucalyptus luehmanniana</td><td>(Myrtaceae)</td><td>Davies &amp; Myerscough 1991</td></tr><tr><td>Persoonia lanceolata</td><td>(Proteaceae)</td><td>Auld et al. 2007</td></tr><tr><td>Telopea speciosissima</td><td>(Proteaceae)</td><td>Bradstock 1995</td></tr></tbody></table>
+| Species (family) | Researcher |
+|---|---|
+| Acacia suaveolens (Fabaceae) | Auld 1986, Auld & Myerscough 1986, Warton & Wardle 2003 |
+| Angophora hispida (Myrtaceae) | Auld 1987 |
+| Banksia ericifolia (Proteaceae) | Bradstock & Myerscough 1981, Morris & Myerscough 1988 |
+| Banksia oblongifolia (Proteaceae) | Zammit 1988 |
+| Blandfordia nobilis (Blandfordiaceae) | Johnson et al. 1994 |
+| Eucalyptus luehmanniana (Myrtaceae) | Davies & Myerscough 1991 |
+| Persoonia lanceolata (Proteaceae) | Auld et al. 2007 |
+| Telopea speciosissima (Proteaceae) | Bradstock 1995 |
 
 Various facets of fire ecology for groupings of plant species in the Sydney region have been studied, e.g. Auld & Denham (2006), Auld & O'Connell (1991), Auld & Tozer (1995), Bradstock (1990), Bradstock (1991), Bradstock *et al*. (1994), Bradstock & Myerscough (1988), Bradstock & O'Connell (1988), Cary & Morrison (1995), Clark (1988), Denham & Auld (2002), Keith & Bradstock (1994), Kenny (2000), Morrison (1995), Morrison *et al*. (1996), Morrison & Renwick (2000), Ooi *et al*. (2006, 2007), Pannell & Myerscough (1993), Pyke (1983), Thomas *et al*. (2007), Whelan & York (1998) and Zammit & Westoby (1987).
 
-{2}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 The conservation of biodiversity is an important objective in the management of Lane Cove and Garigal National Parks, the two major reserves in the study area (e.g. see NSW NPWS 1998a, 1998b), while, in recent years, local councils, supported by the community, have also placed increasing emphasis on the conservation of the flora and fauna of many smaller bushland reserves. The increased knowledge of plant responses to fire in this present study will assist in the management, for conservation purposes, of bushland in the Narrabeen Lagoon and Lane Cove River areas. Such information may also have broader application in the management of bushland in the Sydney region, particularly when used in conjunction with the findings of other researchers.
 
@@ -64,7 +91,7 @@ The management of fire for conservation purposes in the Lane Cove River and Narr
 
 The Lane Cove River fire began on 6 January 1994 in the Browns Waterhole area and was probably deliberately lit (NSW State Coroner 1995). During that day bushland was burnt at North Epping, South Turramurra, Marsfield and West Pymble. Strong winds on 6 January and the following day rapidly forced fire downriver, with the spread accelerated by spotting. On 7 January, fire burnt bushland along Terrys Creek, Marsfield and downriver to Blue Gum Creek. Fire fighters backburned overnight on 7 January, along Delhi Rd. from Fullers Bridge to Plassey Rd. at North Ryde, in an attempt to contain the wildfire. However, strong winds on 8 January forced fire across Delhi Rd. into the Fairyland area and across the river into Mowbray Park and the Stringybark Creek area at Lane Cove West (NSW State Coroner 1995). The area of bushland burnt in the Lane Cove River catchment was variously estimated to be c. 383 ha (NSW NPWS 2002, DEC NSW 2005a, 2006a) or c. 580 hectares (NSW State Coroner 1995, Gill & Moore 1998). The former estimate may possibly have been limited to bushland burnt in Lane Cove National Park, whilst the latter was for all bushland 'affected' in the Lane Cove River area. The fires were generally described as being of a very high intensity (NSW State Coroner 1995).
 
-{3}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 The fire in the Narrabeen Lagoon catchment area began on 8 January 1994, having originated at Cottage Point on 7 January, and spread rapidly through the adjoining Ku-ringgai Chase National Park (NSW State Coroner 1995). On 8 January, and over the next few days, wildfire burnt through bushland in the Deep Creek, Mullet Creek, Middle Creek, Jamieson Park and Wheeler Creek areas. This fire event was estimated to have burnt c. 1000 ha in the eastern section (centred on Deep Creek) of Garigal National Park (DEC NSW 2005b, 2006b). Additional bushland in the Narrabeen Lagoon catchment area, outside of Garigal National Park, was also burnt.
 
@@ -84,13 +111,34 @@ Benson (1985) suggested that varying fire intensities within single fire events 
 
 The January 1994 fires in the Lane Cove River and Narrabeen Lagoon areas were generally of an apparently high intensity
 
-{4}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-#### **Table 3. Dates of observations of fire responses for localities in the Lane Cove River and Narrabeen Lagoon catchment areas, following the January 1994 fires.**
+**Table 3. Dates of observations of fire responses for localities in the Lane Cove River and Narrabeen Lagoon catchment areas, following the January 1994 fires.**
 
-<table><thead><tr><th>Localities</th><th>Dates of observations</th></tr></thead><tbody><tr><td>Upper Stringybark Creek, Lane Cove West</td><td>1994 Apr.</td></tr><tr><td>Mowbray Park, Lane Cove West</td><td>1994 Feb, Apr, Jul, Oct, Dec.</td></tr><tr><td>Blue Gum Creek, Lindfield</td><td>1994 Feb, May , Jul, Oct, Nov.</td></tr><tr><td>Sir Phillip Game Reserve, Lindfield</td><td>1994 Jul.</td></tr><tr><td>De Burghs Bridge to Browns Waterhole, south bank of the river</td><td>1994 Mar.(2), May, Jun, Jul.</td></tr><tr><td>De Burghs Bridge to Browns Waterhole, north bank of the river</td><td>1994 Mar.(2), Jul.(2), Aug, Sep, Oct, Dec.</td></tr><tr><td>Upriver of Browns Waterhole, north bank of the river</td><td>1994 Mar, Sep.</td></tr><tr><td>Upriver of Browns Waterhole, south bank of the river</td><td>1994 Mar, Jul.</td></tr><tr><td>Mullet Creek area</td><td>1994 Apr, Sep.</td></tr><tr><td>Deep Creek area</td><td>1994 Mar, May (2), Jun, Aug, Sep.(2), Oct.</td></tr><tr><td>Middle Creek area</td><td>1994 Mar, Aug.</td></tr><tr><td>Jamieson Park</td><td>1994 Apr.</td></tr><tr><td>Oxford Creek area</td><td>1994 Mar, Oct.</td></tr><tr><td>Wheeler Creek area</td><td>1994 May, Aug.</td></tr></tbody></table>
+| Localities | Dates of observations |
+|---|---|
+| **Lane Cove River catchment** | |
+| Upper Stringybark Creek, Lane Cove West | 1994 Apr. |
+| Mowbray Park, Lane Cove West | 1994 Feb, Apr, Jul, Oct, Dec.; 1996 Jul, Sep, Oct.; 1997 Mar.; 1998 Sep, Oct. |
+| Fairyland, North Ryde (south of Delhi Rd., west of Quebec Road, north-east of Epping Road & north of the river) | 1994 Jan.(2), Mar, Aug.(2), Sep, Oct, Nov, Dec.(2); 1995 Jan, Mar, Apr, May (2), Jun, Aug, Sep, Oct, Dec.; 1996 Apr, Aug, Oct, Dec.; 1997 Jan, Apr, Sep(2), Nov.; 1998 Mar, Jun, Sep, Oct.; 1999 Jan., Oct.; 2002 Oct.; 2007 Oct. |
+| Blue Gum Creek, Lindfield | 1994 Feb, May , Jul, Oct, Nov.; 1995 Sep, Dec.; 1996 May , Dec.; 1999 Oct. |
+| Sir Phillip Game Reserve, Lindfield | 1994 Jul. |
+| Fullers Bridge to De Burghs Bridge, along the south (or west) bank of the river, North Ryde (variously including Plassey Road, Banksia Hill, Carter Creek, Tunks Hill, Riverside Drive, Riverside Walking Track & just north of Kobada Park) | 1994 Feb, Mar.(2), Apr, May, Jun.(2), Jul, Aug.(2), Sep(2), Oct.(2), Nov, Dec.; 1995 Jan, Mar, Jun, Aug, Sep.(2), Oct.(2), Nov, Dec(2); 1996 Jan.(2), Mar, Apr, May , Jun.(2), Jul, Aug.(2), Sep(2), Oct, Nov.(2) Dec.; 1997 Jan, Feb, Mar, May , Jun, Jul, Aug, Sep, Oct.(2), Nov.; 1998 Jun, Jul.(2), Aug.(2), Sep, Oct.; 1999 Jan, Mar, Sep.(2), Oct.; 2000 May; 2002 Oct. |
+| Fullers Bridge to De Burghs Bridge, north (or east) bank of the river (mostly Great North Walk) | 1994 Feb, Mar, Jun, Jul, Aug, Sep, Oct, Dec.; 1995 Mar, Jun, Sep, Oct.; 1996 May, Aug, Sep, Oct, Nov.; 1997 Feb, Aug, Nov.; 1998 Aug. |
+| De Burghs Bridge to Browns Waterhole, south bank of the river | 1994 Mar.(2), May, Jun, Jul.; 1995 Sep.; 1996 May |
+| De Burghs Bridge to Browns Waterhole, north bank of the river | 1994 Mar.(2), Jul.(2), Aug, Sep, Oct, Dec.; 1995 Sep.; 1996 May, Jul, Sep.; 1997 Jul, Oct,; 1998 Aug. (2), Oct.; 1999 Mar, Sep. (2); 2000 May.; 2007 Aug. |
+| Terrys Creek (from Somerset Park /Lucknow Park to Browns Waterhole) | 1994 Mar.(2), May, Jul, Sep, Oct, Dec.; 1995 Sep.; 1996 May, Sep.; 1997 Jul.; 1998 Aug. |
+| Upriver of Browns Waterhole, north bank of the river | 1994 Mar, Sep.; 1995 Mar. |
+| Upriver of Browns Waterhole, south bank of the river | 1994 Mar, Jul.; 1996 May, Aug. |
+| **Narrabeen Lagoon catchment** | |
+| Mullet Creek area | 1994 Apr, Sep. |
+| Deep Creek area | 1994 Mar, May (2), Jun, Aug, Sep.(2), Oct. |
+| Middle Creek area | 1994 Mar, Aug. |
+| Jamieson Park | 1994 Apr. |
+| Oxford Creek area | 1994 Mar, Oct. |
+| Wheeler Creek area | 1994 May, Aug. |
 
-{5}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 – I noted a large proportion of the bushland burnt in both of the study areas experienced 100% tree and/or large shrub canopy scorch. However there was some patchiness– some patches were evidently burnt at low or moderate intensities, other patches of vegetation remained unburnt. During the earliest period of observations, the locations of unburnt patches were noted and plant responses in patches that were apparently burnt at lower intensities were recorded (e.g. *Muellerina eucalyptoides* (Loranthaceae) resprouted after an evidently low to moderate intensity fire). Observations of plant responses in apparently lower fire intensities were used to help understand the responses of the same species in the more severely scorched areas. For example, if a species was observed as being killed (as evidenced by the presence of scorched, dead plant skeletons) in the lower intensity areas (e.g. some of the edges of burnt areas), then this information complemented any observations that no plants of the same species could be found resprouting in the immediately adjoining areas that were evidently burnt at a higher intensity.
 
@@ -116,7 +164,7 @@ Benson & McDougall (1993) documented that the low-growing coniferous shrub *Podo
 
 The great majority of monocotyledons resprouted following the 1994 fires, but a few species were killed e.g. *Caustis flexuosa* and *Caustis pentandra* (Cyperaceae). D. Benson 
 
-{6}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 observed *Caustis flexuosa* and *Caustis pentandra* were killed by fire at Leura swamp, in the Blue Mountains, west of Sydney (Benson & McDougall 2002). However, Williams & Clarke (2006) reported that *Caustis flexuosa* resprouted after fire, at Gibraltar Range National Park, in northern NSW.
 
@@ -140,7 +188,7 @@ Bond & van Wilgen (1996) stated that fire-stimulated flowering is very common in
 
 A few species of dicotyledons showed variable responses to the January 1994 fires. The shrub *Gompholobium latifolium* (Fabaceae) was killed in the Lane Cove River area, but scattered plants of this species resprouted in the Narrabeen Lagoon area. Auld (1996) recorded that variation in fire response occurs within individual species of the genus *Gompholobium* and suggested that such variability can result from a number of causes, including genetic variation within a species. *Acacia oxycedrus* (Fabaceae) was killed by fire in the Lane Cove River area, but mostly resprouted after the January 1994 fires in the Narrabeen Lagoon area. Auld (1996) noted that *Acacia oxycedrus* is one of a number of *Acacia* species in the Sydney region that exhibit a variable 
 
-{7}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 fire response. The small shrub *Xanthosia pilosa* (Apiaceae) was mostly killed by the January 1994 fires in the Lane Cove River catchment area, but some plants there did resprout. L. McDougall found that *Xanthosia pilosa* displayed a variable fire response in Garigal National Park, northern Sydney (Benson & McDougall 1993). The shrub *Astrotricha longifolia* (Araliaceae) was probably mostly killed by the January 1994 fires at Lane Cove River, but a few scattered plants of this species resprouted.
 
@@ -162,7 +210,7 @@ Bond & van Wilgen (1996) defined fire ephemerals as plant species that emerge on
 
 *Pelargonium inodorum* (Geraniaceae) may be one of the few species in the Lane Cove River area that could be regarded as a true 'fire ephemeral'. *Pelargonium inodorum* seemed to be a rather short-lived species, apparently disappearing from the burnt bushland by about 2 years after the fires, in 
 
-{8}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 the Lane Cove River area. Benson & McDougall (1997) noted that *Pelargonium inodorum* has been recorded growing in burnt *Imperata cylindrica* grassland and also from the remains of an old campfire. Walsh & McDougall (2004) stated that *Pelargonium australe* and *Pelargonium helmsii* had been rarely collected in the alpine and subalpine vegetation of Kosciuszko National Park, before the wildfires of January 2003, but were locally abundant after those fires. They deduced that these species may have long-lived seedbanks. *Pelargonium inodorum* may also have a longlasting soil seedbank, in the bushland of northern Sydney, where it seems to be mostly evident following disturbance, particularly fire. Another possible fire ephemeral may be *Rorippa gigantea* (Brassicaceae), which was seen flowering and beginning to form fruit along Deep Creek (Narrabeen Lagoon catchment), within 38 weeks of that area being burnt. Benson & McDougall (1994) noted that the recruitment of *Rorippa gigantea* seedlings tends to occur after disturbance and may be fire-related.
 
@@ -178,7 +226,7 @@ Seedling establishment of the obligate seeder shrub *Persoonia pinifolia* (Prote
 
 Floyd (1989) noted that 'pioneer' rainforest plant species in south-eastern Australia often have features that enable them to recover following fires, e.g. the insulating, corky bark of *Endiandra sieberi* (Lauraceae) and the resprouting capabilities of species such as *Acmena smithii* (Myrtaceae) and *Synoum glandulosum* (Meliaceae). Floyd (1990) observed that some areas of warm temperate rainforest in the Blue Mountains, west of Sydney, were apparently adversely affected by more intense and/or very frequent fires. Chesterfield *et al*. (1990) found that some warm temperate rainforest species, e.g. *Acmena smithii*, resprouted after a wildfire in Victoria, but some other species were killed. Floyd (1990) and Keith (2004) indicated that a series of fires, 
 
-{9}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
 within a few decades, can lead to a deterioration of patches of warm temperate rainforest in southern NSW. Campbell & Clarke (2006) observed that most woody understorey rainforest species vigorously resprouted after some fires in wet sclerophyll forest, on the New England Tablelands of northern NSW. However, they found that there was generally a lack of post-fire seedling recruitment of these rainforest species. One of the areas that they studied (in Washpool National Park) was burnt by high intensity fire in 2002, but had not been previously burnt for at least 50 years.
 
@@ -198,30 +246,331 @@ A few of the exotic species recorded post-fire, e.g. *Helianthus annuus* (Astera
 
 In general, the majority of the observations recorded in this study are similar to the findings of many other researchers. Most of the recorded differences between various studies, in parameters such as the time to first flowering after fire, or in the mode of regeneration for a given species, are probably due to natural variations in populations and conditions between different study sites and study dates. Benson & McDougall (1998, 2005) briefly discussed such variations, with respect to some contradictory observations of fire responses reported for some of the species in their *Ecology of*  
 
-{10}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-*Sydney Plant Species* series of papers. However, it is possible that some of the discrepancies in the recorded modes of regeneration of particular species may be due to occasional errors by observers. For example, following the January 1994 fires in the Lane Cove River area, I observed *Lobelia dentata* flowering in many long unburnt localities, where I had not previously recorded this species. Subsequently, I assumed that many of these plants were probably seedlings, even though I had not seen any cotyledons on these plants, immediately after their first post-fire emergence. However, my assumption may have been incorrect, as Benson & McDougall (1997) observed that *Lobelia dentata* apparently resprouted after fire from a very deeply-buried fleshy rhizome, at one locality in the Sydney region. The observations reported in this paper provide useful information for the conservation of bushland in the broader Sydney region, and in particular for planning of fire management for bushland in the Lane Cove River and Narrabeen Lagoon catchments. For example, basic information such as the time a plant species takes to first produce fruits, following fire, can be used in the estimation of 'fire interval thresholds', as discussed by Bradstock *et al.* (1995) and Keith *et al*. (2002b). Such guidelines for bushland management can be refined, as more researchers record their observations of the responses of plants to various fires in different areas of bushland. **Acknowledgements** I would like to thank the librarians at the National Herbarium of New South Wales, Royal Botanic Gardens, Sydney for providing access to some unpublished floristic lists. I appreciate the encouragement that was provided by Doug Benson and Lyn McDougall, when they welcomed contributions to their *Ecology of Sydney Plant Species* project. I would also like to thank the anonymous referee for making many detailed suggestions that helped to improve the organisation and presentation of this paper, Tony Auld for suggesting the term 'fire-followers' and drawing my attention to his work on *Persoonia lanceolata,* and Doug Benson for creating Tables 1 and 2. **References** Adams, P.B. & Lawson, S.D. (1984) The effects of bushfire on Victorian epiphytic and lithophytic orchids. *The Orchadian* 7(12): 282–286. Auld, T.D. (1986) Population dynamics of the shrub *Acacia suaveolens* (Sm.) Willd.: Fire and the transition to seedlings. *Australian Journal of Ecology* 11: 373–385. Auld, T.D. (1987) Post-fire demography in the resprouting shrub *Angophora hispida* (Sm.) Blaxell: Flowering, seed production, dispersal, seedling establishment and survival. *Proceedings of the Linnean Society of New South Wales* 109(4): 259–269. Auld, T.D. (1996) Ecology of the Fabaceae in the Sydney region: fire, ants and the soil seedbank. *Cunninghamia* 4(4): 531–551. Auld, T.D. (2001) The ecology of the Rutaceae in the Sydney region of south-eastern Australia: Poorly known ecology of a neglected family. *Cunninghamia* 7(2): 213–239. Auld, T.D. & Denham, A.J. (2006) How much seed remains in the soil after a fire? *Plant Ecology* 187: 15–24. Auld, T.D., Denham, A.J. & Turner, K (2007) Dispersal and recruitment dynamics in the fleshy-fruited *Persoonia lanceolata* (Proteaceae). *Journal of Vegetation Science* 18: 903–910. Auld, T.D., Keith, D.A. & Bradstock, R.A. (2000) Patterns in longevity of soil seedbanks in fire-prone communities of southeastern Australia. *Australian Journal of Botany* 48(4): 539–548. Auld, T.D. & Myerscough, P.J. (1986) Population dynamics of the shrub *Acacia suaveolens* (Sm.) Willd.: Seed production and predispersal seed predation. *Australian Journal of Ecology* 11: 219–234. Auld, T.D. & O'Connell, M.A. (1991) Predicting patterns of postfire germination in 35 eastern Australian Fabaceae. *Australian Journal of Ecology* 16: 53–70. Auld, T.D. & Tozer, M. (1995) Patterns in emergence of *Acacia*  and *Grevillea* seedlings after fire. *Proceedings of the Linnean Society of New South Wales* 115: 5–15. Beardsell, D.V., Clements, M.A., Hutchinson, J.F. & Williams, E.G. (1986) Pollination of *Diuris maculata* R. Br. (Orchidaceae) by floral mimicry of the native legumes *Daviesia* spp. and *Pultenaea scabra* R. Br.. *Australian Journal of Botany* 34: 165–173. Beecroft Cheltenham Civic Trust (1976) *A plan of management for Pennant Hills Park and some surrounding bushland* (Beecroft Cheltenham Civic Trust: Sydney). Benson, D.H. (1979) Native vegetation of Deep Creek, Narrabeen. (Unpublished report). Benson, D.H. (1981) Vegetation of the Agnes Banks sand deposit, Richmond, New South Wales. *Cunninghamia* 1(1): 35–57. Benson, D.H. (1985) Maturation periods for fire-sensitive shrub species in Hawkesbury sandstone vegetation. *Cunninghamia* 1(3): 339–349. Benson, D. & Howell, J. (1990) *Taken for granted: the bushland of Sydney and its suburbs* (Kangaroo Press: Kenthusrt). Benson, D. & Howell, J. (1994) The natural vegetation of the Sydney 1:100 000 map sheet. *Cunninghamia* 3(4): 677–787. Benson, D. & McDougall, L. (1993) Ecology of Sydney plant species, part 1: Ferns, fern-allies, cycads, conifers and dicotyledon families Acanthaceae to Asclepiadaceae. *Cunninghamia* 3(2): 257–422. Benson, D. & McDougall, L. (1994) Ecology of Sydney plant species, part 2: Dicotyledon families Asteraceae to Buddlejaceae. *Cunninghamia* 3(4): 789–1004. Benson, D. & McDougall, L. (1995) Ecology of Sydney plant species, part 3: Dicotyledon families Cabombaceae to Eupomatiaceae. *Cunninghamia* 4(2): 217–431. Benson, D. & McDougall, L. (1996) Ecology of Sydney plant species, part 4: Dicotyledon family Fabaceae. *Cunninghamia*  4(4): 553–752. Benson, D. & McDougall, L. (1997) Ecology of Sydney plant species, part 5: Dicotyledon families Flacourtiaceae to Myrsinaceae. *Cunninghamia* 5(2): 330–544. Benson, D. & McDougall, L. (1998) Ecology of Sydney plant species, part 6: Dicotyledon family Myrtaceae. *Cunninghamia*  5(4): 808–987. Benson, D. & McDougall, L. (1999) Ecology of Sydney plant species, part 7a: Dicotyledon families Nyctaginaceae to Primulaceae. *Cunninghamia* 6(2): 402–509.
+*Sydney Plant Species* series of papers. However, it is possible that some of the discrepancies in the recorded modes of regeneration of particular species may be due to occasional errors by observers. For example, following the January 1994 fires in the Lane Cove River area, I observed *Lobelia dentata* flowering in many long unburnt localities, where I had not previously recorded this species. Subsequently, I assumed that many of these plants were probably seedlings, even though I had not seen any cotyledons on these plants, immediately after their first post-fire emergence. However, my assumption may have been incorrect, as Benson & McDougall (1997) observed that *Lobelia dentata* apparently resprouted after fire from a very deeply-buried fleshy rhizome, at one locality in the Sydney region.
 
-{11}<!-- PAGE BREAK -->
+The observations reported in this paper provide useful information for the conservation of bushland in the broader Sydney region, and in particular for planning of fire management for bushland in the Lane Cove River and Narrabeen Lagoon catchments. For example, basic information such as the time a plant species takes to first produce fruits, following fire, can be used in the estimation of 'fire interval thresholds', as discussed by Bradstock *et al.* (1995) and Keith *et al*. (2002b). Such guidelines for bushland management can be refined, as more researchers record their observations of the responses of plants to various fires in different areas of bushland.
 
-- Benson, D. & McDougall, L. (2000) Ecology of Sydney plant species, part 7b: Dicotyledon families Proteaceae to Rubiaceae. *Cunninghamia* 6(4): 1016–1202. Benson, D. & McDougall, L. (2001) Ecology of Sydney plant species, part 8: Dicotyledon families Rutaceae to Zygophyllaceae. *Cunninghamia* 7(2): 241–462. Benson, D. & McDougall, L. (2002) Ecology of Sydney plant species, part 9: Monocotyledon families Agavaceae to Juncaginaceae. *Cunninghamia* 7(4): 695–930. Benson, D. & McDougall, L. (2005) Ecology of Sydney plant species, part 10: Monocotyledon families Lemnaceae to Zosteraceae. *Cunninghamia* 9(1): 16–212. Benwell, A.S. (1998) Post-fire seedling recruitment in coastal heathland in relation toregeneration strategy and habitat. *Australian Journal of Botany* 46: 75–101. Bernhardt, P. & Weston, P.H. (1996) The pollination ecology of *Persoonia* (Proteaceae) in eastern Australia. *Telopea* 6(4): 775–804. Bond, W.J. & van Wilgen, B.W. (1996) *Fire and plants* (Chapman & Hall: London). Bradstock, R.A. (1990) Demography of woody plants in relation to fire: *Banksia serrata* Lf. and *Isopogon anemonifolius* (Salisb.) Knight. *Australian Journal of Ecology* 15: 117–132. Bradstock, R.A. (1991) The role of fire in establishment of seedlings of serotinous species from the Sydney region. *Australian Journal of Botany* 39: 347–356. Bradstock, R.A. (1995) Demography of woody plants in relation to fire: *Telopea speciosissima*. *Proceedings of the Linnean Society of New South Wales* 115: 25–33. Bradstock, R.A., Gill, A.M., Hastings, S.M. & Moore, P.H.R. (1994) Survival of serotinous seedbanks during bushfires: Comparative studies of *Hakea* species from southeastern Australia. *Australian Journal of Ecology* 19: 276–282. Bradstock, R.A., Keith, D.A. & Auld, T.D. (1995) Fire and conservation: imperatives and constraints on managing for diversity. pp. 323–333. In: R.A. Bradstock, T.D. Auld, D.A.Keith, R.T. Kingsford, D. Lunney & D.P. Sivertsen (eds.) *Conserving biodiversity:Threats and solutions* (Surrey Beatty & Sons: Sydney). Bradstock, R.A. & Myerscough, P.J. (1981) Fire effects on seed release and the emergence and establishment of seedlings in *Banksia ericifolia* L.f.. *Australian Journal of Botany* 29: 521–
-- 531. Bradstock, R.A. & Myerscough, P.J. (1988) The survival and population response to frequent fires of two woody resprouters *Banksia serrata* and *Isopogon anemonifolius*. *Australian Journal of Botany* 36: 415–431. Bradstock, R.A. & O'Connell, M.A. (1988) Demography of woody plants in relation to fire: *Banksia ericifolia* L.f. and *Petrophile pulchella* (Schrad) R.Br. *Australian Journal of Ecology* 13(4): 505–518. Bradstock, R.A., Tozer, M.G. & Keith, D.A. (1997) Effects of high frequency fire on floristic composition and abundance in a fireprone heathland near Sydney. *Australian Journal of Botany* 45: 641–655. Bradstock, R.A., Williams, J.E. & Gill, A.M. (eds.) (2002) *Flammable Australia: The fire regimes and biodiversity of a continent* (Cambridge University Press: Cambridge). Brown, C. & Tohver, L. (1995) *Bushfire! Looking to the future*  (Envirobook Publishing: Sydney). Buchanan, R.A. (1989) Pied currawongs (*Strepera graculina*): their diet and role in weed dispersal in suburban Sydney, New South Wales. *Proceedings of the Linnean Society of New South Wales*  111(4): 241–255. Campbell, M.L. & Clarke, P.J. (2006) Response of montane wet sclerophyll forest understorey species to fire: Evidence from high and low intensity fires. *Proceedings of the Linnean Society of New South Wales* 127: 63–73. Carolin, R.C. & Tindale, M.D. (1994) *Flora of the Sydney region*  (Reed: Chatswood). Cary, G.J. & Morrison, D.A. (1995) Effects of fire frequency on plant species composition of sandstone communities in the Sydney region: Combinations of inter-fire intervals. *Australian Journal of Ecology* 20: 418–426. Chesterfield, E.A., Taylor, S.J. & Molnar, C.D. (1990) *Recovery after wildfire: warm temperate rainforest at Jones Creek. Technical Report Series No. 101.* (Arthur Rylah Institute for Environmental Research: Melbourne). Clark, S.S. (1988) Effects of hazard-reduction burning on populations of understorey plant species on Hawkesbury sandstone. *Australian Journal of Ecology* 13: 473–484. Clark, S.S. & McLoughlin, L.C. (1986) Historical and biological evidence for fire regimes in the Sydney region prior to the arrival of Europeans: implications for future bushland management. *Australian Geographer* 17: 101–112. Clarke, P.J. & Benson, D.H. (1987) *Vegetation survey of Lane Cove River State Recreation Area* (Royal Botanic Gardens: Sydney). Clarke, P.J. & Knox, K.J.E. (2002) Post-fire response of shrubs in the tablelands of eastern Australia: do existing models explain habitat differences? *Australian Journal of Botany* 50: 53–62. Clarke, P.J., Knox, K.J.E., Wills, K.E. & Campbell, M. (2005) Landscape patterns of woody plant response to crown fire: disturbance and productivity influence sprouting ability. *Journal of Ecology* 93(3): 544–555. Costello, S (ed.) (1994) *New South Wales burning.* (Sesta Pty Ltd: Melbourne). Coveny, R. (1965–1975) *Deep Creek, Narrabeen – plant checklist*  (Unpublished). Coveny, R. (1965–1978) *Cheltenham – plant checklist*  (Unpublished). Davies, S.J. & Myerscough, P.J. (1991) Post-fire demography of the wet-mallee *Eucalyptus luehmanniana* F. Muell. (Myrtaceae). *Australian Journal of Botany* 39: 459–466. Denham, A.J. & Auld, T.D. (2002) Flowering, seed dispersal, seed predation and seedling recruitment in two pyrogenic flowering resprouters. *Australian Journal of Botany* 50: 545–557. Denham, A.J. & Whelan, R.J. (2000) Reproductive ecology and breeding system of *Lomatia silaifolia* (Proteaceae) following a fire. *Australian Journal of Botany* 48(2): 261–269. Department of Environment and Conservation NSW (2005a) *Lane Cove National Park fire management plan* (National Parks and Wildlife Service: Sydney). Department of Environment and Conservation NSW (2005b) *Kuring-gai Chase and Garigal National Parks fire management plan* (National Parks and Wildlife Service: Sydney). Department of Environment and Conservation NSW (2006a) *Lane Cove National Park, Wallumatta Nature Reserve and Dalrymple Hay Nature Reserve fire management strategy* (National Parks and Wildlife Service: Sydney). Department of Environment and Conservation NSW (2006b) *Garigal National Park fire management strategy* (National Parks and Wildlife Service: Sydney). Department of Environment and Conservation NSW (2006c) *Invasion of native plant communities by Chrysanthemoides monilifera* (bitou bush and boneseed): Threat abatement plan. (DEC NSW: Hurstville).
+# **Acknowledgements**
 
-{12}<!-- PAGE BREAK -->
+I would like to thank the librarians at the National Herbarium of New South Wales, Royal Botanic Gardens, Sydney for providing access to some unpublished floristic lists. I appreciate the encouragement that was provided by Doug Benson and Lyn McDougall, when they welcomed contributions to their *Ecology of Sydney Plant Species* project. I would also like to thank the anonymous referee for making many detailed suggestions that helped to improve the organisation and presentation of this paper, Tony Auld for suggesting the term 'fire-followers' and drawing my attention to his work on *Persoonia lanceolata,* and Doug Benson for creating Tables 1 and 2.
 
-Department of Environment, Sport and Territories (1996) *Fire and biodiversity: The effects and effectiveness of fire management* (Biodiversity Unit, DEST: Canberra). Fairley, A. & Moore, P. (1989) *Native plants of the Sydney district: an identification guide* (Kangaroo Press: Kenthurst). Floyd, A.G. (1989) *Rainforest trees of mainland south-eastern Australia* (Inkata Press: Melbourne). Floyd, A.G. (1990) *Australian rainforests in New South Wales*  (Surrey Beatty & Sons Pty Ltd: Sydney). Fox, M.D. (1988) Understorey changes following fire at Myall Lakes, New South Wales. *Cunninghamia* 2(1): 85–95. Fox, M.D. & Fox, B.J. (1986) The effect of fire frequency on the structure and floristic composition of a woodland understorey. *Australian Journal of Ecology* 11: 77–85. Gill, A.M. (1975) Fire and the Australian flora: a review. *Australian Forestry* 38(1): 4–25. Gill, A.M. (1981) Adaptive responses of Australian vascular plant species to fires. pp. 243–271. In: A.M. Gill, R.H. Groves & I.R. Noble (eds.) *Fire and the Australian biota* (Australian Academy of Science: Canberra). Gill, A.M. (1999) Biodiversity and bushfires: an Australia-wide perspective on plant-species changes after a fire event. pp. 9–53. In: A.M. Gill, J.C.Z. Woinarski & A. York (eds.) *Australia's biodiversity – responses to fire. Biodiversity Technical Paper, No. 1* (Department of the Environment and Heritage: Canberra). Gill, A.M. & Bradstock, R.A. (1992) A national register for the fire responses of plant species. *Cunninghamia* 2(4): 653–660. Gill, A.M. & Bradstock, R. (1995) Extinction of biota by fires. pp. 309–322. In: R.A. Bradstock, T.D. Auld, D.A. Keith, R.T. Kingsford, D. Lunney & D.P. Sivertsen (eds.) *Conservingbiodiversity: Threats and solutions* (Surrey Beatty & Sons: Sydney). Gill, A.M., Groves, R.H. & Noble, I.R. (eds.)(1981). *Fire and the Australian biota* (Australian Academy of Science: Canberra). Gill, A.M. & Moore, P.H.R. (1996) Regional and historical fire weather patterns pertinent to the January 1994 Sydney bushfires. *Proceedings of the Linnean Society of New South Wales* 116: 27–36. Gill, A.M. & Moore, P.H.R. (1998) Big versus small fires: the bushfires of greater Sydney, January 1994. pp. 49–68. In: J.M. Moreno (ed.) *Large forest fires.* (Backhuys Publishers:Leiden). Gill, A.M., Moore, P.H.R. & Armstrong, J.P. (1991) *Bibliography of fire ecology in Australia.* Edition 3 (Department of Bush Fire Services). Gill, A.M., Moore, P.H.R. & Martin, W.K. (1994) *Bibliography of fire ecology in Australia (including fire science and fire management).* Edition 4 (NSW National Parks and Wildlife Service: Hurstville). Gill, A.M., Woinarski, J.C.Z. & York, A. (1999) *Australia's biodiversity – responses to fire. Biodiversity Technical Paper, No. 1* (Department of the Environment and Heritage: Canberra). Harden, G.J. (ed.) (1990–1993) *Flora of New South Wales.* Vols. 1–4 (New South Wales University Press: Sydney). Harden, G.J. (ed.) (2002) *Flora of New South Wales.* Vol. 2, Revised Edition (University of New South Wales Press: Sydney). Harden, G.J. & Murray, L.J. (eds.) (2000) *Supplement to Flora of New South Wales, Volume 1* (University of New South Wales Press Ltd: Sydney). Johnson, K.A., Morrison, D.A. & Goldsack, G. (1994) Post-fire flowering patterns in *Blandfordia nobilis* (Liliaceae). *Australian Journal of Botany* 42: 49–60. Jones, D.L. (1988) *Native orchids of Australia* (Reed Books Pty Ltd: Sydney). Jones, D.L. (2006) *A complete guide to native orchids of Australia, including the island territories.* (Reed New Holland: Sydney). Keith, D. (1992) Fire and the conservation of native bushland plants. *National Parks Journal* 36(5): 20–22. Keith, D. (1996) Fire-driven extinction of plant populations: a synthesis of theory and review of evidence from Australian vegetation. *Proceedings of the Linnean Society of New South Wales* 116: 37–78. Keith, D.A. (2004) *Ocean shores to desert dunes: the native vegetation of New South Wales and the ACT* (Department of Environment and Conservation(NSW): Hurstville). Keith, D.A. & Bradstock, R.A. (1994) Fire and competition in Australian heath: a conceptual model and field investigations. *Journal of Vegetation Science* 5(3): 347–354. Keith, D.A., McCaw, W.L. & Whelan, R.J. (2002a) Fire regimes in Australian heathlands and their effects on plants and animals. pp. 199–237. In: R.A. Bradstock, J.E. Williams & A.M. Gill (eds.) *Flammable Australia: The fire regimes and biodiversity of a continent* (Cambridge University Press: Cambridge). Keith, D.A., Williams, J.E. & Woinarski, J.C.Z. (2002b) Fire management and biodiversity conservation: key approaches and principles. pp. 401–425. In: R.A. Bradstock, J.E. Williams & A.M. Gill (eds.) *Flammable Australia: The fire regimes and biodiversity of a continent* (Cambridge University Press: Cambridge). Kenny, B.J. (2000) Influence of multiple fire-related germination cues on three Sydney *Grevillea* (Proteaceae) species. *Austral Ecology* 25(6): 664–669. Klaphake, V. (1995) Case study: Warraroon Reserve in the Lane Cove River valley. pp.40–43. In: C. Brown & L. Tohver (eds.) *Bushfire! Looking to the future.* (Envirobook Publishing: Sydney). Knox, K.J.E. & Clarke, P.J. (2004) Fire response syndromes of shrubs in grassy woodlands in the New England Tableland Bioregion. *Cunninghamia* 8(3): 348–353. Kubiak, P.J. (1986–1989) *A floristic list of the natural vegetation of the Lane Cove River catchment area* (Unpublished). Kubiak, P.J. (1992) *Narrabeen Lagoon catchment area – floristic list (excluding exotic species)* (Unpublished). Kubiak, P.J. (1996) *Lane Cove National Park – floristic list (excluding exotic species)* (Unpublished). Lane Cove River SRA Trust (1983) *Lane Cove River State Recreation Area* (Lane Cove River State Recreation Area Trust: Chatswood). Martyn, J. (1994) *A field guide to the bushland of the upper Lane Cove Valley* (STEP Inc.: Turramurra). McLoughlin, L. (1985) *The middle Lane Cove River: a history and a future.* Monograph No. 1 (Centre for Environmental and Urban Studies, Macquarie University: Sydney). McLoughlin, L. & Wyatt, M. (1993) *The upper Lane Cove: History, heritage, bibliography* (Graduate School of the Environment, Macquarie University: Sydney). Milberg, P. & Lamont, B.B. (1995) Fire enhances weed invasion of roadside vegetation in southwestern Australia. *Biological Conservation* 73: 45–49. Morris, E.C. & Myerscough, P.J. (1988) Survivorship, growth and self-thinning in *Banksia ericifolia*. *Australian Journal of Ecology* 13: 181–189. Morrison, D.A. (1995) Some effects of low-intensity fires on populations of co-occurring small trees in the Sydney region. *Proceedings of the Linnean Society of New South Wales* 115: 109–119.
+# **References**
 
-{13}<!-- PAGE BREAK -->
+Adams, P.B. & Lawson, S.D. (1984) The effects of bushfire on Victorian epiphytic and lithophytic orchids. *The Orchadian* 7(12): 282–286.
 
-Morrison, D.A. (2002) Effects of fire intensity on plant species composition of sandstone communities in the Sydney region. *Austral Ecology* 27(4): 433–441. Morrison, D.A., Buckney, R.T., Bewick, B.J. & Cary, G.J. (1996) Conservation conflicts over burning bush in south-eastern Australia. *Biological Conservation* 76: 167–175. Morrison, D.A., Cary, G.J., Pengelly, S.M., Ross, D.G., Mullins, B.J., Thomas, C.R. & Anderson, T.S. (1995) Effects of fire frequency on plant species composition of sandstone communities in the Sydney region: Inter-fire interval and timesince-fire. *Australian Journal of Ecology* 20: 239–247. Morrison, D.A. & Renwick, J.A. (2000) Effects of variation in fire intensity on regeneration of co-occurring species of small trees in the Sydney region. *Australian Journal of Botany* 48(1): 71–79. Myerscough, P.J. (1998) Ecology of Myrtaceae with special reference to the Sydney region. *Cunninghamia* 5(4): 787–807. Myerscough, P.J. & Clarke, P.J. (2007) Burnt to blazes: landscape fires, resilience and habitat interaction in frequently burnt coastal heath. *Australian Journal of Botany* 55: 91–102. Myerscough, P.J., Clarke, P.J. & Skelton, N.J. (1995) Plant coexistence in coastal heaths: Floristic patterns and species attributes. *Australian Journal of Ecology* 20: 482–493. Myerscough, P.J., Whelan, R.J. & Bradstock, R.A. (2000) Ecology of Proteaceae with special reference to the Sydney region. *Cunninghamia* 6(4): 951–1015. National Trust of Australia (NSW) (1980) *Narrabeen Lagoon survey.* (National Trust of Australia (NSW): Sydney). Nieuwenhuis, A. (1987) The effect of fire frequency on the sclerophyll vegetation of the West Head, New South Wales. *Australian Journal of Ecology* 12: 373–385. NSW National Parks and Wildlife Service (1998a) *Lane Cove National Park plan of management.*  NSW National Parks and Wildlife Service (1998b) *Garigal National Park plan of management.*  NSW National Parks and Wildlife Service (2002) *Draft fire management plan – Lane Cove National Park.* (NSW NPWS: Sydney). NSW State Coroner (1995) *New South Wales bushfire inquiry – findings.* (Coroners Court: Westmead). Ooi, M.K.J., Auld, T.D. & Whelan, R.J. (2006) Dormancy and the fire-centric focus: Germination of three *Leucopogon* species (Ericaceae) from south-eastern Australia. *Annals of Botany* 98: 421–430. Ooi, M.K.J., Auld, T.D. & Whelan, R.J. (2007) Distinguishing between persistence and dormancy in soil seed banks of three shrub species from fire-prone southeastern Australia. *Journal of Vegetation Science* 18: 405–412. Pannell, J.R. & Myerscough, P.J. (1993) Canopy-stored seed banks of *Allocasuarina distyla* and *A. nana* in relation to time since fire. *Australian Journal of Botany* 41:1–9. Purdie, R.W. (1977) Early stages of regeneration after burning in dry sclerophyll vegetation. I : Regeneration of the understorey by vegetative means. *Australian Journal of Botany* 25: 21–34. Purdie, R.W. & Slatyer, R.O. (1976) Vegetation succession after fire in sclerophyll woodland communities in south-eastern Australia. *Australian Journal of Ecology* 1: 223–236. Pyke, G.H. (1983) Relationship between time since fire and flowering in *Telopea speciosissima* R. Br. and *Lambertia formosa* Sm.. *Australian Journal of Botany* 31: 293–296. Reidy, M., Chevalier, W. & McDonald, T. (2005) Lane Cove National Park Bushcare volunteers: Taking stock, 10 years on. *Ecological Management and Restoration* 6(2): 94–104. Robinson, L. (1991) *Field guide to the native plants of Sydney*  (Kangaroo Press: Kenthusrt). Sheringham, P.R. & Sanders, J.M. (1993) *Vegetation survey of Garigal National Park and surrounding crown lands* (NSW National Parks and Wildlife Service: Sydney). Siddiqi, M.Y., Carolin, R.C. & Myerscough, P.J. (1976) Studies in the ecology of coastal heath in New South Wales. III. Regrowth of vegetation after fire. *Proceedings of the Linnean Society of New South Wales* 101(1): 53–63. Smith, J. & Smith, P. (1993) *Vegetation and fauna of Pennant Hills Park* (report prepared for Hornsby Shire Council). STEP Inc. (1985) *A plan of management for South Turramurra bushland. Second edition* (STEP Inc.: Turramurra). Thomas, P.B., Morris, E.C. & Auld, T.D. (2007) Response surfaces for the combined effects of heat shock and smoke on germination of 16 species forming soil seed banks in south-east Australia. *Austral Ecology* 32: 605–616. Walsh, N.G. & McDougall, K.L. (2004) Progress in the recovery of the flora of treeless subalpine vegetation in Kosciuszko National Park after the 2003 fires. *Cunninghamia* 8(4): 439–452. Wark, M.C. (1996) Regeneration of heath and heath woodland in the north-eastern Otway Ranges three to ten years after the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 108(2): 121–142. Wark, M.C. (1997) Regeneration of some forest and gully communities in the Angahook–Lorne State Park (north-eastern Otway Ranges) 1–10 years after the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 109(1): 7–36. Wark, M.C. (1999) Regeneration of *Melaleuca lanceolata* Otto. and *Melaleuca squarrosa* Donn ex Sm. communities of the coast and river valleys in the north-eastern Otway Ranges 1–10 years after the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 111(2): 173–213. Wark, M.C. (2000) After the 1983 wildfire: the Anglesea vegetation regeneration project – how it grew. *The Victorian Naturalist*  117(3): 96–106. Wark, M.C., White, M.D., Robertson, D.J. & Marriott, P.F. (1987) Regeneration of heath and heath woodland in the north-eastern Otway Ranges following the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 99(2): 51–88. Warton, D.I. & Wardle, G.M. (2003) Site-to-site variation in the demography of a fire-affected perennial, *Acacia suaveolens*, at Ku-ring-gai Chase National Park, New South Wales, Australia. *Austral Ecology* 28: 38–47. Weiss, P.W. (1984) Seed characteristics and regeneration of some species in invaded coastal communities. *Australian Journal of Ecology* 9(2): 99–106. Weiss, P.W., Adair, R.J. & Edwards, P.B. (1998) *Chrysanthemoides monilifera* (L.) T. Norl. pp.49–61.In: F.D. Panetta, R.H. Groves & R.C.H. Shepherd (eds.) *The biology of Australian weeds.*  Volume 2 (R.G. and F.J. Richardson: Melbourne). Weston, P.H., Perkins, A.J. & Entwisle, T.J. (2005) More than symbioses: orchid ecology, with examples from the Sydney Region. *Cunninghamia* 9(1): 1–15. Whelan, R.J. (1995) *The ecology of fire* (Cambridge University Press: Cambridge). Whelan, R.J., Rodgerson, L., Dickman, C.R. & Sutherland, E.F. (2002) Critical life cycles of plants and animals: developing a process-based understanding of population changes in fire-prone landscapes. pp. 94–124. In: R.A. Bradstock, J.E. Williams & A.M. Gill (eds.) *Flammable Australia: The fire regimes and biodiversity of a continent.* (Cambridge University Press: Cambridge).
+Auld, T.D. (1986) Population dynamics of the shrub *Acacia suaveolens* (Sm.) Willd.: Fire and the transition to seedlings. *Australian Journal of Ecology* 11: 373–385.
 
-{14}<!-- PAGE BREAK -->
+Auld, T.D. (1987) Post-fire demography in the resprouting shrub *Angophora hispida* (Sm.) Blaxell: Flowering, seed production, dispersal, seedling establishment and survival. *Proceedings of the Linnean Society of New South Wales* 109(4): 259–269.
 
-Whelan, R.J. & York, J. (1998) Post-fire germination of *Hakea sericea* and *Petrophile sessilis* after spring burning. *Australian Journal of Botany* 46: 367–376. Williams, J.E. & Gill, A.M. (1995) *The impact of fire regimes on native forests in eastern New South Wales. Environmental Heritage Monograph Series No. 2* (NSW National Parks and Wildlife Service: Hurstville). Williams, J.E., Whelan, R.J. & Gill, A.M. (1994) Fire and environmental heterogeneity in southern temperate forest ecosystems: implications for management. *Australian Journal of Botany* 42: 125–137. Williams, P.R. & Clarke, P.J. (2006) Fire history and soil gradients generate floristic patterns in montane sedgelands and wet heaths of Gibraltar Range National Park. *Proceedings of the Linnean Society of New South Wales* 127: 27–38. Zammit, C. (1988) Dynamics of resprouting in the lignotuberous shrub *Banksia oblongifolia*. *Australian Journal of Ecology* 13: 311–320. Zammit, C. & Westoby, M. (1987) Population structure and reproductive status of two *Banksia* shrubs at various times after fire. *Vegetatio* 70: 11–20.
+Auld, T.D. (1996) Ecology of the Fabaceae in the Sydney region: fire, ants and the soil seedbank. *Cunninghamia* 4(4): 531–551.
+
+Auld, T.D. (2001) The ecology of the Rutaceae in the Sydney region of south-eastern Australia: Poorly known ecology of a neglected family. *Cunninghamia* 7(2): 213–239.
+
+Auld, T.D. & Denham, A.J. (2006) How much seed remains in the soil after a fire? *Plant Ecology* 187: 15–24.
+
+Auld, T.D., Denham, A.J. & Turner, K (2007) Dispersal and recruitment dynamics in the fleshy-fruited *Persoonia lanceolata* (Proteaceae). *Journal of Vegetation Science* 18: 903–910.
+
+Auld, T.D., Keith, D.A. & Bradstock, R.A. (2000) Patterns in longevity of soil seedbanks in fire-prone communities of southeastern Australia. *Australian Journal of Botany* 48(4): 539–548.
+
+Auld, T.D. & Myerscough, P.J. (1986) Population dynamics of the shrub *Acacia suaveolens* (Sm.) Willd.: Seed production and predispersal seed predation. *Australian Journal of Ecology* 11: 219–234.
+
+Auld, T.D. & O'Connell, M.A. (1991) Predicting patterns of postfire germination in 35 eastern Australian Fabaceae. *Australian Journal of Ecology* 16: 53–70.
+
+Auld, T.D. & Tozer, M. (1995) Patterns in emergence of *Acacia*  and *Grevillea* seedlings after fire. *Proceedings of the Linnean Society of New South Wales* 115: 5–15.
+
+Beardsell, D.V., Clements, M.A., Hutchinson, J.F. & Williams, E.G. (1986) Pollination of *Diuris maculata* R. Br. (Orchidaceae) by floral mimicry of the native legumes *Daviesia* spp. and *Pultenaea scabra* R. Br.. *Australian Journal of Botany* 34: 165–173.
+
+Beecroft Cheltenham Civic Trust (1976) *A plan of management for Pennant Hills Park and some surrounding bushland* (Beecroft Cheltenham Civic Trust: Sydney).
+
+Benson, D.H. (1979) Native vegetation of Deep Creek, Narrabeen. (Unpublished report).
+
+Benson, D.H. (1981) Vegetation of the Agnes Banks sand deposit, Richmond, New South Wales. *Cunninghamia* 1(1): 35–57.
+
+Benson, D.H. (1985) Maturation periods for fire-sensitive shrub species in Hawkesbury sandstone vegetation. *Cunninghamia* 1(3): 339–349.
+
+Benson, D. & Howell, J. (1990) *Taken for granted: the bushland of Sydney and its suburbs* (Kangaroo Press: Kenthusrt).
+
+Benson, D. & Howell, J. (1994) The natural vegetation of the Sydney 1:100 000 map sheet. *Cunninghamia* 3(4): 677–787.
+
+Benson, D. & McDougall, L. (1993) Ecology of Sydney plant species, part 1: Ferns, fern-allies, cycads, conifers and dicotyledon families Acanthaceae to Asclepiadaceae. *Cunninghamia* 3(2): 257–422.
+
+Benson, D. & McDougall, L. (1994) Ecology of Sydney plant species, part 2: Dicotyledon families Asteraceae to Buddlejaceae. *Cunninghamia* 3(4): 789–1004.
+
+Benson, D. & McDougall, L. (1995) Ecology of Sydney plant species, part 3: Dicotyledon families Cabombaceae to Eupomatiaceae. *Cunninghamia* 4(2): 217–431.
+
+Benson, D. & McDougall, L. (1996) Ecology of Sydney plant species, part 4: Dicotyledon family Fabaceae. *Cunninghamia*  4(4): 553–752.
+
+Benson, D. & McDougall, L. (1997) Ecology of Sydney plant species, part 5: Dicotyledon families Flacourtiaceae to Myrsinaceae. *Cunninghamia* 5(2): 330–544.
+
+Benson, D. & McDougall, L. (1998) Ecology of Sydney plant species, part 6: Dicotyledon family Myrtaceae. *Cunninghamia*  5(4): 808–987.
+
+Benson, D. & McDougall, L. (1999) Ecology of Sydney plant species, part 7a: Dicotyledon families Nyctaginaceae to Primulaceae. *Cunninghamia* 6(2): 402–509.
+
+<!-- PAGE BREAK -->
+
+Benson, D. & McDougall, L. (2000) Ecology of Sydney plant species, part 7b: Dicotyledon families Proteaceae to Rubiaceae. *Cunninghamia* 6(4): 1016–1202.
+
+Benson, D. & McDougall, L. (2001) Ecology of Sydney plant species, part 8: Dicotyledon families Rutaceae to Zygophyllaceae. *Cunninghamia* 7(2): 241–462.
+
+Benson, D. & McDougall, L. (2002) Ecology of Sydney plant species, part 9: Monocotyledon families Agavaceae to Juncaginaceae. *Cunninghamia* 7(4): 695–930.
+
+Benson, D. & McDougall, L. (2005) Ecology of Sydney plant species, part 10: Monocotyledon families Lemnaceae to Zosteraceae. *Cunninghamia* 9(1): 16–212.
+
+Benwell, A.S. (1998) Post-fire seedling recruitment in coastal heathland in relation toregeneration strategy and habitat. *Australian Journal of Botany* 46: 75–101.
+
+Bernhardt, P. & Weston, P.H. (1996) The pollination ecology of *Persoonia* (Proteaceae) in eastern Australia. *Telopea* 6(4): 775–804.
+
+Bond, W.J. & van Wilgen, B.W. (1996) *Fire and plants* (Chapman & Hall: London).
+
+Bradstock, R.A. (1990) Demography of woody plants in relation to fire: *Banksia serrata* Lf. and *Isopogon anemonifolius* (Salisb.) Knight. *Australian Journal of Ecology* 15: 117–132.
+
+Bradstock, R.A. (1991) The role of fire in establishment of seedlings of serotinous species from the Sydney region. *Australian Journal of Botany* 39: 347–356.
+
+Bradstock, R.A. (1995) Demography of woody plants in relation to fire: *Telopea speciosissima*. *Proceedings of the Linnean Society of New South Wales* 115: 25–33.
+
+Bradstock, R.A., Gill, A.M., Hastings, S.M. & Moore, P.H.R. (1994) Survival of serotinous seedbanks during bushfires: Comparative studies of *Hakea* species from southeastern Australia. *Australian Journal of Ecology* 19: 276–282.
+
+Bradstock, R.A., Keith, D.A. & Auld, T.D. (1995) Fire and conservation: imperatives and constraints on managing for diversity. pp. 323–333. In: R.A. Bradstock, T.D. Auld, D.A.Keith, R.T. Kingsford, D. Lunney & D.P. Sivertsen (eds.) *Conserving biodiversity:Threats and solutions* (Surrey Beatty & Sons: Sydney).
+
+Bradstock, R.A. & Myerscough, P.J. (1981) Fire effects on seed release and the emergence and establishment of seedlings in *Banksia ericifolia* L.f.. *Australian Journal of Botany* 29: 521–531.
+
+Bradstock, R.A. & Myerscough, P.J. (1988) The survival and population response to frequent fires of two woody resprouters *Banksia serrata* and *Isopogon anemonifolius*. *Australian Journal of Botany* 36: 415–431.
+
+Bradstock, R.A. & O'Connell, M.A. (1988) Demography of woody plants in relation to fire: *Banksia ericifolia* L.f. and *Petrophile pulchella* (Schrad) R.Br. *Australian Journal of Ecology* 13(4): 505–518.
+
+Bradstock, R.A., Tozer, M.G. & Keith, D.A. (1997) Effects of high frequency fire on floristic composition and abundance in a fireprone heathland near Sydney. *Australian Journal of Botany* 45: 641–655.
+
+Bradstock, R.A., Williams, J.E. & Gill, A.M. (eds.) (2002) *Flammable Australia: The fire regimes and biodiversity of a continent* (Cambridge University Press: Cambridge).
+
+Brown, C. & Tohver, L. (1995) *Bushfire! Looking to the future*  (Envirobook Publishing: Sydney).
+
+Buchanan, R.A. (1989) Pied currawongs (*Strepera graculina*): their diet and role in weed dispersal in suburban Sydney, New South Wales. *Proceedings of the Linnean Society of New South Wales*  111(4): 241–255.
+
+Campbell, M.L. & Clarke, P.J. (2006) Response of montane wet sclerophyll forest understorey species to fire: Evidence from high and low intensity fires. *Proceedings of the Linnean Society of New South Wales* 127: 63–73.
+
+Carolin, R.C. & Tindale, M.D. (1994) *Flora of the Sydney region*  (Reed: Chatswood).
+
+Cary, G.J. &
+
+Morrison, D.A. (1995) Effects of fire frequency on plant species composition of sandstone communities in the Sydney region: Combinations of inter-fire intervals. *Australian Journal of Ecology* 20: 418–426.
+
+Chesterfield, E.A., Taylor, S.J. & Molnar, C.D. (1990) *Recovery after wildfire: warm temperate rainforest at Jones Creek. Technical Report Series No. 101.* (Arthur Rylah Institute for Environmental Research: Melbourne).
+
+Clark, S.S. (1988) Effects of hazard-reduction burning on populations of understorey plant species on Hawkesbury sandstone. *Australian Journal of Ecology* 13: 473–484.
+
+Clark, S.S. & McLoughlin, L.C. (1986) Historical and biological evidence for fire regimes in the Sydney region prior to the arrival of Europeans: implications for future bushland management. *Australian Geographer* 17: 101–112.
+
+Clarke, P.J. & Benson, D.H. (1987) *Vegetation survey of Lane Cove River State Recreation Area* (Royal Botanic Gardens: Sydney).
+
+Clarke, P.J. & Knox, K.J.E. (2002) Post-fire response of shrubs in the tablelands of eastern Australia: do existing models explain habitat differences? *Australian Journal of Botany* 50: 53–62.
+
+Clarke, P.J., Knox, K.J.E., Wills, K.E. & Campbell, M. (2005) Landscape patterns of woody plant response to crown fire: disturbance and productivity influence sprouting ability. *Journal of Ecology* 93(3): 544–555.
+
+Costello, S (ed.) (1994) *New South Wales burning.* (Sesta Pty Ltd: Melbourne).
+
+Coveny, R. (1965–1975) *Deep Creek, Narrabeen – plant checklist*  (Unpublished).
+
+Coveny, R. (1965–1978) *Cheltenham – plant checklist*  (Unpublished).
+
+Davies, S.J. & Myerscough, P.J. (1991) Post-fire demography of the wet-mallee *Eucalyptus luehmanniana* F. Muell. (Myrtaceae). *Australian Journal of Botany* 39: 459–466.
+
+Denham, A.J. & Auld, T.D. (2002) Flowering, seed dispersal, seed predation and seedling recruitment in two pyrogenic flowering resprouters. *Australian Journal of Botany* 50: 545–557.
+
+Denham, A.J. & Whelan, R.J. (2000) Reproductive ecology and breeding system of *Lomatia silaifolia* (Proteaceae) following a fire. *Australian Journal of Botany* 48(2): 261–269.
+
+Department of Environment and Conservation NSW (2005a) *Lane Cove National Park fire management plan* (National Parks and Wildlife Service: Sydney).
+
+Department of Environment and Conservation NSW (2005b) *Kuring-gai Chase and Garigal National Parks fire management plan* (National Parks and Wildlife Service: Sydney).
+
+Department of Environment and Conservation NSW (2006a) *Lane Cove National Park, Wallumatta Nature Reserve and Dalrymple Hay Nature Reserve fire management strategy* (National Parks and Wildlife Service: Sydney).
+
+Department of Environment and Conservation NSW (2006b) *Garigal National Park fire management strategy* (National Parks and Wildlife Service: Sydney).
+
+Department of Environment and Conservation NSW (2006c) *Invasion of native plant communities by Chrysanthemoides monilifera* (bitou bush and boneseed): Threat abatement plan. (DEC NSW: Hurstville).
+
+<!-- PAGE BREAK -->
+
+Department of Environment, Sport and Territories (1996) *Fire and biodiversity: The effects and effectiveness of fire management* (Biodiversity Unit, DEST: Canberra).
+
+Fairley, A. & Moore, P. (1989) *Native plants of the Sydney district: an identification guide* (Kangaroo Press: Kenthurst).
+
+Floyd, A.G. (1989) *Rainforest trees of mainland south-eastern Australia* (Inkata Press: Melbourne).
+
+Floyd, A.G. (1990) *Australian rainforests in New South Wales*  (Surrey Beatty & Sons Pty Ltd: Sydney).
+
+Fox, M.D. (1988) Understorey changes following fire at Myall Lakes, New South Wales. *Cunninghamia* 2(1): 85–95.
+
+Fox, M.D. & Fox, B.J. (1986) The effect of fire frequency on the structure and floristic composition of a woodland understorey. *Australian Journal of Ecology* 11: 77–85.
+
+Gill, A.M. (1975) Fire and the Australian flora: a review. *Australian Forestry* 38(1): 4–25.
+
+Gill, A.M. (1981) Adaptive responses of Australian vascular plant species to fires. pp. 243–271. In: A.M. Gill, R.H. Groves & I.R. Noble (eds.) *Fire and the Australian biota* (Australian Academy of Science: Canberra).
+
+Gill, A.M. (1999) Biodiversity and bushfires: an Australia-wide perspective on plant-species changes after a fire event. pp. 9–53. In: A.M. Gill, J.C.Z. Woinarski & A. York (eds.) *Australia's biodiversity – responses to fire. Biodiversity Technical Paper, No. 1* (Department of the Environment and Heritage: Canberra).
+
+Gill, A.M. & Bradstock, R.A. (1992) A national register for the fire responses of plant species. *Cunninghamia* 2(4): 653–660.
+
+Gill, A.M. & Bradstock, R. (1995) Extinction of biota by fires. pp. 309–322. In: R.A. Bradstock, T.D. Auld, D.A. Keith, R.T. Kingsford, D. Lunney & D.P. Sivertsen (eds.) *Conservingbiodiversity: Threats and solutions* (Surrey Beatty & Sons: Sydney).
+
+Gill, A.M., Groves, R.H. & Noble, I.R. (eds.)(1981). *Fire and the Australian biota* (Australian Academy of Science: Canberra).
+
+Gill, A.M. & Moore, P.H.R. (1996) Regional and historical fire weather patterns pertinent to the January 1994 Sydney bushfires. *Proceedings of the Linnean Society of New South Wales* 116: 27–36.
+
+Gill, A.M. & Moore, P.H.R. (1998) Big versus small fires: the bushfires of greater Sydney, January 1994. pp. 49–68. In: J.M. Moreno (ed.) *Large forest fires.* (Backhuys Publishers:Leiden).
+
+Gill, A.M., Moore, P.H.R. & Armstrong, J.P. (1991) *Bibliography of fire ecology in Australia.* Edition 3 (Department of Bush Fire Services).
+
+Gill, A.M., Moore, P.H.R. & Martin, W.K. (1994) *Bibliography of fire ecology in Australia (including fire science and fire management).* Edition 4 (NSW National Parks and Wildlife Service: Hurstville).
+
+Gill, A.M., Woinarski, J.C.Z. & York, A. (1999) *Australia's biodiversity – responses to fire. Biodiversity Technical Paper, No. 1* (Department of the Environment and Heritage: Canberra).
+
+Harden, G.J. (ed.) (1990–1993) *Flora of New South Wales.* Vols. 1–4 (New South Wales University Press: Sydney).
+
+Harden, G.J. (ed.) (2002) *Flora of New South Wales.* Vol. 2, Revised Edition (University of New South Wales Press: Sydney).
+
+Harden, G.J. & Murray, L.J. (eds.) (2000) *Supplement to Flora of New South Wales, Volume 1* (University of New South Wales Press Ltd: Sydney).
+
+Johnson, K.A., Morrison, D.A. & Goldsack, G. (1994) Post-fire flowering patterns in *Blandfordia nobilis* (Liliaceae). *Australian Journal of Botany* 42: 49–60.
+
+Jones, D.L. (1988) *Native orchids of Australia* (Reed Books Pty Ltd: Sydney).
+
+Jones, D.L. (2006) *A complete guide to native orchids of Australia, including the island territories.* (Reed New Holland: Sydney).
+
+Keith, D. (1992) Fire and the conservation of native bushland plants. *National Parks Journal* 36(5): 20–22.
+
+Keith, D. (1996) Fire-driven extinction of plant populations: a synthesis of theory and review of evidence from Australian vegetation. *Proceedings of the Linnean Society of New South Wales* 116: 37–78.
+
+Keith, D.A. (2004) *Ocean shores to desert dunes: the native vegetation of New South Wales and the ACT* (Department of Environment and Conservation(NSW): Hurstville).
+
+Keith, D.A. & Bradstock, R.A. (1994) Fire and competition in Australian heath: a conceptual model and field investigations. *Journal of Vegetation Science* 5(3): 347–354.
+
+Keith, D.A., McCaw, W.L. & Whelan, R.J. (2002a) Fire regimes in Australian heathlands and their effects on plants and animals. pp. 199–237. In: R.A. Bradstock, J.E. Williams & A.M. Gill (eds.) *Flammable Australia: The fire regimes and biodiversity of a continent* (Cambridge University Press: Cambridge).
+
+Keith, D.A., Williams, J.E. & Woinarski, J.C.Z. (2002b) Fire management and biodiversity conservation: key approaches and principles. pp. 401–425. In: R.A. Bradstock, J.E. Williams & A.M. Gill (eds.) *Flammable Australia: The fire regimes and biodiversity of a continent* (Cambridge University Press: Cambridge).
+
+Kenny, B.J. (2000) Influence of multiple fire-related germination cues on three Sydney *Grevillea* (Proteaceae) species. *Austral Ecology* 25(6): 664–669.
+
+Klaphake, V. (1995) Case study: Warraroon Reserve in the Lane Cove River valley. pp.40–43. In: C. Brown & L. Tohver (eds.) *Bushfire! Looking to the future.* (Envirobook Publishing: Sydney).
+
+Knox, K.J.E. & Clarke, P.J. (2004) Fire response syndromes of shrubs in grassy woodlands in the New England Tableland Bioregion. *Cunninghamia* 8(3): 348–353.
+
+Kubiak, P.J. (1986–1989) *A floristic list of the natural vegetation of the Lane Cove River catchment area* (Unpublished).
+
+Kubiak, P.J. (1992) *Narrabeen Lagoon catchment area – floristic list (excluding exotic species)* (Unpublished).
+
+Kubiak, P.J. (1996) *Lane Cove National Park – floristic list (excluding exotic species)* (Unpublished).
+
+Lane Cove River SRA Trust (1983) *Lane Cove River State Recreation Area* (Lane Cove River State Recreation Area Trust: Chatswood).
+
+Martyn, J. (1994) *A field guide to the bushland of the upper Lane Cove Valley* (STEP Inc.: Turramurra).
+
+McLoughlin, L. (1985) *The middle Lane Cove River: a history and a future.* Monograph No. 1 (Centre for Environmental and Urban Studies, Macquarie University: Sydney).
+
+McLoughlin, L. & Wyatt, M. (1993) *The upper Lane Cove: History, heritage, bibliography* (Graduate School of the Environment, Macquarie University: Sydney).
+
+Milberg, P. & Lamont, B.B. (1995) Fire enhances weed invasion of roadside vegetation in southwestern Australia. *Biological Conservation* 73: 45–49.
+
+Morris, E.C. & Myerscough, P.J. (1988) Survivorship, growth and self-thinning in *Banksia ericifolia*. *Australian Journal of Ecology* 13: 181–189. Morrison, D.A. (1995) Some effects of low-intensity fires on populations of co-occurring small trees in the Sydney region. *Proceedings of the Linnean Society of New South Wales* 115: 109–119.
+
+<!-- PAGE BREAK -->
+
+Morrison, D.A. (2002) Effects of fire intensity on plant species composition of sandstone communities in the Sydney region. *Austral Ecology* 27(4): 433–441.
+
+Morrison, D.A., Buckney, R.T., Bewick, B.J. & Cary, G.J. (1996) Conservation conflicts over burning bush in south-eastern Australia. *Biological Conservation* 76: 167–175.
+
+Morrison, D.A., Cary, G.J., Pengelly, S.M., Ross, D.G., Mullins, B.J., Thomas, C.R. & Anderson, T.S. (1995) Effects of fire frequency on plant species composition of sandstone communities in the Sydney region: Inter-fire interval and timesince-fire. *Australian Journal of Ecology* 20: 239–247.
+
+Morrison, D.A. & Renwick, J.A. (2000) Effects of variation in fire intensity on regeneration of co-occurring species of small trees in the Sydney region. *Australian Journal of Botany* 48(1): 71–79.
+
+Myerscough, P.J. (1998) Ecology of Myrtaceae with special reference to the Sydney region. *Cunninghamia* 5(4): 787–807.
+
+Myerscough, P.J. & Clarke, P.J. (2007) Burnt to blazes: landscape fires, resilience and habitat interaction in frequently burnt coastal heath. *Australian Journal of Botany* 55: 91–102.
+
+Myerscough, P.J., Clarke, P.J. & Skelton, N.J. (1995) Plant coexistence in coastal heaths: Floristic patterns and species attributes. *Australian Journal of Ecology* 20: 482–493.
+
+Myerscough, P.J., Whelan, R.J. & Bradstock, R.A. (2000) Ecology of Proteaceae with special reference to the Sydney region. *Cunninghamia* 6(4): 951–1015.
+
+National Trust of Australia (NSW) (1980) *Narrabeen Lagoon survey.* (National Trust of Australia (NSW): Sydney).
+
+Nieuwenhuis, A. (1987) The effect of fire frequency on the sclerophyll vegetation of the West Head, New South Wales. *Australian Journal of Ecology* 12: 373–385.
+
+NSW National Parks and Wildlife Service (1998a) *Lane Cove National Park plan of management.* 
+
+NSW National Parks and Wildlife Service (1998b) *Garigal National Park plan of management.* 
+
+NSW National Parks and Wildlife Service (2002) *Draft fire management plan – Lane Cove National Park.* (NSW NPWS: Sydney).
+
+NSW State Coroner (1995) *New South Wales bushfire inquiry – findings.* (Coroners Court: Westmead).
+
+Ooi, M.K.J., Auld, T.D. & Whelan, R.J. (2006) Dormancy and the fire-centric focus: Germination of three *Leucopogon* species (Ericaceae) from south-eastern Australia. *Annals of Botany* 98: 421–430.
+
+Ooi, M.K.J., Auld, T.D. & Whelan, R.J. (2007) Distinguishing between persistence and dormancy in soil seed banks of three shrub species from fire-prone southeastern Australia. *Journal of Vegetation Science* 18: 405–412.
+
+Pannell, J.R. & Myerscough, P.J. (1993) Canopy-stored seed banks of *Allocasuarina distyla* and *A. nana* in relation to time since fire. *Australian Journal of Botany* 41:1–9.
+
+Purdie, R.W. (1977) Early stages of regeneration after burning in dry sclerophyll vegetation. I : Regeneration of the understorey by vegetative means. *Australian Journal of Botany* 25: 21–34.
+
+Purdie, R.W. & Slatyer, R.O. (1976) Vegetation succession after fire in sclerophyll woodland communities in south-eastern Australia. *Australian Journal of Ecology* 1: 223–236.
+
+Pyke, G.H. (1983) Relationship between time since fire and flowering in *Telopea speciosissima* R. Br. and *Lambertia formosa* Sm.. *Australian Journal of Botany* 31: 293–296.
+
+Reidy, M., Chevalier, W. & McDonald, T. (2005) Lane Cove National Park Bushcare volunteers: Taking stock, 10 years on. *Ecological Management and Restoration* 6(2): 94–104.
+
+Robinson, L. (1991) *Field guide to the native plants of Sydney*  (Kangaroo Press: Kenthusrt).
+
+Sheringham, P.R. & Sanders, J.M. (1993) *Vegetation survey of Garigal National Park and surrounding crown lands* (NSW National Parks and Wildlife Service: Sydney).
+
+Siddiqi, M.Y., Carolin, R.C. & Myerscough, P.J. (1976) Studies in the ecology of coastal heath in New South Wales. III. Regrowth of vegetation after fire. *Proceedings of the Linnean Society of New South Wales* 101(1): 53–63.
+
+Smith, J. & Smith, P. (1993) *Vegetation and fauna of Pennant Hills Park* (report prepared for Hornsby Shire Council).
+
+STEP Inc. (1985) *A plan of management for South Turramurra bushland. Second edition* (STEP Inc.: Turramurra).
+
+Thomas, P.B., Morris, E.C. & Auld, T.D. (2007) Response surfaces for the combined effects of heat shock and smoke on germination of 16 species forming soil seed banks in south-east Australia. *Austral Ecology* 32: 605–616.
+
+Walsh, N.G. & McDougall, K.L. (2004) Progress in the recovery of the flora of treeless subalpine vegetation in Kosciuszko National Park after the 2003 fires. *Cunninghamia* 8(4): 439–452.
+
+Wark, M.C. (1996) Regeneration of heath and heath woodland in the north-eastern Otway Ranges three to ten years after the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 108(2): 121–142.
+
+Wark, M.C. (1997) Regeneration of some forest and gully communities in the Angahook–Lorne State Park (north-eastern Otway Ranges) 1–10 years after the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 109(1): 7–36.
+
+Wark, M.C. (1999) Regeneration of *Melaleuca lanceolata* Otto. and *Melaleuca squarrosa* Donn ex Sm. communities of the coast and river valleys in the north-eastern Otway Ranges 1–10 years after the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 111(2): 173–213.
+
+Wark, M.C. (2000) After the 1983 wildfire: the Anglesea vegetation regeneration project – how it grew. *The Victorian Naturalist*  117(3): 96–106.
+
+Wark, M.C., White, M.D., Robertson, D.J. & Marriott, P.F. (1987) Regeneration of heath and heath woodland in the north-eastern Otway Ranges following the wildfire of February 1983. *Proceedings of the Royal Society of Victoria* 99(2): 51–88.
+
+Warton, D.I. & Wardle, G.M. (2003) Site-to-site variation in the demography of a fire-affected perennial, *Acacia suaveolens*, at Ku-ring-gai Chase National Park, New South Wales, Australia. *Austral Ecology* 28: 38–47.
+
+Weiss, P.W. (1984) Seed characteristics and regeneration of some species in invaded coastal communities. *Australian Journal of Ecology* 9(2): 99–106.
+
+Weiss, P.W., Adair, R.J. & Edwards, P.B. (1998) *Chrysanthemoides monilifera* (L.) T. Norl. pp.49–61.In: F.D. Panetta, R.H. Groves & R.C.H. Shepherd (eds.) *The biology of Australian weeds.*  Volume 2 (R.G. and F.J. Richardson: Melbourne).
+
+Weston, P.H., Perkins, A.J. & Entwisle, T.J. (2005) More than symbioses: orchid ecology, with examples from the Sydney Region. *Cunninghamia* 9(1): 1–15.
+
+Whelan, R.J. (1995) *The ecology of fire* (Cambridge University Press: Cambridge).
+
+Whelan, R.J., Rodgerson, L., Dickman, C.R. & Sutherland, E.F. (2002) Critical life cycles of plants and animals: developing a process-based understanding of population changes in fire-prone landscapes. pp. 94–124. In: R.A. Bradstock, J.E. Williams & A.M. Gill (eds.) *Flammable Australia: The fire regimes and biodiversity of a continent.* (Cambridge University Press: Cambridge).
+
+<!-- PAGE BREAK -->
+
+Whelan, R.J. & York, J. (1998) Post-fire germination of *Hakea sericea* and *Petrophile sessilis* after spring burning. *Australian Journal of Botany* 46: 367–376.
+
+Williams, J.E. & Gill, A.M. (1995) *The impact of fire regimes on native forests in eastern New South Wales. Environmental Heritage Monograph Series No. 2* (NSW National Parks and Wildlife Service: Hurstville).
+
+Williams, J.E., Whelan, R.J. & Gill, A.M. (1994) Fire and environmental heterogeneity in southern temperate forest ecosystems: implications for management. *Australian Journal of Botany* 42: 125–137.
+
+Williams, P.R. & Clarke, P.J. (2006) Fire history and soil gradients generate floristic patterns in montane sedgelands and wet heaths of Gibraltar Range National Park. *Proceedings of the Linnean Society of New South Wales* 127: 27–38.
+
+Zammit, C. (1988) Dynamics of resprouting in the lignotuberous shrub *Banksia oblongifolia*. *Australian Journal of Ecology* 13: 311–320.
+
+Zammit, C. & Westoby, M. (1987) Population structure and reproductive status of two *Banksia* shrubs at various times after fire. *Vegetatio* 70: 11–20.
 
 Manuscript accepted 31 March 2009
 
-#### **Appendix 1. Observations on fire responses (after 100% leaf scorch) of vascular plants in the Lane Cove River (LCR) (observations mainly Jan 1994 – Oct 1999) and Narrabeen Lagoon (NL) (Mar – Oct 1994) catchments, following the fires of January 1994.**
+**Appendix 1. Observations on fire responses (after 100% leaf scorch) of vascular plants in the Lane Cove River (LCR) (observations mainly Jan 1994 – Oct 1999) and Narrabeen Lagoon (NL) (Mar – Oct 1994) catchments, following the fires of January 1994.**
 
 **R** = majority of adult plants resprouted after the fires;
 
@@ -239,9 +588,7 @@ Note: 'possibly' = say 50–70% sure of observation; 'probably' = say 80–90% s
 
 **Seedlings first observed** = first time seedlings noticed (adv = advanced seedlings).
 
-**First flowering and fruiting times**(or spore production) after the fires are shown for resprouted plants (Resp) and plants from seed. (If unclear
-
-whether plants grew from seed or resprouted, then time of first flowering or fruiting bridges both columns and is underlined).
+**First flowering and fruiting times**(or spore production) after the fires are shown for resprouted plants (Resp) and plants from seed. (If unclear whether plants grew from seed or resprouted, then time of first flowering or fruiting bridges both columns and is underlined).
 
 Flowering time in **bold type** = sizable proportion of population was flowering (e.g. when first flowering involved only a few plants).
 
@@ -251,87 +598,1098 @@ Flowering time in **bold type** = sizable proportion of population was flowering
 
 \* = exotic species (introduced plants growing in bushland, or in weed thickets and patches of weeds in close proximity to bushland).
 
-Other abbreviations: **grn**. = green fruit; **imm**. = immature fruit; **ri**. = ripe fruit; **(shd)** = shedding seed or spores; **w** = weeks**; y** = year(s); **m.i.f**. = moderate intensity fire; **(1)** = one plant; **buds** = flowers in bud; **prob.** = probably; **c.**= approximately.
+Other abbreviations: **grn**. = green fruit; **imm**. = immature fruit; **ri**. = ripe fruit; **(shd)** = shedding seed or spores; **w** = weeks; **y** = year(s); **m.i.f**. = moderate intensity fire; **(1)** = one plant; **buds** = flowers in bud; **prob.** = probably; **c.**= approximately.
 
-<table><thead><tr><th></th><th>Fire Response Seedlings</th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td>First flowering First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR NL</td><td>Resp Seed Resp Seed</td><td>Primary Secondary</td></tr><tr><td>Adiantum aethiopicum</td><td>(s.lat.) R R</td><td>50w</td><td>c.1y</td></tr><tr><td>Adiantum hispidulum</td><td>R</td><td>41w</td><td>41w–(shd)</td></tr><tr><td>Asplenium australasicum</td><td>K</td><td></td><td></td></tr><tr><td>Asplenium flabellifolium</td><td>R R</td><td>26w</td><td>26w</td></tr><tr><td>Blechnum ambiguum</td><td>R R</td><td>50w</td><td>63w–(shd)</td></tr><tr><td>Blechnum camfieldii</td><td>R</td><td>38w</td><td>38w</td></tr><tr><td>Blechnum cartilagineum</td><td>R R</td><td>10w</td><td>10w–(shd)</td></tr><tr><td>Blechnum indicum</td><td>R R</td><td>10w</td><td>10w–(shd)</td></tr><tr><td>Blechnum nudum</td><td>R</td><td>33w</td><td>33w–(shd)</td></tr><tr><td>Doodia aspera</td><td>R R</td><td>23w</td><td>23w</td></tr><tr><td>Doodia caudata</td><td>R</td><td>23w</td><td>23w</td></tr><tr><td>Doodia linearis</td><td>R</td><td>15w</td><td>29w–(shd)</td></tr><tr><td>Cyathea australis</td><td>R</td><td>49w</td><td>c.1y</td></tr><tr><td>Davallia solida var. pyxidata</td><td>K / r K / r</td><td></td><td></td></tr><tr><td>*Nephrolepis cordifolia</td><td>R / k R</td><td></td><td></td></tr><tr><td>Histiopteris incisa</td><td>R R</td><td></td><td></td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| **PTERIDOPHYTES** | | | | | | | | | |
+| **Adiantaceae** | | | | | | | | | |
+| Adiantum aethiopicum (s.lat.) | R | R |  |  |  | 50w |  |  | c.1y |
+| Adiantum hispidulum | R |  |  |  |  | 41w |  |  | 41w–(shd) |
+| **Aspleniaceae** | | | | | | | | | |
+| Asplenium australasicum | K |  |  |  |  |  |  |  |  |
+| Asplenium flabellifolium | R | R |  |  |  | 26w |  |  | 26w |
+| **Blechnaceae** | | | | | | | | | |
+| Blechnum ambiguum | R | R |  |  |  | 50w |  |  | 63w–(shd) |
+| Blechnum camfieldii |  | R |  |  |  | 38w |  |  | 38w |
+| Blechnum cartilagineum | R | R |  |  |  | 10w |  |  | 10w–(shd) |
+| Blechnum indicum | R | R |  |  |  | 10w |  |  | 10w–(shd) |
+| Blechnum nudum | R |  |  |  |  | 33w |  |  | 33w–(shd) |
+| Doodia aspera | R | R |  |  |  | 23w |  |  | 23w |
+| Doodia caudata | R |  |  |  |  | 23w |  |  | 23w |
+| Doodia linearis | R |  |  |  |  | 15w |  |  | 29w–(shd) |
+| **Cyatheaceae** | | | | | | | | | |
+| Cyathea australis | R |  |  |  |  | 49w |  |  | c.1y |
+| **Davalliaceae** | | | | | | | | | |
+| Davallia solida var. pyxidata | K/r | K/r |  |  |  |  |  |  |  |
+| *Nephrolepis cordifolia | R/k | R |  |  |  |  |  |  |  |
+| **Dennstaedtiaceae** | | | | | | | | | |
+| Histiopteris incisa | R | R |  |  |  |  |  |  |  |
 
-{15}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Hypolepis muelleri</th><th>R</th><th></th><th></th><th>44w–grn</th><th></th></tr></thead><tbody><tr><td>Pteridium esculentum</td><td>R</td><td>R</td><td></td><td>10w</td><td>10w–(shd)</td></tr><tr><td>Calochlaena dubia</td><td>R</td><td>R</td><td></td><td>50w</td><td>c.1y</td></tr><tr><td>Gleichenia dicarpa</td><td>R / k</td><td></td><td></td><td></td><td></td></tr><tr><td>Gleichenia microphylla</td><td>R</td><td></td><td></td><td></td><td></td></tr><tr><td>Gleichenia rupestris</td><td>R</td><td>pR</td><td></td><td></td><td></td></tr><tr><td>Sticherus flabellatus</td><td>K / r</td><td>K / R</td><td></td><td>35w–grn</td><td></td></tr><tr><td>Grammitis ?stenophylla</td><td></td><td>K</td><td></td><td></td><td></td></tr><tr><td>Hymenophyllum cupressiforme</td><td></td><td>K</td><td></td><td></td><td></td></tr><tr><td>Lindsaea linearis</td><td>R</td><td></td><td></td><td>50w</td><td>c.1y</td></tr><tr><td>Lindsaea microphylla</td><td>R</td><td>R</td><td></td><td>21w</td><td>21–50w</td></tr><tr><td>Lycopodiella lateralis</td><td></td><td>pK</td><td></td><td></td><td></td></tr><tr><td>Todea barbara</td><td>R</td><td>R</td><td></td><td>10w</td><td>10w</td></tr><tr><td>Platycerium bifurcatum</td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td>Pyrrosia rupestris</td><td>K</td><td>K</td><td></td><td></td><td></td></tr><tr><td>Psilotum nudum</td><td>K / r</td><td>K / r</td><td></td><td>50w–grn</td><td></td></tr><tr><td>Pteris tremula</td><td>pR</td><td></td><td></td><td></td><td></td></tr><tr><td>*Pteris vittata</td><td>R</td><td></td><td></td><td>23w</td><td></td></tr><tr><td>Schizaea bifida (s.lat.)</td><td>R</td><td>R</td><td></td><td>63w</td><td></td></tr><tr><td>Schizaea rupestris</td><td>pR</td><td>R</td><td></td><td>38w–grn</td><td></td></tr><tr><td>Selaginella uliginosa</td><td></td><td>R</td><td></td><td></td><td></td></tr><tr><td>Cheilanthes distans</td><td></td><td>?K</td><td></td><td>140w</td><td></td></tr><tr><td>Cheilanthes sieberi</td><td>R</td><td></td><td></td><td>23w</td><td>23w</td></tr><tr><td>Pellaea falcata</td><td>R</td><td></td><td></td><td></td><td></td></tr><tr><td>Christella dentata</td><td>R</td><td></td><td></td><td>23w</td><td>23w</td></tr><tr><td>Callitris muelleri</td><td></td><td>K 32w</td><td></td><td></td><td></td></tr><tr><td>*Pinus radiata</td><td></td><td>K</td><td></td><td></td><td></td></tr><tr><td>Podocarpus spinulosus</td><td>R</td><td>R</td><td>92w</td><td>100w</td><td>c.2y</td></tr><tr><td>Macrozamia communis</td><td>R</td><td>R</td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.1y)</td><td>R</td><td></td><td>6w</td><td>11w</td><td>26w–(shd)</td></tr><tr><td>Pseuderanthemum variabile</td><td>R</td><td>R</td><td>7w</td><td>10w</td><td>20w–(shd)</td></tr><tr><td>*Thunbergia alata</td><td>pR</td><td></td><td>26w</td><td></td><td></td></tr><tr><td></td><td></td><td>Fire Response Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Hypolepis muelleri | R |  |  |  |  | 44w–grn |  |  |  |
+| Pteridium esculentum | R | R |  |  |  | 10w |  |  | 10w–(shd) |
+| **Dicksoniaceae** | | | | | | | | | |
+| Calochlaena dubia | R | R |  |  |  | 50w |  |  | c.1y |
+| **Gleicheniaceae** | | | | | | | | | |
+| Gleichenia dicarpa | R/k |  |  |  |  |  |  |  |  |
+| Gleichenia microphylla | R |  |  |  |  |  |  |  |  |
+| Gleichenia rupestris | R | pR |  |  |  |  |  |  |  |
+| Sticherus flabellatus | K/r | K/R |  |  |  | 35w–grn |  |  |  |
+| **Grammitaceae** | | | | | | | | | |
+| Grammitis ?stenophylla |  | K |  |  |  |  |  |  |  |
+| **Hymenophyllaceae** | | | | | | | | | |
+| Hymenophyllum cupressiforme |  | K |  |  |  |  |  |  |  |
+| **Lindsaeaceae** | | | | | | | | | |
+| Lindsaea linearis | R |  |  |  |  | 50w |  |  | c.1y |
+| Lindsaea microphylla | R | R |  |  |  | 21w |  |  | 21–50w |
+| **Lycopodiaceae** | | | | | | | | | |
+| Lycopodiella lateralis |  | pK |  |  |  |  |  |  |  |
+| **Osmundaceae** | | | | | | | | | |
+| Todea barbara | R | R |  |  |  | 10w |  |  | 10w |
+| **Polypodiaceae** | | | | | | | | | |
+| Platycerium bifurcatum | K |  |  |  |  |  |  |  |  |
+| Pyrrosia rupestris | K | K |  |  |  |  |  |  |  |
+| **Psilotaceae** | | | | | | | | | |
+| Psilotum nudum | K/r | K/r |  |  |  | 50w–grn |  |  |  |
+| **Pteridaceae** | | | | | | | | | |
+| Pteris tremula | pR |  |  |  |  |  |  |  |  |
+| *Pteris vittata | R |  |  |  |  | 23w |  |  |  |
+| **Schizaeaceae** | | | | | | | | | |
+| Schizaea bifida (s.lat.) | R | R |  |  |  | 63w |  |  |  |
+| Schizaea rupestris | pR | R |  |  |  | 38w–grn |  |  |  |
+| **Selaginellaceae** | | | | | | | | | |
+| Selaginella uliginosa |  | R |  |  |  |  |  |  |  |
+| **Sinopteridaceae** | | | | | | | | | |
+| Cheilanthes distans |  | ?K |  |  |  | <u>140w</u> | <u>140w</u> |  |  |
+| Cheilanthes sieberi | R |  |  |  |  | 23w |  |  | 23w |
+| Pellaea falcata | R |  |  |  |  |  |  |  |  |
+| **Thelypteridaceae** | | | | | | | | | |
+| Christella dentata | R |  |  |  |  | 23w |  |  | 23w |
+| **GYMNOSPERMS** | | | | | | | | | |
+| **Cupressaceae** | | | | | | | | | |
+| Callitris muelleri |  | K | 32w |  |  |  |  |  |  |
+| **Pinaceae** | | | | | | | | | |
+| *Pinus radiata |  | K |  |  |  |  |  |  |  |
+| **Podocarpaceae** | | | | | | | | | |
+| Podocarpus spinulosus | R | R |  | 92w |  | 100w |  |  | c.2y |
+| **Zamiaceae** | | | | | | | | | |
+| Macrozamia communis | R | R |  |  |  |  |  |  |  |
+| **DICOTYLEDONS** | | | | | | | | | |
+| **Acanthaceae** | | | | | | | | | |
+| Brunoniella pumilio (poss.pk.pf.flower.c.1y) | R |  |  | 6w |  | 11w |  |  | 26w–(shd) |
+| Pseuderanthemum variabile | R | R |  | 7w |  | 10w |  |  | 20w–(shd) |
+| *Thunbergia alata | pR |  |  | 26w |  |  |  |  |  |
 
-{16}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Acer negundo</th><th>R</th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Tetragonia tetragonioides</td><td>?K</td><td></td><td>7w</td><td>39w</td><td>39w–grn</td><td></td><td></td></tr><tr><td>Alternanthera denticulata</td><td>R</td><td></td><td></td><td>10w</td><td></td><td></td><td></td></tr><tr><td>*Amaranthus hybridus</td><td>?K</td><td></td><td></td><td>12w</td><td>19w</td><td></td><td></td></tr><tr><td>*Amaranthus viridus</td><td>?K</td><td></td><td>9w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Prunus cerasus</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Prunus persica</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Toxicodendron succedaneum</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>K</td><td>K</td><td>15w</td><td>41w</td><td>56w</td><td>56w–(shd)</td><td></td></tr><tr><td>Actinotus minor</td><td>K</td><td>K</td><td>24w</td><td>42w</td><td></td><td></td><td></td></tr><tr><td>Centella asiatica</td><td>R</td><td></td><td></td><td></td><td>10w</td><td></td><td></td></tr><tr><td>*Ciclospermum leptophyllum</td><td></td><td></td><td></td><td>28w</td><td>43w–grn</td><td></td><td></td></tr><tr><td>*Eryngium pandanifolium</td><td>R</td><td></td><td></td><td>50w–buds</td><td></td><td></td><td></td></tr><tr><td>*Foeniculum vulgare</td><td>R</td><td>R</td><td>9w(1)</td><td>50w–buds</td><td>63w</td><td></td><td>63w–(shd)</td></tr><tr><td>*Hydrocotyle bonariensis</td><td>R</td><td>pR</td><td></td><td>11w</td><td>20w</td><td></td><td></td></tr><tr><td>Hydrocotyle peduncularis</td><td>R</td><td></td><td>15w</td><td>10w</td><td>16w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>R</td><td>R</td><td>15w</td><td>56w</td><td>63w</td><td></td><td>63w</td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R / k</td><td>R</td><td>24w</td><td>63w</td><td>64w–imm</td><td></td><td></td></tr><tr><td>Platysace stephensonii</td><td></td><td>R</td><td>17w</td><td></td><td></td><td></td><td></td></tr><tr><td>Trachymene incisa</td><td></td><td>R</td><td></td><td>35w</td><td>35w</td><td></td><td>35+w–(shd)</td></tr><tr><td>(prob.pk.pf.fi.flower.c.4y)</td><td>K / r</td><td>K</td><td>22w</td><td>85w</td><td></td><td></td><td></td></tr><tr><td>Xanthosia tridentata</td><td>K</td><td></td><td>20w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Nerium oleander</td><td>R</td><td>R</td><td></td><td>150w</td><td></td><td></td><td></td></tr><tr><td>Parsonsia straminea</td><td></td><td>K / R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Vinca major</td><td>R</td><td></td><td></td><td>36w</td><td></td><td></td><td></td></tr><tr><td>Astrotricha floccosa</td><td></td><td>K</td><td>13w</td><td></td><td></td><td></td><td></td></tr><tr><td>Astrotricha latifolia</td><td>K</td><td></td><td>44w</td><td>146w</td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3y)</td><td>K / r</td><td></td><td>43w</td><td>92w</td><td>101w–imm</td><td>c.2–3y</td><td></td></tr><tr><td>*Hedera helix</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Polyscias sambucifolia</td><td>R</td><td></td><td>38w</td><td>51w,101w</td><td>114w–ri</td><td></td><td>c.2–3y</td></tr><tr><td>*Araujia sericifera</td><td>R</td><td>R</td><td>10w</td><td></td><td>61w–(grn)</td><td></td><td></td></tr><tr><td>*Gomphocarpus ?fruticosus</td><td></td><td></td><td></td><td>38w(buds)</td><td></td><td></td><td></td></tr><tr><td>Marsdenia suaveolens</td><td>R</td><td>R</td><td></td><td>10w</td><td>32w</td><td></td><td>32+w</td></tr><tr><td>Tylophora barbata</td><td>R</td><td></td><td></td><td>43w</td><td></td><td></td><td></td></tr><tr><td>*Ageratina adenophora</td><td>R</td><td>R</td><td>42w</td><td>38w</td><td>44w</td><td></td><td>44w–(shd)</td></tr><tr><td>*Ageratina riparia</td><td>R</td><td></td><td>63w</td><td>34w</td><td>38w</td><td></td><td>40w–(shd)</td></tr><tr><td>*Ageratum houstonianum</td><td></td><td>?K</td><td></td><td>38w</td><td></td><td></td><td></td></tr><tr><td>*Ambrosia artemesiifolia</td><td></td><td>?R</td><td></td><td>13w(1)</td><td></td><td></td><td></td></tr><tr><td>*Arctotheca calendula</td><td></td><td></td><td></td><td>38w</td><td></td><td></td><td></td></tr><tr><td>*Aster subulatus</td><td></td><td></td><td></td><td>61w</td><td>63w–(shd)</td><td></td><td></td></tr><tr><td>*Bidens pilosa</td><td>pK</td><td>pK</td><td>7w</td><td>13w</td><td>19w</td><td>19w–(shd)</td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| **Aceraceae** | | | | | | | | | |
+| *Acer negundo | R |  |  |  |  |  |  |  |  |
+| **Aizoaceae** | | | | | | | | | |
+| Tetragonia tetragonioides | ?K |  | 7w |  | 39w |  | 39w–grn |  |  |
+| **Amaranthaceae** | | | | | | | | | |
+| Alternanthera denticulata | R |  |  | 10w |  |  |  |  |  |
+| *Amaranthus hybridus | ?K |  |  |  | 12w |  | 19w |  |  |
+| *Amaranthus viridus | ?K |  | 9w |  |  |  |  |  |  |
+| **Amygdalaceae** | | | | | | | | | |
+| *Prunus cerasus | R |  |  |  |  |  |  |  |  |
+| *Prunus persica | R | R |  |  |  |  |  |  |  |
+| **Anacardiaceae** | | | | | | | | | |
+| *Toxicodendron succedaneum | R |  |  |  |  |  |  |  |  |
+| **Apiaceae** | | | | | | | | | |
+| Actinotus helianthi (prob.pk.pf.flower.c.2–3y) | K | K | 15w |  | 41w |  | 56w | 56w–(shd) |  |
+| Actinotus minor | K | K | 24w |  | 42w |  |  |  |  |
+| Centella asiatica | R |  |  |  |  | 10w |  |  |  |
+| *Ciclospermum leptophyllum |  |  |  | <u>28w</u> | <u>28w</u> | <u>43w–grn</u> | <u>43w–grn</u> |  |  |
+| *Eryngium pandanifolium | R |  |  | 50w–buds |  |  |  |  |  |
+| *Foeniculum vulgare | R | R | 9w(1) | 50w–buds |  | 63w |  |  | 63w–(shd) |
+| *Hydrocotyle bonariensis | R | pR |  | 11w |  | 20w |  |  |  |
+| Hydrocotyle peduncularis | R |  | 15w | 10w |  | 16w |  |  |  |
+| Platysace lanceolata (prob.pk.pf.flower.c.3–5y) | R | R | 15w | 56w |  | 63w |  |  | 63w |
+| Platysace linearifolia (prob.pk.pf.flower.c.2–3y) | R/k | R | 24w | 63w |  | 64w–imm |  |  |  |
+| Platysace stephensonii |  | R | 17w |  |  |  |  |  |  |
+| Trachymene incisa |  | R |  | 35w |  | 35w |  |  | 35+w–(shd) |
+| Xanthosia pilosa (prob.pk.pf.fi.flower.c.4y) | K/r | K | 22w |  | 85w |  |  |  |  |
+| Xanthosia tridentata | K |  | 20w |  |  |  |  |  |  |
+| **Apocynaceae** | | | | | | | | | |
+| *Nerium oleander | R | R |  | 150w |  |  |  |  |  |
+| Parsonsia straminea |  | K/R |  |  |  |  |  |  |  |
+| *Vinca major | R |  |  | 36w |  |  |  |  |  |
+| **Araliaceae** | | | | | | | | | |
+| Astrotricha floccosa |  | K | 13w |  |  |  |  |  |  |
+| Astrotricha latifolia | K |  | 44w |  | 146w |  |  |  |  |
+| Astrotricha longifolia (prob.pk.pf.flower.c.3y) | K/r |  | 43w | <u>92w</u> | <u>92w</u> | <u>101w–imm</u> | <u>101w–imm</u> | c.2–3y |  |
+| *Hedera helix | R |  |  |  |  |  |  |  |  |
+| Polyscias sambucifolia | R |  | 38w | 51w,101w |  | 114w–ri |  |  | c.2–3y |
+| **Asclepiadaceae** | | | | | | | | | |
+| *Araujia sericifera | R | R | 10w |  |  | <u>61w–(grn)</u> | <u>61w–(grn)</u> |  |  |
+| *Gomphocarpus ?fruticosus |  |  |  | <u>38w(buds)</u> | <u>38w(buds)</u> |  |  |  |  |
+| Marsdenia suaveolens | R | R |  | 10w |  | 32w |  |  | 32+w |
+| Tylophora barbata | R |  |  | 43w |  |  |  |  |  |
+| **Asteraceae** | | | | | | | | | |
+| *Ageratina adenophora | R | R | 42w | 38w |  | 44w |  |  | 44w–(shd) |
+| *Ageratina riparia | R |  | 63w | 34w |  | 38w |  |  | 40w–(shd) |
+| *Ageratum houstonianum |  | ?K |  |  | 38w |  |  |  |  |
+| *Ambrosia artemesiifolia |  | ?R |  | <u>13w(1)</u> | <u>13w(1)</u> |  |  |  |  |
+| *Arctotheca calendula |  |  |  | <u>38w</u> | <u>38w</u> |  |  |  |  |
+| *Aster subulatus |  |  |  | <u>61w</u> | <u>61w</u> | <u>63w–(shd)</u> | <u>63w–(shd)</u> |  |  |
+| *Bidens pilosa | pK | pK | 7w |  | 13w |  | 19w | 19w–(shd) |  |
 
-{17}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Bidens subalternans</th><th>pK</th><th>12w</th><th>12w</th><th>16w–grn.</th><th></th></tr></thead><tbody><tr><td>*Bidens tripartita</td><td>pK</td><td></td><td>15w</td><td>15w</td><td></td></tr><tr><td>var . angustifolia</td><td>pR</td><td></td><td>11w</td><td>16w–(shd)</td><td>16w–(shd)</td></tr><tr><td>Cassinia aculeata</td><td>K</td><td></td><td></td><td>136w</td><td>c.3y(shd)</td></tr><tr><td>Cassinia denticulata</td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td>Cassinia longifolia</td><td></td><td></td><td>202w(buds)</td><td></td><td></td></tr><tr><td>subsp. monilifera</td><td>K</td><td>19w</td><td>88w</td><td>101w</td><td>c.2y(shd)</td></tr><tr><td>*Cirsium vulgare</td><td>?R</td><td></td><td>26 &amp; 38w</td><td>46,51w–(shd)</td><td></td></tr><tr><td>*Conyza bonariensis</td><td>pK</td><td></td><td>38w</td><td>50w</td><td>61w–(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R</td><td>10w</td><td>42w</td><td></td><td></td></tr><tr><td>Cotula australis</td><td>pK</td><td></td><td></td><td>15w</td><td></td></tr><tr><td>*Crassocephalum crepidioides</td><td>pK</td><td>15w</td><td>15w</td><td>15w</td><td>39w</td></tr><tr><td>*Delairea odorata</td><td>pK</td><td></td><td>125w</td><td></td><td></td></tr><tr><td>*Dimorphotheca pluvialis</td><td></td><td></td><td>36w</td><td></td><td></td></tr><tr><td>*Dittrichia graveolens</td><td></td><td></td><td>63w</td><td></td><td></td></tr><tr><td>*Erechtites valerianifolia</td><td>pK</td><td></td><td>28w</td><td>30w</td><td>39w</td></tr><tr><td>*Erigeron karvinskianus</td><td>R</td><td></td><td>10w</td><td>27w</td><td>27w–(shd)</td></tr><tr><td>Euchiton sphaericus</td><td></td><td></td><td>43w</td><td>43w</td><td></td></tr><tr><td>*Facelis retusa</td><td></td><td></td><td></td><td>43w–(shd)</td><td></td></tr><tr><td>*Galinsoga parviflora</td><td>pK</td><td>7w</td><td>12w</td><td>15w</td><td>15w</td></tr><tr><td>*Gamochaeta americana</td><td>K / R</td><td></td><td></td><td>10w</td><td>10w–(shd)</td></tr><tr><td>*Gamochaeta pensylvanica</td><td>pK</td><td>15w</td><td>15w</td><td>15w</td><td>15w</td></tr><tr><td>*Gamochaeta spicata</td><td>pK</td><td></td><td></td><td>27w</td><td>27w–(shd)</td></tr><tr><td>*Helianthus annuus</td><td></td><td></td><td>12w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3y)</td><td>?K pK</td><td></td><td>87w</td><td>97w</td><td>c.2y(shd)</td></tr><tr><td>Helichrysum rutidolepis</td><td>R</td><td></td><td>18w</td><td>18w</td><td></td></tr><tr><td>Helichrysum scorpioides</td><td>R</td><td></td><td>16w</td><td>23w</td><td>43w–(shd)</td></tr><tr><td>*Hypochaeris radicata</td><td>R</td><td></td><td>10w</td><td>10w</td><td>10w</td></tr><tr><td>*Lactuca serriola</td><td>?K</td><td></td><td>50w</td><td>50w</td><td></td></tr><tr><td>Lagenifera gracilis</td><td>R</td><td></td><td>9w</td><td>12w</td><td>12w–(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.4–5y)</td><td>K/r</td><td></td><td>85w</td><td>94w</td><td>c.2–3y(shd)</td></tr><tr><td>Olearia tomentosa</td><td>K / r</td><td>35w</td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–4y)</td><td>K / r</td><td>36w</td><td>100w</td><td>104w</td><td>c.2y(shd)</td></tr><tr><td>Pseudognaphalium luteoalbum</td><td></td><td></td><td>41w</td><td>43w</td><td>43w–(shd)</td></tr><tr><td>*Roldana petasitis</td><td>R R</td><td></td><td></td><td>38w</td><td></td></tr><tr><td>var. hispidulus</td><td>pK</td><td></td><td>38w</td><td>44w</td><td>44w–(shd)</td></tr><tr><td>*Senecio madagascariensis</td><td>pK</td><td></td><td>15w</td><td>20w</td><td>26w–(shd)</td></tr><tr><td>Senecio minimus</td><td></td><td></td><td>43w–buds</td><td></td><td></td></tr><tr><td>*Senecio pterophorus</td><td></td><td></td><td>154w</td><td></td><td></td></tr><tr><td>Sigesbeckia orientalis</td><td>pK</td><td>11w</td><td>11w</td><td>16w</td><td>16w–ri.</td></tr><tr><td>*Solidago canadensis</td><td>R</td><td></td><td>16w</td><td>33w</td><td>33w–(shd)</td></tr><tr><td>*Soliva sessilis</td><td></td><td></td><td></td><td>43w(grn)</td><td></td></tr><tr><td>*Sonchus oleraceus</td><td>pK</td><td>8w</td><td>15w</td><td>15w</td><td>15w</td></tr><tr><td>*Tagetes minuta</td><td>pK</td><td></td><td>20w</td><td>20w</td><td>20w</td></tr><tr><td>*Taraxacum officianale</td><td>R</td><td></td><td>11w</td><td>25w</td><td>25w–(shd)</td></tr><tr><td>*Xanthium occidentale</td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td>var. australasica</td><td>R / K</td><td></td><td></td><td></td><td></td></tr><tr><td>*Impatiens walleriana</td><td>pK</td><td>18w</td><td>18w</td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| *Bidens subalternans | pK |  | 12w |  | 12w |  | 16w–grn. |  |  |
+| *Bidens tripartita | pK |  |  |  | 15w |  | 15w |  |  |
+| Brachyscome angustifolia var. angustifolia | pR |  |  | 11w |  | 16w–(shd) |  |  | 16w–(shd) |
+| Cassinia aculeata | K |  |  |  |  |  | 136w | c.3y(shd) |  |
+| Cassinia denticulata | K |  |  |  |  |  |  |  |  |
+| Cassinia longifolia |  |  |  | <u>202w(buds)</u> | <u>202w(buds)</u> |  |  |  |  |
+| *Chrysanthemoides monilifera subsp. monilifera | K |  | 19w |  | 88w |  | 101w | c.2y(shd) |  |
+| *Cirsium vulgare | ?R |  |  | <u>26 & 38w</u> | <u>26 & 38w</u> | <u>46,51w–(shd)</u> | <u>46,51w–(shd)</u> |  |  |
+| *Conyza bonariensis | pK |  |  |  | 38w |  | 50w | 61w–(shd) |  |
+| *Coreopsis lanceolata (prob.pk.pf.flower.c.2–3y) |  | R | 10w | <u>42w</u> | <u>42w</u> |  |  |  |  |
+| Cotula australis | pK |  |  |  |  |  | 15w |  |  |
+| *Crassocephalum crepidioides | pK |  | 15w |  | 15w |  | 15w | 39w |  |
+| *Delairea odorata | pK |  |  | <u>125w</u> | <u>125w</u> |  |  |  |  |
+| *Dimorphotheca pluvialis |  |  |  | <u>36w</u> | <u>36w</u> |  |  |  |  |
+| *Dittrichia graveolens |  |  |  | <u>63w</u> | <u>63w</u> |  |  |  |  |
+| *Erechtites valerianifolia | pK |  |  |  | 28w |  | 30w | 39w |  |
+| *Erigeron karvinskianus | R |  |  | 10w |  | 27w |  |  | 27w–(shd) |
+| Euchiton sphaericus |  |  |  | <u>43w</u> | <u>43w</u> | <u>43w</u> | <u>43w</u> |  |  |
+| *Facelis retusa |  |  |  |  |  | <u>43w–(shd)</u> | <u>43w–(shd)</u> |  |  |
+| *Galinsoga parviflora | pK |  | 7w |  | 12w |  | 15w | 15w |  |
+| *Gamochaeta americana | K/R |  |  |  |  | 10w |  |  | 10w–(shd) |
+| *Gamochaeta pensylvanica | pK |  | 15w |  | 15w |  | 15w | 15w |  |
+| *Gamochaeta spicata | pK |  |  |  |  |  | 27w | 27w–(shd) |  |
+| *Helianthus annuus |  |  |  |  | 12w |  |  |  |  |
+| Helichrysum elatum (prob.pk.pf.flower.c.3y) | ?K | pK |  |  | 87w |  | 97w | c.2y(shd) |  |
+| Helichrysum rutidolepis | R |  |  | 18w |  | 18w |  |  |  |
+| Helichrysum scorpioides | R |  |  | 16w |  | 23w |  |  | 43w–(shd) |
+| *Hypochaeris radicata | R |  |  | 10w |  | 10w |  |  | 10w |
+| *Lactuca serriola | ?K |  |  |  | 50w |  | 50w |  |  |
+| Lagenifera gracilis | R |  |  | 9w |  | 12w |  |  | 12w–(shd) |
+| Olearia microphylla (prob.pk.pf.flower.c.4–5y) | K/r |  |  |  | 85w |  | 94w | c.2–3y(shd) |  |
+| Olearia tomentosa |  | K/r | 35w |  |  |  |  |  |  |
+| Ozothamnus diosmifolius (prob.pk.pf.flower.c.3–4y) | K/r |  | 36w |  | 100w |  | 104w | c.2y(shd) |  |
+| Pseudognaphalium luteoalbum |  |  |  |  | 41w |  | 43w | 43w–(shd) |  |
+| *Roldana petasitis | R | R |  |  |  | 38w |  |  |  |
+| Senecio hispidulus var. hispidulus | pK |  |  |  | 38w |  | 44w | 44w–(shd) |  |
+| *Senecio madagascariensis | pK |  |  |  | 15w |  | 20w | 26w–(shd) |  |
+| Senecio minimus |  |  |  |  | 43w–buds |  |  |  |  |
+| *Senecio pterophorus |  |  |  | <u>154w</u> | <u>154w</u> |  |  |  |  |
+| Sigesbeckia orientalis | pK |  | 11w |  | 11w |  | 16w | 16w–ri. |  |
+| *Solidago canadensis | R |  |  | 16w |  | 33w |  |  | 33w–(shd) |
+| *Soliva sessilis |  |  |  |  |  | <u>43w(grn)</u> | <u>43w(grn)</u> |  |  |
+| *Sonchus oleraceus | pK |  | 8w |  | 15w |  | 15w | 15w |  |
+| *Tagetes minuta |  | pK |  |  | 20w |  | 20w | 20w |  |
+| *Taraxacum officianale | R |  |  | 11w |  | 25w |  |  | 25w–(shd) |
+| *Xanthium occidentale | K |  |  |  |  |  |  |  |  |
+| **Avicenniaceae** | | | | | | | | | |
+| Avicennia marina var. australasica | R/K |  |  |  |  |  |  |  |  |
+| **Balsaminaceae** | | | | | | | | | |
+| *Impatiens walleriana | pK |  | 18w |  | 18w |  |  |  |  |
 
-{18}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Anredera cordifolia</th><th>pR</th><th>R</th><th>19w(1)</th><th></th><th></th><th></th><th>Note: aerial tubers forming within 39w of fire.</th><th></th><th></th></tr></thead><tbody><tr><td>Bauera ?microphylla</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Bauera rubioides</td><td>K</td><td>K / r</td><td>23w</td><td></td><td>90w</td><td></td><td>198w</td><td>c.4y</td><td></td></tr><tr><td>Pandorea pandorana</td><td>R</td><td></td><td></td><td>26w</td><td></td><td>50w</td><td></td><td></td><td>c.1y–(shd)</td></tr><tr><td>*Echium plantagineum</td><td></td><td></td><td></td><td></td><td>38w</td><td></td><td>38w(grn)</td><td></td><td></td></tr><tr><td>*Brassica fruticulosa</td><td>pK</td><td></td><td>12w</td><td></td><td>12w</td><td></td><td>28w</td><td>28w–(shd)</td><td></td></tr><tr><td>*Brassica juncea</td><td>pK</td><td></td><td></td><td></td><td>43w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Brassica tournefortii</td><td></td><td>?K</td><td></td><td></td><td>42w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Capsella bursa–pastoris</td><td></td><td>pK</td><td>20w</td><td></td><td>20w</td><td></td><td>20w</td><td>20w–grn</td><td></td></tr><tr><td>*Cardamine flexuosa</td><td>pK</td><td></td><td>15w</td><td></td><td></td><td></td><td>15w</td><td>15w–(shd)</td><td></td></tr><tr><td>*Cardamine hirsuta</td><td>pK</td><td></td><td></td><td></td><td>24w</td><td></td><td>24w</td><td>24w</td><td></td></tr><tr><td>*Coronopus didymus</td><td>pK</td><td></td><td>15w</td><td></td><td></td><td></td><td>15w</td><td>15w</td><td></td></tr><tr><td>*Lobularia maratima</td><td>pK</td><td></td><td></td><td></td><td>23w</td><td></td><td></td><td></td><td></td></tr><tr><td>Rorippa gigantea</td><td></td><td></td><td></td><td></td><td>38w</td><td></td><td>38w–imm</td><td></td><td></td></tr><tr><td>*Rorippa nasturtium–aquaticum</td><td>?K</td><td></td><td></td><td></td><td></td><td></td><td>43w–imm</td><td></td><td></td></tr><tr><td>*Buddleja davidii</td><td>R</td><td>R</td><td></td><td>51w</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Buddleja madagascariensis</td><td></td><td>R</td><td></td><td>38w</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Wahlenbergia communis (s.lat.)</td><td></td><td></td><td></td><td></td><td>38w</td><td></td><td>43w–grn.</td><td></td><td></td></tr><tr><td>Wahlenbergia gracilis</td><td>?K</td><td></td><td>24w</td><td></td><td>15w</td><td></td><td>23w–(shd)</td><td></td><td></td></tr><tr><td>*Lonicera japonica</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Cerastium glomeratum</td><td>pK</td><td></td><td>23w</td><td></td><td>23w</td><td></td><td>23w</td><td>23w–(shd)</td><td></td></tr><tr><td>*Petrorhagia velutina</td><td></td><td>pK</td><td></td><td></td><td>38w</td><td></td><td>38w</td><td>44w–(shd)</td><td></td></tr><tr><td>*Polycarpon tetraphyllum</td><td>pK</td><td></td><td></td><td></td><td>43w</td><td></td><td>44w</td><td>44w</td><td></td></tr><tr><td>*Silene gallica var. gallica</td><td>pK</td><td></td><td></td><td></td><td>36w</td><td></td><td>38w</td><td>38w–grn</td><td></td></tr><tr><td>*Stellaria media</td><td>pK</td><td></td><td></td><td></td><td></td><td></td><td>15w</td><td>15w–(shd)</td><td></td></tr><tr><td>Allocasuarina distyla</td><td></td><td>K</td><td>17w</td><td></td><td>86w</td><td></td><td>167w</td><td></td><td></td></tr><tr><td>Allocasuarina littoralis</td><td>K / r</td><td></td><td>10w</td><td>124w</td><td></td><td></td><td>179w</td><td></td><td></td></tr><tr><td>Allocasuarina torulosa</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Casuarina glauca</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Maytenus silvestris</td><td>R</td><td>R</td><td></td><td></td><td></td><td>124w–ri</td><td></td><td></td><td>c.2–3y</td></tr><tr><td>*Atriplex ?prostrata</td><td>pK</td><td></td><td>10w</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Chenopodium album</td><td>pK</td><td>pK</td><td></td><td></td><td></td><td></td><td>20w</td><td></td><td></td></tr><tr><td>Chloanthes stoechadis</td><td></td><td>pK</td><td>10w</td><td></td><td>42w–(1)</td><td></td><td></td><td></td><td></td></tr><tr><td>Hypericum gramineum</td><td>R</td><td></td><td></td><td>11w</td><td></td><td>38w</td><td></td><td></td><td>38w–(shd)</td></tr><tr><td>*Hypericum perforatum</td><td>R</td><td></td><td></td><td>43w</td><td></td><td>50w</td><td></td><td></td><td>63w–(shd)</td></tr><tr><td>Calystegia marginata</td><td>pK</td><td></td><td>9w</td><td></td><td>41w</td><td></td><td>46w</td><td>46w–grn</td><td></td></tr><tr><td>Convolvulus erubescens</td><td></td><td></td><td></td><td></td><td></td><td></td><td>51w–(shd)</td><td></td><td></td></tr><tr><td>Dichondra repens (s.lat.)</td><td></td><td></td><td>9w</td><td></td><td></td><td></td><td>18w(1)</td><td></td><td></td></tr><tr><td>*Ipomoea cairica</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Ipomoea indica</td><td>R</td><td>R</td><td></td><td>15w</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>First flowering</td><td></td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp</td><td>Seed</td><td>Resp</td><td>Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| **Basellaceae** | | | | | | | | | |
+| *Anredera cordifolia | pR | R | 19w(1) | Note: aerial tubers forming within 39w of fire. |  |  |  |  |  |
+| **Baueraceae** | | | | | | | | | |
+| Bauera ?microphylla |  | R |  |  |  |  |  |  |  |
+| Bauera rubioides | K | K/r | 23w |  | 90w |  | 198w | c.4y |  |
+| **Bignoniaceae** | | | | | | | | | |
+| Pandorea pandorana | R |  |  | 26w |  | 50w |  |  | c.1y–(shd) |
+| **Boraginaceae** | | | | | | | | | |
+| *Echium plantagineum |  |  |  | <u>38w</u> | <u>38w</u> | <u>38w(grn)</u> | <u>38w(grn)</u> |  |  |
+| **Brassicaceae** | | | | | | | | | |
+| *Brassica fruticulosa | pK |  | 12w |  | 12w |  | 28w | 28w–(shd) |  |
+| *Brassica juncea | pK |  |  |  | 43w |  |  |  |  |
+| *Brassica tournefortii |  | ?K |  |  | 42w |  |  |  |  |
+| *Capsella bursa–pastoris |  | pK | 20w |  | 20w |  | 20w | 20w–grn |  |
+| *Cardamine flexuosa | pK |  | 15w |  |  |  | 15w | 15w–(shd) |  |
+| *Cardamine hirsuta | pK |  |  |  | 24w |  | 24w | 24w |  |
+| *Coronopus didymus | pK |  | 15w |  |  |  | 15w | 15w |  |
+| *Lobularia maratima | pK |  |  |  | 23w |  |  |  |  |
+| Rorippa gigantea |  |  |  |  | 38w |  | 38w–imm |  |  |
+| *Rorippa nasturtium–aquaticum | ?K |  |  |  |  |  | 43w–imm |  |  |
+| **Buddlejaceae** | | | | | | | | | |
+| *Buddleja davidii | R | R |  | 51w |  |  |  |  |  |
+| *Buddleja madagascariensis |  | R |  | 38w |  |  |  |  |  |
+| **Campanulaceae** | | | | | | | | | |
+| Wahlenbergia communis (s.lat.) |  |  |  | <u>38w</u> | <u>38w</u> | <u>43w–grn.</u> | <u>43w–grn.</u> |  |  |
+| Wahlenbergia gracilis | ?K |  | 24w | <u>15w</u> | <u>15w</u> | <u>23w–(shd)</u> | <u>23w–(shd)</u> |  |  |
+| **Caprifoliaceae** | | | | | | | | | |
+| *Lonicera japonica | R | R |  |  |  |  |  |  |  |
+| **Caryophyllaceae** | | | | | | | | | |
+| *Cerastium glomeratum | pK |  | 23w |  | 23w |  | 23w | 23w–(shd) |  |
+| *Petrorhagia velutina |  | pK |  |  | 38w |  | 38w | 44w–(shd) |  |
+| *Polycarpon tetraphyllum | pK |  |  |  | 43w |  | 44w | 44w |  |
+| *Silene gallica var. gallica | pK |  |  |  | 36w |  | 38w | 38w–grn |  |
+| *Stellaria media | pK |  |  |  |  |  | 15w | 15w–(shd) |  |
+| **Casuarinaceae** | | | | | | | | | |
+| Allocasuarina distyla |  | K | 17w |  | 86w |  | 167w |  |  |
+| Allocasuarina littoralis | K/r |  | 10w | 124w |  |  | 179w |  |  |
+| Allocasuarina torulosa | R | R |  |  |  |  |  |  |  |
+| Casuarina glauca | R | R |  |  |  |  |  |  |  |
+| **Celastraceae** | | | | | | | | | |
+| Maytenus silvestris | R | R |  |  |  | 124w–ri |  |  | c.2–3y |
+| **Chenopodiaceae** | | | | | | | | | |
+| *Atriplex ?prostrata | pK |  | 10w |  |  |  |  |  |  |
+| *Chenopodium album | pK | pK |  |  |  |  | 20w |  |  |
+| **Chloanthaceae** | | | | | | | | | |
+| Chloanthes stoechadis |  | pK | 10w |  | 42w–(1) |  |  |  |  |
+| **Clusiaceae** | | | | | | | | | |
+| Hypericum gramineum | R |  |  | 11w |  | 38w |  |  | 38w–(shd) |
+| *Hypericum perforatum | R |  |  | 43w |  | 50w |  |  | 63w–(shd) |
+| **Convolvulaceae** | | | | | | | | | |
+| Calystegia marginata | pK |  | 9w |  | 41w |  | 46w | 46w–grn |  |
+| Convolvulus erubescens |  |  |  |  |  | <u>51w–(shd)</u> | <u>51w–(shd)</u> |  |  |
+| Dichondra repens (s.lat.) |  |  | 9w |  |  | <u>18w(1)</u> | <u>18w(1)</u> |  |  |
+| *Ipomoea cairica |  | R |  |  |  |  |  |  |  |
+| *Ipomoea indica | R | R |  | 15w |  |  |  |  |  |
 
-{19}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Polymeria calycina</th><th>pR</th><th>R</th><th>38w</th><th>56w</th><th></th></tr></thead><tbody><tr><td>*Crassula multicava</td><td></td><td>pR</td><td>38w</td><td></td><td></td></tr><tr><td>Crassula sieberiana</td><td>pK</td><td>pK 13w</td><td></td><td>26w 26w</td><td></td></tr><tr><td>(poss.pk.pf.flower.c.3+y)</td><td>R</td><td>15w</td><td>91w</td><td>108w</td><td>c.2y(shd)</td></tr><tr><td>Ceratopetalum apetalum</td><td>R</td><td></td><td></td><td></td><td></td></tr><tr><td>Ceratopetalum gummiferum</td><td>R</td><td>R 101w</td><td>50w</td><td></td><td>c.2–3y</td></tr><tr><td>Schizomeria ovata</td><td>R</td><td>R</td><td></td><td></td><td></td></tr><tr><td>Hibbertia aspera</td><td>R</td><td></td><td>50w</td><td></td><td></td></tr><tr><td>Hibbertia bracteata</td><td>R</td><td>R</td><td>38w, 87w</td><td></td><td></td></tr><tr><td>Hibbertia cistiflora</td><td></td><td>pK</td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–5y)</td><td>R</td><td>39w</td><td>38w</td><td></td><td></td></tr><tr><td>Hibbertia diffusa</td><td>R</td><td></td><td>23w–buds</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>pK</td><td>51w</td><td></td><td>56w, 87w</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td>K 26w</td><td></td><td>72w, 86w</td><td></td></tr><tr><td>Hibbertia nitida</td><td>K</td><td></td><td>135w–adv</td><td></td><td></td></tr><tr><td>Hibbertia riparia</td><td>(s.lat.) R</td><td></td><td>89w</td><td>108w</td><td></td></tr><tr><td>Hibbertia scandens</td><td>R</td><td>R</td><td></td><td></td><td></td></tr><tr><td>Hibbertia serpyllifolia</td><td></td><td>R</td><td></td><td></td><td></td></tr><tr><td>Drosera auriculata</td><td>pR</td><td>pR</td><td>26w</td><td>26w</td><td>26w–(shd)</td></tr><tr><td>Drosera binata</td><td>R</td><td>R</td><td>17w</td><td></td><td></td></tr><tr><td>Drosera peltata</td><td>pR</td><td>pR</td><td>17w</td><td>32w</td><td>32w–(shd)</td></tr><tr><td>Drosera spatulata</td><td>pR</td><td>pR</td><td>41w</td><td>63w</td><td>63w–(shd)</td></tr><tr><td>Elaeocarpus reticulatus</td><td>R</td><td>R</td><td>201w</td><td>c.5y-grn</td><td>c.5y–a few fruit</td></tr><tr><td>Acrotriche divaricata</td><td></td><td>K</td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>R</td><td>R</td><td>40w, 86w</td><td></td><td></td></tr><tr><td>Dracophyllum secundum</td><td>K</td><td>K 67w</td><td></td><td>c.3y</td><td>c.3–4y</td></tr><tr><td>Epacris crassifolia</td><td>K</td><td>K 20w</td><td></td><td></td><td></td></tr><tr><td>Epacris longiflora</td><td>K</td><td>K</td><td>88w–adv</td><td>124w</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td>K 61w</td><td></td><td>86w</td><td></td></tr><tr><td>Epacris obtusifolia</td><td></td><td>K</td><td>38w(1)</td><td></td><td></td></tr><tr><td>Epacris pulchella</td><td>K</td><td>K</td><td></td><td>120w 122w</td><td>c.2–3y(shd)</td></tr><tr><td>var. purpurascens</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>K</td><td></td><td></td><td>c.3–4y</td><td></td></tr><tr><td>Leucopogon amplexicaulis</td><td>pK</td><td>K 63w</td><td></td><td>87w–(1) 142w</td><td>c.3–4y</td></tr><tr><td>(poss.pk.pf.flower.c.5+y)</td><td>K</td><td>K</td><td>75w–adv</td><td>108w</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td></td><td></td><td>135w 143w</td><td>c.3y</td></tr><tr><td>Leucopogon esquamatus</td><td>pK</td><td>K</td><td></td><td>196w</td><td>c.4y</td></tr><tr><td>Leucopogon juniperinus</td><td>K</td><td></td><td></td><td>c.3–4y</td><td></td></tr><tr><td>Leucopogon lanceolatus</td><td>R</td><td>R</td><td>88w</td><td>90w–grn</td><td>c.2–3y</td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td>K</td><td></td><td>75w</td><td></td></tr><tr><td>Leucopogon setiger</td><td>K</td><td>K</td><td></td><td>c.4y</td><td></td></tr><tr><td></td><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td>Resp</td><td>Seed Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Polymeria calycina | pR | R |  | 38w |  | 56w |  |  |  |
+| **Crassulaceae** | | | | | | | | | |
+| *Crassula multicava |  | pR |  | 38w |  |  |  |  |  |
+| Crassula sieberiana | pK | pK | 13w |  | 26w |  | 26w |  |  |
+| **Cunoniaceae** | | | | | | | | | |
+| Callicoma serratifolia (poss.pk.pf.flower.c.3+y) | R |  | 15w | 91w |  | 108w |  |  | c.2y(shd) |
+| Ceratopetalum apetalum | R |  |  |  |  |  |  |  |  |
+| Ceratopetalum gummiferum | R | R | 101w | 50w |  |  |  |  | c.2–3y |
+| Schizomeria ovata | R | R |  |  |  |  |  |  |  |
+| **Dilleniaceae** | | | | | | | | | |
+| Hibbertia aspera | R |  |  | 50w |  |  |  |  |  |
+| Hibbertia bracteata | R | R |  | 38w,**87w** |  |  |  |  |  |
+| Hibbertia cistiflora |  | pK |  |  |  |  |  |  |  |
+| Hibbertia dentata (prob.pk.pf.flower.c.4–5y) | R |  | 39w | 38w |  |  |  |  |  |
+| Hibbertia diffusa | R |  |  | 23w–buds |  |  |  |  |  |
+| Hibbertia fasciculata (prob.pk.pf.flower.c.3–5y) | pK |  | 51w |  | 56w,**87w** |  |  |  |  |
+| Hibbertia linearis (prob.pk.pf.flower.c.4–6y) | K | K | 26w |  | 72w,**86w** |  |  |  |  |
+| Hibbertia nitida | K |  | 135w–adv |  |  |  |  |  |  |
+| Hibbertia riparia (s.lat.) | R |  |  | 89w |  | 108w |  |  |  |
+| Hibbertia scandens | R | R |  |  |  |  |  |  |  |
+| Hibbertia serpyllifolia |  | R |  |  |  |  |  |  |  |
+| **Droseraceae** | | | | | | | | | |
+| Drosera auriculata | pR | pR |  | 26w |  | 26w |  |  | 26w–(shd) |
+| Drosera binata | R | R |  | 17w |  |  |  |  |  |
+| Drosera peltata | pR | pR |  | 17w |  | 32w |  |  | 32w–(shd) |
+| Drosera spatulata | pR | pR |  | 41w |  | 63w |  |  | 63w–(shd) |
+| **Elaeocarpaceae** | | | | | | | | | |
+| Elaeocarpus reticulatus | R | R |  | 201w |  | <u>c.5y-grn</u> | <u>c.5y-grn</u> |  | c.5y–a few fruit |
+| **Ericaceae** | | | | | | | | | |
+| **Styphelioideae** | | | | | | | | | |
+| Acrotriche divaricata |  | K |  |  |  |  |  |  |  |
+| Brachyloma daphnoides (prob.pk.pf.flower.c.3–5y) | R | R |  | 40w,**86w** |  |  |  |  |  |
+| Dracophyllum secundum | K | K | 67w |  |  |  | c.3y | c.3–4y |  |
+| Epacris crassifolia | K | K | 20w |  |  |  |  |  |  |
+| Epacris longiflora | K | K | 88w–adv |  | 124w |  |  |  |  |
+| Epacris microphylla (prob.pk.pf.flower.c.4–6y) | K | K | 61w |  | 86w |  |  |  |  |
+| Epacris obtusifolia |  | K | 38w(1) |  |  |  |  |  |  |
+| Epacris pulchella | K | K |  |  | 120w |  | 122w | c.2–3y(shd) |  |
+| Epacris purpurascens var. purpurascens | K |  |  |  | c.3–4y |  |  |  |  |
+| Leucopogon amplexicaulis | pK | K | 63w |  | 87w–(1) |  | 142w | c.3–4y |  |
+| Leucopogon appressus (poss.pk.pf.flower.c.5+y) | K | K | 75w–adv |  | 108w |  |  |  |  |
+| Leucopogon ericoides (prob.pk.pf.flower.c.4–6y) | K |  |  |  | 135w |  | 143w | c.3y |  |
+| Leucopogon esquamatus | pK | K |  |  |  |  | 196w | c.4y |  |
+| Leucopogon juniperinus | K |  |  |  | c.3–4y |  |  |  |  |
+| Leucopogon lanceolatus | R | R |  | 88w |  | 90w–grn |  |  | c.2–3y |
+| Leucopogon microphyllus (prob.pk.pf.flower.c.4–6y) | K | K |  |  | 75w |  |  |  |  |
+| Leucopogon setiger | K | K |  |  | c.4y |  |  |  |  |
 
-{20}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>subsp. ?subulata</th><th></th><th>R</th><th></th><th>37w–(1)</th><th></th><th></th></tr></thead><tbody><tr><td>Melichrus procumbens</td><td></td><td></td><td></td><td>c.3–4y(1)</td><td></td><td></td></tr><tr><td>Monotoca elliptica</td><td>K / r</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Monotoca scoparia</td><td>R</td><td>R</td><td></td><td>67w</td><td></td><td></td></tr><tr><td>Sprengelia incarnata</td><td></td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td>Styphelia longifolia</td><td>K</td><td></td><td>126w–(1)–adv</td><td>186w</td><td>195w</td><td>c.4y</td></tr><tr><td>Styphelia triflora</td><td>K</td><td></td><td>61w</td><td></td><td>149w</td><td>c.3y</td></tr><tr><td>Styphelia tubiflora</td><td>K</td><td>K</td><td>64w</td><td>124w</td><td>242w</td><td>c.4–5y</td></tr><tr><td>Trochocarpa laurina</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td></tr><tr><td>Woollsia pungens</td><td>K</td><td>K</td><td>72w–adv</td><td>120w</td><td></td><td></td></tr><tr><td>Amperea xiphoclada</td><td>R</td><td>R</td><td></td><td>16w</td><td>38w</td><td>50w–grn</td></tr><tr><td>Bertya brownii</td><td></td><td>K</td><td>13w</td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.3–4y)</td><td>R</td><td>R</td><td></td><td>46w</td><td>63w</td><td>63w</td></tr><tr><td>*Chamaesyce supina</td><td>pK</td><td></td><td></td><td></td><td>9w</td><td></td></tr><tr><td>var. pubescens</td><td>pK</td><td></td><td></td><td>43w</td><td></td><td></td></tr><tr><td>*Euphorbia peplus</td><td>pK</td><td></td><td>7w</td><td></td><td>9w</td><td>9w</td></tr><tr><td>Glochidion ferdinandi</td><td>R</td><td>R</td><td></td><td></td><td>76w</td><td>c.2–3y</td></tr><tr><td>(prob.pk.pf.fruit.c.5–6y)</td><td>K</td><td>K</td><td>30w</td><td>85w</td><td>86w</td><td>c.2–3y</td></tr><tr><td>Monotaxis linifolia</td><td></td><td>pK</td><td></td><td></td><td></td><td></td></tr><tr><td>Omalanthus populifolius</td><td>R</td><td></td><td>6w</td><td></td><td></td><td></td></tr><tr><td>Phyllanthus hirtellus</td><td>R</td><td>R</td><td>26w</td><td>23w</td><td>38w</td><td>43w–grn.</td></tr><tr><td>*Phyllanthus tenellus</td><td>pK</td><td></td><td></td><td>18w</td><td></td><td></td></tr><tr><td>Poranthera corymbosa</td><td>pK</td><td></td><td></td><td>94w</td><td></td><td></td></tr><tr><td>Poranthera ericifolia</td><td>pK</td><td>K</td><td>38w</td><td>38w</td><td>43w</td><td>50w</td></tr><tr><td>Poranthera microphylla</td><td>pK</td><td>pK</td><td>15w</td><td>18w</td><td>18w</td><td>18–39w</td></tr><tr><td>Ricinocarpos pinifolius</td><td>R</td><td>R</td><td>133w–adv</td><td>86w</td><td>94w</td><td>c.2y</td></tr><tr><td>*Ricinus communis</td><td>pK</td><td>pK</td><td>8w</td><td>25w</td><td>25w</td><td>25–38w</td></tr><tr><td>Eupomatia laurina</td><td></td><td>R</td><td></td><td></td><td></td><td></td></tr><tr><td>*Senna pendula</td><td>R</td><td>R</td><td>7w</td><td>61w</td><td>85w</td><td>c.2y</td></tr><tr><td>Bossiaea heterophylla</td><td>pK</td><td>?r</td><td>10w</td><td>67w</td><td>97w</td><td>c.2y(shd)</td></tr><tr><td>(poss.pk.pf.fruit.c.4–5y)</td><td>R</td><td></td><td></td><td>36w</td><td>100w</td><td>c.2y–(shd)</td></tr><tr><td>Bossiaea scolopendria</td><td>R</td><td>K</td><td>?63w?</td><td>86w</td><td>104w</td><td>c.2y–(shd)</td></tr><tr><td>Daviesia alata</td><td></td><td>?K</td><td></td><td></td><td></td><td></td></tr><tr><td>Daviesia ulicifolia</td><td>?K</td><td>?K</td><td>37w</td><td>37w</td><td>c.4y</td><td></td></tr><tr><td>Desmodium ?gunnii</td><td>R</td><td></td><td></td><td>11w</td><td></td><td></td></tr><tr><td>Desmodium rhytidophyllum</td><td></td><td>R</td><td></td><td>13w</td><td>13w</td><td></td></tr><tr><td>var. floribunda</td><td>pK</td><td>K</td><td>63w</td><td>90w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.5y)</td><td>K</td><td>K</td><td>10w</td><td>85w</td><td>150w</td><td>c.3y(shd)</td></tr><tr><td>Dillwynia rudis</td><td>K</td><td>pK</td><td></td><td></td><td>90w</td><td>c.2y</td></tr><tr><td>*Dipogon lignosus</td><td>R</td><td></td><td>10w</td><td>38w</td><td>50w</td><td>c.1y–(shd)</td></tr><tr><td>*Erythrina crista–galli</td><td>R</td><td>R</td><td></td><td>13w</td><td></td><td></td></tr><tr><td>*Erythrina x sykesii</td><td>R</td><td>R</td><td></td><td>38w</td><td></td><td></td></tr><tr><td>*Genista monspessulana</td><td>K</td><td></td><td>11w</td><td>86w</td><td>104w</td><td>2y</td></tr><tr><td>Glycine clandestina</td><td>R</td><td>pR</td><td></td><td>35w</td><td></td><td></td></tr><tr><td>Glycine tabacina</td><td>R</td><td>pR</td><td>8w</td><td>10w</td><td>30w</td><td>30w–(shd)</td></tr><tr><td></td><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Lissanthe strigosa subsp. ?subulata |  | R |  | 37w–(1) |  |  |  |  |  |
+| Melichrus procumbens |  |  |  | <u>c.3–4y(1)</u> | <u>c.3–4y(1)</u> |  |  |  |  |
+| Monotoca elliptica | K/r |  |  |  |  |  |  |  |  |
+| Monotoca scoparia | R | R |  | 67w |  |  |  |  |  |
+| Sprengelia incarnata |  | K |  |  |  |  |  |  |  |
+| Styphelia longifolia | K |  | 126w–(1)–adv |  | 186w |  | 195w | c.4y |  |
+| Styphelia triflora | K |  | 61w |  |  |  | 149w | c.3y |  |
+| Styphelia tubiflora | K | K | 64w |  | 124w |  | 242w | c.4–5y |  |
+| Trochocarpa laurina | R | R |  |  |  |  |  |  |  |
+| Woollsia pungens | K | K | 72w–adv |  | 120w |  |  |  |  |
+| **Euphorbiaceae** | | | | | | | | | |
+| Amperea xiphoclada | R | R |  | 16w |  | 38w |  |  | 50w–grn |
+| Bertya brownii |  | K | 13w |  |  |  |  |  |  |
+| Breynia oblongifolia (poss.pk.pf.flower.c.3–4y) | R | R |  | 46w |  | 63w |  |  | 63w |
+| *Chamaesyce supina | pK |  |  |  |  |  | 9w |  |  |
+| *Euphorbia depauperata var. pubescens | pK |  |  |  | 43w |  |  |  |  |
+| *Euphorbia peplus | pK |  | 7w |  |  |  | 9w | 9w |  |
+| Glochidion ferdinandi | R | R |  |  |  | 76w |  |  | c.2–3y |
+| Micrantheum ericoides (prob.pk.pf.fruit.c.5–6y) | K | K | 30w |  | 85w |  | 86w | c.2–3y |  |
+| Monotaxis linifolia |  | pK |  |  |  |  |  |  |  |
+| Omalanthus populifolius | R |  | 6w |  |  |  |  |  |  |
+| Phyllanthus hirtellus | R | R | 26w | 23w |  | 38w |  |  | 43w–grn. |
+| *Phyllanthus tenellus | pK |  |  |  | 18w |  |  |  |  |
+| Poranthera corymbosa | pK |  |  |  | 94w |  |  |  |  |
+| Poranthera ericifolia | pK | K | 38w |  | 38w |  | 43w | 50w |  |
+| Poranthera microphylla | pK | pK | 15w |  | 18w |  | 18w | 18–39w |  |
+| Ricinocarpos pinifolius | R | R | 133w–adv | 86w |  | 94w |  |  | c.2y |
+| *Ricinus communis | pK | pK | 8w |  | 25w |  | 25w | 25–38w |  |
+| **Eupomatiaceae** | | | | | | | | | |
+| Eupomatia laurina |  | R |  |  |  |  |  |  |  |
+| **Fabaceae** | | | | | | | | | |
+| **Caesalpinioideae** | | | | | | | | | |
+| *Senna pendula | R | R | 7w | 61w |  | 85w |  |  | c.2y |
+| **Faboideae** | | | | | | | | | |
+| Bossiaea heterophylla | pK | ?r | 10w |  | 67w |  | 97w | c.2y(shd) |  |
+| Bossiaea obcordata (poss.pk.pf.fruit.c.4–5y) | R |  |  | 36w |  | 100w |  |  | c.2y–(shd) |
+| Bossiaea scolopendria | R | K | ?63w? | 86w |  | 104w |  |  | c.2y–(shd) |
+| Daviesia alata |  | ?K |  |  |  |  |  |  |  |
+| Daviesia ulicifolia | ?K | ?K | 37w |  | 37w |  | c.4y |  |  |
+| Desmodium ?gunnii | R |  |  | 11w |  |  |  |  |  |
+| Desmodium rhytidophyllum |  | R |  | 13w |  | 13w |  |  |  |
+| Dillwynia floribunda var. floribunda | pK | K | 63w |  | 90w |  |  |  |  |
+| Dillwynia retorta (prob.pk.pf.flower.c.5y) | K | K | 10w |  | 85w |  | 150w | c.3y(shd) |  |
+| Dillwynia rudis | K | pK |  |  |  |  | 90w | c.2y |  |
+| *Dipogon lignosus | R |  | 10w | 38w |  | 50w |  |  | c.1y–(shd) |
+| *Erythrina crista–galli | R | R |  | 13w |  |  |  |  |  |
+| *Erythrina x sykesii | R | R |  | 38w |  |  |  |  |  |
+| *Genista monspessulana | K |  | 11w |  | 86w |  | 104w | 2y |  |
+| Glycine clandestina | R | pR |  | 35w |  |  |  |  |  |
+| Glycine tabacina | R | pR | 8w | 10w |  | 30w |  |  | 30w–(shd) |
 
-{21}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Gompholobium glabratum</th><th>pK</th><th></th><th>23w</th><th></th><th>89w</th><th>c.2y</th></tr></thead><tbody><tr><td>Gompholobium grandiflorum</td><td>R</td><td>?k</td><td></td><td>90w</td><td>125w</td><td>c.2–3y(shd)</td></tr><tr><td>(prob.pk.pf.fruit.c.4–5y)</td><td>K</td><td>R</td><td>37w</td><td>140w</td><td>154w</td><td>c.3y(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>R</td><td>pR</td><td>7w</td><td>31w</td><td>40w</td><td>c.1y</td></tr><tr><td>Hovea linearis</td><td>(s.lat.) R</td><td>R</td><td></td><td>31w</td><td>100w</td><td>c.2y</td></tr><tr><td>Hovea longifolia</td><td>K</td><td></td><td>30w</td><td>190w</td><td>198w</td><td>c.4y</td></tr><tr><td>Kennedia rubicunda</td><td>?K / r</td><td>?K / r</td><td>6w</td><td>35w</td><td>46w</td><td>c.1y</td></tr><tr><td>*Lotus angustissimus</td><td>pK</td><td>pK</td><td>27w</td><td>37w</td><td>43w</td><td>43w</td></tr><tr><td>*Medicago arabica</td><td>pK</td><td></td><td></td><td>38w</td><td>38w</td><td></td></tr><tr><td>*Medicago polymorpha</td><td>pK</td><td></td><td></td><td>33w</td><td>38w</td><td></td></tr><tr><td>*Melilotus indicus</td><td>pK</td><td>pK</td><td></td><td>26w</td><td>38w</td><td></td></tr><tr><td>Mirbelia rubiifolia</td><td>pK</td><td>K</td><td>17w</td><td>141w</td><td>3–4y</td><td>c.3–4y(shd)</td></tr><tr><td>subsp. speciosa</td><td></td><td></td><td></td><td>189w</td><td></td><td></td></tr><tr><td>Phyllota grandiflora</td><td>pR</td><td>R</td><td></td><td>37w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–5y)</td><td>R / k</td><td>R</td><td>63w</td><td>86w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>R</td><td>R</td><td>36w</td><td>36w, 87w</td><td>101w</td><td>c.2y–(shd)</td></tr><tr><td>Podolobium ilicifolium</td><td></td><td>K/R</td><td>35w</td><td>38w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4y)</td><td>pK</td><td></td><td>12w</td><td>92w</td><td>122w</td><td>c.2–3y(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>K</td><td>K</td><td>20w</td><td>86w</td><td>150w</td><td>c.3y(shd)</td></tr><tr><td>(poss.pk.pf.flower.c.5+y)</td><td>K</td><td>K</td><td>10w</td><td>88w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>?K</td><td></td><td>97w–adv</td><td>140w</td><td>154w</td><td>c.3y(shd)</td></tr><tr><td>Pultenaea polifolia</td><td></td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td>Pultenaea retusa</td><td>pK</td><td></td><td></td><td>86w</td><td>90w</td><td>c.2y</td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>K</td><td>K</td><td>21w</td><td>90w</td><td>104w</td><td>c.2–3y(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.5–6y)</td><td>K</td><td>K</td><td>24w</td><td>61w c.2y</td><td></td><td></td></tr><tr><td>Pultenaea villosa</td><td>K</td><td></td><td>26w</td><td></td><td></td><td></td></tr><tr><td>Sphaerolobium minus</td><td></td><td></td><td></td><td>90w</td><td></td><td></td></tr><tr><td>*Trifolium campestre</td><td>pK</td><td></td><td></td><td>41w</td><td>43w</td><td></td></tr><tr><td>*Trifolium cernuum</td><td>pK</td><td></td><td></td><td>16w</td><td>38w</td><td></td></tr><tr><td>*Trifolium dubium</td><td>pK</td><td></td><td></td><td>43w</td><td>43w</td><td></td></tr><tr><td>*Trifolium glomeratum</td><td>pK</td><td></td><td></td><td>36w</td><td></td><td></td></tr><tr><td>*Trifolium repens</td><td>pK</td><td></td><td></td><td>36w</td><td></td><td></td></tr><tr><td>*Vicia hirsuta</td><td>pK</td><td></td><td></td><td></td><td>38w</td><td></td></tr><tr><td>*Vicia sativa</td><td>pK</td><td>?K</td><td></td><td>37w</td><td>37w</td><td></td></tr><tr><td>*Vicia tetrasperma</td><td>pK</td><td></td><td>11w</td><td>33w</td><td>36w</td><td></td></tr><tr><td>(poss.pk.pf.flower.c.2–5y)</td><td>K</td><td>pK</td><td>17w</td><td>91w</td><td>100w</td><td>c.2y(shd)</td></tr><tr><td>*Wisteria ?sinensis</td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Acacia baileyana</td><td>pK</td><td></td><td>44w–adv</td><td>135w</td><td>198w</td><td>c.3–4y</td></tr><tr><td>Acacia binervia</td><td>K</td><td></td><td>124w–(adv)</td><td>142w</td><td>198w</td><td>c.3–4y</td></tr><tr><td>Acacia echinula</td><td></td><td></td><td></td><td>186w</td><td></td><td></td></tr><tr><td>(*?)Acacia elata</td><td>?K</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Acacia falcata</td><td>pK</td><td></td><td>51w–adv</td><td></td><td>90w–grn</td><td>c.2–3y</td></tr><tr><td>Acacia floribunda</td><td>R / k</td><td>k</td><td></td><td>135w</td><td></td><td></td></tr><tr><td>Acacia hispidula</td><td>pK</td><td></td><td></td><td>61w</td><td>124w</td><td>c.3y</td></tr><tr><td>Acacia implexa</td><td></td><td>R</td><td></td><td></td><td></td><td></td></tr><tr><td>Acacia irrorata</td><td>subsp. irrorata</td><td></td><td></td><td>153w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.fruit.c.4–6y)</td><td>K</td><td>K</td><td>9w</td><td>56w</td><td>97w</td><td>c.2–3y(shd)</td></tr><tr><td></td><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Gompholobium glabratum | pK |  | 23w |  |  |  | 89w | c.2y |  |
+| Gompholobium grandiflorum | R | ?k |  | 90w |  | 125w |  |  | c.2–3y(shd) |
+| Gompholobium latifolium (prob.pk.pf.fruit.c.4–5y) | K | R | 37w |  | 140w |  | 154w | c.3y(shd) |  |
+| Hardenbergia violacea (prob.pk.pf.flower.c.3–5y) | R | pR | 7w | 31w |  | 40w |  |  | c.1y |
+| Hovea linearis (s.lat.) | R | R |  | 31w |  | 100w |  |  | c.2y |
+| Hovea longifolia | K |  | 30w |  | 190w |  | 198w | c.4y |  |
+| Kennedia rubicunda | ?K/r | ?K/r | 6w |  | 35w |  | 46w | c.1y |  |
+| *Lotus angustissimus | pK | pK | 27w |  | 37w |  | 43w | 43w |  |
+| *Medicago arabica | pK |  |  |  | 38w |  | 38w |  |  |
+| *Medicago polymorpha | pK |  |  |  | 33w |  | 38w |  |  |
+| *Melilotus indicus | pK | pK |  |  | 26w |  | 38w |  |  |
+| Mirbelia rubiifolia | pK | K | 17w |  | 141w |  | 3–4y | c.3–4y(shd) |  |
+| Mirbelia speciosa subsp. speciosa |  |  |  |  | 189w |  |  |  |  |
+| Phyllota grandiflora | pR | R |  | 37w |  |  |  |  |  |
+| Phyllota phylicoides (prob.pk.pf.flower.c.4–5y) | R/k | R | 63w | 86w |  |  |  |  |  |
+| Platylobium formosum (prob.pk.pf.flower.c.3–5y) | R | R | 36w | <u>36w, **87w**</u> | <u>36w, **87w**</u> | 101w |  |  | c.2y–(shd) |
+| Podolobium ilicifolium |  | K/R | 35w | 38w |  |  |  |  |  |
+| *Psoralea pinnata (prob.pk.pf.flower.c.4y) | pK |  | 12w |  | 92w |  | 122w | c.2–3y(shd) |  |
+| Pultenaea daphnoides (prob.pk.pf.flower.c.3–5y) | K | K | 20w |  | 86w |  | 150w | c.3y(shd) |  |
+| Pultenaea flexilis (poss.pk.pf.flower.c.5+y) | K | K | 10w |  | 88w |  |  |  |  |
+| Pultenaea mollis (prob.pk.pf.flower.c.3–5y) | ?K |  | 97w–adv |  | 140w |  | 154w | c.3y(shd) |  |
+| Pultenaea polifolia |  | K |  |  |  |  |  |  |  |
+| Pultenaea retusa | pK |  |  |  | 86w |  | 90w | c.2y |  |
+| Pultenaea stipularis (prob.pk.pf.flower.c.3–5y) | K | K | 21w |  | 90w |  | 104w | c.2–3y(shd) |  |
+| Pultenaea tuberculata (prob.pk.pf.flower.c.5–6y) | K | K | 24w |  | 61w**c.2y** |  |  |  |  |
+| Pultenaea villosa | K |  | 26w |  |  |  |  |  |  |
+| Sphaerolobium minus |  |  |  | <u>90w</u> | <u>90w</u> |  |  |  |  |
+| *Trifolium campestre | pK |  |  |  | 41w |  | 43w |  |  |
+| *Trifolium cernuum | pK |  |  |  | 16w |  | 38w |  |  |
+| *Trifolium dubium | pK |  |  |  | 43w |  | 43w |  |  |
+| *Trifolium glomeratum | pK |  |  |  | 36w |  |  |  |  |
+| *Trifolium repens | pK |  |  |  | 36w |  |  |  |  |
+| *Vicia hirsuta | pK |  |  |  |  | <u>38w</u> | <u>38w</u> |  |  |
+| *Vicia sativa | pK | ?K |  |  | 37w |  | 37w |  |  |
+| *Vicia tetrasperma | pK |  | 11w |  | 33w |  | 36w |  |  |
+| Viminaria juncea (poss.pk.pf.flower.c.2–5y) | K | pK | 17w |  | 91w |  | 100w | c.2y(shd) |  |
+| *Wisteria ?sinensis | R |  |  |  |  |  |  |  |  |
+| **Mimosoideae** | | | | | | | | | |
+| *Acacia baileyana | pK |  | 44w–adv |  | 135w |  | 198w | c.3–4y |  |
+| Acacia binervia | K |  | 124w–(adv) |  | 142w |  | 198w | c.3–4y |  |
+| Acacia echinula |  |  |  | <u>186w</u> | <u>186w</u> |  |  |  |  |
+| (*?)Acacia elata | ?K |  |  |  |  |  |  |  |  |
+| Acacia falcata | pK |  | 51w–adv |  |  |  | 90w–grn | c.2–3y |  |
+| Acacia floribunda | R/k | k |  | 135w |  |  |  |  |  |
+| Acacia hispidula | pK |  |  |  | 61w |  | 124w | c.3y |  |
+| Acacia implexa |  | R |  |  |  |  |  |  |  |
+| Acacia irrorata subsp. irrorata |  |  |  |  | 153w |  |  |  |  |
+| Acacia linifolia (prob.pk.pf.fruit.c.4–6y) | K | K | 9w |  | 56w |  | 97w | c.2–3y(shd) |  |
 
-{22}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>subsp. longifolia</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>K</td><td>K</td><td>10w</td><td></td><td>85w</td><td>149w</td><td>c.3y(shd)</td><td></td></tr><tr><td>Acacia longissima</td><td>K</td><td></td><td>88w–adv</td><td></td><td>153w</td><td>169w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.fruit.c.4y)</td><td>K</td><td>K</td><td>25w</td><td></td><td>131w</td><td>149w</td><td>c.3y(shd)</td><td></td></tr><tr><td>Acacia oxycedrus</td><td>K</td><td>R / k</td><td>17w</td><td></td><td>136w</td><td></td><td></td><td></td></tr><tr><td>Acacia parramattensis</td><td>pK/r</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Acacia parvipinnula</td><td>?K</td><td></td><td></td><td></td><td>135w</td><td></td><td></td><td></td></tr><tr><td>*Acacia podalyriifolia</td><td>pK</td><td>K</td><td>36w</td><td></td><td>124w</td><td>154w</td><td>c.3y(shd)</td><td></td></tr><tr><td>*Acacia saligna</td><td></td><td>R</td><td>21w</td><td></td><td>140w</td><td>145w(grn)</td><td></td><td></td></tr><tr><td>Acacia schinoides</td><td>K</td><td></td><td>51w</td><td></td><td>154w</td><td>235w</td><td>c.5y</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2–4y)</td><td>K</td><td>K</td><td>15w</td><td></td><td>71w</td><td>97w</td><td>c.2y(shd)</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–4y)</td><td>K</td><td>K</td><td>12w</td><td></td><td>91w</td><td>149w</td><td>c.3y(shd)</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>K</td><td>K</td><td>10w</td><td></td><td>67w</td><td>101w</td><td>c.2–3y(shd)</td><td></td></tr><tr><td>subsp. lophantha</td><td></td><td></td><td></td><td></td><td>87w</td><td>163w</td><td>c.3y(shd)</td><td></td></tr><tr><td>subsp. capreolata</td><td>pK</td><td></td><td>12w</td><td></td><td>12w</td><td>12w</td><td></td><td></td></tr><tr><td>*Fumaria ?officianalis</td><td></td><td></td><td>15w</td><td></td><td>15w</td><td>15w</td><td></td><td></td></tr><tr><td>*Centaurium tenuiflorum</td><td>?K</td><td></td><td></td><td></td><td>43w</td><td></td><td></td><td></td></tr><tr><td>Geranium homeanum</td><td>R</td><td></td><td>10w</td><td>19w</td><td></td><td>19w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td></td><td></td><td>20w</td><td></td><td>35w</td><td>44w–(shd)</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R</td><td></td><td>33w</td><td>36w</td><td></td><td>49w</td><td></td><td>c.1y–(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R</td><td>R</td><td>21w</td><td>31w</td><td></td><td>64w</td><td></td><td></td></tr><tr><td>Goodenia bellidifolia</td><td>R</td><td>R</td><td>26w</td><td>31w</td><td></td><td>51w</td><td></td><td>c.1y–(shd)</td></tr><tr><td>Goodenia hederacea</td><td>R</td><td></td><td></td><td>39w</td><td></td><td>49w</td><td></td><td>c.1y</td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R</td><td>R</td><td></td><td>20w</td><td></td><td>46w</td><td></td><td>46w–(shd)</td></tr><tr><td>Goodenia ovata</td><td>K</td><td>K</td><td>20w</td><td></td><td>143w</td><td>146w</td><td>c.2–3y</td><td></td></tr><tr><td>Goodenia paniculata</td><td></td><td>pR</td><td></td><td></td><td>10–20w</td><td></td><td></td><td></td></tr><tr><td>Goodenia stelligera</td><td></td><td></td><td></td><td></td><td>31w(1)</td><td></td><td></td><td></td></tr><tr><td>Scaevola ramosissima</td><td>R</td><td>R</td><td></td><td>16w</td><td></td><td>51w</td><td></td><td>c.1y</td></tr><tr><td>Velleia lyrata</td><td></td><td></td><td></td><td></td><td>36w</td><td>51w–(shd )</td><td></td><td></td></tr><tr><td>subsp. micranthus</td><td>pK</td><td>pK</td><td>12w</td><td></td><td>43w</td><td></td><td></td><td></td></tr><tr><td>Gonocarpus salsoloides</td><td></td><td>pK</td><td>17w</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>K / r</td><td>K</td><td>10w</td><td></td><td>94w</td><td>100w</td><td>c.2y</td><td></td></tr><tr><td>*Liquidambar styraciflua</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Hemigenia purpurea</td><td>pK</td><td>K</td><td>51w</td><td></td><td>100w</td><td>104w</td><td>c.2y</td><td></td></tr><tr><td>Plectranthus parviflorus</td><td>pK</td><td>pK</td><td>15w</td><td></td><td>49w</td><td>49w</td><td></td><td></td></tr><tr><td>Prostanthera denticulata</td><td></td><td>K</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Prostanthera linearis</td><td>K</td><td>K / r</td><td></td><td></td><td>150w</td><td></td><td></td><td></td></tr><tr><td>*Prunella vulgaris</td><td>?K</td><td></td><td>19w</td><td></td><td>51w</td><td>51w</td><td>c.1y–(shd)</td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp</td><td>Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Acacia longifolia subsp. longifolia (prob.pk.pf.flower.c.4–6y) | K | K | 10w |  | 85w |  | 149w | c.3y(shd) |  |
+| Acacia longissima | K |  | 88w–adv |  | 153w |  | 169w |  |  |
+| Acacia myrtifolia (prob.pk.pf.fruit.c.4y) | K | K | 25w |  | 131w |  | 149w | c.3y(shd) |  |
+| Acacia oxycedrus | K | R/k | 17w |  | 136w |  |  |  |  |
+| Acacia parramattensis | pK/r |  |  |  |  |  |  |  |  |
+| Acacia parvipinnula | ?K |  |  |  | 135w |  |  |  |  |
+| *Acacia podalyriifolia | pK | K | 36w |  | 124w |  | 154w | c.3y(shd) |  |
+| *Acacia saligna |  | R | 21w | <u>140w</u> | <u>140w</u> | <u>145w(grn)</u> | <u>145w(grn)</u> |  |  |
+| Acacia schinoides | K |  | 51w |  | 154w |  | 235w | c.5y |  |
+| Acacia suaveolens (prob.pk.pf.flower.c.2–4y) | K | K | 15w |  | 71w |  | 97w | c.2y(shd) |  |
+| Acacia terminalis (prob.pk.pf.flower.c.3–4y) | K | K | 12w |  | 91w |  | 149w | c.3y(shd) |  |
+| Acacia ulicifolia (prob.pk.pf.flower.c.3–5y) | K | K | 10w |  | 67w |  | 101w | c.2–3y(shd) |  |
+| *Paraserianthes lophantha subsp. lophantha |  |  |  |  | 87w |  | 163w | c.3y(shd) |  |
+| **Fumariaceae** | | | | | | | | | |
+| *Fumaria capreolata subsp. capreolata | pK |  | 12w |  | 12w |  | 12w |  |  |
+| *Fumaria ?officianalis |  |  | 15w |  | 15w |  | 15w |  |  |
+| **Gentianaceae** | | | | | | | | | |
+| *Centaurium tenuiflorum | ?K |  |  |  | 43w |  |  |  |  |
+| **Geraniaceae** | | | | | | | | | |
+| Geranium homeanum | R |  | 10w | 19w |  | 19w |  |  |  |
+| Pelargonium inodorum (prob.pk.pf.flower.c.1y) |  |  | 20w | <u>35w</u> | <u>35w</u> | <u>44w–(shd)</u> | <u>44w–(shd)</u> |  |  |
+| **Goodeniaceae** | | | | | | | | | |
+| Dampiera purpurea (prob.pk.pf.flower.c.2–3y) | R |  | 33w | 36w |  | 49w |  |  | c.1y–(shd) |
+| Dampiera stricta (prob.pk.pf.flower.c.2–3y) | R | R | 21w | 31w |  | 64w |  |  |  |
+| Goodenia bellidifolia | R | R | 26w | 31w |  | 51w |  |  | c.1y–(shd) |
+| Goodenia hederacea | R |  |  | 39w |  | 49w |  |  | c.1y |
+| Goodenia heterophylla (prob.pk.pf.flower.c.2–3y) | R | R |  | 20w |  | 46w |  |  | 46w–(shd) |
+| Goodenia ovata | K | K | 20w |  | 143w |  | 146w | c.2–3y |  |
+| Goodenia paniculata |  | pR |  | <u>10–20w</u> | <u>10–20w</u> |  |  |  |  |
+| Goodenia stelligera |  |  |  | <u>31w(1)</u> | <u>31w(1)</u> |  |  |  |  |
+| Scaevola ramosissima | R | R |  | 16w |  | 51w |  |  | c.1y |
+| Velleia lyrata |  |  |  | <u>36w</u> | <u>36w</u> | 51w–(shd) |  |  |  |
+| **Haloragaceae** | | | | | | | | | |
+| Gonocarpus micranthus subsp. micranthus | pK | pK | 12w |  | 43w |  |  |  |  |
+| Gonocarpus salsoloides |  | pK | 17w |  |  |  |  |  |  |
+| Gonocarpus teucrioides (prob.pk.pf.flower.c.2–3y) | K/r | K | 10w |  | 94w |  | 100w | c.2y |  |
+| **Hamamelidaceae** | | | | | | | | | |
+| *Liquidambar styraciflua | R |  |  |  |  |  |  |  |  |
+| **Lamiaceae** | | | | | | | | | |
+| Hemigenia purpurea | pK | K | 51w |  | 100w |  | 104w | c.2y |  |
+| Plectranthus parviflorus | pK | pK | 15w |  | 49w |  | 49w |  |  |
+| Prostanthera denticulata |  | K |  |  |  |  |  |  |  |
+| Prostanthera linearis | K | K/r |  |  | 150w |  |  |  |  |
+| *Prunella vulgaris | ?K |  | 19w |  | 51w |  | 51w | c.1y–(shd) |  |
 
-{23}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Stachys arvensis</th><th>pK</th><th></th><th></th><th></th><th>16w</th><th>23w</th><th>23w–(shd)</th><th></th></tr></thead><tbody><tr><td>(prob.pk.pf.flower.c.3–6y)</td><td>K</td><td></td><td>33w</td><td></td><td>61w</td><td>91w</td><td>c.2–3y(ripe)</td><td></td></tr><tr><td>(poss.pk.pf.fruit.c.5y)</td><td>K</td><td></td><td></td><td></td><td>150w</td><td>191w</td><td>c.3–4y</td><td></td></tr><tr><td>*Cinnamomum camphora</td><td>R</td><td>R</td><td></td><td>94w</td><td></td><td></td><td></td><td></td></tr><tr><td>Endiandra sieberi</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Utricularia dichotoma</td><td></td><td>?R</td><td></td><td></td><td>32w</td><td></td><td></td><td></td></tr><tr><td>Utricularia lateriflora</td><td></td><td>?R</td><td></td><td></td><td>32w</td><td></td><td></td><td></td></tr><tr><td>*Linum trigynum</td><td>?K</td><td>?K</td><td></td><td></td><td>38w</td><td>38w</td><td></td><td></td></tr><tr><td>*Reinwardtia indica</td><td>pR</td><td></td><td></td><td>23w</td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3y)</td><td>?R</td><td></td><td>20w</td><td></td><td>49w</td><td>63w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td></td><td></td><td></td><td></td><td>19w</td><td>49w–(shd)</td><td></td><td></td></tr><tr><td>Lobelia gracilis</td><td></td><td></td><td></td><td></td><td>49w</td><td>67w</td><td></td><td></td></tr><tr><td>Pratia purpurascens</td><td>R</td><td>pR</td><td></td><td>6w</td><td></td><td>15w</td><td></td><td>15w–grn</td></tr><tr><td>(poss.pk.pf.flower.c.4–6y)</td><td>R</td><td>R</td><td>63w</td><td>87w</td><td></td><td>163w c.4y(1)</td><td></td><td>c.3y(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.3y)</td><td>pK</td><td>K</td><td></td><td></td><td>37w</td><td>43w</td><td>c.1y</td><td></td></tr><tr><td>subsp. congener</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>K</td><td></td><td></td><td></td><td></td><td>The host of this mistletoe was also killed by the same fire.</td><td></td><td></td></tr><tr><td>Muellerina eucalyptoides</td><td></td><td></td><td></td><td></td><td></td><td>R(1)m.i.f One plant resprouted after low to medium intensity fire. The canopy of its host was not 100% scorched.</td><td></td><td></td></tr><tr><td>*Cotoneaster ?franchetti</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Cotoneaster glaucophyllus</td><td>R</td><td></td><td></td><td></td><td></td><td>122w</td><td></td><td>c.2–3y(ripe)</td></tr><tr><td>*Eriobotrya japonica</td><td></td><td>k</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Pyracantha angustifolia</td><td>R</td><td></td><td></td><td></td><td></td><td>122w</td><td></td><td>c.2–3y(ripe)</td></tr><tr><td>*Pyracantha crenulata</td><td>R</td><td></td><td></td><td></td><td></td><td>125w</td><td></td><td>c.2–3y(ripe)</td></tr><tr><td>*Pyracantha fortuneana</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Hibiscus diversifolius</td><td></td><td>?K</td><td>?13w</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Malva parviflora</td><td>?K</td><td></td><td></td><td></td><td>11w</td><td>11w</td><td></td><td></td></tr><tr><td>*Modiola caroliniana</td><td>?K</td><td></td><td>7w</td><td></td><td>38w</td><td>50w</td><td>c.1y–(shd)</td><td></td></tr><tr><td>(poss.pk.pf.fruit.c.2+y)</td><td>pK</td><td></td><td>9w</td><td></td><td></td><td>44w(1)</td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.3y)</td><td>pK</td><td></td><td>6w</td><td></td><td>15w</td><td>28w</td><td>28w–(shd)</td><td></td></tr><tr><td>*Melia azedarach</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Synoum glandulosum</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Sarcopetalum harveyanum</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Stephania japonica var. discolor</td><td>R</td><td>R</td><td>9w(1)</td><td>50w</td><td></td><td></td><td></td><td></td></tr><tr><td>Villarsia exaltata</td><td></td><td>pR</td><td></td><td>20w</td><td></td><td>20w</td><td></td><td>20w–(shd)</td></tr><tr><td>Wilkiea huegeliana</td><td></td><td>?K</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp</td><td>Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| *Stachys arvensis | pK |  |  |  | 16w |  | 23w | 23w–(shd) |  |
+| **Lauraceae** | | | | | | | | | |
+| Cassytha glabella (prob.pk.pf.flower.c.3–6y) | K |  | 33w |  | 61w |  | 91w | c.2–3y(ripe) |  |
+| Cassytha pubescens (poss.pk.pf.fruit.c.5y) | K |  |  |  | 150w |  | 191w | c.3–4y |  |
+| *Cinnamomum camphora | R | R |  | 94w |  |  |  |  |  |
+| Endiandra sieberi |  | R |  |  |  |  |  |  |  |
+| **Lentibulariaceae** | | | | | | | | | |
+| Utricularia dichotoma |  | ?R |  | <u>32w</u> | <u>32w</u> |  |  |  |  |
+| Utricularia lateriflora |  | ?R |  | <u>32w</u> | <u>32w</u> |  |  |  |  |
+| **Linaceae** | | | | | | | | | |
+| *Linum trigynum | ?K | ?K |  |  | 38w |  | 38w |  |  |
+| *Reinwardtia indica | pR |  |  | 23w |  |  |  |  |  |
+| **Lobeliaceae** | | | | | | | | | |
+| Lobelia alata (prob.pk.pf.flower.c.3y) | ?R |  | 20w | <u>49w</u> | <u>49w</u> | <u>63w</u> | <u>63w</u> |  |  |
+| Lobelia dentata (prob.pk.pf.flower.c.1y) |  |  |  | <u>19w</u> | <u>19w</u> | <u>49w–(shd)</u> | <u>49w–(shd)</u> |  |  |
+| Lobelia gracilis |  |  |  | <u>49w</u> | <u>49w</u> | <u>67w</u> | <u>67w</u> |  |  |
+| Pratia purpurascens | R | pR |  | 6w |  | 15w |  |  | 15w–grn |
+| **Loganiaceae** | | | | | | | | | |
+| Logania albiflora (poss.pk.pf.flower.c.4–6y) | R | R | 63w | 87w |  | 163w | c.4y(1) |  | c.3y(shd) |
+| Mitrasacme polymorpha (prob.pk.pf.flower.c.3y) | pK | K |  |  | 37w |  | 43w | c.1y |  |
+| **Loranthaceae** | | | | | | | | | |
+| Amyema congener subsp. congener | K | The host of this mistletoe was also killed by the same fire. |  |  |  |  |  |  |  |
+| Muellerina eucalyptoides | R(1)m.i.f One plant resprouted after low to medium intensity fire. The canopy of its host was not 100% scorched. |  |  |  |  |  |  |  |  |
+| **Malaceae** | | | | | | | | | |
+| *Cotoneaster ?franchetti | R | R |  |  |  |  |  |  |  |
+| *Cotoneaster glaucophyllus | R |  |  |  |  | 122w |  |  | c.2–3y(ripe) |
+| *Eriobotrya japonica |  | k |  |  |  |  |  |  |  |
+| *Pyracantha angustifolia | R |  |  |  |  | 122w |  |  | c.2–3y(ripe) |
+| *Pyracantha crenulata | R |  |  |  |  | 125w |  |  | c.2–3y(ripe) |
+| *Pyracantha fortuneana | R |  |  |  |  |  |  |  |  |
+| **Malvaceae** | | | | | | | | | |
+| Hibiscus diversifolius |  | ?K | ?13w |  |  |  |  |  |  |
+| *Malva parviflora | ?K |  |  |  | 11w |  | 11w |  |  |
+| *Modiola caroliniana | ?K |  | 7w |  | 38w |  | 50w | c.1y–(shd) |  |
+| *Pavonia hastata (poss.pk.pf.fruit.c.2+y) | pK |  | 9w |  |  |  | 44w(1) |  |  |
+| *Sida rhombifolia (poss.pk.pf.flower.c.3y) | pK |  | 6w |  | 15w |  | 28w | 28w–(shd) |  |
+| **Meliaceae** | | | | | | | | | |
+| *Melia azedarach | R |  |  |  |  |  |  |  |  |
+| Synoum glandulosum | R | R |  |  |  |  |  |  |  |
+| **Menispermaceae** | | | | | | | | | |
+| Sarcopetalum harveyanum | R | R |  |  |  |  |  |  |  |
+| Stephania japonica var. discolor | R | R | 9w(1) | 50w |  |  |  |  |  |
+| **Menyanthaceae** | | | | | | | | | |
+| Villarsia exaltata |  | pR |  | 20w |  | 20w |  |  | 20w–(shd) |
+| **Monimiaceae** | | | | | | | | | |
+| Wilkiea huegeliana |  | ?K |  |  |  |  |  |  |  |
 
-{24}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Ficus coronata</th><th>R</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>*Ficus pumila</td><td>?K</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Ficus rubiginosa</td><td>R</td><td>R</td><td></td><td></td><td>140w</td><td></td><td></td><td></td></tr><tr><td>*Morus alba</td><td>R</td><td>R</td><td></td><td></td><td>44w</td><td></td><td></td><td>c.1–2y</td></tr><tr><td>Aegiceras corniculatum</td><td>R / k</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(syn. Myrsine variabilis )</td><td>R</td><td>R</td><td>39w</td><td>122w–buds</td><td></td><td></td><td></td><td></td></tr><tr><td>Acmena smithii</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.fruit.c.1–2y)</td><td>R</td><td></td><td>67w</td><td>50w</td><td>61w</td><td></td><td></td><td>61–67w(shd)</td></tr><tr><td>Angophora costata</td><td>R</td><td></td><td>35w</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.1–2y)</td><td>R</td><td>R</td><td>104w</td><td>32w, 49w</td><td>61w</td><td></td><td></td><td>61w(shd)</td></tr><tr><td>(poss.pk.pf.flower.c.3+y)</td><td>R</td><td>R</td><td></td><td>150w</td><td>163w–ri.</td><td></td><td></td><td>c.3y</td></tr><tr><td>Babingtonia densifolia</td><td>K</td><td>K</td><td>61w–adv</td><td>2y, 3y</td><td></td><td>164w</td><td>c.3–4y(shd)</td><td></td></tr><tr><td>Babingtonia pluriflora</td><td>R</td><td></td><td></td><td></td><td>124w</td><td></td><td></td><td></td></tr><tr><td>Backhousia myrtifolia</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Baeckea brevifolia</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Baeckea diosmifolia</td><td>R</td><td>R</td><td></td><td>46w</td><td>56w</td><td></td><td></td><td>56w</td></tr><tr><td>Baeckea imbricata</td><td>K</td><td>K</td><td></td><td></td><td></td><td>184w</td><td>c.3–4y</td><td></td></tr><tr><td>Baeckea linifolia</td><td>R</td><td>R</td><td></td><td>161w</td><td>190w</td><td></td><td></td><td>c.3–4y</td></tr><tr><td>Callistemon citrinus</td><td>R</td><td>R</td><td></td><td>97w</td><td></td><td></td><td></td><td></td></tr><tr><td>Callistemon linearis</td><td>R</td><td>R</td><td></td><td>92w</td><td>144w</td><td></td><td></td><td>c.3y</td></tr><tr><td>(poss.pk.pf.flower.c.4+y)</td><td>K</td><td>K;r–m.i.f71w</td><td></td><td>139w</td><td></td><td></td><td>c.?3–4y?</td><td></td></tr><tr><td>Corymbia gummifera</td><td>R</td><td></td><td></td><td></td><td>163w</td><td></td><td></td><td>c.3+y</td></tr><tr><td>(poss.pk.pf.flower.c.5+y)</td><td>K</td><td></td><td>36w</td><td>91w</td><td></td><td></td><td></td><td></td></tr><tr><td>var. fascicularis</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>K</td><td>K</td><td>31w</td><td>139, 186w</td><td></td><td></td><td></td><td></td></tr><tr><td>Darwinia procera</td><td></td><td>K</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus botryoides</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus haemastoma</td><td>R</td><td></td><td>75w</td><td>139w</td><td>177w</td><td></td><td></td><td>c.3–4y</td></tr><tr><td>Eucalyptus luehmanniana</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus obstans</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus paniculata</td><td>R</td><td></td><td>?85w–adv</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus pilularis</td><td>R</td><td></td><td>?49w</td><td></td><td></td><td></td><td></td><td>c.4–5y</td></tr><tr><td>Eucalyptus piperita</td><td>R</td><td></td><td>?49w</td><td></td><td></td><td></td><td></td><td>c.3–5y</td></tr><tr><td>Eucalyptus punctata</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus racemosa</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus resinifera</td><td>R</td><td></td><td></td><td>190w–buds</td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus saligna</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Eucalyptus umbra</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Euryomyrtus ramosissima</td><td>pK</td><td></td><td></td><td>139w</td><td></td><td></td><td></td><td></td></tr><tr><td>Kunzea ambigua</td><td>K</td><td>K</td><td>24w</td><td>97w</td><td></td><td>100w</td><td>c.2–4y</td><td></td></tr><tr><td>Kunzea capitata</td><td>R</td><td>K / r</td><td>31w</td><td>91w</td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R</td><td>R</td><td></td><td>97w</td><td>124w</td><td></td><td></td><td>c.2–3y</td></tr><tr><td>Leptospermum grandifolium</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Leptospermum juniperinum</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td></td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp</td><td>Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| **Moraceae** | | | | | | | | | |
+| Ficus coronata | R |  |  |  |  |  |  |  |  |
+| *Ficus pumila | ?K |  |  |  |  |  |  |  |  |
+| Ficus rubiginosa | R | R |  |  |  | 140w |  |  |  |
+| *Morus alba | R | R |  |  |  | 44w |  |  | c.1–2y |
+| **Myrsinaceae** | | | | | | | | | |
+| Aegiceras corniculatum | R/k |  |  |  |  |  |  |  |  |
+| Rapanea variabilis (syn. Myrsine variabilis) | R | R | 39w | 122w–buds |  |  |  |  |  |
+| **Myrtaceae** | | | | | | | | | |
+| Acmena smithii | R | R |  |  |  |  |  |  |  |
+| Angophora bakeri (poss.pk.pf.fruit.c.1–2y) | R |  | 67w | 50w |  | 61w |  |  | 61–67w(shd) |
+| Angophora costata | R |  | 35w |  |  |  |  |  |  |
+| Angophora hispida (prob.pk.pf.flower.c.1–2y) | R | R | 104w | 32w,**49w** |  | 61w |  |  | 61w(shd) |
+| Austromyrtus tenuifolia (poss.pk.pf.flower.c.3+y) | R | R |  | 150w |  | 163w–ri. |  |  | c.3y |
+| Babingtonia densifolia | K | K | 61w–adv |  | 2y,**3y** |  | 164w | c.3–4y(shd) |  |
+| Babingtonia pluriflora | R |  |  |  |  | 124w |  |  |  |
+| Backhousia myrtifolia | R |  |  |  |  |  |  |  |  |
+| Baeckea brevifolia |  | R |  |  |  |  |  |  |  |
+| Baeckea diosmifolia | R | R |  | 46w |  | 56w |  |  | 56w |
+| Baeckea imbricata | K | K |  |  |  |  | 184w | c.3–4y |  |
+| Baeckea linifolia | R | R |  | 161w |  | 190w |  |  | c.3–4y |
+| Callistemon citrinus | R | R |  | 97w |  |  |  |  |  |
+| Callistemon linearis | R | R |  | 92w |  | 144w |  |  | c.3y |
+| Calytrix tetragona (poss.pk.pf.flower.c.4+y) | K | K;r–m.i.f71w |  |  | 139w |  |  | c.?3–4y? |  |
+| Corymbia gummifera | R |  |  |  |  | 163w |  |  | c.3+y |
+| Darwinia biflora (poss.pk.pf.flower.c.5+y) | K |  | 36w |  | 91w |  |  |  |  |
+| Darwinia fascicularis var. fascicularis (poss.pk.pf.flower.c.5+y) | K | K | 31w |  | 139,**186w** |  |  |  |  |
+| Darwinia procera |  | K |  |  |  |  |  |  |  |
+| Eucalyptus botryoides |  | R |  |  |  |  |  |  |  |
+| Eucalyptus haemastoma | R |  | 75w | 139w |  | 177w |  |  | c.3–4y |
+| Eucalyptus luehmanniana |  | R |  |  |  |  |  |  |  |
+| Eucalyptus obstans |  | R |  |  |  |  |  |  |  |
+| Eucalyptus paniculata | R |  | ?85w–adv |  |  |  |  |  |  |
+| Eucalyptus pilularis | R |  | ?49w |  |  |  |  |  | c.4–5y |
+| Eucalyptus piperita | R |  | ?49w |  |  |  |  |  | c.3–5y |
+| Eucalyptus punctata |  | R |  |  |  |  |  |  |  |
+| Eucalyptus racemosa | R |  |  |  |  |  |  |  |  |
+| Eucalyptus resinifera | R |  |  | 190w–buds |  |  |  |  |  |
+| Eucalyptus saligna | R |  |  |  |  |  |  |  |  |
+| Eucalyptus umbra |  | R |  |  |  |  |  |  |  |
+| Euryomyrtus ramosissima | pK |  |  |  | 139w |  |  |  |  |
+| Kunzea ambigua | K | K | 24w |  | 97w |  | 100w | c.2–4y |  |
+| Kunzea capitata | R | K/r | 31w | 91w |  |  |  |  |  |
+| Leptospermum arachnoides (prob.pk.pf.flower.c.2–3y) | R | R |  | 97w |  | 124w |  |  | c.2–3y |
+| Leptospermum grandifolium | R | R |  |  |  |  |  |  |  |
+| Leptospermum juniperinum |  | R |  |  |  |  |  |  |  |
 
-{25}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Leptospermum parvifolium</th><th>R</th><th></th><th></th><th>90w</th><th>108w</th><th></th><th>c.3–4y(shd)</th></tr></thead><tbody><tr><td>(prob.pk.pf.flower.c.4y)</td><td>R</td><td></td><td></td><td>94w</td><td>143w</td><td></td><td>c.3y</td></tr><tr><td>Leptospermum squarrosum</td><td>K</td><td>K</td><td>22w</td><td>169w</td><td>184w</td><td>c.3–5y</td><td></td></tr><tr><td>(poss.pk.pf.flower.c.4y)</td><td>R</td><td>R</td><td>?126w</td><td>17w,31+w</td><td>37w–grn.</td><td></td><td>c.2y(shd)</td></tr><tr><td>Melaleuca deanei</td><td>R</td><td></td><td></td><td>90w–m.i.f.</td><td></td><td></td><td></td></tr><tr><td>Melaleuca hypericifolia</td><td>k / r</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4y)</td><td>R</td><td>R</td><td>6w</td><td>94w</td><td></td><td></td><td></td></tr><tr><td>Melaleuca nodosa</td><td>R</td><td></td><td></td><td>91w</td><td>100w</td><td></td><td>c.2+y</td></tr><tr><td>Melaleuca styphelioides</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4y)</td><td>pK</td><td>K</td><td>32w</td><td>88w</td><td></td><td></td><td></td></tr><tr><td>Syncarpia glomulifera</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td>c.5y</td></tr><tr><td>Tristania neriifolia</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Tristaniopsis collina</td><td>R</td><td>R</td><td></td><td>154w</td><td></td><td></td><td></td></tr><tr><td>Tristaniopsis laurina</td><td>R</td><td>R</td><td></td><td></td><td>124w</td><td></td><td>c.2–3y(shd)</td></tr><tr><td>*Ochna serrulata</td><td>R</td><td>R</td><td></td><td></td><td>93w–grn</td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.4–5y)</td><td>?R</td><td></td><td></td><td>120w</td><td>198w</td><td></td><td></td></tr><tr><td>*Jasminum polyanthum</td><td>?R</td><td></td><td></td><td>87w</td><td></td><td></td><td></td></tr><tr><td>*Ligustrum lucidum</td><td>R</td><td></td><td>44w</td><td>156w</td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.5+y)</td><td>R</td><td>R</td><td>39w</td><td>92w</td><td>122w</td><td></td><td>c.2–3y</td></tr><tr><td>Notelaea longifolia</td><td>R</td><td>R</td><td></td><td></td><td>101w</td><td></td><td>c.2y(ripe)</td></tr><tr><td>var. cinereum</td><td>R</td><td></td><td></td><td>11w</td><td>11w–(shd)</td><td></td><td></td></tr><tr><td>*Epilobium ?ciliatum</td><td></td><td></td><td></td><td>38w</td><td>38w(green)</td><td></td><td></td></tr><tr><td>*Ludwigia peruviana</td><td></td><td>R</td><td></td><td></td><td>20w–grn</td><td></td><td></td></tr><tr><td>*Oenothera mollissima</td><td></td><td></td><td></td><td></td><td>39w(green)</td><td></td><td></td></tr><tr><td>Oxalis “corniculata” (s.lat.)</td><td>pR</td><td></td><td></td><td>10w</td><td>12w</td><td></td><td></td></tr><tr><td>*Oxalis debilis var. corymbosa</td><td>pR</td><td></td><td></td><td>19w</td><td></td><td></td><td></td></tr><tr><td>*Oxalis incarnata</td><td>pR</td><td></td><td></td><td>12w</td><td></td><td></td><td></td></tr><tr><td>*Oxalis latifolia</td><td>pR</td><td></td><td></td><td>8w</td><td></td><td></td><td></td></tr><tr><td>*Oxalis pes–caprae</td><td>pR</td><td></td><td></td><td>26w</td><td></td><td></td><td></td></tr><tr><td>*Passiflora edulis</td><td></td><td></td><td></td><td></td><td>150w(grn)</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4y)</td><td>pR</td><td></td><td></td><td>122w</td><td>122w(grn)</td><td></td><td></td></tr><tr><td>*Passiflora suberosa</td><td></td><td></td><td></td><td></td><td>262w(grn)</td><td></td><td></td></tr><tr><td>*Phytolacca octandra</td><td></td><td></td><td>7w</td><td>15w</td><td>29w</td><td>29w–ri</td><td></td></tr><tr><td>(poss.pk.pf.flower.c.4–5y)</td><td>R</td><td>R</td><td></td><td>38w</td><td>101w</td><td></td><td>c.2y</td></tr><tr><td>(poss.pk.pf.flower.c.5y)</td><td>R</td><td>R</td><td></td><td>51w</td><td>71w–(shd)</td><td></td><td>c.1–2y(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.5 y)</td><td>R</td><td>R</td><td></td><td>36w,88w</td><td>41w–grn</td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Leptospermum parvifolium | R |  |  | 90w |  | 108w |  |  | c.3–4y(shd) |
+| Leptospermum polygalifolium (prob.pk.pf.flower.c.4y) | R |  |  | 94w |  | 143w |  |  | c.3y |
+| Leptospermum squarrosum | K | K | 22w |  | 169w |  | 184w | c.3–5y |  |
+| Leptospermum trinervium (poss.pk.pf.flower.c.4y) | R | R | ?126w | 17w,31+w |  | 37w–grn. |  |  | c.2y(shd) |
+| Melaleuca deanei | R |  |  | 90w–m.i.f. |  |  |  |  |  |
+| Melaleuca hypericifolia | k/r |  |  |  |  |  |  |  |  |
+| Melaleuca linariifolia (prob.pk.pf.flower.c.4y) | R | R | 6w | 94w |  |  |  |  |  |
+| Melaleuca nodosa | R |  |  | 91w |  | 100w |  |  | c.2+y |
+| Melaleuca styphelioides |  | R |  |  |  |  |  |  |  |
+| Micromyrtus ciliata (prob.pk.pf.flower.c.4y) | pK | K | 32w |  | 88w |  |  |  |  |
+| Syncarpia glomulifera | R | R |  |  |  |  |  |  | c.5y |
+| Tristania neriifolia |  | R |  |  |  |  |  |  |  |
+| Tristaniopsis collina | R | R |  | 154w |  |  |  |  |  |
+| Tristaniopsis laurina | R | R |  |  |  | 124w |  |  | c.2–3y(shd) |
+| **Ochnaceae** | | | | | | | | | |
+| *Ochna serrulata | R | R |  |  |  | 93w–grn |  |  |  |
+| **Olacaceae** | | | | | | | | | |
+| Olax stricta (poss.pk.pf.flower.c.4–5y) | ?R |  |  | <u>120w</u> | <u>120w</u> | <u>198w</u> | <u>198w</u> |  |  |
+| **Oleaceae** | | | | | | | | | |
+| *Jasminum polyanthum | ?R |  |  | <u>87w</u> | <u>87w</u> |  |  |  |  |
+| *Ligustrum lucidum | R |  | 44w | 156w |  |  |  |  |  |
+| *Ligustrum sinense (poss.pk.pf.flower.c.5+y) | R | R | 39w | 92w |  | 122w |  |  | c.2–3y |
+| Notelaea longifolia | R | R |  |  |  | 101w |  |  | c.2y(ripe) |
+| **Onagraceae** | | | | | | | | | |
+| Epilobium billardierianum var. cinereum | R |  |  | 11w |  | 11w–(shd) |  |  |  |
+| *Epilobium ?ciliatum |  |  |  | <u>38w</u> | <u>38w</u> | <u>38w(green)</u> | <u>38w(green)</u> |  |  |
+| *Ludwigia peruviana |  | R |  |  |  | 20w–grn |  |  |  |
+| *Oenothera mollissima |  |  |  |  |  | <u>39w(green)</u> | <u>39w(green)</u> |  |  |
+| **Oxalidaceae** | | | | | | | | | |
+| Oxalis “corniculata” (s.lat.) | pR |  |  | <u>10w</u> | <u>10w</u> | <u>12w</u> | <u>12w</u> |  |  |
+| *Oxalis debilis var. corymbosa | pR |  |  | <u>19w</u> | <u>19w</u> |  |  |  |  |
+| *Oxalis incarnata | pR |  |  | <u>12w</u> | <u>12w</u> |  |  |  |  |
+| *Oxalis latifolia | pR |  |  | <u>8w</u> | <u>8w</u> |  |  |  |  |
+| *Oxalis pes–caprae | pR |  |  | <u>26w</u> | <u>26w</u> |  |  |  |  |
+| **Passifloraceae** | | | | | | | | | |
+| *Passiflora edulis |  |  |  |  |  | <u>150w(grn)</u> | <u>150w(grn)</u> |  |  |
+| Passiflora herbertiana (prob.pk.pf.flower.c.4y) | pR |  |  | <u>122w</u> | <u>122w</u> | <u>122w(grn)</u> | <u>122w(grn)</u> |  |  |
+| *Passiflora suberosa |  |  |  |  |  | <u>262w(grn)</u> | <u>262w(grn)</u> |  |  |
+| **Phytolaccaceae** | | | | | | | | | |
+| *Phytolacca octandra |  |  | 7w |  | 15w |  | 29w | 29w–ri |  |
+| **Pittosporaceae** | | | | | | | | | |
+| Billardiera scandens (poss.pk.pf.flower.c.4–5y) | R | R |  | 38w |  | 101w |  |  | c.2y |
+| Bursaria spinosa (poss.pk.pf.flower.c.5y) | R | R |  | 51w |  | 71w–(shd) |  |  | c.1–2y(shd) |
+| Pittosporum revolutum (prob.pk.pf.flower.c.5 y) | R | R |  | 36w,88w |  | 41w–grn |  |  |  |
 
-{26}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Pittosporum undulatum</th><th>k/r</th><th></th><th></th><th></th><th>242w</th><th>262w</th><th>At least 5 years</th></tr></thead><tbody><tr><td>(prob.pk.pf.fruit.c.3–4y)</td><td>?K</td><td>? r</td><td></td><td></td><td>43w</td><td>43w</td><td></td></tr><tr><td>*Plantago lanceolata</td><td>R</td><td>pR</td><td></td><td>10w</td><td></td><td>10w</td><td>50w–(shd)</td></tr><tr><td>*Plantago major</td><td></td><td></td><td></td><td></td><td>50w</td><td>50w(grn)</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>pK</td><td></td><td></td><td></td><td>87w</td><td>101w</td><td>c.2y</td></tr><tr><td>Comesperma sphaerocarpum</td><td>pR</td><td></td><td></td><td>16w</td><td></td><td>16w(grn)</td><td>Less than 1 year</td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>?K</td><td></td><td></td><td></td><td>89w</td><td></td><td></td></tr><tr><td>*Polygala myrtifolia</td><td></td><td></td><td></td><td></td><td>142w</td><td></td><td></td></tr><tr><td>*Polygala virgata</td><td>K</td><td></td><td></td><td></td><td>142w</td><td>142w</td><td>c.2–3y</td></tr><tr><td>*Acetosa sagittata</td><td>R</td><td></td><td></td><td></td><td></td><td>30w</td><td>30w–(shd)</td></tr><tr><td>*Acetosella vulgaris</td><td></td><td></td><td></td><td></td><td>39w</td><td>39w(grn)</td><td></td></tr><tr><td>*Fallopia convolvulus</td><td></td><td></td><td></td><td></td><td></td><td>17w</td><td></td></tr><tr><td>*Persicaria capitata</td><td>R</td><td></td><td></td><td>19w</td><td></td><td></td><td></td></tr><tr><td>Persicaria decipiens</td><td></td><td></td><td></td><td></td><td>20w</td><td></td><td></td></tr><tr><td>Persicaria lapathifolia</td><td></td><td></td><td></td><td></td><td>20w</td><td>20w</td><td></td></tr><tr><td>Persicaria strigosa</td><td></td><td></td><td></td><td></td><td>20w</td><td></td><td></td></tr><tr><td>Rumex brownii</td><td>R</td><td></td><td></td><td>9w</td><td></td><td>19w</td><td></td></tr><tr><td>*Rumex conglomeratus</td><td></td><td></td><td></td><td></td><td></td><td>50w</td><td></td></tr><tr><td>*Rumex crispus</td><td>R</td><td></td><td></td><td></td><td>41w</td><td>51w–(shd)</td><td></td></tr><tr><td>*Portulaca oleracea</td><td></td><td></td><td></td><td></td><td></td><td>15w(grn)</td><td></td></tr><tr><td>*Anagallis arvensis</td><td></td><td></td><td></td><td></td><td>37w</td><td>50w</td><td></td></tr><tr><td>*Primula malacoides</td><td></td><td></td><td></td><td></td><td>38w</td><td></td><td></td></tr><tr><td>Samolus repens</td><td>?K</td><td></td><td></td><td></td><td>49w</td><td>49w(grn)</td><td></td></tr><tr><td>Banksia ericifolia</td><td>K</td><td>K</td><td>17w</td><td></td><td>177w</td><td>234w</td><td>c.4–5y–a few</td></tr><tr><td>Banksia integrifolia</td><td></td><td>R / k</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.10+y)</td><td>K</td><td>K</td><td>21w</td><td></td><td>169w</td><td>218w</td><td>c.4–5y–a few</td></tr><tr><td>Banksia oblongifolia</td><td>R</td><td>R</td><td>17w</td><td>114w</td><td></td><td>234w</td><td>c.4–5y– a few</td></tr><tr><td>Banksia robur</td><td></td><td>R</td><td>32w</td><td></td><td></td><td></td><td></td></tr><tr><td>Banksia serrata</td><td>R</td><td></td><td>12w</td><td>108w</td><td></td><td>177w</td><td>c.3–4y–a few fruit</td></tr><tr><td>Banksia spinulosa</td><td>R</td><td></td><td></td><td>122w</td><td></td><td>201w</td><td>c.3–4y</td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td></td><td>K</td><td></td><td></td><td>91w</td><td>97w–</td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td>(shd)</td><td>c.2y(shd)</td></tr><tr><td>subsp. angustifolium</td><td></td><td>K</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>subsp. longifolium</td><td>R</td><td>R</td><td></td><td>37w</td><td></td><td>42w</td><td>c.1–2y</td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td>K</td><td>9w</td><td></td><td>86w</td><td>114w</td><td>c.2–3y(shd)</td></tr><tr><td>(poss.pk.pf.flower.c.5–6y)</td><td>K</td><td>K</td><td>30w</td><td></td><td>87w</td><td>120w</td><td>c.2–3y(shd)</td></tr><tr><td>*Grevillea robusta</td><td></td><td></td><td>28w(1)</td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td>K</td><td>10w</td><td></td><td>56w, 2y</td><td>114w</td><td>c.2–3y(shd)</td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp</td><td>Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Pittosporum undulatum | k/r |  |  |  | 242w |  | 262w | At least 5 years |  |
+| Rhytidosporum procumbens (prob.pk.pf.fruit.c.3–4y) | ?K | ? r |  | <u>43w</u> | <u>43w</u> | <u>43w</u> | <u>43w</u> |  |  |
+| **Plantaginaceae** | | | | | | | | | |
+| *Plantago lanceolata | R | pR |  | 10w |  | 10w |  |  | 50w–(shd) |
+| *Plantago major |  |  |  | <u>50w</u> | <u>50w</u> | <u>50w(grn)</u> | <u>50w(grn)</u> |  |  |
+| **Polygalaceae** | | | | | | | | | |
+| Comesperma ericinum (prob.pk.pf.flower.c.3–5y) | pK |  |  |  | 87w |  | 101w | c.2y |  |
+| Comesperma sphaerocarpum | pR |  |  | 16w |  | 16w(grn) |  |  | Less than 1 year |
+| Comesperma volubile (prob.pk.pf.flower.c.3–5y) | ?K |  |  | <u>89w</u> | <u>89w</u> |  |  |  |  |
+| *Polygala myrtifolia |  |  |  |  | 142w |  |  |  |  |
+| *Polygala virgata | K |  |  |  | 142w |  | 142w | c.2–3y |  |
+| **Polygonaceae** | | | | | | | | | |
+| *Acetosa sagittata | R |  |  |  |  | 30w |  |  | 30w–(shd) |
+| *Acetosella vulgaris |  |  |  | <u>39w</u> | <u>39w</u> | <u>39w(grn)</u> | <u>39w(grn)</u> |  |  |
+| *Fallopia convolvulus |  |  |  |  |  | <u>17w</u> | <u>17w</u> |  |  |
+| *Persicaria capitata | R |  |  | 19w |  |  |  |  |  |
+| Persicaria decipiens |  |  |  | <u>20w</u> | <u>20w</u> |  |  |  |  |
+| Persicaria lapathifolia |  |  |  | <u>20w</u> | <u>20w</u> | <u>20w</u> | <u>20w</u> |  |  |
+| Persicaria strigosa |  |  |  | <u>20w</u> | <u>20w</u> |  |  |  |  |
+| Rumex brownii | R |  |  | 9w |  | 19w |  |  |  |
+| *Rumex conglomeratus |  |  |  |  |  | <u>50w</u> | <u>50w</u> |  |  |
+| *Rumex crispus | R |  |  | <u>41w</u> | <u>41w</u> | <u>51w–(shd)</u> | <u>51w–(shd)</u> |  |  |
+| **Portulacaceae** | | | | | | | | | |
+| *Portulaca oleracea |  |  |  |  |  | <u>15w(grn)</u> | <u>15w(grn)</u> |  |  |
+| **Primulaceae** | | | | | | | | | |
+| *Anagallis arvensis |  |  |  |  | 37w |  | 50w |  |  |
+| *Primula malacoides |  |  |  | <u>38w</u> | <u>38w</u> |  |  |  |  |
+| Samolus repens | ?K |  |  | <u>49w</u> | <u>49w</u> | <u>49w(grn)</u> | <u>49w(grn)</u> |  |  |
+| **Proteaceae** | | | | | | | | | |
+| Banksia ericifolia | K | K | 17w |  | 177w |  | 234w | c.4–5y–a few fruit |  |
+| Banksia integrifolia |  | R/k |  |  |  |  |  |  |  |
+| Banksia marginata (poss.pk.pf.flower.c.10+y) | K | K | 21w |  | 169w |  | 218w | c.4–5y–a few fruit |  |
+| Banksia oblongifolia | R | R | 17w | 114w |  | 234w |  |  | c.4–5y– a few fruit |
+| Banksia robur |  | R | 32w |  |  |  |  |  |  |
+| Banksia serrata | R |  | 12w | 108w |  | 177w |  |  | c.3–4y–a few fruit |
+| Banksia spinulosa | R |  |  | 122w |  | 201w |  |  | c.3–4y |
+| Conospermum ericifolium (prob.pk.pf.flower.c.3–5y) |  | K |  |  | 91w |  | 97w– (shd) | c.2y(shd) |  |
+| Conospermum longifolium subsp. angustifolium |  | K |  |  |  |  |  |  |  |
+| Conospermum longifolium subsp. longifolium | R | R |  | 37w |  | 42w |  |  | c.1–2y |
+| Grevillea buxifolia (prob.pk.pf.flower.c.4–6y) | K | K | 9w |  | 86w |  | 114w | c.2–3y(shd) |  |
+| Grevillea linearifolia (poss.pk.pf.flower.c.5–6y) | K | K | 30w |  | 87w |  | 120w | c.2–3y(shd) |  |
+| *Grevillea robusta |  |  | 28w(1) |  |  |  |  |  |  |
+| Grevillea sericea (prob.pk.pf.flower.c.4–6y) | K | K | 10w |  | 56w,**2y** |  | 114w | c.2–3y(shd) |  |
 
-{27}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>(poss.pk.pf.flower.c.5y)</th><th>K</th><th>K</th><th></th><th>136w</th><th></th><th></th></tr></thead><tbody><tr><td>Hakea dactyloides</td><td>(s.str.) K</td><td>K</td><td>32w</td><td></td><td>c.6.5y</td><td>c.6.5y–a few</td></tr><tr><td>Hakea gibbosa</td><td>K</td><td>K</td><td>30w</td><td>129w</td><td>159w</td><td>c.3–4y</td></tr><tr><td>Hakea laevipes</td><td>subsp. laevipes R</td><td>R</td><td></td><td>97w</td><td>200w</td><td>c.4y</td></tr><tr><td>Hakea propinqua</td><td>K</td><td>K</td><td>21w</td><td>124w</td><td>177w</td><td>c.3–5y–a few fruit</td></tr><tr><td>Hakea salicifolia</td><td>K</td><td>K</td><td>41w</td><td>295w–buds</td><td>c.6.5y</td><td>c.6.5y–a few fruit</td></tr><tr><td>Hakea sericea</td><td>K</td><td></td><td>24w</td><td>129w</td><td>163w</td><td>c.3–4y</td></tr><tr><td>Hakea teretifolia</td><td>K</td><td>K</td><td>22w</td><td>153w</td><td>184w</td><td>c.3–5y</td></tr><tr><td>Isopogon anemonifolius</td><td>R</td><td></td><td></td><td>90w</td><td>196w</td><td>c.3–4y–a few fruit</td></tr><tr><td>Isopogon anethifolius</td><td>R / K</td><td>R / K</td><td>124w–adv</td><td>142w ?198w</td><td>242w</td><td>c.4–5y–a few fruit</td></tr><tr><td>Lambertia formosa</td><td>R</td><td></td><td></td><td>71w, 94w</td><td>195w</td><td>c.3–4y</td></tr><tr><td>Lomatia myricoides</td><td>R</td><td>R</td><td></td><td>163w</td><td>184w</td><td>c.3–4y(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>R</td><td></td><td>104w(1)</td><td>49w</td><td>63w–(shd)</td><td>c.1–2y(shd)</td></tr><tr><td>(poss.pk.pf.fruit.c.4–6y)</td><td>K</td><td>K</td><td></td><td>108w</td><td>196w</td><td>c.3–4y</td></tr><tr><td>Persoonia laurina</td><td>R</td><td></td><td></td><td>101w</td><td>131w</td><td>c.2–3y</td></tr><tr><td>Persoonia levis</td><td>R</td><td>R</td><td>64w(1)</td><td>50w</td><td>100w</td><td>c.2y–a few fruit</td></tr><tr><td>Persoonia linearis</td><td>R</td><td>R</td><td>140w–adv</td><td>108w</td><td>133w</td><td>c.2–3y</td></tr><tr><td>Persoonia pinifolia</td><td>K</td><td>K</td><td>124w–adv</td><td>270w</td><td>295w</td><td>c.5–6y–a few fruit</td></tr><tr><td>Petrophile pulchella</td><td>K</td><td>K</td><td>24w</td><td></td><td>191w</td><td>c.3–5y–a few fruit</td></tr><tr><td>Stenocarpus salignus</td><td>R</td><td>R</td><td></td><td>154w</td><td>163w</td><td>c.3–4y</td></tr><tr><td>Telopea speciosissima</td><td>R</td><td></td><td></td><td>c.1–2y</td><td>c.2–3y</td><td>c.2–3y–a small</td></tr><tr><td>Xylomelum pyriforme</td><td>R</td><td>R</td><td>133w–adv</td><td>39w</td><td>133w</td><td>c.2–3y</td></tr><tr><td>Clematis aristata</td><td>R</td><td></td><td></td><td>38w</td><td></td><td></td></tr><tr><td>Ranunculus plebeius</td><td>?K</td><td></td><td></td><td>41w</td><td></td><td></td></tr><tr><td>*Ranunculus repens</td><td>R</td><td></td><td></td><td>39w</td><td>44w–grn.</td><td>c.1y</td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>pK</td><td></td><td></td><td>71w</td><td>75w</td><td></td></tr><tr><td>Cryptandra ericoides</td><td></td><td>K</td><td></td><td>64w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td></td><td></td><td>140w</td><td>249w</td><td></td></tr><tr><td>Pomaderris elliptica</td><td></td><td>K</td><td></td><td>195w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td></td><td>63w–adv</td><td>140w</td><td>149w</td><td>c.2–3y</td></tr><tr><td>(prob.pk.pf.flower.c.4–6y)</td><td>K</td><td></td><td>50w</td><td>89w</td><td>143w</td><td></td></tr><tr><td>*Potentilla indica</td><td>R</td><td></td><td></td><td></td><td>23w</td><td></td></tr><tr><td>*Rubus ?discolor</td><td>R</td><td></td><td></td><td>38w</td><td>49w</td><td>c.1y</td></tr><tr><td>*Galium aparine</td><td>?K</td><td></td><td></td><td>44w</td><td>44w</td><td>c.1y</td></tr><tr><td>Galium binifolium</td><td></td><td></td><td>36w</td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.fruit.c.5+y)</td><td>R</td><td></td><td></td><td>101w–grn</td><td></td><td>c.2y</td></tr><tr><td>Opercularia aspera</td><td>R</td><td>R</td><td>21w</td><td></td><td>23w</td><td></td></tr><tr><td>Opercularia varia</td><td>pR</td><td></td><td></td><td>33w</td><td>33w</td><td></td></tr><tr><td>Pomax umbellata</td><td>pK</td><td>pK</td><td>15w</td><td>38w</td><td>49w</td><td>c.1y–(shd)</td></tr><tr><td>*Richardia stellaris</td><td>?R</td><td></td><td></td><td></td><td>25w</td><td></td></tr><tr><td>Asterolasia correifolia</td><td></td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td>Fire Response</td><td>Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Grevillea speciosa (poss.pk.pf.flower.c.5y) | K | K |  |  | 136w |  |  |  |  |
+| Hakea dactyloides (s.str.) | K | K | 32w |  |  |  | c.6.5y | c.6.5y–a few fruit |  |
+| Hakea gibbosa | K | K | 30w |  | 129w |  | 159w | c.3–4y |  |
+| Hakea laevipes subsp. laevipes | R | R |  | 97w |  | 200w |  |  | c.4y |
+| Hakea propinqua | K | K | 21w |  | 124w |  | 177w | c.3–5y–a few fruit |  |
+| Hakea salicifolia | K | K | 41w |  | 295w–buds |  | c.6.5y | c.6.5y–a few fruit |  |
+| Hakea sericea | K |  | 24w |  | 129w |  | 163w | c.3–4y |  |
+| Hakea teretifolia | K | K | 22w |  | 153w |  | 184w | c.3–5y |  |
+| Isopogon anemonifolius | R |  |  | 90w |  | 196w |  |  | c.3–4y–a few fruit |
+| Isopogon anethifolius | R/K | R/K | 124w–adv | 142w | ?198w |  | 242w | c.4–5y–a few fruit |  |
+| Lambertia formosa | R |  |  | 71w,**94w** |  | 195w |  |  | c.3–4y |
+| Lomatia myricoides | R | R |  | 163w |  | 184w |  |  | c.3–4y(shd) |
+| Lomatia silaifolia (prob.pk.pf.flower.c.1y) | R |  | 104w(1) | 49w |  | 63w–(shd) |  |  | c.1–2y(shd) |
+| Persoonia lanceolata (poss.pk.pf.fruit.c.4–6y) | K | K |  |  | 108w |  | 196w | c.3–4y |  |
+| Persoonia laurina | R |  |  | 101w |  | 131w |  |  | c.2–3y |
+| Persoonia levis | R | R | 64w(1) | 50w |  | 100w |  |  | c.2y–a few fruit |
+| Persoonia linearis | R | R | 140w–adv | 108w |  | 133w |  |  | c.2–3y |
+| Persoonia pinifolia | K | K | 124w–adv |  | 270w |  | 295w | c.5–6y–a few fruit |  |
+| Petrophile pulchella | K | K | 24w |  |  |  | 191w | c.3–5y–a few fruit |  |
+| Stenocarpus salignus | R | R |  | 154w |  | 163w |  |  | c.3–4y |
+| Telopea speciosissima | R |  |  | c.1–2y |  | c.2–3y |  |  | c.2–3y–a small pop. |
+| Xylomelum pyriforme | R | R | 133w–adv | 39w |  | 133w |  |  | c.2–3y |
+| **Ranunculaceae** | | | | | | | | | |
+| Clematis aristata | R |  |  | 38w |  |  |  |  |  |
+| Ranunculus plebeius | ?K |  |  | <u>41w</u> | <u>41w</u> |  |  |  |  |
+| *Ranunculus repens | R |  |  | 39w |  | 44w–grn. |  |  | c.1y |
+| **Rhamnaceae** | | | | | | | | | |
+| Cryptandra amara (prob.pk.pf.flower.c.3–5y) | pK |  |  |  | 71w |  | 75w |  |  |
+| Cryptandra ericoides |  | K |  |  | 64w |  |  |  |  |
+| Pomaderris discolor (prob.pk.pf.flower.c.4–6y) | K |  |  |  | 140w |  | 249w |  |  |
+| Pomaderris elliptica |  | K |  |  | 195w |  |  |  |  |
+| Pomaderris ferruginea (prob.pk.pf.flower.c.4–6y) | K |  | 63w–adv |  | 140w |  | 149w | c.2–3y |  |
+| Pomaderris intermedia (prob.pk.pf.flower.c.4–6y) | K |  | 50w |  | 89w |  | 143w |  |  |
+| **Rosaceae** | | | | | | | | | |
+| *Potentilla indica | R |  |  |  |  | 23w |  |  |  |
+| *Rubus ?discolor | R |  |  | 38w |  | 49w |  |  | c.1y |
+| **Rubiaceae** | | | | | | | | | |
+| *Galium aparine | ?K |  |  |  | 44w |  | 44w | c.1y |  |
+| Galium binifolium |  |  | 36w |  |  |  |  |  |  |
+| Morinda jasminoides (poss.pk.pf.fruit.c.5+y) | R |  |  | 101w–grn |  |  |  |  | c.2y |
+| Opercularia aspera | R | R | 21w |  |  | 23w |  |  |  |
+| Opercularia varia | pR |  |  | <u>33w</u> | <u>33w</u> | <u>33w</u> | <u>33w</u> |  |  |
+| Pomax umbellata | pK | pK | 15w |  | 38w |  | 49w | c.1y–(shd) |  |
+| *Richardia stellaris | ?R |  |  |  |  | <u>25w</u> | <u>25w</u> |  |  |
+| **Rutaceae** | | | | | | | | | |
+| Asterolasia correifolia |  | K |  |  |  |  |  |  |  |
 
-{28}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>(prob.pk.pf.flower.c.4–5y)</th><th>K</th><th>K</th><th>23w</th><th>85w</th><th>97w–</th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td>(shd)</td><td>c.2y</td><td></td></tr><tr><td>Boronia mollis</td><td></td><td>pK</td><td>35w</td><td></td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.3+y)</td><td>R</td><td>R</td><td></td><td>37w, 89w</td><td>97w–(shd)</td><td></td><td>c.2y</td></tr><tr><td>Boronia polygalifolia</td><td>pR</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Boronia rigens</td><td>K</td><td>pK</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–5y)</td><td>pK</td><td>pK</td><td>85w</td><td>131w</td><td>89w–grn</td><td>c.2y</td><td></td></tr><tr><td>Crowea saligna</td><td></td><td>?K</td><td>22w</td><td></td><td></td><td></td><td></td></tr><tr><td>Eriostemon australasius</td><td></td><td>K / r</td><td>17w</td><td></td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.10+y)</td><td>K</td><td>K</td><td>30w</td><td>189w</td><td>247w</td><td>c.4–5y</td><td></td></tr><tr><td>subsp. squamulosum</td><td></td><td>K</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>subsp. salsolifolia</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>pK</td><td>K</td><td></td><td>89w, 135w</td><td>141w–grn</td><td>c.2–3y</td><td></td></tr><tr><td>Zieria laevigata</td><td></td><td>?K</td><td>17w</td><td></td><td>97w</td><td></td><td></td></tr><tr><td>(poss.pk.pf.fruit.c.3y)</td><td>pK</td><td></td><td>15w</td><td>63w, 85w</td><td>85w</td><td>c.2y</td><td></td></tr><tr><td>(poss.pk.pf.flower.c.3–5y)</td><td>K</td><td></td><td>26w</td><td>88w</td><td>143w</td><td>c.2–3y</td><td></td></tr><tr><td>*Populus alba</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Salix ?alba</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Salix babylonica (s.lat.)</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Exocarpos cupressiformis</td><td>R</td><td>R</td><td>26w</td><td>61w</td><td>190w</td><td></td><td></td></tr><tr><td>Leptomeria acida</td><td>K</td><td></td><td>122w–adv</td><td>163w</td><td>190w</td><td>c.3–5y</td><td></td></tr><tr><td>*Cardiospermum grandiflorum</td><td>R</td><td></td><td>7w</td><td>63w</td><td>89w</td><td></td><td></td></tr><tr><td>Dodonaea pinnata</td><td></td><td>pK</td><td>31w</td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.fruit.c.4–5 y)</td><td>K</td><td>pK</td><td>6w</td><td>63w</td><td>87w–grn</td><td>c.2–3y</td><td></td></tr><tr><td>*Verbascum virgatum</td><td></td><td></td><td></td><td></td><td>51w</td><td></td><td></td></tr><tr><td>*Veronica persica</td><td></td><td></td><td></td><td>38w</td><td>38w</td><td></td><td></td></tr><tr><td>Veronica plebeia</td><td>R</td><td></td><td>19w</td><td>39w</td><td>44w(grn)</td><td></td><td></td></tr><tr><td>*Ailanthus altissima</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Cestrum parqui</td><td>R</td><td></td><td></td><td>41w</td><td>51w</td><td></td><td>c.1y–grn</td></tr><tr><td>*Datura ferox</td><td></td><td></td><td></td><td></td><td>16w(grn)</td><td></td><td></td></tr><tr><td>*Datura stramonium</td><td></td><td></td><td>8w</td><td>8w</td><td>12w(grn)</td><td></td><td></td></tr><tr><td>Duboisia myoporoides</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Lycopersicon esculentum</td><td></td><td></td><td>12w</td><td>15w</td><td>29w</td><td></td><td></td></tr><tr><td>*Petunia ?(hybrid)</td><td></td><td></td><td></td><td>35w</td><td></td><td></td><td></td></tr><tr><td>*Physalis peruviana</td><td></td><td></td><td></td><td>140w</td><td>140w</td><td></td><td></td></tr><tr><td>Solanum americanum</td><td></td><td></td><td></td><td>37w</td><td>37w</td><td></td><td></td></tr><tr><td>Solanum aviculare</td><td></td><td></td><td>16w</td><td>50w</td><td>94w(grn)</td><td></td><td></td></tr><tr><td>*Solanum chenopodioides</td><td>R</td><td></td><td></td><td>7w</td><td>50w</td><td></td><td></td></tr><tr><td>*Solanum mauritianum</td><td>R</td><td>pR</td><td></td><td>36w</td><td>41w</td><td></td><td>c.1y</td></tr><tr><td>Solanum prinophyllum</td><td></td><td></td><td>13w</td><td>35w</td><td>35w</td><td></td><td></td></tr><tr><td>Solanum vescum</td><td></td><td></td><td>20w</td><td>38w</td><td>38w</td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Boronia ledifolia (prob.pk.pf.flower.c.4–5y) | K | K | 23w |  | 85w |  | 97w– (shd) | c.2y |  |
+| Boronia mollis |  | pK | 35w |  |  |  |  |  |  |
+| Boronia pinnata (poss.pk.pf.flower.c.3+y) | R | R |  | 37w,**89w** |  | 97w–(shd) |  |  | c.2y |
+| Boronia polygalifolia | pR |  |  |  |  |  |  |  |  |
+| Boronia rigens | K | pK |  |  |  |  |  |  |  |
+| Correa reflexa (prob.pk.pf.flower.c.4–5y) | pK | pK | 85w |  | **131w** |  | 89w–grn | c.2y |  |
+| Crowea saligna |  | ?K | 22w |  |  |  |  |  |  |
+| Eriostemon australasius |  | K/r | 17w |  |  |  |  |  |  |
+| Leionema dentatum (poss.pk.pf.flower.c.10+y) | K | K | 30w |  | 189w |  | 247w | c.4–5y |  |
+| Phebalium squamulosum subsp. squamulosum |  | K |  |  |  |  |  |  |  |
+| Philotheca salsolifolia subsp. salsolifolia (prob.pk.pf.flower.c.5–6y) | pK | K |  |  | 89w,**135w** |  | 141w–grn c.2–3y |  |  |
+| Zieria laevigata |  | ?K | 17w |  |  |  | 97w |  |  |
+| Zieria pilosa (poss.pk.pf.fruit.c.3y) | pK |  | 15w |  | 63w,**85w** |  | 85w | c.2y |  |
+| Zieria smithii (poss.pk.pf.flower.c.3–5y) | K |  | 26w |  | 88w |  | 143w | c.2–3y |  |
+| **Salicaceae** | | | | | | | | | |
+| *Populus alba | R |  |  |  |  |  |  |  |  |
+| *Salix ?alba |  | R |  |  |  |  |  |  |  |
+| *Salix babylonica (s.lat.) | R |  |  |  |  |  |  |  |  |
+| **Santalaceae** | | | | | | | | | |
+| Exocarpos cupressiformis | R | R | 26w | 61w |  | <u>190w</u> | <u>190w</u> |  |  |
+| Leptomeria acida | K |  | 122w–adv |  | 163w |  | 190w | c.3–5y |  |
+| **Sapindaceae** | | | | | | | | | |
+| *Cardiospermum grandiflorum | R |  | 7w | <u>63w</u> | <u>63w</u> | <u>89w</u> | <u>89w</u> |  |  |
+| Dodonaea pinnata |  | pK | 31w |  |  |  |  |  |  |
+| Dodonaea triquetra (prob.pk.pf.fruit.c.4–5 y) | K | pK | 6w |  | 63w |  | 87w–grn | c.2–3y |  |
+| **Scrophulariaceae** | | | | | | | | | |
+| *Verbascum virgatum |  |  |  |  |  | <u>51w</u> | <u>51w</u> |  |  |
+| *Veronica persica |  |  |  |  | 38w |  | 38w |  |  |
+| Veronica plebeia | R |  | 19w | <u>39w</u> | <u>39w</u> | <u>44w(grn)</u> | <u>44w(grn)</u> |  |  |
+| **Simaroubaceae** | | | | | | | | | |
+| *Ailanthus altissima | R | R |  |  |  |  |  |  |  |
+| **Solanaceae** | | | | | | | | | |
+| *Cestrum parqui | R |  |  | 41w |  | 51w |  |  | c.1y–grn |
+| *Datura ferox |  |  |  |  |  | <u>16w(grn)</u> | <u>16w(grn)</u> |  |  |
+| *Datura stramonium |  |  | 8w | <u>8w</u> | <u>8w</u> | <u>12w(grn)</u> | <u>12w(grn)</u> |  |  |
+| Duboisia myoporoides |  | R |  |  |  |  |  |  |  |
+| *Lycopersicon esculentum |  |  | 12w |  | 15w |  | 29w |  |  |
+| *Petunia ?(hybrid) |  |  |  |  | 35w |  |  |  |  |
+| *Physalis peruviana |  |  |  |  | 140w |  | 140w |  |  |
+| Solanum americanum |  |  |  | <u>37w</u> | <u>37w</u> | <u>37w</u> | <u>37w</u> |  |  |
+| Solanum aviculare |  |  | 16w | <u>50w</u> | <u>50w</u> | <u>94w(grn)</u> | <u>94w(grn)</u> |  |  |
+| *Solanum chenopodioides | R |  |  | 7w |  | 50w |  |  |  |
+| *Solanum mauritianum | R | pR |  | 36w |  | 41w |  |  | c.1y |
+| Solanum prinophyllum |  |  | 13w |  | 35w |  | 35w |  |  |
+| Solanum vescum |  |  | 20w |  | 38w |  | 38w |  |  |
 
-{29}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Stackhousia nuda</th><th></th><th>R</th><th></th><th>17w(1)</th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Stackhousia viminea</td><td>pK</td><td>pK</td><td>32w</td><td>37w</td><td>42w</td><td>c.1y</td><td></td></tr><tr><td>Commersonia fraseri</td><td>R</td><td></td><td></td><td>63w</td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.4–5y)</td><td>K</td><td>K</td><td>22w</td><td>87w</td><td>97w</td><td>c.2y(shd)</td><td></td></tr><tr><td>Lasiopetalum parviflorum</td><td>K</td><td></td><td></td><td>144w</td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–4y)</td><td></td><td></td><td>20w</td><td>38w</td><td>92w</td><td>c.2y(shd)</td><td></td></tr><tr><td>Stylidium graminifolium</td><td>R</td><td></td><td></td><td>30w</td><td>51w</td><td></td><td>c.1–2y</td></tr><tr><td>(poss.pk.pf.flower.c.3y)</td><td>?K</td><td>K / r</td><td>?75w</td><td>?42w 93w</td><td>104w</td><td>c.2y(shd)</td><td></td></tr><tr><td>Stylidium productum</td><td>R</td><td>pR</td><td>26w</td><td>97w</td><td>101w(grn)</td><td></td><td>c.2–3y?</td></tr><tr><td>(poss.pk.pf.flower.c.2y)</td><td></td><td></td><td></td><td>56w</td><td>61w</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.3–5y)</td><td>K</td><td>K</td><td>22w</td><td>56w</td><td>75w</td><td>c.2y(shd)</td><td></td></tr><tr><td>Wikstroemia indica</td><td></td><td>?K</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Tetratheca ericifolia</td><td></td><td>K</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Tetratheca glandulosa</td><td>R</td><td>R</td><td></td><td>90w</td><td></td><td></td><td></td></tr><tr><td>Tetratheca thymifolia</td><td>R / ?k</td><td>R</td><td>38w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Tropaeolum majus</td><td></td><td></td><td></td><td>26w</td><td>26w</td><td></td><td></td></tr><tr><td>*Celtis australis</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Trema tomentosa var. viridis</td><td></td><td>?K</td><td>10w</td><td></td><td></td><td></td><td></td></tr><tr><td>Urtica incisa</td><td></td><td></td><td></td><td>38w</td><td></td><td></td><td></td></tr><tr><td>Clerodendrum tomentosum</td><td>R</td><td>R</td><td></td><td>143w–buds</td><td>4y–grn.</td><td></td><td></td></tr><tr><td>*Lantana camara</td><td>R</td><td>R</td><td></td><td>16w</td><td>20w–grn</td><td></td><td></td></tr><tr><td>*Verbena bonariensis (s.lat.)</td><td>R</td><td></td><td>11w</td><td>37w</td><td>56w</td><td></td><td></td></tr><tr><td>*Verbena litoralis (s.lat.)</td><td>R</td><td></td><td></td><td>7w</td><td>10w</td><td></td><td></td></tr><tr><td>*Verbena rigida</td><td></td><td></td><td></td><td>12w</td><td>23w–(shd)</td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2–3y)</td><td>R</td><td></td><td></td><td>36w</td><td>43w– grn</td><td></td><td>c.1y</td></tr><tr><td>Viola hederacea</td><td>R</td><td></td><td>10w</td><td>10w</td><td>38w</td><td></td><td></td></tr><tr><td>*Viola odorata</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Cayatia clematidea</td><td>R</td><td>R</td><td></td><td>51w</td><td>51w–grn</td><td></td><td>c.1y</td></tr><tr><td>Cissus hypoglauca</td><td>R</td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Vitis sp.</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Agave americana</td><td>R</td><td></td><td></td><td>19w</td><td></td><td></td><td></td></tr><tr><td>*Yucca aloifolia</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Nothoscordum borbonicum</td><td>pR</td><td>pR</td><td></td><td>9w</td><td>18w</td><td></td><td></td></tr><tr><td>*Alstroemeria pulchella</td><td>pR</td><td></td><td></td><td>49w</td><td>49w</td><td></td><td></td></tr><tr><td>*Amaryllis belladonna</td><td>pR</td><td></td><td></td><td></td><td>12w</td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| **Stackhousiaceae** | | | | | | | | | |
+| Stackhousia nuda |  | R |  | 17w(1) |  |  |  |  |  |
+| Stackhousia viminea | pK | pK | 32w |  | 37w |  | 42w | c.1y |  |
+| **Sterculiaceae** | | | | | | | | | |
+| Commersonia fraseri | R |  |  | 63w |  |  |  |  |  |
+| Lasiopetalum ferrugineum (prob.pk.pf.flower.c.4–5y) | K | K | 22w |  | 87w |  | 97w | c.2y(shd) |  |
+| Lasiopetalum parviflorum | K |  |  |  | 144w |  |  |  |  |
+| Rulingia dasyphylla (prob.pk.pf.flower.c.3–4y) |  |  | 20w |  | 38w |  | 92w | c.2y(shd) |  |
+| **Stylidiaceae** | | | | | | | | | |
+| Stylidium graminifolium | R |  |  | 30w |  | 51w |  |  | c.1–2y |
+| Stylidium lineare (poss.pk.pf.flower.c.3y) | ?K | K/r | ?75w | ?42w | 93w |  | 104w | c.2y(shd) |  |
+| Stylidium productum | R | pR | 26w | <u>97w</u> | <u>97w</u> | <u>101w(grn)</u> | <u>101w(grn)</u> |  | c.2–3y? |
+| **Thymelaeaceae** | | | | | | | | | |
+| Pimelea curviflora (poss.pk.pf.flower.c.2y) |  |  |  |  | 56w |  | 61w |  |  |
+| Pimelea linifolia (prob.pk.pf.flower.c.3–5y) | K | K | 22w |  | 56w |  | 75w | c.2y(shd) |  |
+| Wikstroemia indica |  | ?K |  |  |  |  |  |  |  |
+| **Tremandraceae** | | | | | | | | | |
+| Tetratheca ericifolia |  | K |  |  |  |  |  |  |  |
+| Tetratheca glandulosa | R | R |  | 90w |  |  |  |  |  |
+| Tetratheca thymifolia | R/?k | R | 38w |  |  |  |  |  |  |
+| **Tropaeolaceae** | | | | | | | | | |
+| *Tropaeolum majus |  |  |  |  | 26w |  | 26w |  |  |
+| **Ulmaceae** | | | | | | | | | |
+| *Celtis australis | R |  |  |  |  |  |  |  |  |
+| Trema tomentosa var. viridis |  | ?K | 10w |  |  |  |  |  |  |
+| **Urticaceae** | | | | | | | | | |
+| Urtica incisa |  |  |  | <u>38w</u> | <u>38w</u> |  |  |  |  |
+| **Verbenaceae** | | | | | | | | | |
+| Clerodendrum tomentosum | R | R |  | 143w–buds |  | 4y–grn. |  |  |  |
+| *Lantana camara | R | R |  | 16w |  | 20w–grn |  |  |  |
+| *Verbena bonariensis (s.lat.) | R |  | 11w | <u>37w</u> | <u>37w</u> | <u>56w</u> | <u>56w</u> |  |  |
+| *Verbena litoralis (s.lat.) | R |  |  | 7w |  | 10w |  |  |  |
+| *Verbena rigida |  |  |  | <u>12w</u> | <u>12w</u> | <u>23w–(shd)</u> | <u>23w–(shd)</u> |  |  |
+| **Violaceae** | | | | | | | | | |
+| Hybanthus monopetalus (prob.pk.pf.flower.c.2–3y) | R |  |  | 36w |  | 43w– grn |  |  | c.1y |
+| Viola hederacea | R |  | 10w | <u>10w</u> | <u>10w</u> | <u>38w</u> | <u>38w</u> |  |  |
+| *Viola odorata | R |  |  |  |  |  |  |  |  |
+| **Vitaceae** | | | | | | | | | |
+| Cayatia clematidea | R | R |  | 51w |  | 51w–grn |  |  | c.1y |
+| Cissus hypoglauca | R | R |  |  |  |  |  |  |  |
+| *Vitis sp. |  | R |  |  |  |  |  |  |  |
+| **MONOCOTYLEDONS** | | | | | | | | | |
+| **Agavaceae** | | | | | | | | | |
+| *Agave americana | R |  |  | 19w |  |  |  |  |  |
+| *Yucca aloifolia | R |  |  |  |  |  |  |  |  |
+| **Alliaceae** | | | | | | | | | |
+| *Nothoscordum borbonicum | pR | pR |  | 9w |  | 18w |  |  |  |
+| **Alstroemeriaceae** | | | | | | | | | |
+| *Alstroemeria pulchella | pR |  |  | 49w |  | 49w |  |  |  |
+| **Amaryllidaceae** | | | | | | | | | |
+| *Amaryllis belladonna | pR |  |  |  |  | 12w |  |  |  |
 
-{30}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Clivia miniata</th><th>R</th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>*Narcissus sp.</td><td>pR</td><td>pR</td><td></td><td>18w</td><td></td><td></td><td></td></tr><tr><td>Caesia parviflora</td><td>R</td><td>R</td><td></td><td>37w, 42w</td><td>49w</td><td></td><td>c.1y</td></tr><tr><td>*Chlorophytum comosum</td><td>pR</td><td></td><td></td><td>16w</td><td></td><td></td><td>c.1y</td></tr><tr><td>Laxmannia gracilis (s.str.)</td><td>?K</td><td></td><td></td><td>43w(1), 46w</td><td>51w–(shd)</td><td></td><td></td></tr><tr><td>Sowerbaea juncea</td><td></td><td>R</td><td></td><td>32w</td><td></td><td></td><td></td></tr><tr><td>Thysanotus juncifolius</td><td>pR</td><td>pR</td><td></td><td>17w</td><td>64w–(shd)</td><td></td><td></td></tr><tr><td>Thysanotus tuberosus</td><td>R</td><td></td><td></td><td>46w</td><td></td><td></td><td></td></tr><tr><td>Tricoryne simplex</td><td>R</td><td></td><td></td><td>16w</td><td>41w</td><td></td><td>c.1y</td></tr><tr><td>*Colocasia esculenta</td><td>pR</td><td>pR</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Gymnostachys anceps</td><td></td><td>R</td><td></td><td>35w</td><td>35w</td><td></td><td></td></tr><tr><td>Livistona australis</td><td></td><td>R</td><td></td><td>35w</td><td></td><td></td><td></td></tr><tr><td>*Phoenix ?canariensis</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Asparagus aethiopicus</td><td>R</td><td></td><td></td><td>50w</td><td></td><td></td><td></td></tr><tr><td>*Asparagus asparagoides</td><td>R</td><td></td><td></td><td></td><td>46w</td><td></td><td>c.1y</td></tr><tr><td>*Asparagus officinalis</td><td>pR</td><td></td><td></td><td></td><td>18w</td><td></td><td></td></tr><tr><td>*Asparagus scandens</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>(prob.pk.pf.flower.c.2y)</td><td>R</td><td>R</td><td></td><td>46w, 49w</td><td>56w–(shd)</td><td></td><td>56w–(shd)</td></tr><tr><td>*Canna indica</td><td>R</td><td>R</td><td></td><td>38w</td><td></td><td></td><td></td></tr><tr><td>Centrolepis strigosa</td><td>pK</td><td></td><td></td><td>36w</td><td>44w</td><td></td><td>44w–(shd)</td></tr><tr><td>Burchardia umbellata</td><td>R</td><td>R</td><td></td><td>36w</td><td>46w</td><td></td><td>46w–(shd)</td></tr><tr><td>Commelina cyanea</td><td>R</td><td>R</td><td></td><td>10w</td><td></td><td></td><td></td></tr><tr><td>(poss.pk.pf.flower.c.3y)</td><td>R</td><td></td><td></td><td>43w</td><td></td><td></td><td></td></tr><tr><td>Baumea juncea</td><td>R</td><td>R</td><td></td><td>49w</td><td>51w</td><td></td><td></td></tr><tr><td>Baumea rubiginosa</td><td>R</td><td>R</td><td></td><td>38w</td><td></td><td></td><td></td></tr><tr><td>Carex inversa</td><td>?R</td><td></td><td></td><td>15w</td><td></td><td></td><td></td></tr><tr><td>Caustis flexuosa</td><td>K</td><td>K</td><td>56w</td><td>c.2–3y</td><td></td><td></td><td></td></tr><tr><td>Caustis pentandra</td><td>K</td><td>K</td><td></td><td></td><td>198w</td><td>c.4y</td><td></td></tr><tr><td>Chorizandra cymbaria</td><td>R</td><td>R</td><td></td><td>31w</td><td>42w</td><td></td><td>c.1y</td></tr><tr><td>Chorizandra sphaerocephala</td><td></td><td>R</td><td></td><td>17w</td><td>32w</td><td></td><td>32w–(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>R</td><td>R</td><td></td><td>45w</td><td>56w</td><td></td><td></td></tr><tr><td>*Cyperus albostriatus</td><td>pR</td><td>pR</td><td></td><td>26w</td><td></td><td></td><td></td></tr><tr><td>*Cyperus brevifolius</td><td>R</td><td></td><td></td><td>10w</td><td>10w</td><td></td><td></td></tr><tr><td>*Cyperus eragrostis</td><td>R</td><td></td><td></td><td>10w</td><td>10w</td><td></td><td></td></tr><tr><td>Cyperus ?polystachyos</td><td>R</td><td></td><td></td><td>10w</td><td></td><td></td><td></td></tr><tr><td>Fimbristylis dichotoma</td><td>pR</td><td></td><td></td><td></td><td>71w–(shd)</td><td></td><td></td></tr><tr><td>Gahnia clarkei</td><td>R</td><td></td><td></td><td></td><td>159w</td><td></td><td>c.3y</td></tr><tr><td>Gahnia erythrocarpa</td><td>R</td><td>R</td><td></td><td>91w</td><td>201w</td><td></td><td>c.3–4y</td></tr><tr><td>Gahnia melanocarpa</td><td>R</td><td></td><td></td><td></td><td>125w</td><td></td><td>c.2–3y</td></tr><tr><td>Gahnia radula</td><td>R</td><td>R</td><td></td><td>90w</td><td></td><td></td><td>c.2–3y</td></tr><tr><td>Gymnoschoenus sphaerocephalus</td><td></td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Isolepis ?cernua</td><td>R</td><td></td><td></td><td>10w</td><td></td><td></td><td></td></tr><tr><td>Isolepis inundata</td><td></td><td></td><td></td><td>28w</td><td></td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| *Clivia miniata | R |  |  |  |  |  |  |  |  |
+| *Narcissus sp. | pR | pR |  | 18w |  |  |  |  |  |
+| **Anthericaceae** | | | | | | | | | |
+| Caesia parviflora | R | R |  | 37w,**42w** |  | 49w |  |  | c.1y |
+| *Chlorophytum comosum | pR |  |  | 16w |  |  |  |  | c.1y |
+| Laxmannia gracilis (s.str.) | ?K |  |  | <u>43w(1), **46w**</u> | <u>43w(1), **46w**</u> | <u>51w–(shd)</u> | <u>51w–(shd)</u> |  |  |
+| Sowerbaea juncea |  | R |  | 32w |  |  |  |  |  |
+| Thysanotus juncifolius | pR | pR |  | 17w |  | <u>64w–(shd)</u> | <u>64w–(shd)</u> |  |  |
+| Thysanotus tuberosus | R |  |  | 46w |  |  |  |  |  |
+| Tricoryne simplex | R |  |  | 16w |  | 41w |  |  | c.1y |
+| **Araceae** | | | | | | | | | |
+| *Colocasia esculenta | pR | pR |  |  |  |  |  |  |  |
+| Gymnostachys anceps |  | R |  | 35w |  | 35w |  |  |  |
+| **Arecaceae** | | | | | | | | | |
+| Livistona australis |  | R |  | 35w |  |  |  |  |  |
+| *Phoenix ?canariensis | R |  |  |  |  |  |  |  |  |
+| **Asparagaceae** | | | | | | | | | |
+| *Asparagus aethiopicus | R |  |  | 50w |  |  |  |  |  |
+| *Asparagus asparagoides | R |  |  |  |  | 46w |  |  | c.1y |
+| *Asparagus officinalis | pR |  |  |  |  | 18w |  |  |  |
+| *Asparagus scandens | R |  |  |  |  |  |  |  |  |
+| **Blandfordiaceae** | | | | | | | | | |
+| Blandfordia nobilis (prob.pk.pf.flower.c.2y) | R | R |  | 46w,**49w** |  | 56w–(shd) |  |  | 56w–(shd) |
+| **Cannaceae** | | | | | | | | | |
+| *Canna indica | R | R |  | 38w |  |  |  |  |  |
+| **Centrolepidaceae** | | | | | | | | | |
+| Centrolepis strigosa | pK |  |  | 36w |  | 44w |  |  | 44w–(shd) |
+| **Colchicaceae** | | | | | | | | | |
+| Burchardia umbellata | R | R |  | 36w |  | 46w |  |  | 46w–(shd) |
+| **Commelinaceae** | | | | | | | | | |
+| Commelina cyanea | R | R |  | 10w |  |  |  |  |  |
+| *Tradescantia fluminensis (poss.pk.pf.flower.c.3y) | R |  |  | 43w |  |  |  |  |  |
+| **Cyperaceae** | | | | | | | | | |
+| Baumea juncea | R | R |  | 49w |  | 51w |  |  |  |
+| Baumea rubiginosa | R | R |  | 38w |  |  |  |  |  |
+| Carex inversa | ?R |  |  | <u>15w</u> | <u>15w</u> |  |  |  |  |
+| Caustis flexuosa | K | K | 56w |  | c.2–3y |  |  |  |  |
+| Caustis pentandra | K | K |  |  |  |  | 198w | c.4y |  |
+| Chorizandra cymbaria | R | R |  | 31w |  | 42w |  |  | c.1y |
+| Chorizandra sphaerocephala |  | R |  | 17w |  | 32w |  |  | 32w–(shd) |
+| Cyathochaeta diandra (prob.pk.pf.flower.c.1y) | R | R |  | 45w |  | 56w |  |  |  |
+| *Cyperus albostriatus | pR | pR |  | 26w |  |  |  |  |  |
+| *Cyperus brevifolius | R |  |  | 10w |  | 10w |  |  |  |
+| *Cyperus eragrostis | R |  |  | 10w |  | 10w |  |  |  |
+| Cyperus ?polystachyos | R |  |  | 10w |  |  |  |  |  |
+| Fimbristylis dichotoma | pR |  |  |  |  | <u>71w–(shd)</u> | <u>71w–(shd)</u> |  |  |
+| Gahnia clarkei | R |  |  |  |  | 159w |  |  | c.3y |
+| Gahnia erythrocarpa | R | R |  | 91w |  | 201w |  |  | c.3–4y |
+| Gahnia melanocarpa | R |  |  |  |  | 125w |  |  | c.2–3y |
+| Gahnia radula | R | R |  | 90w |  |  |  |  | c.2–3y |
+| Gymnoschoenus sphaerocephalus |  | R |  |  |  |  |  |  |  |
+| Isolepis ?cernua | R |  |  | 10w |  |  |  |  |  |
+| Isolepis inundata |  |  |  | <u>28w</u> | <u>28w</u> |  |  |  |  |
 
-{31}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Isolepis prolifera</th><th>pR</th><th></th><th></th><th></th><th>63w</th><th></th></tr></thead><tbody><tr><td>Lepidosperma filiforme</td><td></td><td>?K</td><td></td><td></td><td></td><td></td></tr><tr><td>Lepidosperma gunnii</td><td>pR</td><td></td><td></td><td></td><td>61w</td><td></td></tr><tr><td>Lepidosperma laterale</td><td>R</td><td></td><td></td><td>49w</td><td>56w</td><td>56w</td></tr><tr><td>Lepidosperma limicola</td><td></td><td>R</td><td></td><td>32w</td><td></td><td></td></tr><tr><td>Lepidosperma neesii</td><td>R</td><td>R</td><td></td><td>35w</td><td>63w</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>R</td><td>R</td><td></td><td>10w</td><td>32w</td><td>c.1y–(shd)</td></tr><tr><td>Schoenus apogon</td><td>?K</td><td>?K</td><td></td><td>38w</td><td></td><td></td></tr><tr><td>Schoenus brevifolius</td><td>R</td><td></td><td></td><td>41w</td><td>63w</td><td></td></tr><tr><td>Schoenus ericetorum</td><td>R</td><td></td><td></td><td>36w</td><td></td><td></td></tr><tr><td>Schoenus imberbis</td><td>R</td><td>R</td><td></td><td>37w</td><td>76w</td><td></td></tr><tr><td>Schoenus melanostachys</td><td>R</td><td>R</td><td></td><td>35w</td><td>51w</td><td>c.1y</td></tr><tr><td>Schoenus moorei</td><td>R</td><td>R</td><td></td><td>32w</td><td>51w</td><td>c.1y</td></tr><tr><td>Schoenus paludosus</td><td></td><td>K</td><td></td><td></td><td></td><td></td></tr><tr><td>Schoenus turbinatus</td><td></td><td></td><td></td><td>104w–buds</td><td></td><td></td></tr><tr><td>Schoenus villosus</td><td>R</td><td></td><td></td><td>56w–buds</td><td></td><td></td></tr><tr><td>Tetraria capillaris</td><td>R</td><td></td><td></td><td>50w</td><td></td><td></td></tr><tr><td>Tricostularia pauciflora</td><td>pR</td><td></td><td></td><td></td><td>104w</td><td></td></tr><tr><td>Haemodorum corymbosum</td><td>R</td><td>R</td><td></td><td>42w</td><td>64w</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>R</td><td>R</td><td></td><td>42w</td><td>56w</td><td>56w–(shd)</td></tr><tr><td>Hypoxis hygrometrica (s.lat.)</td><td>pR</td><td></td><td></td><td>16w</td><td></td><td></td></tr><tr><td>*Anomatheca laxa</td><td>pR</td><td></td><td></td><td>40w</td><td></td><td></td></tr><tr><td>*Aristea ecklonii</td><td>pR</td><td>R</td><td></td><td>41w</td><td>44w</td><td></td></tr><tr><td>*Crocosmia X crocosmiiflora</td><td>pR</td><td>pR</td><td></td><td>18w</td><td>38w–grn</td><td></td></tr><tr><td>*Freesia hybrid</td><td>pR</td><td></td><td></td><td>33w</td><td>38w</td><td></td></tr><tr><td>*Gladiolus angustus</td><td>pR</td><td>pR</td><td></td><td>40w</td><td></td><td></td></tr><tr><td>Patersonia glabrata</td><td>R</td><td>R</td><td></td><td>38w</td><td>49w</td><td>c.1y–(shd)</td></tr><tr><td>Patersonia sericea</td><td>R</td><td>R</td><td></td><td>31w</td><td>44w</td><td>c.1y–(shd)</td></tr><tr><td>*Romulea rosea</td><td>pR</td><td></td><td></td><td>33w</td><td></td><td></td></tr><tr><td>*Sisyrinchium iridifolium</td><td></td><td>?K</td><td></td><td>42w</td><td>42w</td><td></td></tr><tr><td>*Sisyrinchium species A</td><td>?K</td><td>?K</td><td></td><td>42w</td><td>44w</td><td></td></tr><tr><td>cv. Bulbillifera</td><td>pR</td><td>pR</td><td></td><td>38w</td><td></td><td>Note: Bulbils began to be shed within 50w of fire.</td></tr><tr><td>*Juncus articulatus</td><td>R</td><td></td><td></td><td>10w</td><td></td><td></td></tr><tr><td>*Juncus bufonius</td><td></td><td></td><td></td><td></td><td>38w(grn)</td><td></td></tr><tr><td>Juncus continuus</td><td></td><td>R</td><td></td><td>42w–buds</td><td></td><td></td></tr><tr><td>Juncus planifolius</td><td></td><td></td><td></td><td></td><td>40w</td><td></td></tr><tr><td>Triglochin procerum (s.str.)</td><td></td><td>pR</td><td></td><td>20w</td><td>20w</td><td>20w</td></tr><tr><td>*Lilium formosanum</td><td>R</td><td>R</td><td></td><td>26w</td><td>29w–grn</td><td></td></tr><tr><td>Lomandra cylindrica</td><td>R</td><td></td><td></td><td>40w</td><td>56w</td><td>56w–(shd)</td></tr><tr><td>subsp. filiformis</td><td>R</td><td>R</td><td></td><td>35w</td><td>51w</td><td>c.1y</td></tr><tr><td>Lomandra fluviatilis</td><td>R</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Lomandra glauca</td><td>R</td><td>R</td><td></td><td>36w</td><td>49w</td><td>c.1y</td></tr><tr><td>Lomandra gracilis</td><td>R</td><td>R</td><td></td><td>38w</td><td>51w</td><td>c.1y–(shd)</td></tr><tr><td>Lomandra longifolia</td><td>R</td><td>R</td><td>131w</td><td>34w</td><td>50w</td><td>c.1y–(shd)</td></tr><tr><td>Lomandra micrantha</td><td>R</td><td></td><td></td><td>64w</td><td></td><td></td></tr><tr><td>Lomandra multiflora</td><td>R</td><td>R</td><td></td><td>41w</td><td>51w</td><td>c.1y</td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td></td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| *Isolepis prolifera | pR |  |  |  |  | <u>63w</u> | <u>63w</u> |  |  |
+| Lepidosperma filiforme |  | ?K |  |  |  |  |  |  |  |
+| Lepidosperma gunnii | pR |  |  |  |  | 61w |  |  |  |
+| Lepidosperma laterale | R |  |  | 49w |  | 56w |  |  | 56w |
+| Lepidosperma limicola |  | R |  | 32w |  |  |  |  |  |
+| Lepidosperma neesii | R | R |  | 35w |  | 63w |  |  |  |
+| Ptilothrix deusta (prob.pk.pf.flower.c.1y) | R | R |  | 10w |  | 32w |  |  | c.1y–(shd) |
+| Schoenus apogon | ?K | ?K |  | <u>38w</u> | <u>38w</u> |  |  |  |  |
+| Schoenus brevifolius | R |  |  | 41w |  | 63w |  |  |  |
+| Schoenus ericetorum | R |  |  | 36w |  |  |  |  |  |
+| Schoenus imberbis | R | R |  | 37w |  | 76w |  |  |  |
+| Schoenus melanostachys | R | R |  | 35w |  | 51w |  |  | c.1y |
+| Schoenus moorei | R | R |  | 32w |  | 51w |  |  | c.1y |
+| Schoenus paludosus |  | K |  |  |  |  |  |  |  |
+| Schoenus turbinatus |  |  |  | <u>104w–buds</u> | <u>104w–buds</u> |  |  |  |  |
+| Schoenus villosus | R |  |  | 56w–buds |  |  |  |  |  |
+| Tetraria capillaris | R |  |  | 50w |  |  |  |  |  |
+| Tricostularia pauciflora | pR |  |  |  |  | 104w |  |  |  |
+| **Haemodoraceae** | | | | | | | | | |
+| Haemodorum corymbosum | R | R |  | 42w |  | 64w |  |  |  |
+| Haemodorum planifolium (prob.pk.pf.flower.c.1y) | R | R |  | 42w |  | 56w |  |  | 56w–(shd) |
+| **Hypoxidaceae** | | | | | | | | | |
+| Hypoxis hygrometrica (s.lat.) | pR |  |  | 16w |  |  |  |  |  |
+| **Iridaceae** | | | | | | | | | |
+| *Anomatheca laxa | pR |  |  | 40w |  |  |  |  |  |
+| *Aristea ecklonii | pR | R |  | 41w |  | 44w |  |  |  |
+| *Crocosmia X crocosmiiflora | pR | pR |  | 18w |  | 38w–grn |  |  |  |
+| *Freesia hybrid | pR |  |  | 33w |  | 38w |  |  |  |
+| *Gladiolus angustus | pR | pR |  | 40w |  |  |  |  |  |
+| Patersonia glabrata | R | R |  | 38w |  | 49w |  |  | c.1y–(shd) |
+| Patersonia sericea | R | R |  | 31w |  | 44w |  |  | c.1y–(shd) |
+| *Romulea rosea | pR |  |  | 33w |  |  |  |  |  |
+| *Sisyrinchium iridifolium |  | ?K |  | <u>42w</u> | <u>42w</u> | <u>42w</u> | <u>42w</u> |  |  |
+| *Sisyrinchium species A | ?K | ?K |  | <u>42w</u> | <u>42w</u> | <u>44w</u> | <u>44w</u> |  |  |
+| *Watsonia meriana cv. Bulbillifera | pR | pR |  | 38w |  | Note: Bulbils began to be shed within 50w of fire. |  |  |  |
+| **Juncaceae** | | | | | | | | | |
+| *Juncus articulatus | R |  |  | 10w |  |  |  |  |  |
+| *Juncus bufonius |  |  |  |  |  | <u>38w(grn)</u> | <u>38w(grn)</u> |  |  |
+| Juncus continuus |  | R |  | 42w–buds |  |  |  |  |  |
+| Juncus planifolius |  |  |  |  |  | <u>40w</u> | <u>40w</u> |  |  |
+| **Juncaginaceae** | | | | | | | | | |
+| Triglochin procerum (s.str.) |  | pR |  | 20w |  | 20w |  |  | 20w |
+| **Liliaceae** | | | | | | | | | |
+| *Lilium formosanum | R | R |  | 26w |  | 29w–grn |  |  |  |
+| **Lomandraceae** | | | | | | | | | |
+| Lomandra cylindrica | R |  |  | 40w |  | 56w |  |  | 56w–(shd) |
+| Lomandra filiformis subsp. filiformis | R | R |  | 35w |  | 51w |  |  | c.1y |
+| Lomandra fluviatilis | R |  |  |  |  |  |  |  |  |
+| Lomandra glauca | R | R |  | 36w |  | 49w |  |  | c.1y |
+| Lomandra gracilis | R | R |  | 38w |  | 51w |  |  | c.1y–(shd) |
+| Lomandra longifolia | R | R | 131w | 34w |  | 50w |  |  | c.1y–(shd) |
+| Lomandra micrantha | R |  |  | 64w |  |  |  |  |  |
+| Lomandra multiflora | R | R |  | 41w |  | 51w |  |  | c.1y |
 
-{32}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>Lomandra obliqua</th><th>R</th><th>R</th><th>41w</th><th>49w</th><th>c.1y</th></tr></thead><tbody><tr><td>Eustrephus latifolius</td><td>R</td><td>pR</td><td>15w</td><td>35w</td><td>35w–ri</td></tr><tr><td>Geitonoplesium cymosum</td><td></td><td>R</td><td>35w–buds</td><td></td><td></td></tr><tr><td>Acianthus caudatus</td><td>pR</td><td></td><td>28w</td><td>38w</td><td></td></tr><tr><td>Acianthus fornicatus</td><td>pR</td><td></td><td>23w</td><td>33w</td><td></td></tr><tr><td>Acianthus pusillus</td><td>pR</td><td></td><td>16w</td><td>26w</td><td></td></tr><tr><td>Caladenia carnea</td><td>pR</td><td></td><td>36w</td><td></td><td></td></tr><tr><td>Caladenia catenata</td><td>pR</td><td></td><td>34w</td><td>39w</td><td></td></tr><tr><td>Caladenia testacea</td><td></td><td></td><td>86w (1)</td><td></td><td></td></tr><tr><td>Caleana major</td><td>pR</td><td>pR</td><td>37w</td><td>49w</td><td></td></tr><tr><td>Calochilus campestris</td><td>pR</td><td>pR</td><td>37w</td><td>42w</td><td></td></tr><tr><td>Calochilus paludosus</td><td>pR</td><td>pR</td><td>37w</td><td>41w</td><td></td></tr><tr><td>Calochilus robertsonii</td><td>pR</td><td></td><td>39w</td><td></td><td></td></tr><tr><td>Cestichis reflexa</td><td></td><td>K</td><td>Lightly burnt plants resprouted from pseudobulbs –NL.</td><td></td><td></td></tr><tr><td>Chiloglottis sp.</td><td></td><td>pR</td><td>10w</td><td></td><td></td></tr><tr><td>Corybas pruinosus</td><td></td><td>pR</td><td>Leaves emerged within 35w of fire.</td><td></td><td></td></tr><tr><td>Cryptostylis erecta</td><td>pR</td><td></td><td>46w</td><td>108w</td><td></td></tr><tr><td>Cryptostylis subulata</td><td>pR</td><td></td><td>101w</td><td>101w–grn</td><td></td></tr><tr><td>Cymbidium suave</td><td>pK</td><td>pK</td><td>Resprouted, low intensity–flowered 92w after fire.</td><td></td><td></td></tr><tr><td>Dipodium roseum</td><td>pR</td><td></td><td>101w</td><td></td><td></td></tr><tr><td>Dipodium variegatum</td><td>pR</td><td></td><td>49w</td><td></td><td></td></tr><tr><td>Diuris aurea</td><td></td><td>pR</td><td>37w</td><td>42w</td><td></td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>pR</td><td></td><td>30w</td><td>36w</td><td></td></tr><tr><td>Dockrillia linguiformis</td><td>K</td><td>K</td><td>143w–buds</td><td></td><td></td></tr><tr><td>Eriochilus petricola</td><td>pR</td><td></td><td>64w</td><td></td><td></td></tr><tr><td>Genoplesium fimbriatum</td><td></td><td>pR</td><td>10w</td><td>21w</td><td></td></tr><tr><td>Genoplesium pumilum</td><td></td><td>pR</td><td></td><td>17w</td><td></td></tr><tr><td>Genoplesium rufum</td><td>pR</td><td>pR</td><td>16w</td><td>24w</td><td></td></tr><tr><td>Glossodia major</td><td></td><td>pR</td><td>31w</td><td></td><td></td></tr><tr><td>Glossodia minor</td><td>pR</td><td>pR</td><td>31w</td><td>36w</td><td></td></tr><tr><td>Lyperanthus suaveolens</td><td>pR</td><td></td><td>36w</td><td></td><td></td></tr><tr><td>Microtis unifolia (s.lat.)</td><td>pR</td><td>pR</td><td>36w</td><td>43w</td><td></td></tr><tr><td>Orthoceras strictum</td><td></td><td></td><td></td><td>104w</td><td></td></tr><tr><td>Prasophyllum elatum</td><td>pR</td><td>pR</td><td>36w</td><td>43w</td><td></td></tr><tr><td>Prasophyllum striatum</td><td></td><td>pR</td><td></td><td>22w</td><td></td></tr><tr><td>Pterostylis acuminata</td><td>pR</td><td></td><td>18w</td><td></td><td></td></tr><tr><td>Pterostylis concinna</td><td>pR</td><td></td><td>29w</td><td>30w</td><td></td></tr><tr><td>Pterostylis daintreana</td><td></td><td>pR</td><td>22w</td><td>31w</td><td></td></tr><tr><td>Pterostylis longifolia</td><td>pR</td><td></td><td>24w</td><td></td><td></td></tr><tr><td>Pterostylis nutans</td><td>pR</td><td>pR</td><td>30w</td><td>36w</td><td></td></tr><tr><td>Rimacola elliptica</td><td>pR</td><td>pR</td><td>38w</td><td></td><td></td></tr><tr><td>Thelymitra ixioides</td><td>pR</td><td>pR</td><td>31w</td><td>43w–(shd)</td><td></td></tr><tr><td>Thelymitra pauciflora</td><td>pR</td><td>pR</td><td>37w</td><td>42w</td><td></td></tr><tr><td>Philydrum lanuginosum</td><td></td><td>pR</td><td></td><td>20w</td><td></td></tr><tr><td>Dianella caerulea</td><td>R</td><td>R</td><td>41w</td><td>49w</td><td>c.1y</td></tr><tr><td>Dianella prunina</td><td>R</td><td>R</td><td>43w</td><td>51w</td><td>c.1y</td></tr><tr><td>Dianella revoluta</td><td>R</td><td></td><td>94w</td><td></td><td></td></tr><tr><td>Thelionema caespitosum</td><td>R</td><td></td><td>91w</td><td>100w</td><td></td></tr><tr><td>*Agrostis capillaris</td><td></td><td></td><td>43w</td><td></td><td></td></tr><tr><td>*Agrostis stolonifera</td><td></td><td></td><td>43w</td><td></td><td></td></tr><tr><td>*Andropogon virginicus</td><td>R</td><td>R</td><td>15w</td><td>20w</td><td>20w</td></tr><tr><td></td><td></td><td>Fire Response Seedlings</td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td></tr><tr><td></td><td>LCR</td><td>NL</td><td>Resp Seed</td><td>Resp Seed</td><td>Primary Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Lomandra obliqua | R | R |  | 41w |  | 49w |  |  | c.1y |
+| **Luzuriagaceae** | | | | | | | | | |
+| Eustrephus latifolius | R | pR |  | 15w |  | 35w |  |  | 35w–ri |
+| Geitonoplesium cymosum |  | R |  | 35w–buds |  |  |  |  |  |
+| **Orchidaceae** | | | | | | | | | |
+| Acianthus caudatus | pR |  |  | 28w |  | 38w |  |  |  |
+| Acianthus fornicatus | pR |  |  | 23w |  | 33w |  |  |  |
+| Acianthus pusillus | pR |  |  | 16w |  | 26w |  |  |  |
+| Caladenia carnea | pR |  |  | 36w |  |  |  |  |  |
+| Caladenia catenata | pR |  |  | 34w |  | 39w |  |  |  |
+| Caladenia testacea |  |  |  | <u>86w (1)</u> | <u>86w (1)</u> |  |  |  |  |
+| Caleana major | pR | pR |  | 37w |  | 49w |  |  |  |
+| Calochilus campestris | pR | pR |  | 37w |  | 42w |  |  |  |
+| Calochilus paludosus | pR | pR |  | 37w |  | 41w |  |  |  |
+| Calochilus robertsonii | pR |  |  | 39w |  |  |  |  |  |
+| Cestichis reflexa |  | K | Lightly burnt plants resprouted from pseudobulbs –NL. |  |  |  |  |  |  |
+| Chiloglottis sp. |  | pR |  | 10w |  |  |  |  |  |
+| Corybas pruinosus |  | pR |  | Leaves emerged within 35w of fire. |  |  |  |  |  |
+| Cryptostylis erecta | pR |  |  | 46w |  | 108w |  |  |  |
+| Cryptostylis subulata | pR |  |  | <u>101w</u> | <u>101w</u> | <u>101w–grn</u> | <u>101w–grn</u> |  |  |
+| Cymbidium suave | pK | pK |  | Resprouted, low intensity–flowered 92w after fire. |  |  |  |  |  |
+| Dipodium roseum | pR |  |  | <u>101w</u> | <u>101w</u> |  |  |  |  |
+| Dipodium variegatum | pR |  |  | 49w |  |  |  |  |  |
+| Diuris aurea |  | pR |  | 37w |  | 42w |  |  |  |
+| Diuris maculata (prob.pk.pf.flower.c.1y) | pR |  |  | 30w |  | 36w |  |  |  |
+| Dockrillia linguiformis | K | K |  | <u>143w–buds</u> | <u>143w–buds</u> |  |  |  |  |
+| Eriochilus petricola | pR |  |  | 64w |  |  |  |  |  |
+| Genoplesium fimbriatum |  | pR |  | 10w |  | 21w |  |  |  |
+| Genoplesium pumilum |  | pR |  |  |  | 17w |  |  |  |
+| Genoplesium rufum | pR | pR |  | 16w |  | 24w |  |  |  |
+| Glossodia major |  | pR |  | 31w |  |  |  |  |  |
+| Glossodia minor | pR | pR |  | 31w |  | 36w |  |  |  |
+| Lyperanthus suaveolens | pR |  |  | 36w |  |  |  |  |  |
+| Microtis unifolia (s.lat.) | pR | pR |  | 36w |  | 43w |  |  |  |
+| Orthoceras strictum |  |  |  |  |  | <u>104w</u> | <u>104w</u> |  |  |
+| Prasophyllum elatum | pR | pR |  | 36w |  | 43w |  |  |  |
+| Prasophyllum striatum |  | pR |  |  |  | 22w |  |  |  |
+| Pterostylis acuminata | pR |  |  | 18w |  |  |  |  |  |
+| Pterostylis concinna | pR |  |  | 29w |  | 30w |  |  |  |
+| Pterostylis daintreana |  | pR |  | 22w |  | 31w |  |  |  |
+| Pterostylis longifolia | pR |  |  | 24w |  |  |  |  |  |
+| Pterostylis nutans | pR | pR |  | 30w |  | 36w |  |  |  |
+| Rimacola elliptica | pR | pR |  | 38w |  |  |  |  |  |
+| Thelymitra ixioides | pR | pR |  | 31w |  | 43w–(shd) |  |  |  |
+| Thelymitra pauciflora | pR | pR |  | 37w |  | 42w |  |  |  |
+| **Philydraceae** | | | | | | | | | |
+| Philydrum lanuginosum |  | pR |  |  |  | 20w |  |  |  |
+| **Phormiaceae** | | | | | | | | | |
+| Dianella caerulea | R | R |  | 41w |  | 49w |  |  | c.1y |
+| Dianella prunina | R | R |  | 43w |  | 51w |  |  | c.1y |
+| Dianella revoluta | R |  |  | 94w |  |  |  |  |  |
+| Thelionema caespitosum | R |  |  | 91w |  | 100w |  |  |  |
+| **Poaceae** | | | | | | | | | |
+| *Agrostis capillaris |  |  |  | <u>43w</u> | <u>43w</u> |  |  |  |  |
+| *Agrostis stolonifera |  |  |  | <u>43w</u> | <u>43w</u> |  |  |  |  |
+| *Andropogon virginicus | R | R |  | 15w |  | 20w |  |  | 20w |
 
-{33}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>(poss.pk.pf.flower.c.1–2y)</th><th>R</th><th>R</th><th>41w</th><th></th><th>49w</th><th></th><th>c.1y–(shd)</th></tr></thead><tbody><tr><td>Aristida benthamii</td><td></td><td>R</td><td>17w</td><td></td><td>32w</td><td></td><td>32w–(shd)</td></tr><tr><td>Aristida calycina var. calycina</td><td>R</td><td></td><td></td><td></td><td>26w</td><td></td><td>26w–(shd)</td></tr><tr><td>Aristida ramosa</td><td>R</td><td>R</td><td>8w</td><td></td><td>17w</td><td></td><td>17w</td></tr><tr><td>Aristida vagans</td><td>R</td><td></td><td>6w</td><td></td><td>15w</td><td></td><td>15w–(shd)</td></tr><tr><td>Aristida warburgii</td><td>R</td><td></td><td>11w</td><td></td><td>16w</td><td></td><td>16w</td></tr><tr><td>*Arundo donax</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Austrodathonia ?linkii</td><td></td><td></td><td></td><td></td><td>30w–(shd)</td><td></td><td></td></tr><tr><td>Austrodanthonia tenuior</td><td>R</td><td></td><td>11w</td><td></td><td>18w</td><td></td><td>18w</td></tr><tr><td>Austrostipa pubescens</td><td>R</td><td></td><td></td><td></td><td>49w</td><td></td><td>c.1y–(shd)</td></tr><tr><td>*Avena sativa</td><td></td><td></td><td></td><td>23w</td><td>43w–(shd)</td><td></td><td></td></tr><tr><td>*Briza maxima</td><td>?K</td><td></td><td></td><td>43w</td><td>50w</td><td>1y–(shd)</td><td></td></tr><tr><td>*Briza minor</td><td>?K</td><td>?K</td><td></td><td>28w</td><td>43w</td><td>43w</td><td></td></tr><tr><td>*Briza subaristata</td><td></td><td></td><td></td><td></td><td>51w</td><td></td><td></td></tr><tr><td>*Bromus catharticus</td><td></td><td></td><td></td><td>39w</td><td></td><td></td><td></td></tr><tr><td>*Bromus diandrus</td><td></td><td></td><td></td><td>41w</td><td></td><td></td><td></td></tr><tr><td>*Chloris gayana</td><td></td><td>R</td><td>13w</td><td></td><td>35w</td><td></td><td></td></tr><tr><td>*Cortaderia selloana</td><td>R</td><td>R</td><td>18w</td><td></td><td>20w</td><td></td><td></td></tr><tr><td>Cymbopogon refractus</td><td>R</td><td></td><td>9w</td><td></td><td>19w</td><td></td><td>19w</td></tr><tr><td>Deyeuxia quadriseta</td><td></td><td></td><td></td><td>39w</td><td>44w</td><td></td><td></td></tr><tr><td>Dichelachne crinita</td><td>R</td><td>pR</td><td>37w</td><td></td><td>49w</td><td></td><td>c.1y–(shd)</td></tr><tr><td>Dichelachne micrantha</td><td>R</td><td></td><td>16w</td><td></td><td></td><td></td><td></td></tr><tr><td>Dichelachne parva</td><td></td><td></td><td></td><td>39w</td><td></td><td></td><td></td></tr><tr><td>Dichelachne rara</td><td></td><td></td><td></td><td>41w</td><td></td><td></td><td></td></tr><tr><td>Digitaria parviflora</td><td>R</td><td>R</td><td>13w</td><td></td><td>30w</td><td></td><td>30w–(shd)</td></tr><tr><td>Echinopogon caespitosus</td><td>R</td><td></td><td>8w</td><td></td><td>15w</td><td></td><td>15w</td></tr><tr><td>*Ehrharta erecta</td><td>R</td><td></td><td>12w</td><td></td><td>38w</td><td></td><td></td></tr><tr><td>*Eleusine indica</td><td></td><td></td><td></td><td>15w</td><td></td><td></td><td></td></tr><tr><td>Entolasia marginata</td><td>R</td><td></td><td>9w</td><td></td><td>28w</td><td></td><td>28w–(shd)</td></tr><tr><td>Entolasia stricta</td><td>R</td><td>R</td><td>8w</td><td></td><td>22w</td><td></td><td>22w</td></tr><tr><td>Eragrostis ?brownii</td><td>R</td><td></td><td>8w</td><td></td><td></td><td></td><td></td></tr><tr><td>Eragrostis leptostachya</td><td>R</td><td></td><td>9w</td><td></td><td></td><td></td><td></td></tr><tr><td>Hemarthria uncinata</td><td>R</td><td>R</td><td>11w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Hordeum distichon</td><td></td><td></td><td></td><td>12w</td><td>40w</td><td></td><td></td></tr><tr><td>Imperata cylindrica var. major</td><td>R</td><td></td><td>6w</td><td></td><td>11w</td><td></td><td>11w</td></tr><tr><td>Lachnagrostis filiformis</td><td></td><td></td><td></td><td>39w</td><td>44w</td><td></td><td></td></tr><tr><td>*Lolium multiflorum</td><td></td><td></td><td></td><td>38w</td><td></td><td></td><td></td></tr><tr><td>*Lolium perenne</td><td></td><td></td><td></td><td>44w</td><td></td><td></td><td></td></tr><tr><td>*Melinis repens</td><td>R</td><td></td><td>19w</td><td></td><td>26w</td><td></td><td></td></tr><tr><td>Microlaena stipoides</td><td>R</td><td></td><td>8w</td><td></td><td>15w</td><td></td><td>15w</td></tr><tr><td>Oplismenus aemulus</td><td>?K</td><td></td><td></td><td>19w</td><td></td><td></td><td></td></tr><tr><td>Panicum simile</td><td>R</td><td></td><td>15w</td><td></td><td>16w</td><td></td><td></td></tr><tr><td>*Paspalum dilatatum</td><td>R</td><td></td><td>10w</td><td></td><td>15w</td><td></td><td>15w</td></tr><tr><td>*Paspalum quadrifarium</td><td>R</td><td>R</td><td>11w</td><td></td><td>28w</td><td></td><td>28w–(shd)</td></tr><tr><td>*Paspalum urvillei</td><td>R</td><td></td><td>9w</td><td></td><td>9w</td><td></td><td></td></tr><tr><td>*Pennisetum clandestinum</td><td>R</td><td>pR</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Pennisetum macrourum</td><td>R</td><td></td><td>50w</td><td></td><td></td><td></td><td></td></tr><tr><td>Phragmites australis</td><td>R</td><td></td><td></td><td></td><td>71w</td><td></td><td>c. 1–2y</td></tr><tr><td>*Phyllostachys aurea</td><td>R</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>*Poa annua</td><td></td><td></td><td></td><td>30w</td><td></td><td></td><td></td></tr><tr><td>Poa labillardieri</td><td>R</td><td></td><td>9w</td><td></td><td></td><td></td><td></td></tr><tr><td>*Setaria gracilis</td><td>R</td><td></td><td>9w</td><td></td><td>10w</td><td></td><td></td></tr><tr><td>*Setaria palmifolia</td><td>R</td><td>R</td><td>16w</td><td></td><td>30w</td><td></td><td></td></tr><tr><td>*Setaria sphacelata</td><td></td><td>R</td><td>38w</td><td></td><td>38w</td><td></td><td></td></tr><tr><td></td><td>Fire Response</td><td></td><td>Seedlings</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td>First flowering</td><td>First fruiting</td><td>Juvenile periods</td><td></td></tr><tr><td></td><td>LCR</td><td>NL</td><td>Resp</td><td>Seed</td><td>Resp Seed</td><td>Primary</td><td>Secondary</td></tr></tbody></table>
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| Anisopogon avenaceus (poss.pk.pf.flower.c.1–2y) | R | R |  | 41w |  | 49w |  |  | c.1y–(shd) |
+| Aristida benthamii |  | R |  | 17w |  | 32w |  |  | 32w–(shd) |
+| Aristida calycina var. calycina | R |  |  |  |  | 26w |  |  | 26w–(shd) |
+| Aristida ramosa | R | R |  | 8w |  | 17w |  |  | 17w |
+| Aristida vagans | R |  |  | 6w |  | 15w |  |  | 15w–(shd) |
+| Aristida warburgii | R |  |  | 11w |  | 16w |  |  | 16w |
+| *Arundo donax | R |  |  |  |  |  |  |  |  |
+| Austrodathonia ?linkii |  |  |  |  |  | <u>30w–(shd)</u> | <u>30w–(shd)</u> |  |  |
+| Austrodanthonia tenuior | R |  |  | 11w |  | 18w |  |  | 18w |
+| Austrostipa pubescens | R |  |  |  |  | 49w |  |  | c.1y–(shd) |
+| *Avena sativa |  |  |  | <u>23w</u> | <u>23w</u> | <u>43w–(shd)</u> | <u>43w–(shd)</u> |  |  |
+| *Briza maxima | ?K |  |  |  | 43w |  | 50w | 1y–(shd) |  |
+| *Briza minor | ?K | ?K |  |  | 28w |  | 43w | 43w |  |
+| *Briza subaristata |  |  |  |  |  | <u>51w</u> | <u>51w</u> |  |  |
+| *Bromus catharticus |  |  |  | <u>39w</u> | <u>39w</u> |  |  |  |  |
+| *Bromus diandrus |  |  |  | <u>41w</u> | <u>41w</u> |  |  |  |  |
+| *Chloris gayana |  | R |  | 13w |  | 35w |  |  |  |
+| *Cortaderia selloana | R | R |  | 18w |  | 20w |  |  |  |
+| Cymbopogon refractus | R |  |  | 9w |  | 19w |  |  | 19w |
+| Deyeuxia quadriseta |  |  |  | <u>39w</u> | <u>39w</u> | <u>44w</u> | <u>44w</u> |  |  |
+| Dichelachne crinita | R | pR |  | 37w |  | 49w |  |  | c.1y–(shd) |
+| Dichelachne micrantha | R |  |  | 16w |  |  |  |  |  |
+| Dichelachne parva |  |  |  | <u>39w</u> | <u>39w</u> |  |  |  |  |
+| Dichelachne rara |  |  |  | <u>41w</u> | <u>41w</u> |  |  |  |  |
+| Digitaria parviflora | R | R |  | 13w |  | 30w |  |  | 30w–(shd) |
+| Echinopogon caespitosus | R |  |  | 8w |  | 15w |  |  | 15w |
+| *Ehrharta erecta | R |  |  | 12w |  | <u>38w</u> | <u>38w</u> |  |  |
+| *Eleusine indica |  |  |  | <u>15w</u> | <u>15w</u> |  |  |  |  |
+| Entolasia marginata | R |  |  | 9w |  | 28w |  |  | 28w–(shd) |
+| Entolasia stricta | R | R |  | 8w |  | 22w |  |  | 22w |
+| Eragrostis ?brownii | R |  |  | 8w |  |  |  |  |  |
+| Eragrostis leptostachya | R |  |  | 9w |  |  |  |  |  |
+| Hemarthria uncinata | R | R |  | 11w |  |  |  |  |  |
+| *Hordeum distichon |  |  |  | <u>12w</u> | <u>12w</u> | <u>40w</u> | <u>40w</u> |  |  |
+| Imperata cylindrica var. major | R |  |  | 6w |  | 11w |  |  | 11w |
+| Lachnagrostis filiformis |  |  |  | <u>39w</u> | <u>39w</u> | <u>44w</u> | <u>44w</u> |  |  |
+| *Lolium multiflorum |  |  |  | <u>38w</u> | <u>38w</u> |  |  |  |  |
+| *Lolium perenne |  |  |  | <u>44w</u> | <u>44w</u> |  |  |  |  |
+| *Melinis repens | R |  |  | 19w |  | 26w |  |  |  |
+| Microlaena stipoides | R |  |  | 8w |  | 15w |  |  | 15w |
+| Oplismenus aemulus | ?K |  |  | <u>19w</u> | <u>19w</u> |  |  |  |  |
+| Panicum simile | R |  |  | 15w |  | 16w |  |  |  |
+| *Paspalum dilatatum | R |  |  | 10w |  | 15w |  |  | 15w |
+| *Paspalum quadrifarium | R | R |  | 11w |  | 28w |  |  | 28w–(shd) |
+| *Paspalum urvillei | R |  |  | 9w |  | 9w |  |  |  |
+| *Pennisetum clandestinum | R | pR |  |  |  |  |  |  |  |
+| *Pennisetum macrourum | R |  |  | 50w |  |  |  |  |  |
+| Phragmites australis | R |  |  |  |  | 71w |  |  | c. 1–2y |
+| *Phyllostachys aurea | R |  |  |  |  |  |  |  |  |
+| *Poa annua |  |  |  |  | 30w |  |  |  |  |
+| Poa labillardieri | R |  |  | 9w |  |  |  |  |  |
+| *Setaria gracilis | R |  |  | 9w |  | 10w |  |  |  |
+| *Setaria palmifolia | R | R |  | 16w |  | 30w |  |  |  |
+| *Setaria sphacelata |  | R |  | 38w |  | 38w |  |  |  |
 
-{34}<!-- PAGE BREAK -->
+<!-- PAGE BREAK -->
 
-<table><thead><tr><th>*Sorghum bicolor</th><th></th><th>23w 23w</th></tr></thead><tbody><tr><td>*Sporobolus africanus</td><td></td><td>19w</td></tr><tr><td>Sporobolus creber</td><td>pR</td><td>15w</td></tr><tr><td>Themda australis</td><td>R R</td><td>13w 49w c.1y</td></tr><tr><td>*Vulpia bromoides</td><td></td><td>43w</td></tr><tr><td>subsp. meiostachyum</td><td>R</td><td></td></tr><tr><td>Chordifex dimorphus</td><td>K / r</td><td>One plant resprouted. Others apparently killed.</td></tr><tr><td>Chordifex fastigiatus</td><td>K</td><td>One plant resprouted, but it was not 100% scorched.</td></tr><tr><td>Empodisma minus</td><td>R</td><td></td></tr><tr><td>Eurychorda complanata</td><td>pK</td><td>Unable to find this species in one location where it previously occurred before the fire (as</td></tr><tr><td>Leptocarpus tenax</td><td>R</td><td>32w</td></tr><tr><td>Lepyrodia scariosa</td><td>R R</td><td>56w</td></tr><tr><td>Smilax australis</td><td>R R</td><td>35w– (1)</td></tr><tr><td>Smilax glyciphylla</td><td>R</td><td>46w 50w c.1y</td></tr><tr><td>Typha ?orientalis</td><td>pR</td><td>85w</td></tr><tr><td>Schelhammera undulata</td><td>R R</td><td>13w 44w 44w–grn.</td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>R R</td><td>35w,51w 100w c.2y–(shd)</td></tr><tr><td>(prob.pk.pf.flower.c.1y)</td><td>R R</td><td>17w,39w 56w 56–63w(shd)</td></tr><tr><td>Xanthorrhoea ?minor</td><td></td><td>38w</td></tr><tr><td>Xanthorrhoea resinifera</td><td>R R</td><td>43w</td></tr><tr><td>Xyris gracilis</td><td>R</td><td>51w</td></tr><tr><td>Xyris juncea</td><td>R</td><td>17w 32w</td></tr><tr><td>Xyris operculata</td><td>R</td><td>32w</td></tr><tr><td>*Hedychium gardnerianum</td><td>R</td><td>88w</td></tr><tr><td></td><td>Fire Response</td><td>Seedlings</td></tr><tr><td></td><td></td><td>First flowering First fruiting Juvenile periods</td></tr><tr><td></td><td>LCR NL</td><td>Resp Seed Resp Seed Primary Secondary</td></tr></tbody></table>
-<!-- md_opt: none; text-layer PDF, raw marker output, Step 0 skipped -->
+| Family/Species (Post–fire fl, fr peaks) | Fire Response LCR | Fire Response NL | Seedlings first observed | First flowering Resp | First flowering Seed | First fruiting Resp | First fruiting Seed | Juvenile periods Primary | Juvenile periods Secondary |
+|---|---|---|---|---|---|---|---|---|---|
+| *Sorghum bicolor |  |  |  |  | 23w |  | 23w |  |  |
+| *Sporobolus africanus |  |  |  | <u>19w</u> | <u>19w</u> |  |  |  |  |
+| Sporobolus creber | pR |  |  | 15w |  |  |  |  |  |
+| Themda australis | R | R |  | 13w |  | 49w |  |  | c.1y |
+| *Vulpia bromoides |  |  |  | <u>43w</u> | <u>43w</u> |  |  |  |  |
+| **Restionaceae** | | | | | | | | | |
+| Baloskion tetraphyllum subsp. meiostachyum |  | R |  |  |  |  |  |  |  |
+| Chordifex dimorphus |  | K/r | One plant resprouted. Others apparently killed. |  |  |  |  |  |  |
+| Chordifex fastigiatus |  | K | One plant resprouted, but it was <u>not</u> 100% scorched. |  |  |  |  |  |  |
+| Empodisma minus | R |  |  |  |  |  |  |  |  |
+| Eurychorda complanata |  | pK | Unable to find this species in one location where it previously occurred before the fire (as observed 38w after the fire). |  |  |  |  |  |  |
+| Leptocarpus tenax |  | R |  | <u>32w</u> | <u>32w</u> |  |  |  |  |
+| Lepyrodia scariosa | R | R |  | 56w |  |  |  |  |  |
+| **Smilacaceae** | | | | | | | | | |
+| Smilax australis | R | R |  | 35w– (1) |  |  |  |  |  |
+| Smilax glyciphylla | R |  |  | 46w |  | 50w |  |  | c.1y |
+| **Typhaceae** | | | | | | | | | |
+| Typha ?orientalis | pR |  |  |  |  | 85w |  |  |  |
+| **Uvulariaceae** | | | | | | | | | |
+| Schelhammera undulata | R | R |  | 13w |  | 44w |  |  | 44w–grn. |
+| **Xanthorrhoeaceae** | | | | | | | | | |
+| Xanthorrhoea arborea (prob.pk.pf.flower.c.1y) | R | R |  | 35w,51w |  | 100w |  |  | c.2y–(shd) |
+| Xanthorrhoea media (prob.pk.pf.flower.c.1y) | R | R |  | 17w,39w |  | 56w |  |  | 56–63w(shd) |
+| Xanthorrhoea ?minor |  |  |  | 38w |  |  |  |  |  |
+| Xanthorrhoea resinifera | R | R |  | 43w |  |  |  |  |  |
+| **Xyridaceae** | | | | | | | | | |
+| Xyris gracilis | R |  |  | 51w |  |  |  |  |  |
+| Xyris juncea |  | R |  | 17w |  | 32w |  |  |  |
+| Xyris operculata |  | R |  | 32w |  |  |  |  |  |
+| **Zingiberaceae** | | | | | | | | | |
+| *Hedychium gardnerianum | R |  |  |  |  | 88w |  |  |  |
+
+<!-- md_opt: model=claude-opus-5-5; date=2026-10-26; md_sha256=c59121b3e0dda3b099f6831f9be13036fac43385dc88020fd184f83998b0c23e; pdf_sha256=32012cdc411b5d581cde2c3a1512742509d03ba725b5f063e5e37259d900957f; pdf_pages=35; fixes=200; unresolved=none -->
