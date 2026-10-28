@@ -5,7 +5,7 @@ Usage (from the repo root):
     python scripts/claude/benchmark.py --rescore    # score all snapshots again
     python scripts/claude/benchmark.py --run <dir>  # score one snapshot folder
 
-Ground truth: data/papers_test/answers/Juvenile period data.csv (agents never read it).
+Ground truth: data/papers_test/answers/juvenile_period_data_part*.ods, first sheet of each (agents never read it).
 Answer rows are matched to papers by the start of their Source; papers without answer rows are not scored.
 Only papers extracted in the run itself are scored (LOG started >= the run's last _run line), so papers
 carried over from an earlier run are not counted twice.
@@ -30,14 +30,16 @@ import hashlib
 import importlib.util
 import re
 import sys
+import zipfile
 from collections import defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
+from xml.etree import ElementTree
 
 REPO = Path(__file__).resolve().parents[2]
 LOGS = REPO / "data/inference_test/logs"
 RUNS = LOGS / "runs"
-ANSWERS = REPO / "data/papers_test/answers/Juvenile period data.csv"
+ANSWERS = sorted((REPO / "data/papers_test/answers").glob("juvenile_period_data_part*.ods"))
 OUT = LOGS / "benchmark.csv"
 DETAILS = LOGS / "benchmark_details.csv"
 
@@ -46,6 +48,7 @@ PAPERS = [
     ("Kubiak PJ. (2009)", "Kubiak_Cunn_2009"),
     ("Wark, M.C. (1997)", "biostor-259750"),
     ("Burrows, N. D., Wardell-Johnson", "Post_fire_juvenile_period_of_plants_in_s"),
+    ("Burrows, G.E. (1995)", "Burrows_1995"),
     ("Benson, D. (1985)", "Benson_1985_Cunninghamia"),
     ("Miller, R.G., Enright", "Austral_Ecology_-_2025_-_Miller"),
     ("Muir AM", "Muir_et_al_2014"),
@@ -241,8 +244,35 @@ def scores(tp, fp, fn):
     return [round(x, 4) if x != "" else "" for x in (p, r, f(1), f(0.5))]
 
 
+def read_ods(path):
+    """Rows of the first sheet of an .ods file as dicts keyed by the header row (stdlib only).
+    Number cells give their stored value, not the displayed one, so a cell format cannot truncate decimals."""
+    ns = {"table": "urn:oasis:names:tc:opendocument:xmlns:table:1.0",
+          "office": "urn:oasis:names:tc:opendocument:xmlns:office:1.0",
+          "text": "urn:oasis:names:tc:opendocument:xmlns:text:1.0"}
+    q = lambda prefix, name: f"{{{ns[prefix]}}}{name}"  # noqa: E731
+    with zipfile.ZipFile(path) as z:
+        root = ElementTree.fromstring(z.read("content.xml"))
+    sheet = root.find(".//table:table", ns)
+    rows = []
+    for row in sheet.iter(q("table", "table-row")):
+        cells = []
+        for c in row:
+            if c.tag not in (q("table", "table-cell"), q("table", "covered-table-cell")):
+                continue
+            if c.get(q("office", "value-type")) in ("float", "percentage", "currency"):
+                v = c.get(q("office", "value"), "")
+            else:
+                v = "\n".join("".join(p.itertext()) for p in c.findall("text:p", ns))
+            cells += [v] * int(c.get(q("table", "number-columns-repeated"), "1"))
+        if any(v.strip() for v in cells):  # skip blank rows (often repeated thousands of times)
+            rows.append(cells)
+    header = [h.strip() for h in rows[0]]
+    return [dict(zip(header, r + [""] * (len(header) - len(r)))) for r in rows[1:]]
+
+
 def load_answers():
-    rows = list(csv.DictReader(open(ANSWERS, encoding="cp1252", errors="replace", newline="")))  # saved by Excel, not UTF-8
+    rows = [r for path in ANSWERS for r in read_ods(path)]
     out = defaultdict(lambda: defaultdict(lambda: defaultdict(set)))  # paper -> taxon -> column -> values
     for r in rows:
         paper = paper_of_source(r.get("Source", ""))
