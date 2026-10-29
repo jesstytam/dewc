@@ -40,6 +40,8 @@ REPO = Path(__file__).resolve().parents[2]
 LOGS = REPO / "data/inference_test/logs"
 RUNS = LOGS / "runs"
 ANSWERS = sorted((REPO / "data/papers_test/answers").glob("juvenile_period_data_part*.ods"))
+# partN_updated.ods supersedes partN.ods when both are present
+ANSWERS = [p for p in ANSWERS if not p.with_name(p.stem + "_updated.ods").exists()]
 OUT = LOGS / "benchmark.csv"
 DETAILS = LOGS / "benchmark_details.csv"
 
