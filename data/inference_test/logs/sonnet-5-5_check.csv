@@ -1,0 +1,24 @@
+level,where,column,check,value
+warning,RESULT line 180,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 187,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 1099,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1154,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1163,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1164,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1165,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1291,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
+warning,RESULT line 1292,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
+warning,RESULT line 1343,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1775,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
+warning,RESULT line 1940,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
+warning,RESULT line 2028,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 2053,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
+warning,RESULT line 2466,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'rocky creek'
+warning,RESULT line 2958,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
+warning,RESULT line 3144,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a sensu harden (1994)
+warning,RESULT line 3184,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a sensu powell (1992)
+warning,RESULT line 3345,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 4223,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 4329,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT line 4340,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT lines 107..136,location_name,"empty on 30 of 56 rows of Burrows_et_al_2008 while other rows name a site; fill it, or say in notes why the row has no site",

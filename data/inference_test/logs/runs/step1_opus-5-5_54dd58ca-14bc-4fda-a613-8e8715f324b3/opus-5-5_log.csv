@@ -1,0 +1,24 @@
+paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
+_run,start,0,2026-10-30T05:28:13Z,,model=claude-opus-5-5; date=2026-10-30; git=f88b67e1b2e3ce1ddcc0bc0422b1c8e3fac29b19; claude_md_sha256=d2966079ecc420c6ae9e176eeffc3f7291150d01a5d40691158979901f29405a; papers_sha256=4a2700e3ae176e9fb6846c3dd08d642898bc684d3b0cf4e310df444e7559a9e9,,,,,,
+Ashton_et_al_1989,done,2,2026-10-30T05:27:29Z,2026-10-30T05:28:13Z,"loaded whole file in one read (18 pages), not 10-page batches",1,2,24968,83536,4287,112793
+Auld_et_al_1995,done,10,2026-10-30T05:28:20Z,2026-10-30T05:28:51Z,,1,2,15040,115038,3250,133330
+Auld_et_al_2007,done,1,2026-10-30T05:28:51Z,2026-10-30T05:29:13Z,,1,2,17553,130078,2287,149920
+Benson_1985,done,99,2026-10-30T05:29:13Z,2026-10-30T05:30:39Z,table 2 vicinity values in notes only: paper says vicinity plants include fire-unaffected individuals,2,4,36100,311118,10280,357502
+Bradstock_et_al_1988,done,5,2026-10-30T05:30:39Z,2026-10-30T05:31:08Z,,1,2,7398,183731,3254,194385
+Burrows_1995,done,1,2026-10-30T05:31:08Z,2026-10-30T05:32:41Z,,,,,,,
+Burrows_et_al_2008,done,61,2026-10-30T05:32:41Z,2026-10-30T05:33:30Z,,2,4,36728,397373,8546,442651
+Denham_et_al_2002,done,4,2026-10-30T05:33:30Z,2026-10-30T05:33:48Z,,1,2,24264,227857,1993,254116
+Enright_et_al_1996,done,1,2026-10-30T05:33:49Z,2026-10-30T05:34:06Z,,1,2,21032,252121,1796,274951
+Enright_et_al_1998,done,14,2026-10-30T05:34:06Z,2026-10-30T05:34:34Z,,2,4,25739,566347,2998,595088
+Enright_et_al_2025,done,5,2026-10-30T05:34:34Z,2026-10-30T05:35:23Z,,2,4,26934,619208,5470,651616
+Knox_et_al_2004,done,33,2026-10-30T05:35:23Z,2026-10-30T05:35:55Z,,2,4,17219,665933,3593,686749
+Kubiak_2009,done,1307,2026-10-30T05:35:55Z,2026-10-30T05:39:33Z,bridged (underlined) flowering and fruiting cells in notes only; fruiting in notes; 3 site rows where species at both sites,6,12,54511,2247130,12966,2314619
+Miller_et_al_2025,done,6,2026-10-30T05:40:01Z,2026-10-30T05:40:46Z,,3,6,28178,1276221,4455,1308860
+Morgan_et_al_1999,done,1,2026-10-30T05:40:46Z,2026-10-30T05:40:59Z,,1,2,20843,438656,1210,460711
+Muir_et_al_2014,done,8,2026-10-30T05:40:59Z,2026-10-30T05:41:29Z,"time to 80% of maximum flower production in notes only (near-match, per CLAUDE.md)",1,2,23722,459499,3178,486401
+NSWNPWS_2004,done,2699,2026-10-30T05:41:29Z,2026-10-30T05:42:28Z,"no units printed for juvenile periods or intervals: values in notes only; fire response codes not defined: copied as printed; no title, author or year printed",3,6,13508,1462217,6134,1481865
+Ooi_2019,done,5,2026-10-30T05:42:35Z,2026-10-30T05:43:09Z,,2,4,14977,1016018,3773,1034772
+Pyke_1983,done,1,2026-10-30T05:43:09Z,2026-10-30T05:43:21Z,,1,2,8458,516721,1140,526321
+Wahren_et_al_2001,done,2,2026-10-30T05:43:21Z,2026-10-30T05:43:50Z,"genus-level row for Poa, paper gives no species",1,2,15186,525179,3099,543466
+Wark_1997,done,200,2026-10-30T05:43:50Z,2026-10-30T05:45:16Z,FRR first flowering in notes only: not stated whether from seed or regrowth; subsites taken from table 3 presence records,4,8,41946,2238977,8977,2289908
+Zammit_et_al_1987,done,2,2026-10-30T05:45:16Z,2026-10-30T05:45:36Z,,1,2,15448,582311,2101,599862

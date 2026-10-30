@@ -1,0 +1,33 @@
+level,where,column,check,value
+warning,RESULT line 225,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
+warning,RESULT line 232,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
+warning,RESULT line 640,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 641,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 642,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x sykesii
+warning,RESULT line 1199,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1208,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1209,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1210,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1321,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x crocosmiiflora
+warning,RESULT line 1322,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x crocosmiiflora
+warning,RESULT line 1323,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",x crocosmiiflora
+warning,RESULT line 1336,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
+warning,RESULT line 1337,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",species a
+warning,RESULT line 1388,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 1820,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
+warning,RESULT line 1985,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. microphylla
+warning,RESULT line 2073,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 2098,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. flavovirens
+warning,RESULT line 2511,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. 'rocky creek'
+warning,RESULT line 3003,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. b
+warning,RESULT line 3189,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 3229,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 3390,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. a
+warning,RESULT line 4265,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.
+warning,RESULT line 4372,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT line 4383,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",spp.
+warning,RESULT lines 117..118,location_name,"empty on 2 of 5 rows of Bradstock_et_al_1988 while other rows name a site; fill it, or say in notes why the row has no site",
+warning,RESULT lines 176..180,location_name,"empty on 5 of 61 rows of Burrows_et_al_2008 while other rows name a site; fill it, or say in notes why the row has no site",
+warning,RESULT lines 187..199,location_name,"empty on 13 of 14 rows of Enright_et_al_1998 while other rows name a site; fill it, or say in notes why the row has no site",
+warning,RESULT lines 399..1537,location_name,"empty on 23 of 1307 rows of Kubiak_2009 while other rows name a site; fill it, or say in notes why the row has no site",
+warning,RESULT lines 4352..4360,location_name,"empty on 2 of 200 rows of Wark_1997 while other rows name a site; fill it, or say in notes why the row has no site",

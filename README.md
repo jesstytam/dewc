@@ -173,3 +173,22 @@ I spent a good few weeks thinking about how to benchmark the extraction results 
 # Human-in-the-loop GUI
 
 This is the part where I highlight my creation of an application that can increase the speed at which extraction results can be checked. 
+
+# Adapting Claude for meta-analysis
+
+[ADAPTING_CLAUDE_MD.md](ADAPTING_CLAUDE_MD.md) builds this kind of pipeline for another meta-analysis. It is self-contained, so it does not need this repository. It needs 1 paper that has already been extracted by hand:
+
+- `example.csv`: all rows of that paper, with the columns the new study needs
+- `example.pdf`: the paper itself
+
+Copy those files into an empty folder and start Claude Code there:
+
+```bash
+mkdir new_study && cd new_study
+cp /path/to/ADAPTING_CLAUDE_MD.md /path/to/example.csv /path/to/example.pdf .
+claude "Follow ADAPTING_CLAUDE_MD.md. Example extraction: example.csv. Example paper: example.pdf."
+```
+
+Claude reads the example, works out the row unit, columns and value formats, and asks about anything the example cannot show. You approve `metadata.csv`. Claude then writes `CLAUDE.md` and the scripts, and tests them against the example.
+
+After that, you run the pilot extractions it describes, one fresh session per model. Most of the rules in this repository's `CLAUDE.md` came from pilot disagreements rather than upfront design, so expect several rounds.
