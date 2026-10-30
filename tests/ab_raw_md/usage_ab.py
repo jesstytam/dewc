@@ -5,12 +5,14 @@ Usage (from the repo root, after quitting the test session):
 """
 
 import argparse
+import importlib.util
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE.parents[1] / "scripts/claude"))
-import usage  # noqa: E402
+spec = importlib.util.spec_from_file_location("usage", HERE.parents[1] / "scripts/claude/4c_usage.py")
+usage = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(usage)
 
 usage.LOGS = HERE / "logs"  # also keeps sessions.csv lookups inside the test folder
 

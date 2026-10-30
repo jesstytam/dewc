@@ -9,14 +9,14 @@ Run Step 1 of `CLAUDE.md` exactly as written, with all its extraction rules, col
 ```python
 ROOT     = "tests/ab_raw_md/"                    # TEMPLATE, METADATA, RESULT, LOG and check reports all under ROOT
 PAPERS   = "tests/ab_raw_md/papers/*.md"         # raw markdown; each file ends with an md_opt end comment, so treat it as a finished MD_OPT file
-CHECK    = "tests/ab_raw_md/check_ab.py"         # same checks as scripts/claude/check.py, with the paths above; run it, never edit it
+CHECK    = "tests/ab_raw_md/check_ab.py"         # same checks as scripts/claude/4a_check.py, with the paths above; run it, never edit it
 ```
 
 - `papers_sha256` = `sha256sum tests/ab_raw_md/papers/*.md | LC_ALL=C sort | sha256sum`, run from the repo root.
 - Skip the check that every `MD_RAW` file has a finished `MD_OPT` file.
 - Read only `tests/ab_raw_md/references/`, `tests/ab_raw_md/papers/`, `RESULT` and `LOG`. Write only `RESULT`, `LOG` and check reports under `tests/ab_raw_md/`.
 - Do not read or write anything in `data/` in this session. This replaces the `CLAUDE.md` rule "Use `data/inference_test/` only" for this test.
-- Do not run `scripts/claude/usage.py` or `scripts/claude/log_session.py`.
+- Do not run `scripts/claude/4c_usage.py` or `scripts/claude/4b_log_session.py`.
 
 ## For the user
 
@@ -29,5 +29,5 @@ CHECK    = "tests/ab_raw_md/check_ab.py"         # same checks as scripts/claude
 
 - `papers/`: raw copies of `data/papers_test/md/*.md` for the 14 papers (the 16 new papers without the duplicates `AuldScottProcFireEffectsIAWF1997-1` and `part303174`), each with the end comment `<!-- md_opt: none; raw pdf2md output, not optimised -->`.
 - `references/`: copies of `data/inference_test/references/` (template.csv, metadata.csv).
-- `check_ab.py`, `usage_ab.py`: thin wrappers that run `scripts/claude/check.py` and `usage.py` with the test paths.
+- `check_ab.py`, `usage_ab.py`: thin wrappers that run `scripts/claude/4a_check.py` and `4c_usage.py` with the test paths.
 - `compare.py`: compares the test result with the baseline Sonnet run on cleaned markdown (session e22fd76a), and measures run-to-run noise from 2 earlier Sonnet runs on the same cleaned papers.

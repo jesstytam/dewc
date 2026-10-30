@@ -1,12 +1,13 @@
 """Check extraction output against the rules in CLAUDE.md.
 
 Usage (from the repo root):
-    python scripts/claude/check.py <slug> --paper <stem>   # after each paper in Step 1 (raw results)
-    python scripts/claude/check.py <slug>                  # after all papers in Step 1 (raw results)
-    python scripts/claude/check.py <slug> --final          # after scripts/pipeline/5_normalise.py (final results)
-    python scripts/claude/check.py --step0                 # after Step 0
+    python scripts/claude/4a_check.py <slug> --paper <stem>   # after each paper in Step 1 (raw results)
+    python scripts/claude/4a_check.py <slug>                  # after all papers in Step 1 (raw results)
+    python scripts/claude/4a_check.py <slug> --final          # after scripts/pipeline/5_normalise.py (final results)
+    python scripts/claude/4a_check.py --step0                 # after Step 0
 
-Only checks that need no reading of the paper; column rules are in references/metadata.csv. Never edits RESULT or LOG.
+Only checks that need no reading of the paper; column rules are in references/metadata.csv.
+Row checks are pydantic models whose fields are the metadata.csv columns. Never edits RESULT or LOG.
 Writes a report to data/inference_test/logs/{slug}_check.csv (or md_opt_check.csv)
 and exits 1 if any check fails.
 """
@@ -19,6 +20,9 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+from pydantic import ConfigDict, Field, ValidationError, create_model, field_validator
+from pydantic_core import PydanticCustomError
+
 REPO = Path(__file__).resolve().parents[2]
 ROOT = REPO / "data/inference_test"  # test run only; never data/inference
 MD_RAW = REPO / "data/papers_test/md_raw"
@@ -26,6 +30,7 @@ MD_LLM = REPO / "data/papers_test/md_llm"
 PDF_CLEAN = "data/papers_test/pdf_clean/"
 PDF_CLEAN_DIR = REPO / PDF_CLEAN
 LOGS = ROOT / "logs"
+METADATA = ROOT / "references/metadata.csv"  # column dictionary; the row models are built from it
 
 TOKEN_COLS = ["n_requests", "input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens", "output_tokens", "total_tokens"]
 LOG_HEADER = ["paper", "status", "n_rows", "started", "finished", "note"] + TOKEN_COLS
@@ -45,8 +50,8 @@ VARIABLE_UNIT = [
     "recovery_time",
 ]
 TIME_COLS = ["pjp_mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
-RAW_EMPTY = ["pjp_mths", "time_unit", "scientific_name", "pdf_path"]  # filled by 5_normalise.py
-RAW_TIME_RE = re.compile(r"(\S.*?) (days|weeks|months|years)")  # raw time cell: value as printed + unit
+UNIT_OF = {col: col + "_unit" for col in TIME_COLS if col != "pjp_mths"}  # time column -> its unit column
+RAW_EMPTY = ["pjp_mths", "scientific_name", "pdf_path"]  # filled by 5_normalise.py
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
@@ -142,10 +147,10 @@ def check_times(where, entry, report, need_finished=True):
 
 
 def check_tokens(where, entry, report):
-    """Token cells: empty (agent) or whole numbers (filled by usage.py)."""
+    """Token cells: empty (agent) or whole numbers (filled by 4c_usage.py)."""
     for col in TOKEN_COLS:
         if entry.get(col, "") and not entry[col].isdigit():
-            report.error(where, col, "empty or whole number; filled by usage.py", entry[col])
+            report.error(where, col, "empty or whole number; filled by 4c_usage.py", entry[col])
 
 
 def decimals(value):
@@ -167,11 +172,11 @@ def paper_text(stem):
     return _paper_text[stem]
 
 
-def check_quote(where, row, report):
+def check_quote(row):
     """data_quote: one '[<data_location item>] <quote>' per data_location item, each quote found verbatim in the paper."""
     loc, quote = row["data_location"], row["data_quote"]
     if not quote:
-        report.error(where, "data_quote", "verbatim quote for each data_location item, e.g. '[table 2, p. 342] | Banksia ericifolia | R | 5 |'", quote)
+        yield error("verbatim quote for each data_location item, e.g. '[table 2, p. 342] | Banksia ericifolia | R | 5 |'", quote)
         return
     if not loc:
         return
@@ -182,7 +187,7 @@ def check_quote(where, row, report):
         tag = f"[{item}] "
         at = quote.lower().find((tag if k == 0 else "; " + tag).lower(), pos)  # data_location is lower-cased by 5_normalise.py
         if at == -1 or (k == 0 and at != 0):
-            report.error(where, "data_quote", f"item {k + 1} must start with '[{item}] ' (one item per data_location item, same order, joined by '; ')", quote[:120])
+            yield error(f"item {k + 1} must start with '[{item}] ' (one item per data_location item, same order, joined by '; ')", quote[:120])
             return
         starts.append((at if k == 0 else at + 2, len(tag)))
         pos = at + len(tag)
@@ -195,7 +200,7 @@ def check_quote(where, row, report):
         for piece in body.split(" ... "):
             piece = squash(piece)
             if piece and piece not in text:
-                report.error(where, "data_quote", f"not found verbatim in the paper ([{items[k]}]); copy it from the markdown", piece[:120])
+                yield error(f"not found verbatim in the paper ([{items[k]}]); copy it from the markdown", piece[:120])
 
 
 def expected_pdf_path(stem):
@@ -218,163 +223,320 @@ def formatted(row):
 
 
 def raw_time_ok(value):
-    """'<value as printed> <unit>', e.g. '26 months', '3.0 - 16.0 years', '>4 years'."""
-    m = RAW_TIME_RE.fullmatch(value)
-    return bool(m) and bool(TIME_RE.fullmatch(re.sub(r"\s+", "", DASH_RE.sub("-", m.group(1)))))
+    """Value as printed: number, min-max or >/< bound, e.g. '26', '3.0 - 16.0', '>4'."""
+    return bool(TIME_RE.fullmatch(re.sub(r"\s+", "", DASH_RE.sub("-", value))))
+
+
+# Row rules: one pydantic model per row kind (data row, NA row), its fields built from references/metadata.csv.
+# Each rule is a generator registered with @rule for the columns it reports on; it gets the row after the
+# case and dash rules (formatted) and yields error(...) or warning(...). Every field is validated on its own,
+# so a row reports all its problems at once, each on the column it belongs to.
+
+RULES = []  # (columns, row kinds, function); "*" = every column
+
+
+def rule(*columns, rows=("data",)):
+    def add(f):
+        RULES.append((columns, rows, f))
+        return f
+    return add
+
+
+def error(check, value=""):
+    return ("error", check, value)
+
+
+def warning(check, value=""):
+    return ("warning", check, value)
+
+
+@rule("*", rows=("data", "na"))
+def cell_format(col, value, row, ctx):
+    orig = ctx["orig"][col]
+    if orig != orig.strip():
+        yield error("leading or trailing space", orig)
+    if ctx["raw"]:
+        return  # case and dashes are set by 5_normalise.py
+    if DASH_RE.search(orig) and col != "data_quote":
+        yield error("en or em dash; use ASCII hyphen '-'", orig)
+    if orig != "NA" and orig != orig.lower() and col not in KEEP_CASE:
+        if not (col == "source" and orig == row["file_name"]):
+            yield error("lower case (only genus, codes and file_name keep capitals)", orig)
+
+
+@rule("source", "file_name", rows=("data", "na"))
+def required(col, value, row, ctx):
+    if not value or value == "NA":
+        yield error("empty or NA")
+
+
+@rule(*RAW_EMPTY)
+def raw_empty(col, value, row, ctx):
+    if ctx["raw"] and value:
+        yield error("leave empty in raw results: 5_normalise.py fills it", ctx["orig"][col])
+
+
+@rule("pdf_path", rows=("data", "na"))
+def pdf_path(col, value, row, ctx):
+    if not ctx["raw"]:
+        pdf = expected_pdf_path(row["file_name"])
+        if value != pdf:
+            yield error(f"must be '{pdf}'" if pdf else "no PDF with this file stem in pdf_clean", value)
+
+
+@rule("*", rows=("na",))
+def na_cell(col, value, row, ctx):
+    keep = ("notes", "source", "file_name", "supplementary_material") + (() if ctx["raw"] else ("pdf_path",))
+    if col not in keep and value != "NA":
+        yield error("NA row: cell must be NA", value)
+    if col == "notes" and (not value or value == "NA"):
+        yield error("NA row: reason missing")
+
+
+@rule("*")
+def no_na(col, value, row, ctx):
+    if value == "NA":
+        yield error("NA in data row; leave empty instead")
+
+
+@rule("genus", "species", "subsp")
+def name(col, value, row, ctx):
+    if col != "subsp" and not value:
+        yield error("empty")
+    if NAME_MARK_RE.search(value):
+        yield error("remove '?' or '*' from the name; printed form in Notes", value)
+    if HYPHEN_SPACE_RE.search(value):
+        yield error("space next to a hyphen; hyphenated epithet is one word ('novae- zelandiae' -> 'novae-zelandiae')", value)
+    if col == "genus" and value and not re.fullmatch(r"[A-Z][a-z]+", value):
+        yield error("one capitalised word, no marks", value)
+    if col == "species":
+        if RANK_IN_SPECIES_RE.search(value):
+            yield error("rank word in Species; rank and name go in subsp", value)
+        elif value and not re.fullmatch(r"[a-z][a-z-]*", value):
+            yield warning("not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')", value)
+    if col == "subsp" and value and not RANK_RE.match(value):
+        yield error("rank word + name, e.g. 'subsp. buxifolia', 'var. lanceolatus', 'f. glauca'", value)
+
+
+@rule("scientific_name")
+def scientific_name(col, value, row, ctx):
+    name = f"{row['genus']} {row['species']}"
+    if not ctx["raw"] and value != name:
+        yield error(f"must be genus + ' ' + species: '{name}'", value)
+
+
+@rule("native_status")
+def native_status(col, value, row, ctx):
+    if value and not re.fullmatch(r"[a-z]+( [a-z]+)*", value):
+        yield error("paper's term in lower case, e.g. native, exotic", value)
+
+
+@rule("fire_response_categorical_surv1", "fire_response_implied")
+def fire_response(col, value, row, ctx):
+    if CODE_SPACE_RE.search(value):
+        yield error("space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", value)
+    if col == "fire_response_implied" and value not in ("", "NA") and row["fire_response_categorical_surv1"] not in ("", "NA"):
+        yield error("fill only when fire_response_categorical_surv1 is empty (stated response wins)", value)
+
+
+@rule("source")
+def source(col, value, row, ctx):
+    if value != row["file_name"] and not APA_RE.fullmatch(value):
+        yield warning("does not look like APA: 'author, a. b. (yyyy). title. ...'", value)
+
+
+@rule("data_location")
+def data_location(col, value, row, ctx):
+    if not value:
+        yield error("where the row's values are printed, e.g. 'table 2, p. 342'", value)
+    elif value != "NA" and not LOC_PAGE_RE.search(value):
+        yield warning("no page: add 'p. N' (printed page) or 'pdf p. N'", value)
+
+
+@rule("data_quote")
+def data_quote(col, value, row, ctx):
+    yield from check_quote(row)
+
+
+@rule("notes")
+def notes(col, value, row, ctx):
+    m = NOTES_PAGE_RE.search(value)
+    if m:
+        yield warning("page reference: write 'p. N' (printed page) or 'pdf p. N'", m.group(0))
+
+
+@rule("latitude", "longitude")
+def coordinate(col, value, row, ctx):
+    lo, hi = {"latitude": (-44, -10), "longitude": (112, 154)}[col]
+    if not value:
+        return
+    if not NUMBER_RE.fullmatch(value):
+        yield error("not a decimal number", value)
+    elif not lo <= float(value) <= hi:
+        yield error(f"outside {lo} to {hi}", value)
+    elif "." in value and (value.endswith("0") or decimals(value) > 4):
+        yield error("at most 4 decimals, no trailing zeros ('151.0' -> '151')", value)
+
+
+@rule(*TIME_COLS)
+def time_value(col, value, row, ctx):
+    if not value:
+        return
+    if ctx["raw"]:
+        if col not in RAW_EMPTY and not raw_time_ok(value):
+            yield error("value as printed: number, min-max or >/< bound, e.g. '26', '>4'; unit in its _unit column", value)
+        return
+    if not TIME_RE.fullmatch(value):
+        yield error("time format: number, min-max, or >/< bound", value)
+    elif col in FIXED_YEARS and any(decimals(part) > 3 for part in value.lstrip("<>").split("-")):
+        yield error("more than 3 decimals", value)
+
+
+@rule(*UNIT_OF.values())
+def time_unit(col, value, row, ctx):
+    time_col = col[:-len("_unit")]
+    if row[time_col] and value not in ctx["allowed"][col]:
+        yield error(f"unit of {time_col}: days, weeks, months or years", value)
+    elif not row[time_col] and value:
+        yield error(f"must be empty: {time_col} is empty", value)
+    elif not ctx["raw"] and value and time_col in FIXED_YEARS + ["primary_juvenile_period"] and value != "years":
+        yield error("final results: years (5_normalise.py converts)", value)
+
+
+@rule("error_column", "error_type", "error_value")
+def error_cells(col, value, row, ctx):
+    err_col, err_type, err_value = row["error_column"], row["error_type"], row["error_value"]
+    filled = err_value not in ("", "NA")
+    if col == "error_column" and filled:
+        if err_col not in TIME_COLS:
+            yield error("name of the time column the error belongs to", err_col)
+        elif not row[err_col]:
+            yield error("names an empty time column", err_col)
+    if col == "error_type":
+        if filled and not err_type:
+            yield error("needed when error_value is filled", err_type)
+        if err_type not in ("", "NA") and not ERROR_TYPE_RE.fullmatch(err_type):
+            yield warning("not se, sd, ci<N> or '± not defined'; fine if printed so", err_type)
+    if col == "error_value":
+        if filled:
+            if err_type.startswith("ci") and not CI_RE.fullmatch(err_value):
+                yield error("confidence interval as lower-upper, e.g. 1.5-3.7", err_value)
+            elif err_type in ("se", "sd") and not ERROR_NUMBER_RE.fullmatch(err_value):
+                yield error("se or sd: a single number", err_value)
+        elif (err_col or err_type) and "NA" not in (err_col, err_type):
+            yield error("empty, but error_column or error_type is filled", err_value)
+
+
+@rule("sample_size")
+def sample_size(col, value, row, ctx):
+    if value not in ("", "NA") and not re.fullmatch(r"\d+", value):
+        yield warning("not a whole number; fine if printed so (explain in notes)", value)
+
+
+@rule("fire_season_categorical")
+def fire_season(col, value, row, ctx):
+    if not value:
+        return
+    seasons = value.split("; ")
+    order = ctx["allowed"]["fire_season_categorical"]
+    if any(s not in order for s in seasons):
+        yield error("summer|autumn|winter|spring, joined by '; '", value)
+    elif seasons != sorted(seasons, key=order.index):
+        yield error("calendar order: summer; autumn; winter; spring", value)
+
+
+@rule("resprouter_type", "location_name")
+def several_values(col, value, row, ctx):
+    if col == "resprouter_type":
+        if re.search(r"\b(and|or)\b", value):
+            yield warning("several types: join with '; ' instead of 'and' / 'or'", value)
+        if value != value.lower() or PLURAL_RE.search(value):
+            yield warning("lower case and singular, e.g. rhizome, lignotuber", value)
+    if re.search(r"\s/\s", value) or (col == "resprouter_type" and "/" in value):
+        yield warning("several values: join with '; ' (keep '/' only if printed inside one value)", value)
+
+
+@rule("rainfall_mm", "rainfall_post_fire_mm")
+def rainfall(col, value, row, ctx):
+    if value and value != "NA" and not re.fullmatch(r"\d+(\.\d+)?(-\d+(\.\d+)?)?", value):
+        yield error("not a number or min-max range", value)
+
+
+@rule("rainfall_post_fire_period")
+def rainfall_period(col, value, row, ctx):
+    if bool(row["rainfall_post_fire_mm"]) != bool(value):
+        yield error("rainfall_post_fire_mm and its period go together", value)
+
+
+def metadata():
+    """Column dictionary rows of references/metadata.csv, in column order."""
+    return list(csv.DictReader(open(METADATA, encoding="utf-8", newline="")))
+
+
+def closed_values(meta):
+    """allowed_values of the columns with a closed list (no 'as printed'), in their printed order."""
+    out = {}
+    for m in meta:
+        values = [v.strip() for v in m["allowed_values"].split(" | ") if v.strip()]
+        if values and "as printed" not in values and not any(" " in v for v in values):
+            out[m["column"]] = values
+    return out
+
+
+def run_rules(rules):
+    def validate(cls, value, info):
+        ctx, errors = info.context, []
+        for f in rules:
+            for level, check, shown in f(info.field_name, value, ctx["row"], ctx):
+                if level == "error":
+                    errors.append((check, shown))
+                else:
+                    ctx["warnings"].append((info.field_name, check, shown))
+        if errors:
+            raise PydanticCustomError("row_rule", "{checks}", {"checks": errors})
+        return value
+    return validate
+
+
+def build_model(name, kind, meta):
+    """Pydantic model of one row kind: 1 str field per metadata column, with the rules registered for that kind."""
+    fields = {m["column"]: (str, Field(description=m["definition"])) for m in meta}
+    validators = {}
+    for col in fields:
+        rules = [f for cols, kinds, f in RULES if kind in kinds and (col in cols or cols == ("*",))]
+        if rules:
+            validators[f"check_{col}"] = field_validator(col)(run_rules(rules))
+    return create_model(name, __config__=ConfigDict(extra="forbid"), __validators__=validators, **fields)
+
+
+_models = {}
+
+
+def row_models():
+    if not _models:
+        meta = metadata()
+        _models.update(data=build_model("DataRow", "data", meta), na=build_model("NaRow", "na", meta),
+                       allowed=closed_values(meta))
+    return _models
 
 
 def check_row(line, row, report, raw=True):
     where = f"RESULT line {line}"
-    for col, value in row.items():
-        if value != value.strip():
-            report.error(where, col, "leading or trailing space", value)
-        if raw:
-            continue  # case and dashes are set by 5_normalise.py
-        if DASH_RE.search(value) and col != "data_quote":
-            report.error(where, col, "en or em dash; use ASCII hyphen '-'", value)
-        if value != "NA" and value != value.lower() and col not in KEEP_CASE:
-            if not (col == "source" and value == row["file_name"]):
-                report.error(where, col, "lower case (only genus, codes and file_name keep capitals)", value)
-    for col in ("source", "file_name"):
-        if not row[col] or row[col] == "NA":
-            report.error(where, col, "empty or NA")
-    if raw:
-        if row["genus"] != "NA":
-            for col in RAW_EMPTY:
-                if row[col]:
-                    report.error(where, col, "leave empty in raw results: 5_normalise.py fills it", row[col])
-        row = formatted(row)
-    else:
-        pdf = expected_pdf_path(row["file_name"])
-        if row["pdf_path"] != pdf:
-            report.error(where, "pdf_path", f"must be '{pdf}'" if pdf else "no PDF with this file stem in pdf_clean", row["pdf_path"])
-
-    if row["genus"] == "NA":  # NA row
-        keep = ("notes", "source", "file_name", "supplementary_material") + (() if raw else ("pdf_path",))
-        for col, value in row.items():
-            if col not in keep and value != "NA":
-                report.error(where, col, "NA row: cell must be NA", value)
-        if not row["notes"] or row["notes"] == "NA":
-            report.error(where, "notes", "NA row: reason missing")
-        return
-
-    for col, value in row.items():
-        if value == "NA":
-            report.error(where, col, "NA in data row; leave empty instead")
-    for col in ("genus", "species"):
-        if not row[col]:
-            report.error(where, col, "empty")
-
-    name = f"{row['genus']} {row['species']}"
-    if not raw and row["scientific_name"] != name:
-        report.error(where, "scientific_name", f"must be genus + ' ' + species: '{name}'", row["scientific_name"])
-    for col in ("genus", "species", "subsp"):
-        if NAME_MARK_RE.search(row[col]):
-            report.error(where, col, "remove '?' or '*' from the name; printed form in Notes", row[col])
-        if HYPHEN_SPACE_RE.search(row[col]):
-            report.error(where, col, "space next to a hyphen; hyphenated epithet is one word ('novae- zelandiae' -> 'novae-zelandiae')", row[col])
-    if row["genus"] and not re.fullmatch(r"[A-Z][a-z]+", row["genus"]):
-        report.error(where, "genus", "one capitalised word, no marks", row["genus"])
-    if RANK_IN_SPECIES_RE.search(row["species"]):
-        report.error(where, "species", "rank word in Species; rank and name go in subsp", row["species"])
-    elif row["species"] and not re.fullmatch(r"[a-z][a-z-]*", row["species"]):
-        report.warn(where, "species", "not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')", row["species"])
-    if row["subsp"] and not RANK_RE.match(row["subsp"]):
-        report.error(where, "subsp", "rank word + name, e.g. 'subsp. buxifolia', 'var. lanceolatus', 'f. glauca'", row["subsp"])
-    if row["native_status"] and not re.fullmatch(r"[a-z]+( [a-z]+)*", row["native_status"]):
-        report.error(where, "native_status", "paper's term in lower case, e.g. native, exotic", row["native_status"])
-    for col in ("fire_response_categorical_surv1", "fire_response_implied"):
-        if CODE_SPACE_RE.search(row[col]):
-            report.error(where, col, "space next to '?', '/', ';', ',' or a bracket; remove it ('? r' -> '?r')", row[col])
-    if row["fire_response_categorical_surv1"] not in ("", "NA") and row["fire_response_implied"] not in ("", "NA"):
-        report.error(where, "fire_response_implied", "fill only when fire_response_categorical_surv1 is empty (stated response wins)", row["fire_response_implied"])
-    if row["source"] != row["file_name"] and not APA_RE.fullmatch(row["source"]):
-        report.warn(where, "source", "does not look like APA: 'author, a. b. (yyyy). title. ...'", row["source"])
-    loc = row["data_location"]
-    if row["genus"] != "NA" and not loc:
-        report.error(where, "data_location", "where the row's values are printed, e.g. 'table 2, p. 342'", loc)
-    elif loc and loc != "NA" and not LOC_PAGE_RE.search(loc):
-        report.warn(where, "data_location", "no page: add 'p. N' (printed page) or 'pdf p. N'", loc)
-    check_quote(where, row, report)
-    m = NOTES_PAGE_RE.search(row["notes"])
-    if m:
-        report.warn(where, "notes", "page reference: write 'p. N' (printed page) or 'pdf p. N'", m.group(0))
-
-    lat, lon = row["latitude"], row["longitude"]
-    for col, value, lo, hi in (("latitude", lat, -44, -10), ("longitude", lon, 112, 154)):
-        if value:
-            if not NUMBER_RE.fullmatch(value):
-                report.error(where, col, "not a decimal number", value)
-            elif not lo <= float(value) <= hi:
-                report.error(where, col, f"outside {lo} to {hi}", value)
-            elif "." in value and (value.endswith("0") or decimals(value) > 4):
-                report.error(where, col, "at most 4 decimals, no trailing zeros ('151.0' -> '151')", value)
-
-    if raw:
-        for col in TIME_COLS:
-            if row[col] and col not in RAW_EMPTY and not raw_time_ok(row[col]):
-                report.error(where, col, "'<value as printed> <unit>', unit days|weeks|months|years, e.g. '26 months'", row[col])
-    else:
-        for col in TIME_COLS:
-            value = row[col]
-            if value and not TIME_RE.fullmatch(value):
-                report.error(where, col, "time format: number, min-max, or >/< bound", value)
-        for col in FIXED_YEARS:
-            value = row[col]
-            if value and TIME_RE.fullmatch(value):
-                if any(decimals(part) > 3 for part in value.lstrip("<>").split("-")):
-                    report.error(where, col, "more than 3 decimals", value)
-        unit_needed = any(row[col] for col in VARIABLE_UNIT)
-        if unit_needed and row["time_unit"] not in ("days", "weeks", "months", "years"):
-            report.error(where, "time_unit", "must be days, weeks, months or years", row["time_unit"])
-        if not unit_needed and row["time_unit"]:
-            report.error(where, "time_unit", "must be empty: no variable-unit time column filled", row["time_unit"])
-
-    err_col, err_type, err_value = row["error_column"], row["error_type"], row["error_value"]
-    if err_value not in ("", "NA"):
-        if err_col not in TIME_COLS:
-            report.error(where, "error_column", "name of the time column the error belongs to", err_col)
-        elif not row[err_col]:
-            report.error(where, "error_column", "names an empty time column", err_col)
-        if not err_type:
-            report.error(where, "error_type", "needed when error_value is filled", err_type)
-        elif err_type.startswith("ci") and not CI_RE.fullmatch(err_value):
-            report.error(where, "error_value", "confidence interval as lower-upper, e.g. 1.5-3.7", err_value)
-        elif err_type in ("se", "sd") and not ERROR_NUMBER_RE.fullmatch(err_value):
-            report.error(where, "error_value", "se or sd: a single number", err_value)
-    elif (err_col or err_type) and "NA" not in (err_col, err_type):
-        report.error(where, "error_value", "empty, but error_column or error_type is filled", err_value)
-    if err_type not in ("", "NA") and not ERROR_TYPE_RE.fullmatch(err_type):
-        report.warn(where, "error_type", "not se, sd, ci<N> or '± not defined'; fine if printed so", err_type)
-    if row["sample_size"] not in ("", "NA") and not re.fullmatch(r"\d+", row["sample_size"]):
-        report.warn(where, "sample_size", "not a whole number; fine if printed so (explain in notes)", row["sample_size"])
-
-    pjp, repr4 = row["pjp_mths"], row["time_to_50_percent_flowering_repr4"]
-    if not raw and pjp and repr4 and NUMBER_RE.fullmatch(pjp) and NUMBER_RE.fullmatch(repr4):
-        if round(float(pjp) / 12, decimals(repr4)) != float(repr4):
-            report.error(where, "time_to_50_percent_flowering_repr4", f"should be PJP mths / 12 ({float(pjp) / 12:.3f})", repr4)
-
-    season = row["fire_season_categorical"]
-    if season and not SEASON_RE.fullmatch(season):
-        report.error(where, "fire_season_categorical", "summer|autumn|winter|spring, joined by '; '", season)
-    elif season:
-        seasons = season.split("; ")
-        if seasons != sorted(seasons, key=SEASON_ORDER.index):
-            report.error(where, "fire_season_categorical", "calendar order: summer; autumn; winter; spring", season)
-    resprout = row["resprouter_type"]
-    if re.search(r"\b(and|or)\b", resprout):
-        report.warn(where, "resprouter_type", "several types: join with '; ' instead of 'and' / 'or'", resprout)
-    if resprout != resprout.lower() or PLURAL_RE.search(resprout):
-        report.warn(where, "resprouter_type", "lower case and singular, e.g. rhizome, lignotuber", resprout)
-    for col in ("location_name", "resprouter_type"):
-        if re.search(r"\s/\s", row[col]) or (col == "resprouter_type" and "/" in row[col]):
-            report.warn(where, col, "several values: join with '; ' (keep '/' only if printed inside one value)", row[col])
-    for col in ("rainfall_mm", "rainfall_post_fire_mm"):
-        rain = row[col]
-        if rain and rain != "NA" and not re.fullmatch(r"\d+(\.\d+)?(-\d+(\.\d+)?)?", rain):
-            report.error(where, col, "not a number or min-max range", rain)
-    if bool(row["rainfall_post_fire_mm"]) != bool(row["rainfall_post_fire_period"]):
-        report.error(where, "rainfall_post_fire_period", "rainfall_post_fire_mm and its period go together", row["rainfall_post_fire_period"])
+    models = row_models()
+    kind = "na" if row["genus"] == "NA" else "data"
+    ctx = {"raw": raw, "orig": row, "row": formatted(row) if raw else row, "allowed": models["allowed"], "warnings": []}
+    try:
+        models[kind].model_validate(ctx["row"], context=ctx)
+    except ValidationError as e:
+        for err in e.errors():
+            col = str(err["loc"][0]) if err["loc"] else ""
+            if err["type"] == "row_rule":
+                for check, shown in err["ctx"]["checks"]:
+                    report.error(where, col, check, shown)
+            else:  # column missing from or not in metadata.csv
+                report.error(where, col, err["msg"], str(err.get("input", ""))[:120])
+    for col, check, shown in ctx["warnings"]:
+        report.warn(where, col, check, shown)
 
 
 def check_step1(slug, paper, report, final=False):
@@ -389,6 +551,9 @@ def check_step1(slug, paper, report, final=False):
     # file level
     if not result or result[0] != columns:
         report.error("RESULT line 1", "", f"header must be the {len(columns)} COLUMNS names in order")
+        return
+    if [m["column"] for m in metadata()] != columns:
+        report.error("METADATA", "column", "metadata.csv columns differ from COLUMNS in CLAUDE.md; row checks need both the same")
         return
     if not log or log[0] != LOG_HEADER:
         report.error("LOG line 1", "", "header must be " + ",".join(LOG_HEADER))

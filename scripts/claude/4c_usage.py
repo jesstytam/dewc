@@ -1,8 +1,8 @@
 """Token usage per paper for one Claude Code session.
 
 Usage (from the repo root, after quitting the session):
-    python scripts/claude/usage.py --step step0 --slug opus-5-5 --session <session id or .jsonl path>
-    python scripts/claude/usage.py --step step1 --slug sonnet-5-5 --session <...>
+    python scripts/claude/4c_usage.py --step step0 --slug opus-5-5 --session <session id or .jsonl path>
+    python scripts/claude/4c_usage.py --step step1 --slug sonnet-5-5 --session <...>
 
 Reads the session transcript (~/.claude/projects/<project>/<session>.jsonl, plus any
 subagent transcripts in <session>/subagents/) and the step's log. Each API response is
@@ -10,7 +10,7 @@ assigned to the paper whose started-finished window in the log contains its time
 responses outside every window (setup, final checks, wrap-up) go to "_other".
 
 A session can run several steps (e.g. Step 0, then Step 1). Then pass --window with the
-step's part of the session (log_session.py does this); only responses inside it count.
+step's part of the session (4b_log_session.py does this); only responses inside it count.
 
 Fills the token columns (USAGE_COLS) of each paper's line in the step's log, and of the
 session's line for this step in logs/sessions.csv (totals for the window, including _other).

@@ -14,13 +14,13 @@ MD_RAW   = "data/papers_test/md_raw/*.md"        # 2_pdf2md.py output, every PDF
 PDF_CLEAN = "data/papers_test/pdf_clean/{stem}.pdf"   # source PDF of each paper, renamed by 1_clean_pdf.py; same file stem as its markdown
 MD_LLM   = "data/papers_test/md_llm/{stem}.md"   # Step 0 output; one file per paper: optimised (scanned) or moved unchanged (text-layer, end comment "md_opt: none")
 PAPERS   = "data/papers_test/md_llm/*.md"        # extraction input; pages split by <!-- PAGE BREAK -->
-RESULT   = ROOT + "results/{slug}_raw.csv"       # raw extraction, values as printed; header = COLUMNS names, in COLUMNS order (39 columns)
+RESULT   = ROOT + "results/{slug}_raw.csv"       # raw extraction, values as printed; header = COLUMNS names, in COLUMNS order (46 columns)
 NORMALISE = "scripts/pipeline/5_normalise.py"  # RESULT -> final ROOT + "results/{slug}.csv" (units, case, dashes); run by the user after Step 1, never by agents
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
-USAGE    = "scripts/claude/usage.py"             # token usage per paper; run by the user after each session, never by agents
-CHECK    = "scripts/claude/check.py"             # fixed check script; run it, never edit it; writes reports to ROOT + "logs/"
+USAGE    = "scripts/claude/4c_usage.py"          # token usage per paper; run by the user after each session, never by agents
+CHECK    = "scripts/claude/4a_check.py"          # fixed check script; run it, never edit it; writes reports to ROOT + "logs/"
 ```
 
 ## Read and write scope
@@ -119,13 +119,14 @@ Compare each scanned paper's `MD_RAW` file with its PDF page by page. Fix the ma
 - Value not stated in paper: leave cell empty.
 - Species tables often span many pages. Read every page; extract every species row.
 - Table continues into the next batch: reuse its column headers from the previous batch.
-- Carry site and fire values (coordinates, location name, rainfall, fire season, severity, type) from the paper's methods onto every row of that paper. Several sites or fires: match each species row to its own site and fire.
+- Carry site and fire values (coordinates, location name, rainfall, fire season, severity, type) from the paper's methods onto every row of that paper. Several sites or fires: match each species row to its own site and fire. Value printed for the species itself (its table row or a sentence about it, e.g. 'low intensity' for one species): use it on that species' row instead of the paper-wide value; the paper-wide value in `notes`.
 - Several named sites share one set of coordinates: still 1 row per site; site name in `location_name`, coordinates kept. Never merge sites into 1 row with per-site values in `notes`.
 - A row needs at least 1 value in a fire response or time column. Values kept only in `notes` (near-matches, unreliable or unitless values) never create a row on their own. Exception: a fire response code left out of the cell by a `VALUE_MAP` rule (no clear class, conflicting codes) still creates a row.
 - Value given once for several sites (not split by site): the species recorded at 1 of those sites only -> value on that site's row. Recorded at 2 or more -> 1 extra row with `location_name` = those site names joined by `; `, coordinates empty; site-specific values stay on the site rows. Never put a shared value on one site's row when the species is recorded at several sites.
 - Never merge rows. Same taxon printed as 2 or more separate entries (e.g. different references or variants): 1 row per entry. Duplicate rows are fine; do not check or remove them.
 - Fill a column only when the paper's measure matches the column definition. Near-matches go in `notes` only, with their definition (e.g. time to 80% of maximum flower production; expert or literature estimates).
-- Not yet flowering at the last observation ("not flowering after 4 years"): `>N <unit>`, e.g. `>4 years`.
+- Choose the column by the paper's definition of the measure, not by its name. E.g. 'juvenile period' defined as the time for 50% of individuals to flower -> `time_to_50_percent_flowering`, not `primary_juvenile_period`; the paper's term and definition in `notes`. Columns with the same definition (`primary_juvenile_period` / `age_at_first_flower_production_from_seed_repr3`; `secondary_juvenile_period` / `time_to_first_flower_production_resprout_repr3a`): the paper's term decides, as in `METADATA`.
+- Not yet flowering at the last observation ("not flowering after 4 years"): `>N` with its unit, e.g. `>4` + `years`.
 - Codes and units: use only definitions printed in the paper. Code not defined: copy it as printed (e.g. fire response `S`), never translate it. Unit not stated for a time value: leave the time columns empty; value and "unit not stated" in `notes`.
 - Tables may be parsed with one-off code. Then print 3 random parsed rows next to their source table lines and confirm they match before writing them.
 - Ambiguous value: fill best reading, explain in `notes`. Value printed with uncertainty marks (`c.`, `?`, `approx.`): fill the number without the marks; marks in `notes`.
@@ -172,14 +173,21 @@ COLUMNS = [
   # time after fire
   ("pjp_mths", ""),
   ("primary_juvenile_period", ""),
+  ("primary_juvenile_period_unit", "new"),
   ("age_at_first_flower_production_from_seed_repr3", ""),
+  ("age_at_first_flower_production_from_seed_repr3_unit", "new"),
   ("secondary_juvenile_period", ""),
+  ("secondary_juvenile_period_unit", "new"),
   ("time_to_first_flower_production_resprout_repr3a", ""),
+  ("time_to_first_flower_production_resprout_repr3a_unit", "new"),
   ("time_to_50_percent_flowering_repr4", ""),
+  ("time_to_50_percent_flowering_repr4_unit", "new"),
   ("time_to_50_percent_flowering", "new"),
+  ("time_to_50_percent_flowering_unit", "new"),
   ("time_to_80_percent_flowering", "new"),
+  ("time_to_80_percent_flowering_unit", "new"),
   ("recovery_time", "new"),
-  ("time_unit", "new"),
+  ("recovery_time_unit", "new"),
   # error of a time value
   ("error_column", "new"),
   ("error_type", "new"),
@@ -208,10 +216,10 @@ COLUMNS = [
 ```
 
 Time columns (raw: as printed; `NORMALISE` converts):
-- Write each time value as `<value> <unit>`: value exactly as printed (same decimals, `3.0 - 16.0` and `>4` as printed), unit `days`, `weeks`, `months` or `years` (the paper's unit, spelled out). E.g. `26 months`, `>4 years`, `3.0-16.0 years`. Never convert or round.
-- Primary juvenile period in any unit: `primary_juvenile_period`. `NORMALISE` moves months to `pjp_mths` and fills `time_to_50_percent_flowering_repr4`.
-- Leave `pjp_mths`, `time_unit`, `scientific_name` and `pdf_path` empty (NA row: `NA`); `NORMALISE` fills them.
-- `error_value` in the unit of its time column as printed; `NORMALISE` converts both.
+- Each time column has a unit column after it (`<column>_unit`). Value cell: the value exactly as printed (number, `min-max` or `>`/`<` bound; same decimals, e.g. `3.0 - 16.0`, `>4`). Unit cell: `days`, `weeks`, `months` or `years` (the paper's unit, spelled out). E.g. `26` + `months`; `>4` + `years`. Never convert or round. Value filled = unit filled; no unit printed: both empty (see Extraction rules).
+- Primary juvenile period in any unit: `primary_juvenile_period`. `NORMALISE` moves months to `pjp_mths`.
+- Leave `pjp_mths`, `scientific_name` and `pdf_path` empty (NA row: `NA`); `NORMALISE` fills them.
+- `error_value` in the unit of its time column as printed (that column's `_unit` cell); `NORMALISE` converts both.
 - Paper prints one value in 2 units: write the one in the paper's main results; the other in `notes`.
 - Paper gives values under different terms (e.g. age at first flowering and primary juvenile period): each value in its own column. One value never fills 2 columns.
 - Uncertain value: no `?` in the cell; explain in `notes`.

@@ -1,4 +1,5 @@
 level,where,column,check,value
+error,LOG _run,note,claude_md_sha256 does not match the current files; recompute with the command in CLAUDE.md,a0fca9b1380afdd9a78268dfe4aa481b87c2c91533d9071f1407e2a3a4976331
 warning,RESULT line 165,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. nov
 warning,RESULT line 172,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp. aff. elliptica
 warning,RESULT line 200,species,"not a plain lower-case epithet (fine for phrase names, e.g. 'sp. A')",sp.

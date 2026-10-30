@@ -1,22 +1,23 @@
 """Log a finished pipeline session (Step 0 or Step 1).
 
 Runs as a SessionEnd hook (reads the hook JSON from stdin), or by hand:
-    python scripts/claude/log_session.py --session <session id or .jsonl path>
+    python scripts/claude/4b_log_session.py --session <session id or .jsonl path>
 
 Does nothing for sessions whose prompts never ask to "Run Step 0" or "Run Step 1".
 A session can run several steps (e.g. "Run Step 0", then "Run Step 1"). Each step's part of
 the session runs from its prompt to the next prompt for a different step (or the session end).
 For each step in a pipeline session it:
   1. copies the session transcript to logs/runs/{step}_{slug}_{session}/transcript.jsonl;
-  2. snapshots the rules (CLAUDE.md, check.py, template.csv, metadata.csv, value_map.csv) and the step's outputs into the same folder (Step 0: md_opt_log.csv and
+  2. snapshots the rules (CLAUDE.md, 4a_check.py, template.csv, metadata.csv, value_map.csv) and the step's outputs into the same folder (Step 0: md_opt_log.csv and
      md_opt_check.csv; Step 1: results/{slug}_raw.csv, {slug}_log.csv, {slug}_check.csv);
   3. adds the step's line to logs/sessions.csv (once per session and step);
-  4. fills the token columns in the step's log and in sessions.csv, counting only the step's part of the session (usage.py --window);
-  5. Step 1: scores the snapshot against the answers (benchmark.py --run) into logs/benchmark.csv.
+  4. fills the token columns in the step's log and in sessions.csv, counting only the step's part of the session (4c_usage.py --window);
+  5. Step 1: scores the snapshot against the answers (6_benchmark.py --run) into logs/benchmark.csv.
 """
 
 import argparse
 import csv
+import importlib.util
 import json
 import re
 import shutil
@@ -25,8 +26,9 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-import usage  # noqa: E402
+spec = importlib.util.spec_from_file_location("usage", Path(__file__).resolve().parent / "4c_usage.py")
+usage = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(usage)
 
 REPO = usage.REPO
 ROOT = REPO / "data/inference_test"  # test run only; never data/inference
@@ -107,7 +109,7 @@ def log_step(path, session, step, since, until, slug, models, version):
     run_dir = LOGS / "runs" / f"{step}_{slug}_{session}"
     run_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(path, run_dir / "transcript.jsonl")
-    for f in (REPO / "CLAUDE.md", REPO / "scripts/claude/check.py", ROOT / "references/template.csv", ROOT / "references/metadata.csv",
+    for f in (REPO / "CLAUDE.md", REPO / "scripts/claude/4a_check.py", ROOT / "references/template.csv", ROOT / "references/metadata.csv",
               ROOT / "references/value_map.csv"):
         if not (run_dir / f.name).exists():  # first logging of the session = closest to the run
             shutil.copy2(f, run_dir / f.name)
@@ -136,7 +138,7 @@ def log_step(path, session, step, since, until, slug, models, version):
 
     # 5. accuracy benchmark against the answers (Step 1 of a known agent)
     if step == "step1" and slug in AGENTS.values():
-        subprocess.run([sys.executable, str(Path(__file__).parent / "benchmark.py"), "--run", run_dir.name], check=False)
+        subprocess.run([sys.executable, str(Path(__file__).parent / "6_benchmark.py"), "--run", run_dir.name], check=False)
     print(f"logged {step} | {slug} | session {session} | {run_dir.relative_to(REPO)}", file=sys.stderr)
 
 

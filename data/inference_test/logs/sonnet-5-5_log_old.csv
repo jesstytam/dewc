@@ -1,23 +1,24 @@
 paper,status,n_rows,started,finished,note,n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens
-_run,start,0,2026-10-09T05:58:01Z,,model=claude-sonnet-5-5; date=2026-10-09; git=19ab1376a53c54fbc871e97f0eef98a3cdd5665d; claude_md_sha256=f09537b292cdfa579fab51c979cd66bde743a55d01066e516908b9c7d88f8d55; papers_sha256=fa510360aaa05feba974d6e3d71dfc64bce7f818326e57cb0ad304ee2457fda1,,,,,,
-1-s2.0-S0006320798001128-main,done,1,2026-10-09T05:58:28Z,2026-10-09T05:58:28Z,removed 0 leftover rows; only fire response and resprouting mode for Themeda triandra; no time values,,,,,,
-AuldScottProcFireEffectsIAWF1997,done,7,2026-10-09T05:58:50Z,2026-10-09T05:58:50Z,removed 0 leftover rows,,,,,,
-Austral_Ecology_-_2002_-_Wahren_-_Early_post‐fire_regeneration_in_subalpine_heathland_and_grassland_in_the_Victorian_Alpine,done,3,2026-10-09T05:59:39Z,2026-10-09T05:59:39Z,"removed 3 leftover rows; no printed page numbers, pdf pages used",,,,,,
-Austral_Ecology_-_2025_-_Miller_-_Using_Patterns_of_Post‐Fire_Plant_Reproduction_to_Inform_Minimum_Fire_Intervals_for,done,6,2026-10-09T06:00:37Z,2026-10-09T06:00:37Z,"removed 0 leftover rows; no printed page numbers, pdf pages used",,,,,,
-Australian_Journal_of_Ecology_-_December_1988_-_BRADSTOCK_-_Demography_of_woody_plants_in_relation_to_fire_Banksia,done,3,2026-10-09T06:01:02Z,2026-10-09T06:01:02Z,removed 0 leftover rows,,,,,,
-BF00040753,done,2,2026-10-09T06:01:18Z,2026-10-09T06:01:18Z,"removed 0 leftover rows; fire response only, no time values",,,,,,
-Benson 1985 Cunninghamia_primary juvenile period,done,66,2026-10-09T06:02:31Z,2026-10-09T06:02:31Z,removed 0 leftover rows; vicinity columns of table 2 in notes only,,,,,,
-J_Vegetation_Science_-_2007_-_Auld_-_Dispersal_and_recruitment_dynamics_in_the_fleshy‐fruited_Persoonia_lanceolata_,done,1,2026-10-09T06:02:56Z,2026-10-09T06:02:56Z,"removed 0 leftover rows; no printed page numbers, pdf pages used",,,,,,
-Journal_of_Ecology_-_2002_-_Enright_-_The_ecological_significance_of_canopy_seed_storage_in_fire‐prone_environments_a,done,15,2026-10-09T06:03:27Z,2026-10-09T06:03:27Z,"removed 0 leftover rows; file stem says 2002, paper prints 1998",,,,,,
-Knox_&_Clarke_2004_Cunninghamia_primary_juvenile_period,done,33,2026-10-09T06:04:13Z,2026-10-09T06:04:13Z,removed 33 leftover rows; pages from journal pagination 348-353; values pooled over both reserves,,,,,,
-Kubiak_Cunn_2009,done,1306,2026-10-09T06:08:18Z,2026-10-09T06:08:18Z,"removed 1306 leftover rows; times in appendix 1 not split by site: kept on single-site rows, else on one shared row; 68 species without fire response or fillable time value have no row",,,,,,
-Muir_et_al_2014_AustJBot_obligate_seeder_juvenile,done,8,2026-10-09T06:08:50Z,2026-10-09T06:08:50Z,"removed 0 leftover rows; no printed page numbers, pdf pages used; time to 80% of max flower production in notes only",,,,,,
-Ooi_2019_JEnvManagement_fire_seasonality,done,5,2026-10-09T06:10:05Z,2026-10-09T06:10:05Z,"removed 5 leftover rows; no printed page numbers, pdf pages used; pooled values on shared-site rows",,,,,,
-Post_fire_juvenile_period_of_plants_in_s,done,52,2026-10-09T06:11:16Z,2026-10-09T06:11:16Z,removed 0 leftover rows; table 6 (life form means) and table 7 not entered,,,,,,
-biostor-259750,done,201,2026-10-09T06:12:50Z,2026-10-09T06:12:50Z,removed 201 leftover rows; flowering year classes F1-F3 entered as year N; non-vascular plants included,,,,,,
-bt02009,done,2,2026-10-09T06:13:20Z,2026-10-09T06:13:20Z,"removed 0 leftover rows; first PDF page is a journal cover page; no printed page numbers, pdf pages used",,,,,,
-bt9830293,done,1,2026-10-09T06:13:41Z,2026-10-09T06:13:41Z,"removed 0 leftover rows; lambertia formosa has only peak flowering values (near-match), no row",,,,,,
-bt9890001,done,2,2026-10-09T06:14:33Z,2026-10-09T06:14:33Z,"removed 0 leftover rows; only implied fire responses, no time values",,,,,,
-enright1996,done,1,2026-10-09T06:14:50Z,2026-10-09T06:14:50Z,removed 0 leftover rows,,,,,,
-nswfrrd_v1.3a_pdfvers_sppdata,done,2699,2026-10-09T06:15:57Z,2026-10-09T06:15:57Z,"removed 0 leftover rows; fire response codes undefined, juvenile period units not stated so values are in notes only; source = file stem (no citation printed)",,,,,,
-wf24046,done,4,2026-10-09T06:16:50Z,2026-10-09T06:16:50Z,"removed 0 leftover rows; no printed page numbers, pdf pages used; 1990s and 2017 eras as separate rows",,,,,,
+_run,start,0,2026-10-28T02:50:22Z,,model=claude-sonnet-5-5; date=2026-10-28; git=f4f69959dfe4b4834d042dd106a60c87c4c1d0b3; claude_md_sha256=a0fca9b1380afdd9a78268dfe4aa481b87c2c91533d9071f1407e2a3a4976331; papers_sha256=4a2700e3ae176e9fb6846c3dd08d642898bc684d3b0cf4e310df444e7559a9e9,,,,,,
+Ashton_et_al_1989,no_data,1,2026-10-28T02:50:28Z,2026-10-28T02:50:59Z,no species-level juvenile period or fire response,4,7,15513,686584,1985,704089
+Auld_et_al_1995,done,7,2026-10-28T02:50:59Z,2026-10-28T02:51:40Z,primary juvenile period unknown for 2 species,3,6,15319,559076,4149,578550
+Auld_et_al_2007,done,1,2026-10-28T02:51:40Z,2026-10-28T02:52:11Z,,4,8,12407,803619,3592,819626
+Benson_1985,done,65,2026-10-28T02:52:11Z,2026-10-28T02:53:02Z,,3,5,17911,627055,6938,651909
+Bradstock_et_al_1988,done,3,2026-10-28T02:53:02Z,2026-10-28T02:53:43Z,,5,10,19013,1171450,4786,1195259
+Burrows_1995,done,1,2026-10-28T02:53:43Z,2026-10-28T02:54:20Z,,2,4,14788,491859,5033,511684
+Burrows_et_al_2008,done,57,2026-10-28T02:54:20Z,2026-10-28T02:55:41Z,,3,5,38124,809605,10867,858601
+Denham_et_al_2002,done,2,2026-10-28T02:55:41Z,2026-10-28T02:56:23Z,pdf pages used: no printed page numbers,3,6,18491,908570,4783,931850
+Enright_et_al_1996,done,1,2026-10-28T02:56:23Z,2026-10-28T02:56:51Z,,3,5,14104,963001,3238,980348
+Enright_et_al_1998,done,14,2026-10-28T02:56:51Z,2026-10-28T02:57:26Z,,4,8,11690,1332258,3759,1347715
+Enright_et_al_2025,done,4,2026-10-28T02:57:26Z,2026-10-28T02:58:27Z,pdf pages used: no printed page numbers,5,9,24978,1742459,7875,1775321
+Knox_et_al_2004,done,33,2026-10-28T02:58:27Z,2026-10-28T02:59:18Z,,3,6,23095,1118241,6466,1147808
+Kubiak_2009,done,1306,2026-10-28T02:59:18Z,2026-10-28T02:59:24Z,68 of 829 species without row: only underlined or seedling values; K/R R/K k/r k r codes left empty,1,2,423,389326,549,390300
+Miller_et_al_2025,done,6,2026-10-28T02:59:24Z,2026-10-28T03:00:32Z,pdf pages used: no printed page numbers,5,9,33901,1999182,7964,2041056
+Morgan_et_al_1999,done,1,2026-10-28T03:00:32Z,2026-10-28T03:00:57Z,,4,8,10941,1714257,2726,1727932
+Muir_et_al_2014,done,8,2026-10-28T03:00:57Z,2026-10-28T03:01:39Z,pdf pages used: no printed page numbers; journal not printed in the document,4,8,16286,1756604,5040,1777938
+NSWNPWS_2004,done,2699,2026-10-28T03:01:39Z,2026-10-28T03:01:46Z,juvenile period values not filled: unit not stated,1,1,3399,450877,555,454832
+Ooi_2019,done,5,2026-10-28T03:01:46Z,2026-10-28T03:02:47Z,year of publication not printed in the document; pdf pages used,4,8,17241,1845154,8852,1871255
+Pyke_1983,done,3,2026-10-28T03:02:47Z,2026-10-28T03:03:18Z,lambertia formosa has no fire response or time value,2,4,9348,947677,3873,960902
+Wahren_et_al_2001,done,1,2026-10-28T03:03:18Z,2026-10-28T03:04:06Z,"poa spp. and unnamed shrubs genus-level, no rows; pdf pages used",5,9,14348,2434908,4801,2454066
+Wark_1997,done,199,2026-10-28T03:04:06Z,2026-10-28T03:06:57Z,"hymenophyllum cupressiforme and amyema pendulum not recorded after the fire, no row",14,27,43355,7276666,19305,7339353
+Zammit_et_al_1987,done,10,2026-10-28T03:06:57Z,2026-10-28T03:07:31Z,,3,5,14960,1626909,4450,1646324
