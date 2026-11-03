@@ -1,5 +1,7 @@
 # **D**ata **e**xtraction **w**ith **C**laude
 
+Using Claude for data extraction from papers.
+
 ## Installation
 
 Clone this repo to have all scripts and files locally on your machine:
@@ -25,10 +27,6 @@ pip install -r requirements.txt
 
 ## Data extraction with LLM
 
-### Converting PDF to Markdown
-
-Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
-
 ### Important considerations
 
 Since Claude / LLM is responsible for data extraction, the pipeline instructions were create through a back-and-fourth conversation with the chatbot. This was done by first having a simple outline of the requirements, including the following:
@@ -48,7 +46,7 @@ To update the file, a CSV file containing the extraction results of 1 paper, as 
 Requirements included some of the following:
 
 - updating the variables and corresponding metadata required in this study from [Austraits](https://austraits.org/) and [Fire Ecology Database](http://fireecologyplants.net/).
-- optimising the markdown output after converting PDFs to MDs with `1_pdf2md.py`
+- optimising the Markdown (MD) output after converting PDFs to MDs with `1_pdf2md.py`
 - data type inconsistencies, e.g. decimal places, to include "subsp." in subspecies column or not, etc.
 
 Additional Python scripts created by Claude as per my instructions include the following:
@@ -65,15 +63,16 @@ The intial testing stage aimed to confirm and test that the outputs of the LLMs 
 
 I first provided 1 paper that has been extracted already as an example. I then provided 6 papers that required extraction to update `CLAUDE.md` and test the pipeline. After a few trials, I added another 14 papers for further testing.
 
-<image src="assets/pipeline_flowchart.drawio.png"/>
+<image src="assets/pipeline_flowchart.png"/>
 
 ### Logging each session
 
-Every pipeline session is logged automatically. A `SessionEnd` hook in `.claude/settings.json` runs `scripts/claude/4b_log_session.py` when a session ends. It acts only on sessions whose prompt starts with `Run Step 0` or `Run Step 1`; other sessions are ignored. For each pipeline session it:
+Every pipeline session is checked and logged automatically. A `SessionEnd` hook in `.claude/settings.json` runs `scripts/4b_log_session.py` when a session ends; it runs `4a_check.py` and `4c_usage.py` itself, so 4a-4c need no manual runs. It acts only on sessions whose prompt starts with `Run Step 0` or `Run Step 1`; other sessions are ignored. For each pipeline session it:
 
 1. copies the session transcript (which records the model of every response) and a snapshot of the step's outputs to `data/inference_test/logs/runs/<step>_<slug>_<session id>/`: `md_opt_log.csv` and `md_opt_check.csv` for Step 0; `<slug>_raw.csv`, `<slug>_log.csv` and `<slug>_check.csv` for Step 1;
-2. adds one line to `data/inference_test/logs/sessions.csv`: date, step (`step0`, `step1-trial` or `step1`), agent, the model IDs that actually answered, Claude Code version, session ID;
-3. fills the token breakdown (`n_requests`, `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens`, `output_tokens`, `total_tokens`): per paper in that paper's line of the step's log, and per step as whole-session totals in `sessions.csv`. The session total minus the papers is setup, checks and wrap-up. Each request is assigned to a paper by the `started` and `finished` times the agent writes in its log. Cache-read tokens make up most of the total because every request re-reads the conversation so far; compare papers mainly on `output_tokens` and `n_requests`.
+2. runs the final format check (`scripts/4a_check.py --step0` for Step 0, `scripts/4a_check.py <slug>` for Step 1), so the snapshot holds a fresh check report;
+3. adds one line to `data/inference_test/logs/sessions.csv`: date, step (`step0`, `step1-trial` or `step1`), agent, the model IDs that actually answered, Claude Code version, session ID;
+4. fills the token breakdown with `scripts/4c_usage.py` (`n_requests`, `input_tokens`, `cache_creation_input_tokens`, `cache_read_input_tokens`, `output_tokens`, `total_tokens`): per paper in that paper's line of the step's log, and per step as whole-session totals in `sessions.csv`. The session total minus the papers is setup, checks and wrap-up. Each request is assigned to a paper by the `started` and `finished` times the agent writes in its log. Cache-read tokens make up most of the total because every request re-reads the conversation so far; compare papers mainly on `output_tokens` and `n_requests`.
 
 `models` in `sessions.csv` must show only the expected model ID (e.g. `claude-opus-5-5`). Any other model means the session did not run on the intended model, so its results are not valid for that agent. The agents also record the model themselves: Step 0 in the end comment of each optimised `md_llm/` file, Step 1 in the `_run` line of `<slug>_log.csv`.
 
@@ -82,61 +81,75 @@ Optional: before ending a session, type `/export data/inference_test/logs/runs/<
 If the hook did not run (e.g. the terminal was killed), log the session by hand; running it twice is safe:
 
 ```bash
-python scripts/claude/4b_log_session.py --session <session id>
+python scripts/4b_log_session.py --session <session id>
 ```
 
-**Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>_raw.csv` (and the normalised `<slug>.csv`), `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
+**Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>_raw.csv` (and the cleaned `<slug>.csv`), `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
 
 ### Running
 
-#### Preparation
+#### Converting PDF to Markdown
 
+MD is currently one of the better formats for LLMs to analyse, we first convert the PDFs to MD files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) to convert PDFs to MDs, which showed success for both text-based and image-based (scanned) PDFs.
 
+Run the following first to clean up the PDF's name:
+```
+python scripts/1_clean_pdf.py
+```
+Then convert:
+```
+python scripts/2_pdf2md.py
+```
+Finally, optimise the MDs that were scanned, by first opening up a Claude instance:
+```
+claude --model claude-opus-5-5
+```
+And then running step 0 in `CLAUDE.md`:
+```
+Run Step 0 in CLAUDE.md. Do not ask questions.`
+```
 
 #### Extraction
 
 Use 1 model per Claude instance to prevent results leakage across models during inference times. Start a fresh instance for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
 
-Step 1 reads the optimised papers in `data/papers_test/md_llm/`; `data/papers_test/md_raw/` must be empty.
+Step 1 reads the optimised papers in `data/papers_test/md_llm/`; `data/papers_test/md_raw/` must be empty after optimisation.
 
-1a. **Data extraction (Opus).** New session. Papers already in the log are skipped.
+**Data extraction (Opus).** 
+Start a new instance. 
 
-   ```
-   claude --model claude-opus-5-5
-   ```
+```
+claude --model claude-opus-5-5
+```
 
-   ```
-   Run Step 1 in CLAUDE.md. Do not ask questions.
-   ```
+```
+Run Step 1 in CLAUDE.md. Do not ask questions.
+```
 
-1b. **Data extraction (Sonnet).** New session, same prompt.
+**Data extraction (Sonnet).**
+Start another new instance with the same prompt.
 
-   ```
-   claude --model claude-sonnet-5-5
-   ```
+```
+claude --model claude-sonnet-5-5
+```
 
-   ```
-   Run Step 1 in CLAUDE.md. Do not ask questions.
-   ```
+```
+Run Step 1 in CLAUDE.md. Do not ask questions.
+```
 
-2. **Normalise.** Converts the raw results (values as printed) into the final results: time values (value + `<column>_unit` cells) to each column's unit, `pjp_mths`, case, dashes, `scientific_name` and `pdf_path`. Writes `data/inference_test/results/<slug>.csv`; the raw file is not changed. Rerun it after any change to the script; no re-extraction needed.
+All outputs are stored in `data/inference_test/`.
+Scripts `4a_check.py`, `4b_log_session.py`, and `4c_usage.py` will be ran automatically by Claude once you close the extraction instances.
 
-   ```
-   python scripts/pipeline/5_normalise.py opus-5-5 sonnet-5-5
-   ```
+#### Post-processing
 
-3. **Final check.** Each check exits 1 if any check fails; the reports are in `data/inference_test/logs/` (`<slug>_check.csv` for raw, `<slug>_check_final.csv` for final).
+**Clean results.**
+This step is crucial for formatting outputs, e.g. removing trailing spaces, correcting the number of decimal places, etc.
+Run the following to clean up the LLM-extracted results:
+```
+python scripts/5_clean_results.py opus-5-5 sonnet-5-5
+```
 
-   ```
-   python scripts/claude/4a_check.py opus-5-5
-   python scripts/claude/4a_check.py sonnet-5-5
-   python scripts/claude/4a_check.py opus-5-5 --final
-   python scripts/claude/4a_check.py sonnet-5-5 --final
-   ```
-
-If a session stops early (usage limit, context full), start a new session with the same prompt. Finished papers are skipped and unfinished ones are redone.
-
-All output stays in `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
+This converts the raw results (values as printed) into the final results: time values (value + `<column>_unit` cells) to each column's unit, `pjp_mths`, case, dashes, `scientific_name` and `pdf_path`. Writes `data/inference_test/results/<slug>.csv`; the raw file is not changed. Rerun it after any change to the script; no re-extraction needed.
 
 ### Benchmarking
 
@@ -156,7 +169,7 @@ The ground truth is the human-extracted dataset in `data/papers_test/answers/juv
 
 #### Methods
 
-`scripts/claude/6_benchmark.py` scores each Step 1 snapshot in `data/inference_test/logs/runs/` at 2 levels:
+`scripts/6_benchmark.py` scores each Step 1 snapshot in `data/inference_test/logs/runs/` at 2 levels:
 
 - **Taxa:** the set of taxa (genus + species + subspecies) of each paper. A true positive (TP) is a taxon on both sides, a false positive (FP) is a taxon only in the model's results, and a false negative (FN) is a taxon only in the ground truth.
 - **Values:** for each taxon on both sides, the values of a column are pooled over the taxon's rows into a set on each side. A TP is a value on both sides, a FP is a model value not in the ground truth, and a FN is a ground truth value the model lacks.
@@ -181,10 +194,10 @@ Only papers extracted in the run itself are scored, so papers carried over from 
 To reproduce the scores, run these commands from the repository root:
 
 ```
-python scripts/claude/6_benchmark.py --taxa      # list taxon names
-Rscript scripts/claude/6a_taxon_map.R            # map them to APC accepted names
-python scripts/claude/6_benchmark.py --rescore   # score all runs
-python scripts/claude/6_benchmark.py --report    # per-paper and per-column scores
+python scripts/6_benchmark.py --taxa      # list taxon names
+Rscript scripts/6a_taxon_map.R            # map them to APC accepted names
+python scripts/6_benchmark.py --rescore   # score all runs
+python scripts/6_benchmark.py --report    # per-paper and per-column scores
 ```
 
 The outputs are in `data/inference_test/logs/`: `benchmark.csv` (scores per run, paper and column), `benchmark_papers.csv` (latest run of each paper) and `benchmark_details.csv` (every taxon or value found on only one side).
@@ -242,7 +255,7 @@ Sonnet scored slightly higher than Opus on these runs, mainly because of the Kub
 
 **I believe that it is more important to calculate AI usage based on the number of tokens (an environment-centric approach), rather than cost (a capatalistic approach)**. This makes it easier to convert tokens to CO_2 / Wh / Litres of water, which puts things into perspective on the trade-offs of AI usage. 
 
-Optimising Markdown files of scanned PDFs: 0.5-15M tokens per paper
+Optimising MD files of scanned PDFs: 0.5-15M tokens per paper
 Data extraction: ~ slightly more than 1M tokens for both models
 
 See the AI disclosure section for a full breakdown of the token usage of this project. 
@@ -307,14 +320,14 @@ Notes:
 
 Using an online [AI Impact Calculator](https://aiimpactcalculator.com/), this project is estimated (roughly) to have consumed a total of 14.126425 mWh. Below shows the estimate amount of other resources consumed, e.g. CO_2, water, etc:
 
-**Data extraction using Opus 5.5**
+#### Data extraction using Opus 5.5
 <image src="energy_use/opus_usage.jpg"/>
 <image src="energy_use/opus_perspective.jpg"/>
 
-**Data extraction using Sonnet 5.5**
+#### Data extraction using Sonnet 5.5**
 <image src="energy_use/sonnet_usage.jpg"/>
 <image src="energy_use/sonnet_perspective.jpg"/>
 
-**Development and other tasks using Opus 5.5**
+#### Development and other tasks using Opus 5.5
 <image src="energy_use/opus_usage_dev.jpg"/>
 <image src="energy_use/opus_perspective_dev.jpg"/>

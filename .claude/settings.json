@@ -5,8 +5,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/claude/4b_log_session.py\" > /dev/null 2>&1 || true",
-            "timeout": 120
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/scripts/4b_log_session.py\" > /dev/null 2>&1 || true",
+            "timeout": 300
           }
         ]
       }

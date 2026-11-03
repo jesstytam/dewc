@@ -1,8 +1,8 @@
 """Token usage per paper for one Claude Code session.
 
 Usage (from the repo root, after quitting the session):
-    python scripts/claude/4c_usage.py --step step0 --slug opus-5-5 --session <session id or .jsonl path>
-    python scripts/claude/4c_usage.py --step step1 --slug sonnet-5-5 --session <...>
+    python scripts/4c_usage.py --step step0 --slug opus-5-5 --session <session id or .jsonl path>
+    python scripts/4c_usage.py --step step1 --slug sonnet-5-5 --session <...>
 
 Reads the session transcript (~/.claude/projects/<project>/<session>.jsonl, plus any
 subagent transcripts in <session>/subagents/) and the step's log. Each API response is
@@ -25,7 +25,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[1]
 LOGS = REPO / "data/inference_test/logs"  # test run only; never data/inference
 TRANSCRIPTS = Path.home() / ".claude/projects" / re.sub(r"[^A-Za-z0-9]", "-", str(REPO))
 TOKENS = ["input_tokens", "cache_creation_input_tokens", "cache_read_input_tokens", "output_tokens"]

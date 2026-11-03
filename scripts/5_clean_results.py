@@ -1,8 +1,8 @@
 """Normalise raw Step 1 extraction into the final results.
 
 Usage (from the repo root, after Step 1):
-    python scripts/pipeline/5_normalise.py opus-5-5 sonnet-5-5
-    python scripts/claude/4a_check.py opus-5-5 --final        # then check the output
+    python scripts/5_clean_results.py opus-5-5 sonnet-5-5
+    python scripts/4a_check.py opus-5-5 --final        # then check the output
 
 Reads data/inference_test/results/{slug}_raw.csv (values as printed in the papers) and writes
 data/inference_test/results/{slug}.csv. Never edits the raw file. All unit conversion and
@@ -20,7 +20,7 @@ import re
 import sys
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[1]
 RESULTS = REPO / "data/inference_test/results"  # test run only; never data/inference
 PDF_CLEAN = "data/papers_test/pdf_clean/"
 

@@ -1,10 +1,10 @@
 """Check extraction output against the rules in CLAUDE.md.
 
 Usage (from the repo root):
-    python scripts/claude/4a_check.py <slug> --paper <stem>   # after each paper in Step 1 (raw results)
-    python scripts/claude/4a_check.py <slug>                  # after all papers in Step 1 (raw results)
-    python scripts/claude/4a_check.py <slug> --final          # after scripts/pipeline/5_normalise.py (final results)
-    python scripts/claude/4a_check.py --step0                 # after Step 0
+    python scripts/4a_check.py <slug> --paper <stem>   # after each paper in Step 1 (raw results)
+    python scripts/4a_check.py <slug>                  # after all papers in Step 1 (raw results)
+    python scripts/4a_check.py <slug> --final          # after scripts/5_clean_results.py (final results)
+    python scripts/4a_check.py --step0                 # after Step 0
 
 Only checks that need no reading of the paper; column rules are in references/metadata.csv.
 Row checks are pydantic models whose fields are the metadata.csv columns. Never edits RESULT or LOG.
@@ -23,7 +23,7 @@ from pathlib import Path
 from pydantic import ConfigDict, Field, ValidationError, create_model, field_validator
 from pydantic_core import PydanticCustomError
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[1]
 ROOT = REPO / "data/inference_test"  # test run only; never data/inference
 MD_RAW = REPO / "data/papers_test/md_raw"
 MD_LLM = REPO / "data/papers_test/md_llm"
@@ -51,7 +51,7 @@ VARIABLE_UNIT = [
 ]
 TIME_COLS = ["pjp_mths", "primary_juvenile_period"] + FIXED_YEARS + VARIABLE_UNIT
 UNIT_OF = {col: col + "_unit" for col in TIME_COLS if col != "pjp_mths"}  # time column -> its unit column
-RAW_EMPTY = ["pjp_mths", "scientific_name", "pdf_path"]  # filled by 5_normalise.py
+RAW_EMPTY = ["pjp_mths", "scientific_name", "pdf_path"]  # filled by 5_clean_results.py
 
 TIME_RE = re.compile(r"[<>]?\d+(\.\d+)?(-\d+(\.\d+)?)?")
 NUMBER_RE = re.compile(r"-?\d+(\.\d+)?")
@@ -185,7 +185,7 @@ def check_quote(row):
     pos = 0
     for k, item in enumerate(items):
         tag = f"[{item}] "
-        at = quote.lower().find((tag if k == 0 else "; " + tag).lower(), pos)  # data_location is lower-cased by 5_normalise.py
+        at = quote.lower().find((tag if k == 0 else "; " + tag).lower(), pos)  # data_location is lower-cased by 5_clean_results.py
         if at == -1 or (k == 0 and at != 0):
             yield error(f"item {k + 1} must start with '[{item}] ' (one item per data_location item, same order, joined by '; ')", quote[:120])
             return
@@ -209,7 +209,7 @@ def expected_pdf_path(stem):
 
 
 def formatted(row):
-    """Raw row with the case and dash rules applied, as 5_normalise.py does, for the content checks."""
+    """Raw row with the case and dash rules applied, as 5_clean_results.py does, for the content checks."""
     out = {}
     for col, value in row.items():
         if col != "data_quote":
@@ -256,7 +256,7 @@ def cell_format(col, value, row, ctx):
     if orig != orig.strip():
         yield error("leading or trailing space", orig)
     if ctx["raw"]:
-        return  # case and dashes are set by 5_normalise.py
+        return  # case and dashes are set by 5_clean_results.py
     if DASH_RE.search(orig) and col != "data_quote":
         yield error("en or em dash; use ASCII hyphen '-'", orig)
     if orig != "NA" and orig != orig.lower() and col not in KEEP_CASE:
@@ -273,7 +273,7 @@ def required(col, value, row, ctx):
 @rule(*RAW_EMPTY)
 def raw_empty(col, value, row, ctx):
     if ctx["raw"] and value:
-        yield error("leave empty in raw results: 5_normalise.py fills it", ctx["orig"][col])
+        yield error("leave empty in raw results: 5_clean_results.py fills it", ctx["orig"][col])
 
 
 @rule("pdf_path", rows=("data", "na"))
@@ -400,7 +400,7 @@ def time_unit(col, value, row, ctx):
     elif not row[time_col] and value:
         yield error(f"must be empty: {time_col} is empty", value)
     elif not ctx["raw"] and value and time_col in FIXED_YEARS + ["primary_juvenile_period"] and value != "years":
-        yield error("final results: years (5_normalise.py converts)", value)
+        yield error("final results: years (5_clean_results.py converts)", value)
 
 
 @rule("error_column", "error_type", "error_value")
@@ -703,7 +703,7 @@ def main():
     parser.add_argument("slug", nargs="?", help="agent slug, e.g. opus-5-5")
     parser.add_argument("--paper", help="file stem of one paper; check only its rows")
     parser.add_argument("--step0", action="store_true", help="check Step 0 output instead")
-    parser.add_argument("--final", action="store_true", help="check the final results written by 5_normalise.py instead of the raw results")
+    parser.add_argument("--final", action="store_true", help="check the final results written by 5_clean_results.py instead of the raw results")
     args = parser.parse_args()
     if not args.step0 and not args.slug:
         parser.error("give a slug, or --step0")

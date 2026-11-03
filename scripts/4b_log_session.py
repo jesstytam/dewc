@@ -1,7 +1,8 @@
 """Log a finished pipeline session (Step 0 or Step 1).
 
+Runs 4a_check.py and 4c_usage.py itself, so one call covers all of 4a-4c.
 Runs as a SessionEnd hook (reads the hook JSON from stdin), or by hand:
-    python scripts/claude/4b_log_session.py --session <session id or .jsonl path>
+    python scripts/4b_log_session.py --session <session id or .jsonl path>
 
 Does nothing for sessions whose prompts never ask to "Run Step 0" or "Run Step 1".
 A session can run several steps (e.g. "Run Step 0", then "Run Step 1"). Each step's part of
@@ -11,8 +12,9 @@ For each step in a pipeline session it:
   2. snapshots the rules (CLAUDE.md, 4a_check.py, template.csv, metadata.csv, value_map.csv) and the step's outputs into the same folder (Step 0: md_opt_log.csv and
      md_opt_check.csv; Step 1: results/{slug}_raw.csv, {slug}_log.csv, {slug}_check.csv);
   3. adds the step's line to logs/sessions.csv (once per session and step);
-  4. fills the token columns in the step's log and in sessions.csv, counting only the step's part of the session (4c_usage.py --window);
-  5. Step 1: scores the snapshot against the answers (6_benchmark.py --run) into logs/benchmark.csv.
+  4. runs the final format check (4a_check.py --step0, or 4a_check.py <slug> for Step 1);
+  5. fills the token columns in the step's log and in sessions.csv, counting only the step's part of the session (4c_usage.py --window);
+  6. Step 1: scores the snapshot against the answers (6_benchmark.py --run) into logs/benchmark.csv.
 """
 
 import argparse
@@ -109,7 +111,7 @@ def log_step(path, session, step, since, until, slug, models, version):
     run_dir = LOGS / "runs" / f"{step}_{slug}_{session}"
     run_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(path, run_dir / "transcript.jsonl")
-    for f in (REPO / "CLAUDE.md", REPO / "scripts/claude/4a_check.py", ROOT / "references/template.csv", ROOT / "references/metadata.csv",
+    for f in (REPO / "CLAUDE.md", REPO / "scripts/4a_check.py", ROOT / "references/template.csv", ROOT / "references/metadata.csv",
               ROOT / "references/value_map.csv"):
         if not (run_dir / f.name).exists():  # first logging of the session = closest to the run
             shutil.copy2(f, run_dir / f.name)
@@ -125,7 +127,13 @@ def log_step(path, session, step, since, until, slug, models, version):
         with open(sessions, "a", encoding="utf-8", newline="") as f:
             csv.DictWriter(f, fieldnames=header, restval="", lineterminator="\n").writerow(row)
 
-    # 4. token columns (only for a known agent, whose log the step wrote), counting only this step's part of the session
+    # 4. final format check (4a_check.py), so the snapshot holds a fresh check report
+    if step == "step0":
+        subprocess.run([sys.executable, str(Path(__file__).parent / "4a_check.py"), "--step0"], check=False)
+    elif slug in AGENTS.values():
+        subprocess.run([sys.executable, str(Path(__file__).parent / "4a_check.py"), slug], check=False)
+
+    # 5. token columns (only for a known agent, whose log the step wrote), counting only this step's part of the session
     if slug in AGENTS.values():
         subprocess.run([sys.executable, str(Path(usage.__file__)), "--step", step, "--slug", slug,
                         "--session", str(path), "--window", f"{since},{until or ''}"], check=False)
@@ -136,7 +144,7 @@ def log_step(path, session, step, since, until, slug, models, version):
         if f.exists():
             shutil.copy2(f, run_dir / f.name)
 
-    # 5. accuracy benchmark against the answers (Step 1 of a known agent)
+    # 6. accuracy benchmark against the answers (Step 1 of a known agent)
     if step == "step1" and slug in AGENTS.values():
         subprocess.run([sys.executable, str(Path(__file__).parent / "6_benchmark.py"), "--run", run_dir.name], check=False)
     print(f"logged {step} | {slug} | session {session} | {run_dir.relative_to(REPO)}", file=sys.stderr)

@@ -1,9 +1,9 @@
 # Align the taxon names of the benchmark with the Australian Plant Census (APCalign).
 #
 # Usage (from the repo root):
-#   python scripts/claude/6_benchmark.py --taxa      # writes data/inference_test/logs/benchmark_taxa.csv
-#   Rscript scripts/claude/6a_taxon_map.R            # writes data/inference_test/logs/benchmark_taxon_map.csv
-#   python scripts/claude/6_benchmark.py --rescore   # scores with APC accepted names
+#   python scripts/6_benchmark.py --taxa      # writes data/inference_test/logs/benchmark_taxa.csv
+#   Rscript scripts/6a_taxon_map.R            # writes data/inference_test/logs/benchmark_taxon_map.csv
+#   python scripts/6_benchmark.py --rescore   # scores with APC accepted names
 #
 # One row per name in benchmark_taxa.csv. accepted_name is empty when APCalign finds no APC accepted name
 # (e.g. mosses, liverworts, phrase names). use = "yes" only for exact or punctuation-only matches; 6_benchmark.py

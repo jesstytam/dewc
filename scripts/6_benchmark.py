@@ -1,11 +1,11 @@
 """Score Step 1 results against the human-extracted answers (accuracy benchmark).
 
 Usage (from the repo root):
-    python scripts/claude/6_benchmark.py              # score every Step 1 snapshot in logs/runs/ not yet in benchmark.csv
-    python scripts/claude/6_benchmark.py --rescore    # score all snapshots again
-    python scripts/claude/6_benchmark.py --run <dir>  # score one snapshot folder
-    python scripts/claude/6_benchmark.py --taxa       # list every taxon name for scripts/claude/6a_taxon_map.R
-    python scripts/claude/6_benchmark.py --report     # per-paper and per-column scores (latest run of each paper), with metrics
+    python scripts/6_benchmark.py              # score every Step 1 snapshot in logs/runs/ not yet in benchmark.csv
+    python scripts/6_benchmark.py --rescore    # score all snapshots again
+    python scripts/6_benchmark.py --run <dir>  # score one snapshot folder
+    python scripts/6_benchmark.py --taxa       # list every taxon name for scripts/6a_taxon_map.R
+    python scripts/6_benchmark.py --report     # per-paper and per-column scores (latest run of each paper), with metrics
 
 Taxon names: when logs/benchmark_taxon_map.csv exists (6a_taxon_map.R, APCalign), names on both sides are first
 replaced by their APC accepted names, so a synonym is not 1 miss + 1 extra; names without one stay as printed.
@@ -46,7 +46,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from xml.etree import ElementTree
 
-REPO = Path(__file__).resolve().parents[2]
+REPO = Path(__file__).resolve().parents[1]
 LOGS = REPO / "data/inference_test/logs"
 RUNS = LOGS / "runs"
 ANSWERS = sorted((REPO / "data/papers_test/answers").glob("juvenile_period_data_part*.ods"))
@@ -357,13 +357,13 @@ def load_answers():
 
 def read_result(run_dir, slug):
     """Final result rows of a snapshot, or None. Snapshots from raw extraction on (2026-10-26) hold only
-    {slug}_raw.csv; it is normalised here with the same code as scripts/pipeline/5_normalise.py."""
+    {slug}_raw.csv; it is normalised here with the same code as scripts/5_clean_results.py."""
     final, raw = run_dir / f"{slug}.csv", run_dir / f"{slug}_raw.csv"
     if final.exists():
         return list(csv.DictReader(open(final, encoding="utf-8", newline="")))
     if not raw.exists():
         return None
-    spec = importlib.util.spec_from_file_location("normalise", REPO / "scripts/pipeline/5_normalise.py")
+    spec = importlib.util.spec_from_file_location("normalise", REPO / "scripts/5_clean_results.py")
     normalise = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(normalise)
     problems = []
@@ -605,7 +605,7 @@ def main():
             w = csv.writer(f, lineterminator="\n")
             w.writerow(["genus", "species", "subsp", "name"])
             w.writerows([*k, PRINTED[k]] for k in sorted(keys))
-        print(f"written: {TAXA.relative_to(REPO)} ({len(keys)} names); next: Rscript scripts/claude/6a_taxon_map.R")
+        print(f"written: {TAXA.relative_to(REPO)} ({len(keys)} names); next: Rscript scripts/6a_taxon_map.R")
         return
     taxon_map = load_taxon_map()
     print(f"taxon map: {len(taxon_map)} names with an APC accepted name" if taxon_map else

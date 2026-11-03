@@ -15,12 +15,12 @@ PDF_CLEAN = "data/papers_test/pdf_clean/{stem}.pdf"   # source PDF of each paper
 MD_LLM   = "data/papers_test/md_llm/{stem}.md"   # Step 0 output; one file per paper: optimised (scanned) or moved unchanged (text-layer, end comment "md_opt: none")
 PAPERS   = "data/papers_test/md_llm/*.md"        # extraction input; pages split by <!-- PAGE BREAK -->
 RESULT   = ROOT + "results/{slug}_raw.csv"       # raw extraction, values as printed; header = COLUMNS names, in COLUMNS order (46 columns)
-NORMALISE = "scripts/pipeline/5_normalise.py"  # RESULT -> final ROOT + "results/{slug}.csv" (units, case, dashes); run by the user after Step 1, never by agents
+NORMALISE = "scripts/5_clean_results.py"  # RESULT -> final ROOT + "results/{slug}.csv" (units, case, dashes); run by the user after Step 1, never by agents
 LOG      = ROOT + "logs/{slug}_log.csv"          # Step 1 log; header: paper,status,n_rows,started,finished,note + TOKEN_COLS
 MD_LOG   = ROOT + "logs/md_opt_log.csv"          # Step 0 log; header: paper,status,pdf_pages,n_tables,n_fixes,unresolved,started,finished,note + TOKEN_COLS
 TOKEN_COLS = "n_requests,input_tokens,cache_creation_input_tokens,cache_read_input_tokens,output_tokens,total_tokens"   # last 6 log columns; agents leave them empty, USAGE fills them
-USAGE    = "scripts/claude/4c_usage.py"          # token usage per paper; run by the user after each session, never by agents
-CHECK    = "scripts/claude/4a_check.py"          # fixed check script; run it, never edit it; writes reports to ROOT + "logs/"
+USAGE    = "scripts/4c_usage.py"          # token usage per paper; run by the user after each session, never by agents
+CHECK    = "scripts/4a_check.py"          # fixed check script; run it, never edit it; writes reports to ROOT + "logs/"
 ```
 
 ## Read and write scope
