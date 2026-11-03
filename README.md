@@ -1,35 +1,30 @@
 # Meta-analysis study on primary and secondary juvenile period post-fire events
 
-# Installation
+## Installation
 
 ```
-git clone <this_repo>
-cd <this_repo>
+git clone git@github.com:jesstytam/primary_juvenile_meta-analysis.git
+cd primary_juvenile_meta-analysis
 pip install -r requirements.txt
 ```
 
-# My system's setup
+## My system's setup
 
 - System: Ubuntu 26.04.1 LTS
 - LLM: Claude Code via the terminal
 - Languages: Python, shell/bash script, R, natural language
 
-# Data collection
+## Data collection
 
 tbd
 
-# Data cleaning
+### Converting PDF to Markdown
 
-<!-- ![](assets/pipeline_flowchart.drawio.pdf) -->
-<image src="assets/pipeline_flowchart.drawio.pdf"/>
+Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
 
-## Converting PDF to Markdown
+## Data extraction with LLM
 
-Since Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
-
-# Data extraction with LLM
-
-## Important considerations
+### Important considerations
 
 Since Claude / LLM is responsible for data extraction, the pipeline instructions were create through a back-and-fourth conversation with the chatbot. This was done by first having a simple outline of the requirements, including the following:
 
@@ -39,7 +34,7 @@ Since Claude / LLM is responsible for data extraction, the pipeline instructions
 - language requirements, i.e. use of code and pseudo-code for deterministic outputs
 - read and write permissions for which files and folders
 
-## Writing CLAUDE.md
+### Writing CLAUDE.md
 
 Claude reads instructions from the `CLAUDE.md` file, which was updated iteratively by parsing prompts to the LLM and manually checking the outputs after each inference test. 
 
@@ -59,21 +54,20 @@ Additional Python scripts created by Claude as per my instructions include the f
 - `6_benchmark.py` to compare the results between the ground truth and results produced by the LLMs
 - `6a_taxon_map.R` to align taxon names in the ground truth and the LLM results with the Australian Plant Census (APCalign), so synonyms match in `6_benchmark.py` (run `6_benchmark.py --taxa` first, then `--rescore`)
 
-## Triggering the agent (draft written by Claude, edited by human)
+### Triggering the agent
 
-Use 1 model per session to prevent results leakage across models during inference times. Start a fresh session for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
+Use 1 model per Claude instance to prevent results leakage across models during inference times. Start a fresh instance for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
 
-## Initial testing
+### Initial testing
 
 The intial testing stage aimed to confirm and test that the outputs of the LLMs are consistent and follow the provided guidelines in `CLAUDE.md` while showing 0 errors when running `4a_check.py`. 
 
-I first provided 1 paper that has been extracted already as an example. I then provided 6 papers that required extraction 
+I first provided 1 paper that has been extracted already as an example. I then provided 6 papers that required extraction to update `CLAUDE.md` and test the pipeline. After a few trials, I added another 14 papers for further testing.
 
+<!-- ![](assets/pipeline_flowchart.drawio.pdf) -->
+<image src="assets/pipeline_flowchart.drawio.pdf"/>
 
-
-show 1 paper -> iterate tests on 6 papers -> add 14 papers -> test
-
-## Logging each session
+### Logging each session
 
 Every pipeline session is logged automatically. A `SessionEnd` hook in `.claude/settings.json` runs `scripts/claude/4b_log_session.py` when a session ends. It acts only on sessions whose prompt starts with `Run Step 0` or `Run Step 1`; other sessions are ignored. For each pipeline session it:
 
@@ -93,62 +87,39 @@ python scripts/claude/4b_log_session.py --session <session id>
 
 **Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>_raw.csv` (and the normalised `<slug>.csv`), `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
 
-## Steps
+### Running
 
-1. **Step 0: optimise markdown (Opus).** Works through `data/papers_test/md_raw/`: text-layer papers are moved unchanged to `data/papers_test/md_llm/`; scanned papers are compared with their PDF in `data/papers_test/pdf_clean/`, fixed, and written to `data/papers_test/md_llm/`. `md_raw/` is empty when Step 0 is done.
+Step 1 reads the optimised papers in `data/papers_test/md_llm/`; `data/papers_test/md_raw/` must be empty.
 
-   ```
-   claude --model claude-opus-5-5
-   ```
-
-   ```
-   Run Step 0 in CLAUDE.md. Do not ask questions. Stop after CHECK --step0 passes.
-   ```
-
-2. **Manual check.** Open 1–2 files in `data/papers_test/md_llm/` and compare their tables with the PDF (e.g. Kubiak 2009 Appendix 1, Benson 1985 Table 2). Step 1 is only as good as these files. Also read `data/inference_test/logs/md_opt_log.csv` for unresolved items.
-
-3. **Step 1 trial: one paper (Opus).** New session.
+1a. **Data extraction (Opus).** New session. Papers already in the log are skipped.
 
    ```
    claude --model claude-opus-5-5
    ```
 
    ```
-   Run Step 1 in CLAUDE.md. Do not ask questions. Process only "Knox & Clarke 2004 Cunninghamia_primary juvenile period", then stop.
+   Run Step 1 in CLAUDE.md. Do not ask questions.
    ```
 
-   Check the rows in `data/inference_test/results/opus-5-5_raw.csv` (values as printed in the paper), the log in `data/inference_test/logs/opus-5-5_log.csv`, and the check report in `data/inference_test/logs/opus-5-5_check.csv`.
-
-4a. **Step 1: all papers (Opus).** New session. Papers already in the log are skipped.
-
-   ```
-   claude --model claude-opus-5-5
-   ```
-
-   ```
-   Run Step 1 in CLAUDE.md. Do not ask questions. Stop after the final CHECK run.
-   ```
-
-4b. **Step 1: all papers (Sonnet).** New session, same prompt.
+1b. **Data extraction (Sonnet).** New session, same prompt.
 
    ```
    claude --model claude-sonnet-5-5
    ```
 
    ```
-   Run Step 1 in CLAUDE.md. Do not ask questions. Stop after the final CHECK run.
+   Run Step 1 in CLAUDE.md. Do not ask questions.
    ```
 
-5. **Normalise.** Converts the raw results (values as printed) into the final results: time values (value + `<column>_unit` cells) to each column's unit, `pjp_mths`, case, dashes, `scientific_name` and `pdf_path`. Writes `data/inference_test/results/<slug>.csv`; the raw file is not changed. Rerun it after any change to the script; no re-extraction needed.
+2. **Normalise.** Converts the raw results (values as printed) into the final results: time values (value + `<column>_unit` cells) to each column's unit, `pjp_mths`, case, dashes, `scientific_name` and `pdf_path`. Writes `data/inference_test/results/<slug>.csv`; the raw file is not changed. Rerun it after any change to the script; no re-extraction needed.
 
    ```
    python scripts/pipeline/5_normalise.py opus-5-5 sonnet-5-5
    ```
 
-6. **Final check.** Each check exits 1 if any check fails; the reports are in `data/inference_test/logs/` (`<slug>_check.csv` for raw, `<slug>_check_final.csv` for final).
+3. **Final check.** Each check exits 1 if any check fails; the reports are in `data/inference_test/logs/` (`<slug>_check.csv` for raw, `<slug>_check_final.csv` for final).
 
    ```
-   python scripts/claude/4a_check.py --step0
    python scripts/claude/4a_check.py opus-5-5
    python scripts/claude/4a_check.py sonnet-5-5
    python scripts/claude/4a_check.py opus-5-5 --final
@@ -157,24 +128,119 @@ python scripts/claude/4b_log_session.py --session <session id>
 
 If a session stops early (usage limit, context full), start a new session with the same prompt. Finished papers are skipped and unfinished ones are redone.
 
-All output stays in `data/papers_test/md_llm/` and `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
+All output stays in `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
 
 
-# Token usage
+### Token usage
 
-optimise md: 0.5-15M tokens per paper
+Optimising Markdown files of scanned PDFs: 0.5-15M tokens per paper
+Data extraction: ~ slightly more than 1M tokens for both models
 
-data extraction: ~ slightly more than 1M tokens for both models
-
-# Benchmarking
+### Benchmarking
 
 I spent a good few weeks thinking about how to benchmark the extraction results against the ground truth, using methods such as F1 and Levenshtein distance. However, after more thinking, I realised that since 100% accuracy is only a theoretical number, as even a human produces around 4-5% error rates, there is no need to optimise the model(s) any further (currently at ~80% accurate). The biggest time lag in this pipeline can be cut even shorter if I can somehow reduce the time taken for a human to review the extraction results.
 
-# Human-in-the-loop GUI
+Nevertheless, it is always important to check that results produced by LLMs are of high quality. 
 
-This is the part where I highlight my creation of an application that can increase the speed at which extraction results can be checked. 
+#### Ground truth
 
-# Adapting Claude for meta-analysis
+The ground truth is the human-extracted dataset in `data/papers_test/answers/juvenile_period_data_part*.ods`, which I checked against the papers. The rules are:
+
+- Answer rows are matched to papers by the `Path` column, whose file stem equals `file_name` in the results.
+- An empty cell means the paper does not state that value, so a model value in that cell counts as an error.
+- Papers without answer rows are not scored. That leaves 19 of the 22 test papers (`Enright_et_al_1998`, `NSWNPWS_2004` and `Ooi_2019` are not scored).
+- Remaining human errors in the ground truth were left in. The benchmark only needs to compare runs and models, as a human reviews every output anyway.
+- `CLAUDE.md` forbids agents from reading the ground truth or the benchmark files during extraction.
+
+#### Methods
+
+`scripts/claude/6_benchmark.py` scores each Step 1 snapshot in `data/inference_test/logs/runs/` at 2 levels:
+
+- **Taxa:** the set of taxa (genus + species + subspecies) of each paper. A true positive (TP) is a taxon on both sides, a false positive (FP) is a taxon only in the model's results, and a false negative (FN) is a taxon only in the ground truth.
+- **Values:** for each taxon on both sides, the values of a column are pooled over the taxon's rows into a set on each side. A TP is a value on both sides, a FP is a model value not in the ground truth, and a FN is a ground truth value the model lacks.
+
+Precision is TP / (TP + FP) and recall is TP / (TP + FN). The headline score is F0.5, which weights precision twice as much as recall, because a wrong value in a meta-analysis is worse than a missing value that a human reviewer can add. `precision_filled` is precision over cells that both sides filled, which separates wrong values from values the ground truth leaves empty.
+
+Only papers extracted in the run itself are scored, so papers carried over from an earlier run are not counted twice. Because values are pooled per taxon, the value scores do not test whether a value sits on the correct site or fire row.
+
+14 columns are scored at the value level, plus an `introduced` flag. The other result columns are not in the ground truth, so they are not scored. Two values are equal under these rules:
+
+| Column | Rule |
+|---|---|
+| Taxon | Lower case, marks removed, compared on APC accepted names from `6a_taxon_map.R`; otherwise edit distance of at most 2 within the genus |
+| Time columns, `rainfall_mm` | Uncertainty marks (`c.`, `~`, `?`) removed; same bound and range form; equal within half a unit of the coarser printed precision, at most 0.05 |
+| `secondary_juvenile_period`, `time_to_50_percent_flowering` | As above, after conversion to years |
+| `latitude`, `longitude` | Decimal degrees, equal within 0.01 |
+| `fire_response_categorical_surv1` | Same class (obligate, O/R or resprouter) in `references/fire_response_pct.csv`; the paper's own code definition goes first; codes without a class must match exactly |
+| `resprouter_type`, `fire_severity_categorical` | Each term compared in lower case; exact (singular for `resprouter_type`) |
+| `fire_season_categorical` | All seasons of the cell, sorted; exact |
+| `introduced` | Flag from `native_status` or a `*` in the name |
+
+To reproduce the scores, run these commands from the repository root:
+
+```
+python scripts/claude/6_benchmark.py --taxa      # list taxon names
+Rscript scripts/claude/6a_taxon_map.R            # map them to APC accepted names
+python scripts/claude/6_benchmark.py --rescore   # score all runs
+python scripts/claude/6_benchmark.py --report    # per-paper and per-column scores
+```
+
+The outputs are in `data/inference_test/logs/`: `benchmark.csv` (scores per run, paper and column), `benchmark_papers.csv` (latest run of each paper) and `benchmark_details.csv` (every taxon or value found on only one side).
+
+#### Results
+
+These are the latest runs of 2026-10-30 (git `f88b67e`), opus-5-5 run `54dd58ca` and sonnet-5-5 run `98e0ff1b`. Opus was scored on 18 papers, as `Ashton_et_al_1989` was started before its `_run` log line and so was left out. That paper adds only 1 missed taxon to the Sonnet totals and no values.
+
+| Level | Agent | TP | FP | FN | Precision | Recall | F0.5 |
+|---|---|---:|---:|---:|---:|---:|---:|
+| Taxa | Opus | 1027 | 79 | 83 | 0.93 | 0.93 | 0.93 |
+| Taxa | Sonnet | 1027 | 68 | 84 | 0.94 | 0.92 | 0.94 |
+| Values | Opus | 5646 | 423 | 1204 | 0.93 | 0.82 | 0.91 |
+| Values | Sonnet | 5881 | 364 | 969 | 0.94 | 0.86 | 0.92 |
+
+`Kubiak_2009` holds about 71% of the ground truth values, so it dominates these totals:
+
+| Papers | Agent | Precision | Recall | F0.5 |
+|---|---|---:|---:|---:|
+| `Kubiak_2009` only | Opus | 0.99 | 0.92 | 0.98 |
+| `Kubiak_2009` only | Sonnet | 0.99 | 0.97 | 0.99 |
+| All others | Opus | 0.75 | 0.59 | 0.71 |
+| All others | Sonnet | 0.78 | 0.59 | 0.73 |
+
+Values by column:
+
+| Column | Opus precision | Opus recall | Sonnet precision | Sonnet recall |
+|---|---:|---:|---:|---:|
+| `fire_response_categorical_surv1` | 0.99 | 0.96 | 0.99 | 0.96 |
+| `primary_juvenile_period` | 0.95 | 0.96 | 0.96 | 0.96 |
+| `secondary_juvenile_period` | 0.96 | 0.96 | 0.98 | 0.98 |
+| `age_at_first_flower_production_from_seed_repr3` | 0.92 | 0.86 | 0.92 | 0.86 |
+| `time_to_first_flower_production_resprout_repr3a` | 0.98 | 0.84 | 0.99 | 0.84 |
+| `resprouter_type` | 0.81 | 0.56 | 0.93 | 0.56 |
+| `latitude` | 0.97 | 0.65 | 0.99 | 0.76 |
+| `longitude` | 0.98 | 0.65 | 0.99 | 0.76 |
+| `rainfall_mm` | 0.36 | 0.85 | 0.36 | 0.85 |
+| `fire_season_categorical` | 0.98 | 0.98 | 0.98 | 0.98 |
+| `fire_severity_categorical` | 1.00 | 0.95 | 1.00 | 0.95 |
+| `introduced` | 0.92 | 0.99 | 0.92 | 0.99 |
+| `pjp_mths` | - | 0.00 | - | 0.00 |
+| `time_to_50_percent_flowering_repr4` | - | 0.00 | - | 0.00 |
+| `time_to_50_percent_flowering` | 0.00 | - | 0.00 | - |
+
+Most of the low scores come from a few differences in convention, not from misread values:
+
+- **Flowering columns:** both models put 50% flowering values in `time_to_50_percent_flowering` (70 FP), but the ground truth has them in `time_to_50_percent_flowering_repr4` (63 FN) and, for `Burrows_et_al_2008`, also in `pjp_mths` (53 FN). `Burrows_et_al_2008` is the largest source, followed by `Benson_1985` and `Miller_et_al_2025`. This explains the 3 columns with a score of 0.
+- **`Wark_1997` rainfall:** both models give 657 mm on every row (about 160 FP), which the ground truth leaves empty. This explains the low `rainfall_mm` precision.
+- **`Wark_1997` coordinates:** the ground truth holds coordinates estimated from a map, which the models do not extract (about 160 FN each for latitude and longitude).
+- **`Kubiak_2009` coordinates:** Opus left 136 rows empty and Sonnet left 22. This explains most of the gap between the 2 models.
+
+Sonnet scored slightly higher than Opus on these runs, mainly because of the Kubiak coordinates. The difference is small, and both models need the human review step below.
+
+## Human-in-the-loop GUI
+
+See [ryer](https://github.com/jesstytam/ryer) for a PyQt-based GUI for check your extracted results.
+
+## Adapting Claude for meta-analysis
 
 [ADAPTING_CLAUDE_MD.md](ADAPTING_CLAUDE_MD.md) builds this kind of pipeline for another meta-analysis. It is self-contained, so it does not need this repository. It needs 1 paper that has already been extracted by hand:
 
@@ -192,3 +258,7 @@ claude "Follow ADAPTING_CLAUDE_MD.md. Example extraction: example.csv. Example p
 Claude reads the example, works out the row unit, columns and value formats, and asks about anything the example cannot show. You approve `metadata.csv`. Claude then writes `CLAUDE.md` and the scripts, and tests them against the example.
 
 After that, you run the pilot extractions it describes, one fresh session per model. Most of the rules in this repository's `CLAUDE.md` came from pilot disagreements rather than upfront design, so expect several rounds.
+
+### AI disclosure
+
+Needless to say, this project was made with the assistance of Anthropic's Claude.
