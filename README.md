@@ -14,10 +14,6 @@ pip install -r requirements.txt
 - LLM: Claude Code via the terminal
 - Languages: Python, shell/bash script, R, natural language
 
-## Data collection
-
-tbd
-
 ### Converting PDF to Markdown
 
 Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
@@ -65,7 +61,7 @@ The intial testing stage aimed to confirm and test that the outputs of the LLMs 
 I first provided 1 paper that has been extracted already as an example. I then provided 6 papers that required extraction to update `CLAUDE.md` and test the pipeline. After a few trials, I added another 14 papers for further testing.
 
 <!-- ![](assets/pipeline_flowchart.drawio.pdf) -->
-<image src="assets/pipeline_flowchart.drawio.pdf"/>
+<image src="assets/pipeline_flowchart.drawio.png"/>
 
 ### Logging each session
 
@@ -88,6 +84,12 @@ python scripts/claude/4b_log_session.py --session <session id>
 **Before rerunning a step**, move that agent's live files out of the way, because papers already in the log are skipped. Their snapshot is already in `logs/runs/`. For Step 1: `data/inference_test/results/<slug>_raw.csv` (and the normalised `<slug>.csv`), `data/inference_test/logs/<slug>_log.csv` and `data/inference_test/logs/<slug>_check.csv`.
 
 ### Running
+
+#### Preparation
+
+
+
+#### Extraction
 
 Step 1 reads the optimised papers in `data/papers_test/md_llm/`; `data/papers_test/md_raw/` must be empty.
 
@@ -129,12 +131,6 @@ Step 1 reads the optimised papers in `data/papers_test/md_llm/`; `data/papers_te
 If a session stops early (usage limit, context full), start a new session with the same prompt. Finished papers are skipped and unfinished ones are redone.
 
 All output stays in `data/inference_test/`. Nothing is written to `data/inference/` until the test run is complete.
-
-
-### Token usage
-
-Optimising Markdown files of scanned PDFs: 0.5-15M tokens per paper
-Data extraction: ~ slightly more than 1M tokens for both models
 
 ### Benchmarking
 
@@ -236,11 +232,22 @@ Most of the low scores come from a few differences in convention, not from misre
 
 Sonnet scored slightly higher than Opus on these runs, mainly because of the Kubiak coordinates. The difference is small, and both models need the human review step below.
 
+### Token usage
+
+I believe that it is more important to calculate AI usage based on the number of tokens, rather than cost. This makes it easier to convert tokens to CO_2 / Wh / Litres of water, which puts things into perspective on the trade-offs of AI usage. 
+
+Optimising Markdown files of scanned PDFs: 0.5-15M tokens per paper
+Data extraction: ~ slightly more than 1M tokens for both models
+
 ## Human-in-the-loop GUI
 
-See [ryer](https://github.com/jesstytam/ryer) for a PyQt-based GUI for check your extracted results.
+See [ryer](https://github.com/jesstytam/ryer) for a PyQt-based GUI to speed up the checking your extracted results.
 
-## Adapting Claude for meta-analysis
+## Adapting Claude for your meta-analysis
+
+Different research projects have different data extraction needs. Given that LLMs are not deterministic, obviously, adapting the methods here will not yield identical performances. Nonetheless, I have asked Claude to write up some instructions below in this section to help best reproduce this repo, especially CLAUDE.md for other data extraction tasks.
+
+### What Claude reckons
 
 [ADAPTING_CLAUDE_MD.md](ADAPTING_CLAUDE_MD.md) builds this kind of pipeline for another meta-analysis. It is self-contained, so it does not need this repository. It needs 1 paper that has already been extracted by hand:
 
@@ -259,6 +266,6 @@ Claude reads the example, works out the row unit, columns and value formats, and
 
 After that, you run the pilot extractions it describes, one fresh session per model. Most of the rules in this repository's `CLAUDE.md` came from pilot disagreements rather than upfront design, so expect several rounds.
 
-### AI disclosure
+## AI disclosure
 
 Needless to say, this project was made with the assistance of Anthropic's Claude.
