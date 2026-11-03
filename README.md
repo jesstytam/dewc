@@ -1,10 +1,19 @@
-# Meta-analysis study on primary and secondary juvenile period post-fire events
+# **D**ata **e**xtraction **w**ith **C**laude
 
 ## Installation
 
+Clone this repo to have all scripts and files locally on your machine:
 ```
 git clone git@github.com:jesstytam/primary_juvenile_meta-analysis.git
 cd primary_juvenile_meta-analysis
+```
+Create an environment if you haven't got one already, e.g. using Anaconda or Miniconda:
+```
+conda create -n myenv python=3.12
+conda activate myenv
+```
+And then install the dependencies:
+```
 pip install -r requirements.txt
 ```
 
@@ -14,11 +23,11 @@ pip install -r requirements.txt
 - LLM: Claude Code via the terminal
 - Languages: Python, shell/bash script, R, natural language
 
+## Data extraction with LLM
+
 ### Converting PDF to Markdown
 
 Markdown is currently one of the better formats for LLMs to analyse, we first convert the PDFs to Markdown files. Here, I used the Python module [`PyMuPDF`](https://github.com/pymupdf/PyMuPDF) for conversion, which showed success for both text-based and image-based (scanned) PDFs.
-
-## Data extraction with LLM
 
 ### Important considerations
 
@@ -50,17 +59,12 @@ Additional Python scripts created by Claude as per my instructions include the f
 - `6_benchmark.py` to compare the results between the ground truth and results produced by the LLMs
 - `6a_taxon_map.R` to align taxon names in the ground truth and the LLM results with the Australian Plant Census (APCalign), so synonyms match in `6_benchmark.py` (run `6_benchmark.py --taxa` first, then `--rescore`)
 
-### Triggering the agent
-
-Use 1 model per Claude instance to prevent results leakage across models during inference times. Start a fresh instance for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
-
 ### Initial testing
 
 The intial testing stage aimed to confirm and test that the outputs of the LLMs are consistent and follow the provided guidelines in `CLAUDE.md` while showing 0 errors when running `4a_check.py`. 
 
 I first provided 1 paper that has been extracted already as an example. I then provided 6 papers that required extraction to update `CLAUDE.md` and test the pipeline. After a few trials, I added another 14 papers for further testing.
 
-<!-- ![](assets/pipeline_flowchart.drawio.pdf) -->
 <image src="assets/pipeline_flowchart.drawio.png"/>
 
 ### Logging each session
@@ -90,6 +94,8 @@ python scripts/claude/4b_log_session.py --session <session id>
 
 
 #### Extraction
+
+Use 1 model per Claude instance to prevent results leakage across models during inference times. Start a fresh instance for every step below. The pipeline rules are in `CLAUDE.md`, which Claude Code loads automatically; each session works out its agent from the model it runs on.
 
 Step 1 reads the optimised papers in `data/papers_test/md_llm/`; `data/papers_test/md_raw/` must be empty.
 
@@ -234,10 +240,12 @@ Sonnet scored slightly higher than Opus on these runs, mainly because of the Kub
 
 ### Token usage
 
-I believe that it is more important to calculate AI usage based on the number of tokens, rather than cost. This makes it easier to convert tokens to CO_2 / Wh / Litres of water, which puts things into perspective on the trade-offs of AI usage. 
+**I believe that it is more important to calculate AI usage based on the number of tokens (an environment-centric approach), rather than cost (a capatalistic approach)**. This makes it easier to convert tokens to CO_2 / Wh / Litres of water, which puts things into perspective on the trade-offs of AI usage. 
 
 Optimising Markdown files of scanned PDFs: 0.5-15M tokens per paper
 Data extraction: ~ slightly more than 1M tokens for both models
+
+See the AI disclosure section for a full breakdown of the token usage of this project. 
 
 ## Human-in-the-loop GUI
 
@@ -268,4 +276,45 @@ After that, you run the pilot extractions it describes, one fresh session per mo
 
 ## AI disclosure
 
-Needless to say, this project was made with the assistance of Anthropic's Claude.
+Needless to say, this project was made *heavily* with the assistance of Anthropic's Claude.
+
+Claude estimates that this project has used about 1.0 billion tokens as of 2026-11-03, summed from the local Claude Code session transcripts (52 sessions, about 4,000 API requests; about 2,760 by Claude Opus 5.5 and 1,220 by Claude Sonnet 5.5):
+
+| Token type | Tokens |
+|---|---|
+| Input | 7,959 |
+| Cache creation | 21.3M |
+| Cache read | 977.4M |
+| Output | 4.3M |
+| **Total** | **~1.003B** |
+
+Of these, about 906M were used by the pipeline sessions logged in `data/inference_test/logs/sessions.csv`:
+
+| Step | Agent | Sessions | Tokens |
+|---|---|---|---|
+| Step 0 | opus-5-5 | 7 | 190.6M |
+| Step 1 | opus-5-5 | 21 | 381.7M |
+| Step 1 | sonnet-5-5 | 16 | 333.9M |
+
+The remaining ~97M were used in development and chat sessions.
+
+Notes:
+
+- About 98% of all tokens are cache reads, which are billed at a much lower rate than other tokens; output and cache creation tokens drive most of the cost.
+- Claude Code deletes session transcripts after 30 days by default (`cleanupPeriodDays`), so older sessions and sessions run on other machines are not counted. The total is a lower bound.
+
+### Environmental impact
+
+Using an online [AI Impact Calculator](https://aiimpactcalculator.com/), this project is estimated (roughly) to have consumed a total of 14.126425 mWh. Below shows the estimate amount of other resources consumed, e.g. CO_2, water, etc:
+
+**Data extraction using Opus 5.5**
+<image src="energy_use/opus_usage.jpg"/>
+<image src="energy_use/opus_perspective.jpg"/>
+
+**Data extraction using Sonnet 5.5**
+<image src="energy_use/sonnet_usage.jpg"/>
+<image src="energy_use/sonnet_perspective.jpg"/>
+
+**Development and other tasks using Opus 5.5**
+<image src="energy_use/opus_usage_dev.jpg"/>
+<image src="energy_use/opus_perspective_dev.jpg"/>
